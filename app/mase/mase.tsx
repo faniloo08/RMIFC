@@ -22,6 +22,8 @@ function Mase() {
         "Arms Traffic",
         "Natural Events",
         "Marine Infrasture",
+        "Title",
+        "Title"
     ];
     const titres = [
         "Programme de luttes contre les trafics d'...",

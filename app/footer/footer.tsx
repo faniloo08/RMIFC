@@ -109,7 +109,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <p className='text-xs text-white text-center mt-[25px] border-t pt-1'>©2024, Fanilo Rabemanantsoa. Tous droits réservés</p>    
+      <p className='text-xs text-white text-center mt-[25px] border-t pt-1'>©2024, RFIMC Inc. Tous droits réservés</p>    
     </div>
   )
 }

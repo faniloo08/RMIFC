@@ -4,13 +4,8 @@ import { cn } from '@/lib/utils'
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 
-import {
-    IconBrandGithub,
-    IconBrandGoogle,
-    IconBrandOnlyfans,
-} from "@tabler/icons-react"
 
-function page() {
+function Formulaire() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         alert("Form submitted");
@@ -23,12 +18,12 @@ function page() {
       };
 
       return (
-        <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+        <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white/80 dark:bg-black">
           <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-            Bienvenue sur le site de déposition d'information du CRFIM
+            Bienvenue sur la section de déposition d'information du CRFIM
           </h2>
-          <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-            Veuillez-vous connecter car nous n'avons pas encore de processus de connexion
+          <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300 mb-1">
+            Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile, veuillez la déposer ici
           </p>
      
           <form className="my-8" onSubmit={handleSubmit}>
@@ -77,7 +72,7 @@ function page() {
             </LabelInputContainer>
      
             <button
-              className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+              className=" mt-1 bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
               type="submit"
             >
               Soumettre &rarr;
@@ -122,7 +117,7 @@ function page() {
         </div>
       );
 }
-export default page
+export default Formulaire
 const BottomGradient = () => {
     return (
       <>
