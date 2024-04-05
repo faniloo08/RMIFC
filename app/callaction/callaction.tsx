@@ -1,5 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
+import { Dialog, 
+    DialogContent,
+    DialogDescription,
+    DialogTitle,
+    DialogTrigger, } 
+from '@radix-ui/react-dialog'
+
+import Formulaire from '../formulaire/formulaire'
 
 function Callaction() {
   return (
@@ -36,14 +44,16 @@ function Callaction() {
                 </p>
             </div>
             <div>
-                <Link href="/formulaire">
-                    <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px]">
-                        <span className=" ml-[410px] hover:bg-white hover:text-black bg-sky-950  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 py-2 text-sm font-medium text-white backdrop-blur-3xl">
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] ml-[410px] hover:bg-white hover:text-black bg-sky-950 cursor-pointer items-center justify-center px-2 py-2 text-sm font-medium text-white backdrop-blur-3xl">
                             Déposer une information
-                        </span>
-                    </button>
-                </Link>
-                
+                        </button>
+                    </DialogTrigger>
+                    <DialogContent className=" bg-white/50 relative mt-[-400px] ml-[280px] justify-center items-center sm:max-w-[500px] rounded-lg">
+                        <Formulaire/>
+                    </DialogContent>
+                </Dialog>
             </div>
         </div>
     </div>
