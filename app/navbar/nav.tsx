@@ -17,6 +17,32 @@ import {
 import ScrollMenu from "../scrollmenu/scrollmenu"
 import { Chicle, Chilanka } from "next/font/google"
 
+import { 
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
+import { Label } from "@radix-ui/react-menubar"
+import { Input } from "@/components/ui/input"
+
+import {
+  Calendar,
+  User,
+  Album,
+  BadgeHelp
+} from "lucide-react"
+
+import { 
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+ } from "@/components/ui/command"
 //Ceci est à remplacer par une fonction qui génèrerai ces contenus de manière à ce que les 3 articles de presses les plus récentes du CMS soit à afficher
 interface Component{
   title: string;
@@ -88,15 +114,17 @@ export function NavBar() {
   };
   
   return (
-    <NavigationMenu>
+    <NavigationMenu >
       <NavigationMenuList>
         <NavigationMenuItem>
-          <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#299EF2_0%,#A6138E_50%,#011764_100%)]" />
-                <span className=" hover:bg-sky-950 hover:text-white bg-white  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-black backdrop-blur-3xl">
-                  Accueil
-                </span>
-          </button>
+          <Link href="/">
+            <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#299EF2_0%,#A6138E_50%,#011764_100%)]" />
+                  <span className=" hover:bg-sky-950 hover:text-white bg-white  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-black backdrop-blur-3xl">
+                    Accueil
+                  </span>
+            </button>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>
@@ -109,7 +137,7 @@ export function NavBar() {
           <NavigationMenuContent>
             <ul className=" bg-white text-slate-800 grid w-[500px] gap-3 p-4 md:w-[500px] md:grid-cols-4 lg:w-[600px] ">
               <div>
-                <Link href="/">
+                <Link href="/historique">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
@@ -141,7 +169,7 @@ export function NavBar() {
                   ])}
                   >Historique</p>
                 </Link>
-                <Link href="/">
+                <Link href="/faq">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline" 
                   onMouseEnter={() => handleLinkHover([
                   {
@@ -174,7 +202,7 @@ export function NavBar() {
                   FAQ
                   </p>
                 </Link>
-                <Link href="/">
+                <Link href="/partnaire">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                    onMouseEnter={() => handleLinkHover([
                     {
@@ -206,7 +234,7 @@ export function NavBar() {
                     ])}
                   >Partenaires</p>
                 </Link>
-                <Link href="/">
+                <Link href="/cadres">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
@@ -224,7 +252,7 @@ export function NavBar() {
                     description:
                     "Collaboration avec les autorités nationales compétentes",
                     date:"",
-                    coverImage:"/CD3.png",
+                    coverImage:"/CD3.jpg",
                   },
                   {
                     //Protocoles d'Entente et Memoranda d'Entente
@@ -238,7 +266,7 @@ export function NavBar() {
                   ])}
                   >Cadres juridique</p>
                 </Link>
-                <Link href="/">
+                <Link href="/contenu">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
@@ -300,7 +328,7 @@ export function NavBar() {
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
-                    <div className="mb-2 mt-4 text-lg font-medium">
+                    <div className="mb-2 mt-4 text-lg font-bold text-cyan-700 ">
                       12 pillars
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
@@ -316,7 +344,7 @@ export function NavBar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                 <span className=" hover: hover:bg-white hover:text-black bg-sky-950  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-white backdrop-blur-3xl">
@@ -327,15 +355,48 @@ export function NavBar() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                  <span className=" hover:bg-white hover:text-black bg-sky-950  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                    Recherche
-                  </span>
-              </button>
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                    <span className=" hover:bg-white hover:text-black bg-sky-950  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+                      Recherche
+                    </span>
+                </button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[500px]">
+              <Command className="rounded-lg border shadow-md">
+                <CommandInput placeholder="Taper ici pour rechercher..." />
+                <CommandList>
+                  <CommandEmpty>No results found.</CommandEmpty>
+                  <CommandGroup heading="Suggestions">
+                    <CommandItem>
+                      <Calendar className="mr-2 h-4 w-4" />
+                      <span>Evenement</span>
+                    </CommandItem>
+                    <CommandItem>
+                      <BadgeHelp className="mr-2 h-4 w-4" />
+                      <span>FAQ</span>
+                    </CommandItem>
+                    <CommandItem>
+                      <Album className="mr-2 h-4 w-4" />
+                      <span>Articles</span>
+                      <CommandShortcut>⌘A</CommandShortcut>
+                    </CommandItem>
+                  </CommandGroup>
+                  <CommandSeparator />
+                  <CommandGroup heading="Réglages">
+                    <CommandItem>
+                      <User className="mr-2 h-4 w-4" />
+                      <span>Profil</span>
+                      <CommandShortcut>⌘P</CommandShortcut>
+                    </CommandItem>
+                  </CommandGroup>
+                </CommandList>
+              </Command>
+              </DialogContent>
+          </Dialog>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

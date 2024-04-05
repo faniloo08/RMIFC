@@ -34,17 +34,17 @@ function Footer() {
               <p className='text-white text-md font-bold mt-[-5px] relative mb-[5px]'>A propos</p>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/historique">
                 <p className='text-sm text-white underline hover:text-blue-500'>Historique</p>
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/historique">
                 <p className='text-sm text-white underline hover:text-blue-500'>Missions et Valeurs</p>
               </Link>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/historique">
                 <p className='text-sm text-white underline hover:text-blue-500'>Objectifs</p>
               </Link>
             </div>
@@ -55,7 +55,7 @@ function Footer() {
             </div>
             <div>
               <Link href="/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Informations su les droits d'auteurs</p>
+                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Informations sur les droits d'auteurs</p>
               </Link>
             </div>
             <div>

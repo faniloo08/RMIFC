@@ -10,7 +10,7 @@ function Articles() {
                 {/* Article à la une */}
                 <div className='ml-3 justify-center items-center'>
                     {/* Articles.cover */}
-                    <img src='/Art1.png' className="w-450px h-350px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
+                    <img src='/Art1(1).png' className="w-450px h-350px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
 
                     <div className='ml-[-10px]' >
 
@@ -18,7 +18,7 @@ function Articles() {
                             <div >
                                 <p className="hover:underline text-lg justify-center items-center font-bold py-4" >
                                     {/*Articles phares title*/}
-                                    <Link href="/">
+                                    <Link href="/contenu">
                                         Operation Auxilium
                                     </Link>
                                 </p>
@@ -55,13 +55,13 @@ function Articles() {
             <li>
                 {/*Art2*/}
                 <div className='mb-1'>
-                    <img src='/Art2.png' className="w-225px h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
+                    <img src='/Art3(1).png' className="w-225px h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
                     <div className='relative ml-[250px] mt-[-165px]'>
                         <button className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">Others</button>
                         <div >
                             <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                 {/*Articles phares title*/}
-                                <Link href="/">
+                                <Link href="/contenu">
                                     Réunion avec la FBI
                                 </Link>
                             </p>
@@ -93,14 +93,14 @@ function Articles() {
             <li className=''>
                 {/*Art3*/}
                 <div>
-                    <img src='/Art3.png' className="w-225px h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
+                    <img src='/Art2(1).png' className="w-225px h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
                     <div className='relative ml-[250px] mt-[-165px]'>
                         <button className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">Arms Traficking</button>
                     </div>
                     <div className='ml-[250px]' >
                         <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                             {/*Articles phares title*/}
-                            <Link href="/">
+                            <Link href="/contenu">
                                 Opération Qatar
                             </Link>
                         </p>

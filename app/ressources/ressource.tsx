@@ -12,7 +12,7 @@ function Ressource() {
               <div className='grid grid-rows-1 grid-flow-col gap-1 mt-[30px]'>
                 <div className='ml-[20px]'>
                   {/* image */}
-                  <img src="/Météo.png" alt="Météo" width={470} height={150}/>
+                  <img src="/Météo(1).png" alt="Météo" width={470} height={150}/>
                 </div>
                 <div className='w-[450px]'>
                   {/*Text*/}
@@ -46,13 +46,13 @@ function Ressource() {
                 </div>
                 <div>
                   {/* image */}
-                  <img src="/Carte.png" alt="Météo" width={470} height={150}/>
+                  <img src="/Carte(1).png" alt="Météo" width={470} height={150}/>
                 </div>
               </div>
               <div className='grid grid-rows-1 grid-flow-col'>
               <div className='ml-[20px]'>
                 {/* image */}
-                <img src="/Port.png" alt="Météo" width={470} height={150}/>
+                <img src="/Port(1).png" alt="Météo" width={470} height={150}/>
                 </div>
                 <div className='w-[450px]'>
                   {/*Text*/}

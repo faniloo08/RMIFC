@@ -67,7 +67,7 @@ const CARDS = [
     {
       id: 2,
       name: "MARIMOUTOU Vêlayoudom",
-      designation: "Secrétaire général du COI",
+      designation: "Secrétaire général de la COI",
       content: (
         <img src="/COI.png" alt="Mr le Directeur" width={150} height={200} />
       ),

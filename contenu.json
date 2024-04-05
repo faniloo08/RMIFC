@@ -1,0 +1,42 @@
+{
+    "gros titre":"",
+    "couverture":"",
+    "categorie":"",
+    "date":"",
+    "description":"",
+    "article":"",
+    "auteur": {
+        "nom":"",
+        "poste":""        
+    },
+    "postFormat":"",
+    "slidePost":"",
+    "slug":"",
+    "photos": {
+        "photo1":"",
+        "photo2":"",
+        "photo3":""
+    },
+    "articlesSimilaire":{
+        "article1":{
+            "couverture":"",
+            "titre":"",
+            "date":""
+        },
+        "article2":{
+            "couverture":"",
+            "titre":"",
+            "date":""
+        },
+        "article3":{
+            "couverture":"",
+            "titre":"",
+            "date":""
+        },
+        "article4":{
+            "couverture":"",
+            "titre":"",
+            "date":""
+        }
+    }
+}

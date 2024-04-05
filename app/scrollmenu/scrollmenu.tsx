@@ -25,7 +25,7 @@ export default function ScrollMenu() {
         {tags.map((tag) => (
           <>
             <div key={tag} className="text-sm font-bold text-slate-800 hover:underline hover:text-blue-600">
-              <Link href="/">
+              <Link href="/categorie">
                 {tag}
               </Link>
             </div>

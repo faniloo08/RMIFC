@@ -28,8 +28,10 @@ export default function Home() {
               <div> 
                 <MenuBar/>
               </div>
-              <div className="flex items-center justify-center"> 
-                <NavBar/>
+              <div className="flex items-center justify-center">
+                <div>
+                  <NavBar/>
+                </div> 
               </div>
           </div>
           <div className=" ml-[20px] bg-cover grid grid-cols-2 items-center justify-center">
@@ -61,11 +63,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" relative ml-[175px] mt-[-250px]">
-                <p className="text-sky-950 font-bold text-[24px] relative mt-[35px] ">Centre Régional de Fusion d'Information Maritimes</p>
+            <div className=" relative ml-[165px] mt-[-250px]">
+                <p className="text-sky-950 font-bold text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
                 <PresText/>
             </div>
-            <div className="relative ml-[735px] mt-[-170px]">
+            <div className="relative ml-[725px] mt-[-170px]">
               <Statistique/>
             </div>
           </div>

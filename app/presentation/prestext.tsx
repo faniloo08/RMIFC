@@ -12,8 +12,8 @@ Nos missions sont vastes et variées ...
 export function PresText() {
     return (
         <div>
-            <TextGenerateEffect className='h-[20rem] w-[20rem] justify-center items-center ' words={words} />
-            <Link href="/" className='text-cyan-400 underline text-sm '>En savoir plus</Link>
+            <TextGenerateEffect className='lg:h-[20rem] lg:w-[360px] md:w-[180px] justify-center items-center ' words={words} />
+            <Link href="/historique" className='text-cyan-400 underline text-sm '>En savoir plus</Link>
         </div>
     )
     
