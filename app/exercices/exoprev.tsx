@@ -1,13 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
-
 //Cette partie sera généré grâce à une fonction qui recevra les 4 derniers excercices ajoutés au back-end
 function Exercices() {
   return (
     <div>
         <div>
           <p className='justify-center items-center text-center font-bold text-lg'>
-              EXERCICES REALISES
+              EXERCICES REALISES(exo Prev)
           </p>
           <div className='grid grid-rows-2 grid-flow-col gap-4 justify-center items-center'>
             <div className='mt-[50px] '>
@@ -54,7 +53,6 @@ function Exercices() {
                 </Link>
             </div>
         </div>
-
       </div>
     </div>
   )

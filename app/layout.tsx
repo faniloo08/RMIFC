@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
- 
+import ColorSwitcher from "./color-switcher/ColorSwitcher";
 import { cn } from "@/lib/utils"
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -27,12 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >{children}</body>
+      <body
+      className={cn(
+        "min-h-screen bg-background font-sans antialiased",
+        fontSans.variable
+      )}
+    >{children}
+    </body>
+    {/* <ColorSwitcher/> */}
     </html>
+    
   );
 }

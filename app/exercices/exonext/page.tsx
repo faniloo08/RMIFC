@@ -1,23 +1,23 @@
 "use client"
 import Image from "next/image";
-import { NavBar } from "./navbar/nav";
-import {MenuBar} from "./menubar/menu";
-import Slide from "./Slider/slide";
-import Mase from "./mase/mase";
-import { PresText } from "./presentation/prestext";
-import Statistique from "./statistique/statistique";
+import { NavBar } from "@/app/navbar/nav";
+import {MenuBar} from "@/app/menubar/menu";
+import Slide from "@/app/Slider/slide";
+import Mase from "@/app/mase/mase";
+import { PresText } from "@/app/presentation/prestext";
+import Statistique from "@/app/statistique/statistique";
 import Link from "next/link";
-import Articles from "./articles/articles";
-import Callaction from "./callaction/callaction";
-import Exercices from "./exercices/exercices";
-import Recherche from "./recherche/recherche";
-import PersoCles from "./personnagesCles/persoCles";
-import Ressource from "./ressources/ressource";
-import Partenaire from "./partenaires/partenaire";
-import Vcr from "./vcr/vcr";
-import Newsletter from "./newsletter/newsletter";
-import Footer from "./footer/footer";
-import { PaginationDemo } from "./pagination/pagination1";
+import Articles from "@/app/articles/articles";
+import Callaction from "@/app/callaction/callaction";
+import Exercices from "@/app/exercices/exonext";
+import Recherche from "@/app/recherche/recherche";
+import PersoCles from "@/app/personnagesCles/persoCles";
+import Ressource from "@/app/ressources/ressource";
+import Partenaire from "@/app/partenaires/partenaire";
+import Vcr from "@/app/vcr/vcr";
+import Newsletter from "@/app/newsletter/newsletter";
+import Footer from "@/app/footer/footer";
+import { PaginationDemo } from "@/app/pagination/pagination1";
 
 export default function Home() {
   return (

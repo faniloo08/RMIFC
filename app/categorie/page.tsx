@@ -34,7 +34,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le Centre Régional de Fusion d'Informations surveille et analyse les incidents maritimes afin de fournir une vue d'ensemble des activités dans les eaux régionales, facilitant ainsi la coordination des réponses en cas d'incidents.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -47,7 +47,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre travaille en collaboration avec les autorités compétentes pour détecter, surveiller et prévenir le trafic d'armes et la contrebande par voie maritime, contribuant ainsi à renforcer la sécurité et la stabilité dans la région.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -60,7 +60,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le Centre Régional de Fusion d'Informations surveille et évalue l'impact des activités humaines sur l'environnement maritime, contribuant ainsi à la préservation et à la protection des écosystèmes marins.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -73,7 +73,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre identifie et surveille les infrastructures maritimes critiques, telles que les ports et les installations pétrolières, afin de prévenir les menaces potentielles et de garantir leur sécurité et leur fonctionnement continu.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -86,7 +86,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre surveille les cybermenaces ciblant les infrastructures maritimes et coordonne les efforts pour protéger les systèmes informatiques critiques contre les attaques et les intrusions.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -99,7 +99,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre surveille les événements naturels tels que les tempêtes et les tremblements de terre, et fournit une assistance humanitaire en cas de catastrophe (HADR) pour assurer une réponse efficace et coordonnée aux situations d'urgence.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -112,7 +112,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Cette catégorie englobe divers domaines d'intérêt qui ne sont pas spécifiquement couverts par les autres catégories, permettant au centre de surveiller et de répondre à une gamme étendue de menaces et de situations.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -125,7 +125,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre surveille les activités criminelles et les actes de violence en mer, contribuant ainsi à garantir la sécurité et la sûreté des voies maritimes et des navires.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -138,7 +138,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre surveille les activités liées à la prolifération des armes de destruction massive par voie maritime, en coordination avec le Programme de sécurité internationale (PSI) et d'autres partenaires internationaux.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -151,7 +151,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre surveille et régule les activités de plaisance et de tourisme maritime pour garantir la sécurité des voyageurs et la protection des ressources marines dans les zones touristiques.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -164,7 +164,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre travaille à détecter, surveiller et prévenir la pêche illégale, non réglementée et non déclarée en mer, contribuant ainsi à la préservation des ressources marines et à la durabilité des industries de la pêche.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>
@@ -177,7 +177,7 @@ function Categorie() {
                             <p className='text-sm mb-3'>
                                 Le centre surveille les activités de migration illégale et de trafic d'êtres humains par voie maritime, en collaboration avec les autorités nationales et internationales pour prévenir ces activités criminelles et protéger les droits des migrants.
                             </p>
-                            <Link href="">
+                            <Link href="/contenu/tous">
                                 <p className='text-sm text-blue-500 hover:underline mb-3'>
                                     Voir les articles liés
                                 </p>

@@ -1,25 +1,64 @@
 "use client"
 
 import {DataToTable} from '../../lib/api';
-import React ,{ useState } from 'react'
+import {Donnees} from '../../lib/donnes'; //récupération des données.
+// import {Donnees1} from '../../lib/tempdesc'; //description
+// import {Donnees2} from '../../lib/tempdate'; //date
+// import {Donnees3} from '../../lib/tempcont'; //contenu
+import React ,{ useState, useEffect } from 'react'
 import { NavBar } from '../navbar/nav';
 import { MenuBar } from '../menubar/menu';
 import Footer from "../footer/footer";
 import Link from 'next/link';
-
+import ReactMarkdown from 'react-markdown';
+import { Suspense } from 'react';
+import { SkeletonCard } from './skeleton';
 
 function Contenus() {
     //Ces contenus vont être changés par les données dynamique du CMS
-    const GrosTitre = Donnees
+    useEffect(() => {
+        const fetchDonnees = async () => {
+            // Appelez la fonction Donnees pour obtenir les données
+            const titres  = await Donnees();
+
+            //Exemple de titre  
+            const grosTitre  = titres[3].titre;
+            console.log(grosTitre);
+            setGrosTitre(grosTitre);
+
+            //Exemple de description
+            const descri = titres[4].description;
+            console.log(descri);
+            setDescri(descri);
+
+            //Exemple de date
+            const date = titres[4].date
+            console.log(date);
+            setDate(date);
+            
+            //Exemple de contenu
+            const article = titres[4].article;
+            console.log(article);
+            setArticle(article);
+        };
+        fetchDonnees();
+    }, []);
+    const [grosTitre, setGrosTitre] = useState('');
+    const [descri, setDescri] = useState('');
+    const [date, setDate] = useState('');
+    const [article, setArticle] = useState('');
+
+    //User interactions
     const [liked, setLiked] = useState(false);
     const [liked1, setLiked1] = useState(false);
     const [comments, setComments] = useState<string[]>([]);
-  const [commentText, setCommentText] = useState<string>('');
+    const [commentText, setCommentText] = useState<string>('');
     
     const handleCommentChange = (e) => {
         setCommentText(e.target.value);
     };
     
+
     const handleCommentSubmit = () => {
         if (commentText.trim() !== '') {
             setComments([...comments, commentText]);
@@ -50,17 +89,19 @@ function Contenus() {
                         <div className="ml-[50px] mt-[30px] flex ">
                             <p className='text-[40px] lg:w-[630px] md:w-[300px] font-bold'>
                                 {/* Titre de l'article cliqué */}
-                                Quo voluptatibus sequi rem odit repellat et quis quod.
+                                {grosTitre}
                             </p>
                         </div>
-                        <div className="grid grid-cols-2 ml-[50px]">
+                        <div className="grid grid-cols-2 ml-[50px] space-x-[-220px]">
                             <div >
                                 {/* Catégorie */}
-                                <button className="bg-gradient-to-r from-[#51C0FF] to-[#142356]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">Catégorie</button>
+                                <Link href="/contenu/tous">
+                                    <button className="bg-gradient-to-r from-[#51C0FF] to-[#142356]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{descri}</button>
+                                </Link>
                             </div>
                             <div>
                                 {/* Date */}
-                                <p className='mt-[5px] ml-[-220px] font-light text-[13px]'>jj/mm/aa</p>
+                                <p className='mt-[5px] font-light text-[13px]'>{date}</p>
                             </div>
                         </div>
                         <div className='ml-[50px] mt-[30px]'>
@@ -73,7 +114,7 @@ function Contenus() {
                         <div className="items-center justify-center">
                             <div className='mt-[30px] ml-[50px] lg:w-[600px] md:w-[300px]'>
                                 {/* Article */}
-                                <p className='font-bold mb-1'>
+                                {/* <p className='font-bold mb-1'>
                                     Lorem ipsum dolor sit amet.
                                 </p>
                                 <p className='mb-1'>
@@ -91,6 +132,13 @@ function Contenus() {
                                 Aut perspiciatis impedit ut earum ipsum.
                                 Est adipisci error.
                                 Quo dolorem pariatur qui voluptatem placeat qui rerum doloribus.
+                                </p> */}
+                                <p>
+                                    <Suspense fallback={<Loading />}>
+                                        <ReactMarkdown> 
+                                            {article}
+                                        </ReactMarkdown>
+                                    </Suspense>
                                 </p>
                             </div>
                         
@@ -101,11 +149,10 @@ function Contenus() {
                         {/* Texte */}
                         <div className='mt-[30px] lg:w-[330px] md:w-[150px] text-[15px]'>
                             <p>
-                                Lorem ipsum dolor sit amet. Est dolor tenetur rem harum illum in laudantium culpa eum veniam laborum et tenetur sequi. In sint soluta nam recusandae rerum non explicabo ipsum ab sunt voluptatem eos magnam nulla aut sint nobis in maiores facere.
-                                Vel corporis Quis est laudantium fuga est vitae perspiciatis?
+                                Le Centre de fusion de l’information maritime (CRFIM) a été présenté 11e Foire Internationale de Madagascar (FIM) organisée à Antananarivo du 19 au 22 mai. Ce Centre a été mis en place dans le cadre des activités pilotées par la Commission de l’océan Indien (COI) dans le cadre du programme régional de sécurité maritime (MASE) sur financement européen. Installé à proximité de l’entrée du grand hall international, le stand présentant le CRFIM, ses objectifs et l’enjeu de l’échange d’information pour la sécurité et la sûreté maritimes a bénéficié d’une forte visibilité. 
                             </p>
                             <p className='mt-2'>
-                                Non dignissimos sequi ut unde eius ad odit dolore qui laboriosam laborum ea consectetur dicta id tempora quibusdam. Qui excepturi libero 33 possimus veniam et eligendi mollitia sit harum perferendis aut optio ipsam. Non perspiciatis molestiae et expedita nihil in doloribus quia et molestias ipsa.
+                                Le CRFIM permet d’échanger et de fusionner des informations maritimes sur une zone allant du cap de Bonne Esperance (Afrique du Sud) au détroit de Bab-El-Mandeb (Djibouti) afin de renforcer la sécurité et la sureté maritime dans la région, en luttant notamment contre les trafics et crimes commis en mer.
                             </p>
                         </div>
                         {/* Articles similaires */}
@@ -119,7 +166,7 @@ function Contenus() {
                                     {/* cover */}
                                     <img src="/A2.jpg" alt="" width={195} height={175}/>
                                     <div className='mt-1'>
-                                        <Link href="/" className='hover:text-[#00A2E8]'>
+                                        <Link href="/contenu" className='hover:text-[#00A2E8]'>
                                             <p className='text-[13px] font-bold'>
                                                 EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars
                                             </p>
@@ -134,7 +181,7 @@ function Contenus() {
                                     {/* cover */}
                                     <img src="/A3.jpg" alt="" width={195} height={175}/>
                                     <div className='mt-1'>
-                                        <Link href="/" className='hover:text-[#00A2E8]'>
+                                        <Link href="/contenu" className='hover:text-[#00A2E8]'>
                                             <p className='text-[13px] font-bold'>
                                                 OPERATION AUXILUM 2023 du 20 au 26 avril
                                             </p>
@@ -293,17 +340,6 @@ function Contenus() {
 
 export default Contenus
 
-export async function Donnees(){
-    const articles = [await DataToTable()];
-    const titre = articles[2].titre;//gros titre
-    const catégorie = []; 
-    const date = [];
-    const article = [];
-    const couverture = [];
-    const auteur = [];
-    const photos = [];
-    const articlesSimilaires = [];
-    return (
-       titre
-    )
+function Loading() {
+    return <h2>🌀 Loading...</h2>;
 }

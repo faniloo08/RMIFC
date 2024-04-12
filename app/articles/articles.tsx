@@ -104,7 +104,7 @@ function Articles() {
                                 Opération Qatar
                             </Link>
                         </p>
-                        <p className='text-[13px] py-1 w-[320px]'>
+                        <p className='text-[13px] py-1 w-[360px]'>
                             {/* Articles.description */}
                             Les douanes du Qatar saisissent 90 kg de haschisch dissimulés dans une cargaison de pastèques ....
                         </p>

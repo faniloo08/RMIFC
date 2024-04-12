@@ -6,6 +6,7 @@ import Footer from "../footer/footer";
 import Link from 'next/link';
 import { Input } from '@/components/ui/input';
 
+
 function Historique() {
   return (
     <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
@@ -105,7 +106,7 @@ function Historique() {
                                 </p>
 
                                 <p className='text-sm'>
-                                Élargissement du mandat du CRFIM pour inclure la formation et le renforcement des capacités des acteurs régionaux dans le domaine de la sécurité maritime
+                                    Élargissement du mandat du CRFIM pour inclure la formation et le renforcement des capacités des acteurs régionaux dans le domaine de la sécurité maritime
                                 </p>
                             </div>
                         </div>
