@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         
-        <div className="bg-[url('/HomePage(2).png')] bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
+        <div className="bg-white sm:bg-[url('/HomePage(2).png')] md:bg-[url('/HomePage(2).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
           <div className="bg-cover grid grid-cols-1">
               <div> 
                 <MenuBar/>
@@ -38,10 +38,10 @@ export default function Home() {
           <div className=" ml-[20px] bg-cover grid grid-cols-2 items-center justify-center">
             <div className="bg-cover grid grid-cols-1  items-center justify-center">
               < div className="ml-3 relative mt-[50px]">
-                <div className="">
+                <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px]">
                   <Slide/>
                 </div> 
-                <div className=" relative ml-[75px] mt-[-50px]">
+                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] mt-[-50px]">
                   <Mase/>
                 </div>
                 <div className=" relative ml-[30px] mt-[50px]">
@@ -64,24 +64,27 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" relative ml-[165px] mt-[-220px]">
-                <p className="text-sky-950 font-bold text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
+            <div className=" relative hidden sm:hidden md:block md:ml-[170px] lg:ml-[165px] 2xl:ml-[180px] md:mt-[0px] lg:mt-[-220px] 2xl:mt-[-320px]">
+                <p className="text-sky-950 font-bold md:text-[20px] text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
                 <PresText/>
             </div>
-            <div className="relative ml-[725px] mt-[-170px]">
+            <div className="relative hidden sm:hidden md:block 2xl:ml-[980px] lg:ml-[725px] lg:mt-[-170px] 2xl:mt-[-350px]">
               <Statistique/>
             </div>
           </div>
-          <div className=" mt-[20px] bg-white bg-center items-center justify-center">
-            <div>
+          <div className="2xl:mt-[10px] lg:mt-[20px] bg-white bg-center items-center justify-center">
+            <div className="grid grid-flow-row grid-cols-2 lg:space-x-[350px] 2xl:space-x-[600px]">
               <div className="ml-[28px] bg-[url('/fleche.png')] w-[228px] h-[52px] ">
                 <span className="inline-flex justify-center items-center mt-2 ml-4 font-bold text-[#092933]">
                   Dernières Actualités
                 </span>
               </div>
-              <Link href="/contenu/tous" className='text-cyan-400 underline text-sm ml-[920px] mt-[-100px]' >
-                  voir toutes les actualités
-              </Link>
+              <div>
+                <Link href="/contenu/tous" className='text-cyan-400 underline text-sm 2xl:ml-[1400px] lg:ml-[920px] mt-[-150px]' >
+                    voir toutes les actualités
+                </Link>
+              </div>
+              
             </div>
             <div className="ml[30px] mt-[30px]">
               <Articles/>

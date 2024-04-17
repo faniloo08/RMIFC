@@ -114,7 +114,7 @@ export function NavBar() {
   };
   
   return (
-    <NavigationMenu >
+    <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/">
@@ -370,19 +370,25 @@ export function NavBar() {
                 <CommandList>
                   <CommandEmpty>No results found.</CommandEmpty>
                   <CommandGroup heading="Suggestions">
-                    <CommandItem>
-                      <Calendar className="mr-2 h-4 w-4" />
-                      <span>Evenement</span>
-                    </CommandItem>
-                    <CommandItem>
-                      <BadgeHelp className="mr-2 h-4 w-4" />
-                      <span>FAQ</span>
-                    </CommandItem>
-                    <CommandItem>
-                      <Album className="mr-2 h-4 w-4" />
-                      <span>Articles</span>
-                      <CommandShortcut>⌘A</CommandShortcut>
-                    </CommandItem>
+                    <Link href="/contenu">
+                      <CommandItem>
+                        <Calendar className="mr-2 h-4 w-4" />
+                        <span>Evenement</span>
+                      </CommandItem>
+                    </Link>
+                    <Link href="/faq">
+                      <CommandItem>
+                        <BadgeHelp className="mr-2 h-4 w-4" />
+                        <span>FAQ</span>
+                      </CommandItem>
+                    </Link>
+                    <Link href="/contenu/tous">
+                      <CommandItem>
+                        <Album className="mr-2 h-4 w-4" />
+                        <span>Articles</span>
+                        <CommandShortcut>⌘A</CommandShortcut>
+                      </CommandItem>
+                    </Link>
                   </CommandGroup>
                   <CommandSeparator />
                   <CommandGroup heading="Réglages">

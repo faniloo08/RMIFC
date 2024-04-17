@@ -14,10 +14,10 @@ function Vcr() {
     "/VCR1.png"
   ];
   return (
-    <div className='ml-[40px] w-[1000px] h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] justify-center items-center py-[40px]'>
+    <div className='ml-[40px] 2xl:w-[1480px] lg:w-[1000px] h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] justify-center items-center py-[40px]'>
         <div className='grid grid-rows-1 grid-flow-col'>
           <div className='ml-[20px] mt-[-20px]'>
-          <ImagesSlider className=" drop-shadow flex h-[250px] w-[450px] justify-center items-center" images={images}>
+          <ImagesSlider className=" drop-shadow flex h-[250px] 2xl:w-[650px] lg:w-[450px] justify-center items-center" images={images}>
             <motion.div
               initial={{
                 opacity: 0,
@@ -37,7 +37,7 @@ function Vcr() {
           </ImagesSlider>
           </div>
           <div>
-            <div className='w-[450px]'>
+            <div className='2xl:w-[650px] lg:w-[450px]'>
               <p className=' text-white mt-[-20px] scroll-m-20 border-b pb-2 font-semibold tracking-tight first:mt-0'>Devenir Volontaire aux CRFIM Madagascar</p>
               <p className='text-sm  text-white font-light mt-[10px]'>
                 Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. 

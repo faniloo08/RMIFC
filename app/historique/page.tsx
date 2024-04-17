@@ -24,7 +24,7 @@ function Historique() {
                     </p>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Le C.R.F.I.M</p>
@@ -43,13 +43,13 @@ function Historique() {
                         D'où la mise en place du programme M.A.S.E (Maritime Security)
                         </p>
                     </div>
-                    <div className='ml-[130px] '>
+                    <div className=' 2xl:ml-[280px] lg:ml-[130px] '>
                         {/* Cover */}
-                        <img src="/histo1.png" alt="" width={350} height={250}/>
+                        <img src="/histo1.png" alt="" width={350} height={250} className='2xl:w-[85%]'/>
                     </div>
                 </div>
-                <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                <div className="grid grid-cols-2 items-center justify-center 2xl:mb-[30px]">
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Les évènements clés */}
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Les évènements clés</p>
@@ -111,13 +111,13 @@ function Historique() {
                             </div>
                         </div>
                     </div>
-                    <div className='ml-[130px] '>
+                    <div className=' 2xl:ml-[280px] lg:ml-[130px] '>
                         {/* Cover */}
-                        <img src="/gris.png" alt="" width={357} height={398}/>
+                        <img src="/gris.png" alt="" width={357} height={398} className='2xl:w-[85%]'/>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px] mb-[30px]'>
                         {/* Les perspectives futurs */}
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Les perspectives futurs</p>
@@ -148,15 +148,15 @@ function Historique() {
                             </p>
                         </div>
                     </div>
-                    <div className='ml-[130px] '>
+                    <div className='2xl:ml-[280px] lg:ml-[130px] '>
                         {/* Cover */}
-                        <img src="/gris.png" alt="" width={357} height={398}/>
+                        <img src="/gris.png" alt="" width={357} height={398} className='2xl:w-[85%]'/>
                     </div>
                 </div>
                
                 {/* Photos liées à l’article */}
                 <p className='font-bold text-lg mt-[50px] ml-[50px]'>Galerie d'images</p>
-                <div className="mt-[30px] ml-[50px] grid grid-cols-3 gap-1 items-center justify-center">
+                <div className="mt-[30px] 2xl:ml-[80px] lg:ml-[50px] grid grid-cols-3 2xl:gap-6 lg:gap-1 items-center justify-center">
                     <div>
                         {/* Photo1 */}
                         <img src="/Hist1.png" alt="" width={300} height={250} className='hover:scale-110'/>

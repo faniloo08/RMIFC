@@ -28,84 +28,84 @@ function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-start-1 col-end-5 grid grid-rows-1 grid-flow-col">
-          <div className='grid grid-rows-4 grid-flow-col'>
-            <div>
-              <p className='text-white text-md font-bold mt-[-5px] relative mb-[5px]'>A propos</p>
-            </div>
-            <div>
-              <Link href="/historique">
-                <p className='text-sm text-white underline hover:text-blue-500'>Historique</p>
-              </Link>
-            </div>
-            <div>
-              <Link href="/historique">
-                <p className='text-sm text-white underline hover:text-blue-500'>Missions et Valeurs</p>
-              </Link>
-            </div>
-            <div>
-              <Link href="/historique">
-                <p className='text-sm text-white underline hover:text-blue-500'>Objectifs</p>
-              </Link>
-            </div>
+      </div>
+      <div className="2xl:ml-[120px] lg:ml-[60px] mt-[35px] grid grid-rows-1 grid-flow-col">
+        <div className='grid grid-rows-4 grid-flow-col'>
+          <div>
+            <p className='text-white text-md font-bold mt-[-5px] relative mb-[5px]'>A propos</p>
           </div>
           <div>
-            <div>
-              <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Mentions Légales</p>
-            </div>
-            <div>
-              <Link href="/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Informations sur les droits d'auteurs</p>
-              </Link>
-            </div>
-            <div>
-              <Link href="/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Politiques de Confidentialité</p>
-              </Link>
-            </div>
-            <div>
-              <Link href="/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Conditions d'utilisation</p>
-              </Link>
-            </div>
+            <Link href="/historique">
+              <p className='text-sm text-white underline hover:text-blue-500'>Historique</p>
+            </Link>
           </div>
           <div>
-            <div>
-              <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Contact</p>
-            </div>
-            <div>
-              <p className='text-sm text-white w-[200px]'>Ankaditoho, Soanierana, Antananarivo</p>
-            </div>
-            <div>
-              <Link href="/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'> +261 34 05 414 12</p>
-              </Link>
-            </div>
-            <div>
-              <Link href="https://mail.google.com/mail/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>assistante.communication@crfimmadagascar.org</p>
-              </Link>
-            </div>
+            <Link href="/historique">
+              <p className='text-sm text-white underline hover:text-blue-500'>Missions et Valeurs</p>
+            </Link>
           </div>
           <div>
-            <div>
-              <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Liens</p>
-            </div>
-            <div>
-              <Link href="https://cfimmadagascar.org/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>CFIM</p>
-              </Link>
-            </div>
-            <div>
-              <Link href="https://www.meteomadagascar.mg/meteo-madagascar/a-propos-de-meteo/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Météorologie</p>
-              </Link>
-            </div>
-            <div>
-              <Link href="https://www.primature.gov.mg/index.php/primature/organismes-rattaches/">
-                <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Primature Malgache</p>
-              </Link>
-            </div>
+            <Link href="/historique">
+              <p className='text-sm text-white underline hover:text-blue-500'>Objectifs</p>
+            </Link>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Mentions Légales</p>
+          </div>
+          <div>
+            <Link href="/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Informations sur les droits d'auteurs</p>
+            </Link>
+          </div>
+          <div>
+            <Link href="/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Politiques de Confidentialité</p>
+            </Link>
+          </div>
+          <div>
+            <Link href="/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Conditions d'utilisation</p>
+            </Link>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Contact</p>
+          </div>
+          <div>
+            <p className='text-sm text-white w-[200px]'>Ankaditoho, Soanierana, Antananarivo</p>
+          </div>
+          <div>
+            <Link href="/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'> +261 34 05 414 12</p>
+            </Link>
+          </div>
+          <div>
+            <Link href="https://mail.google.com/mail/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>assistante.communication@crfimmadagascar.org</p>
+            </Link>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Liens</p>
+          </div>
+          <div>
+            <Link href="https://cfimmadagascar.org/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>CFIM</p>
+            </Link>
+          </div>
+          <div>
+            <Link href="https://www.meteomadagascar.mg/meteo-madagascar/a-propos-de-meteo/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Météorologie</p>
+            </Link>
+          </div>
+          <div>
+            <Link href="https://www.primature.gov.mg/index.php/primature/organismes-rattaches/">
+              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Primature Malgache</p>
+            </Link>
           </div>
         </div>
       </div>

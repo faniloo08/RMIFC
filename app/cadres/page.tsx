@@ -24,7 +24,7 @@ function Cadres() {
                 </div>
                 
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Conventions internationaux</p>
@@ -58,7 +58,7 @@ function Cadres() {
                         </div>
                         
                     </div>
-                    <div className='ml-[130px] '>
+                    <div className=' 2xl:ml-[400px] lg:ml-[130px] '>
                         {/* Cover */}
                         <img src="/CD1.png" alt="" width={350} height={250}/>
                         <p className='mt-1 text-xs mb-1 text-center w-[350px]'>
@@ -67,7 +67,7 @@ function Cadres() {
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Les évènements clés */}
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Législation Nationale</p>
@@ -91,7 +91,7 @@ function Cadres() {
                         La mise en place d’un centre régional de fusion de l’information maritime « découle des enjeux liés à l’émergence de l’océan Indien en tant que centre de gravité géostratégique ainsi que de la prise de conscience, par les Etats riverains, de leur vulnérabilité face aux menaces que constituent la piraterie, le terrorisme, les différentes sortes de trafics et le pillage de leurs ressources naturelles », a rappelé le président de la République. Et de préciser  que « l’Accord de siège se rapportant au CRFIM constitue l’aboutissement d’un long processus de négociations politique et diplomatique, tant à l’échelle bilatérale que régionale ».
                         </p>
                     </div>
-                    <div className='grid grid-cols-1 grid-flow-row ml-[130px] '>
+                    <div className='grid grid-cols-1 grid-flow-row  2xl:ml-[400px] lg:ml-[130px] '>
                         <div className='mb-4'>
                             <img src="/CD3(1).jpg" alt="" width={357} height={398}/>
                             <p className='mt-1 text-xs mb-1 text-center w-[350px]'>
@@ -108,7 +108,7 @@ function Cadres() {
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Les perspectives futurs */}
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Protocoles d'Ententes et Memoranda</p>
@@ -139,7 +139,7 @@ function Cadres() {
                         </div>
                        
                     </div>
-                    <div className='ml-[130px] '>
+                    <div className=' 2xl:ml-[400px] lg:ml-[130px] '>
                         {/* Cover */}
                         <img src="/CD2.png" alt="" width={357} height={398}/>
                         <p className='mt-1 text-xs mb-1 text-center w-[350px]'>
@@ -150,7 +150,7 @@ function Cadres() {
                
                 {/* Photos liées à l’article */}
                 <p className='font-bold text-lg mt-[50px] ml-[50px]'>Galerie d'images</p>
-                <div className="mt-[30px] ml-[50px] grid grid-cols-3 gap-1 items-center justify-center">
+                <div className="mt-[30px] ml-[50px] grid 2xl:grid-cols-4 lg:grid-cols-3 gap-1 items-center justify-center">
                     <div>
                         {/* Photo1 */}
                         <img src="/CD1.png" alt="" width={300} height={250} className='hover:scale-110'/>

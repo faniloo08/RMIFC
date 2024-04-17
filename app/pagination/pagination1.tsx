@@ -13,7 +13,7 @@ export function PaginationDemo() {
       <Pagination>
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="/exercices/exoprev" />
+            <PaginationPrevious href="/exercices/exoprev"/>
           </PaginationItem>
           <PaginationItem>
             <PaginationLink href="/" className='hover:text-blue-500' isActive>1</PaginationLink>

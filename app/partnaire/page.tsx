@@ -23,7 +23,7 @@ function Partenaires() {
                     </p>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <Link href="https://crcoseychelles.org/">
@@ -35,13 +35,13 @@ function Partenaires() {
 
                         </p>
                     </div>
-                    <div className='ml-[130px] '>
+                    <div className='2xl:ml-[400px] lg:ml-[130px] '>
                         {/* Cover */}
                         <img src="/SlideB.png" alt="" width={357} height={200}/>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <Link href="https://igad.int/">
@@ -53,13 +53,13 @@ function Partenaires() {
                         Intergovernmental Authority on Development, (IGAD) est un groupement régional créé le 21 mars 1986 et associant sept pays est-africains : Djibouti, Éthiopie, Kenya, Somalie, Soudan, Soudan du Sud et Ouganda.
                         </p>
                     </div>
-                    <div className='ml-[130px] mt-[20px]'>
+                    <div className='2xl:ml-[400px] lg:ml-[130px] mt-[20px]'>
                         {/* Cover */}
                         <img src="/Igad.png" alt="" width={200} height={150}/>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <Link href="https://www.eac.int/">
@@ -70,13 +70,13 @@ function Partenaires() {
                         La Communauté d'Afrique de l'Est ( EAC ) est une organisation intergouvernementale composée de huit pays d' Afrique de l'Est . Les États membres sont la République démocratique du Congo , la République fédérale de Somalie , les républiques du Burundi , du Kenya , du Rwanda , du Soudan du Sud , de l'Ouganda et de la Tanzanie.
                         </p>
                     </div>
-                    <div className='ml-[130px] mt-[20px]'>
+                    <div className='2xl:ml-[400px] lg:ml-[130px] mt-[20px]'>
                         {/* Cover */}
                         <img src="/EAC.png" alt="" width={200} height={150}/>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <Link href="https://www.comesa.int/?lang=fr">
@@ -87,13 +87,13 @@ function Partenaires() {
                         Le Marché commun de l'Afrique orientale et australe ( COMESA ) est une communauté économique régionale en Afrique composée de vingt et un États membres s'étendant de la Tunisie à l'Eswatini.
                         </p>
                     </div>
-                    <div className='ml-[130px] mt-[20px]'>
+                    <div className='2xl:ml-[400px] lg:ml-[130px] mt-[20px]'>
                         {/* Cover */}
                         <img src="/Comesa.png" alt="" width={200} height={150}/>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <Link href="https://www.commissionoceanindien.org/">
@@ -104,13 +104,13 @@ function Partenaires() {
                         La Commission de l'Océan Indien ( français : Commission de l'Océan Indien , COI ) est une organisation intergouvernementale qui relie les nations africaines de l'océan Indien : Comores , Madagascar , Maurice , la Réunion (une région d'outre-mer de la France ) et les Seychelles .
                         </p>
                     </div>
-                    <div className='ml-[130px] mt-[20px]'>
+                    <div className='2xl:ml-[400px] lg:ml-[130px] mt-[20px]'>
                         {/* Cover */}
                         <img src="/OI.png" alt="" width={200} height={150}/>
                     </div>
                 </div>
                 <div className="grid grid-cols-2 items-center justify-center">
-                    <div className='mt-[30px] ml-[50px] w-[600px]'>
+                    <div className='mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]'>
                         {/* Le CRFIM */}
                         {/* Titre */}
                         <Link href="https://european-union.europa.eu/index_fr">
@@ -122,13 +122,13 @@ function Partenaires() {
                         L'Union européenne (UE) est une union politico-économique sui generis de vingt-sept États européens qui délèguent ou transmettent par traité l’exercice de certaines compétences à des organes communautaires.
                         </p>
                     </div>
-                    <div className='ml-[130px] mt-[20px]'>
+                    <div className='2xl:ml-[400px] lg:ml-[130px] mt-[20px]'>
                         {/* Cover */}
                         <img src="/UE.png" alt="" width={200} height={150}/>
                     </div>
                 </div>
                 <p className='text-[20px] text-cyan-700 font-bold underline mb-2 mt-[30px] ml-[50px] w-[600px]'>Les pays signatiares</p>
-                <div className="mt-[30px] ml-[50px] grid grid-cols-7 items-center justify-center">
+                <div className="mt-[30px] 2xl:ml-[100px] lg:ml-[50px] grid grid-cols-7 items-center justify-center">
                     <div>
                         {/* Photo1 */}
                         <img src="/Comores.jpg" alt="Comores" title="Comores" width={100} height={70} className='hover:scale-110'/>

@@ -1,20 +1,35 @@
 "use client"
 
-import {DataToTable} from '../../lib/api';
-import {Donnees} from '../../lib/donnes'; //récupération des données.
+//import {DataToTable} from '../../../lib/api';
+import {Donnees} from '../../../lib/donnes'; //récupération des données.
 // import {Donnees1} from '../../lib/tempdesc'; //description
 // import {Donnees2} from '../../lib/tempdate'; //date
 // import {Donnees3} from '../../lib/tempcont'; //contenu
 import React ,{ useState, useEffect } from 'react'
-import { NavBar } from '../navbar/nav';
-import { MenuBar } from '../menubar/menu';
-import Footer from "../footer/footer";
+import { NavBar } from '../../navbar/nav';
+import { MenuBar } from '../../menubar/menu';
+import Recherche from "../../recherche/recherche";
+import Footer from "../../footer/footer";
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import { Suspense } from 'react';
-import { SkeletonCard } from './skeleton';
+import { useSearchParams, usePathname, useRouter } from 'next/navigation'
+//import { SkeletonCard } from '../skeleton';
 
-function Contenus() {
+function Contenus(
+
+    {
+        searchParams,
+    }: {
+        searchParams?: {
+          query?: string;
+          page?: string;
+        };
+    }) 
+    {
+    const query = searchParams?.query || '';
+    const currentPage = Number(searchParams?.page) || 1;
+    
     //Ces contenus vont être changés par les données dynamique du CMS
     useEffect(() => {
         const fetchDonnees = async () => {
@@ -22,7 +37,7 @@ function Contenus() {
             const titres  = await Donnees();
 
             //Exemple de titre  
-            const grosTitre  = titres[3].titre;
+            const grosTitre  = titres[4].titre;
             console.log(grosTitre);
             setGrosTitre(grosTitre);
 
@@ -40,6 +55,11 @@ function Contenus() {
             const article = titres[4].article;
             console.log(article);
             setArticle(article);
+
+            //Exemple de slug
+            const slug = titres[4].slug;
+            console.log(slug);
+            setSlug(slug);
         };
         fetchDonnees();
     }, []);
@@ -47,7 +67,16 @@ function Contenus() {
     const [descri, setDescri] = useState('');
     const [date, setDate] = useState('');
     const [article, setArticle] = useState('');
+    const [slug, setSlug] = useState('');
 
+    //Test slug
+    
+    const pathname = usePathname();
+    const { replace } = useRouter()
+    const params = new URLSearchParams(searchParams);
+    params.set('page', '1');
+    params.set('query', slug);
+    replace(`${pathname}?${params.toString()}`)
     //User interactions
     const [liked, setLiked] = useState(false);
     const [liked1, setLiked1] = useState(false);
@@ -87,7 +116,7 @@ function Contenus() {
                     {/* Article */}
                     <div className='col-span-2'>
                         <div className="ml-[50px] mt-[30px] flex ">
-                            <p className='text-[40px] lg:w-[630px] md:w-[300px] font-bold'>
+                            <p className='text-[40px] 2xl:w-[1000px] lg:w-[630px] md:w-[300px] font-bold'>
                                 {/* Titre de l'article cliqué */}
                                 {grosTitre}
                             </p>
@@ -106,33 +135,14 @@ function Contenus() {
                         </div>
                         <div className='ml-[50px] mt-[30px]'>
                             {/* Cover */}
-                            <img src="/A1.jpg" alt="" width={600} height={350}/>
+                            <img src="/A1.jpg" alt="" width={600} height={350} className='2xl:w-[90%]'/>
                             {/* <p className='mt-1 text-xs mb-1 text-center w-[300px]'>
                                 Signature en ligne du Memorandum d'entente: Auxillum worldwide, CRCO, et  CRFIM joinent leurs forces, 19 dec 2023, Madagascar, Antananarivo.
                             </p> */}
                         </div>
                         <div className="items-center justify-center">
-                            <div className='mt-[30px] ml-[50px] lg:w-[600px] md:w-[300px]'>
+                            <div className='mt-[30px] ml-[50px] 2xl:w-[920px] lg:w-[600px] md:w-[300px]'>
                                 {/* Article */}
-                                {/* <p className='font-bold mb-1'>
-                                    Lorem ipsum dolor sit amet.
-                                </p>
-                                <p className='mb-1'>
-                                Ut veniam ipsumAb velit nam sunt perferendis non suscipit sunt et galisum cumque. Et maiores dolore Qui architecto ea similique laudantium At placeat nulla ad eveniet tempora quo cumque doloribus non officiis reprehenderit.
-
-                                In nihil omnis est illo consequaturet suscipit sed numquam galisum. Aut architecto cumque Et cupiditate est quibusdam exercitationem. Et fugit odio Sed minima aut aliquid assumenda et repellendus consequatur ut ipsa molestiae ab exercitationem mollitia. Eos distinctio ducimusEt laudantium 33 minus libero ut distinctio nihil ut odio doloremque ab libero sunt.
-                                
-                                </p>
-                                <p className='mb-1'>
-                                Ea voluptate eligendi et inventore doloremque rem Quis ullam non reprehenderit doloremque.
-                                Eos aspernatur isteQui voluptas qui illo totam aut deleniti sunt et autem natus. Aut possimus sapiente Et facilis ut tempore omnis sit voluptatem dolore.
-                                </p>
-                                <p className='font-light italic'>
-                                Non internos corporis.
-                                Aut perspiciatis impedit ut earum ipsum.
-                                Est adipisci error.
-                                Quo dolorem pariatur qui voluptatem placeat qui rerum doloribus.
-                                </p> */}
                                 <p>
                                     <Suspense fallback={<Loading />}>
                                         <ReactMarkdown> 
@@ -164,7 +174,7 @@ function Contenus() {
                                 {/* Article1 */}
                                 <div className='mr-2'>
                                     {/* cover */}
-                                    <img src="/A2.jpg" alt="" width={195} height={175}/>
+                                    <img src="/Cutlass.png" alt="" width={195} height={175}/>
                                     <div className='mt-1'>
                                         <Link href="/contenu" className='hover:text-[#00A2E8]'>
                                             <p className='text-[13px] font-bold'>
@@ -179,7 +189,7 @@ function Contenus() {
                                 {/* Article2 */}
                                 <div className='ml-2'>
                                     {/* cover */}
-                                    <img src="/A3.jpg" alt="" width={195} height={175}/>
+                                    <img src="/Auxilum.png" alt="" width={195} height={175}/>
                                     <div className='mt-1'>
                                         <Link href="/contenu" className='hover:text-[#00A2E8]'>
                                             <p className='text-[13px] font-bold'>
@@ -225,7 +235,7 @@ function Contenus() {
                 </div>
                 {/* Photos liées à l’article */}
                 <p className='font-bold text-lg mt-[50px] ml-[50px]'>Galerie d'images</p>
-                <div className="mt-[30px] ml-[50px] grid grid-cols-3 gap-1 items-center justify-center">
+                <div className="2xl:mt-[50px] lg:mt-[30px] 2xl:ml-[180px] lg:ml-[50px] grid grid-cols-3 gap-1 items-center justify-center">
                     <div>
                         {/* Photo1 */}
                         <img src="/CD3(1).jpg" alt="" width={300} height={250} className='hover:scale-110'/>
@@ -317,7 +327,7 @@ function Contenus() {
                             placeholder="Votre Commentaire"
                             value={commentText}
                             onChange={handleCommentChange}
-                            className="ml-[50px] w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            className="ml-[50px] 2xl:w-[1400px] lg:w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                         />
                         <button
                             type="submit"

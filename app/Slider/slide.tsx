@@ -49,7 +49,7 @@ export default function Slide() {
     }
 };
   return (
-    <ImagesSlider className="drop-shadow flex lg:h-[25rem] lg:w-[41rem] md:-[20rem] justify-center items-center" images={images}>
+    <ImagesSlider className="drop-shadow flex lg:h-[25rem] md:h-[20rem] sm:h-[15rem] h-[12rem] w-[17rem] sm:w-[24rem] md:w-[30rem] lg:w-[36rem] xl:w-[41rem] 2xl:w-[57rem] justify-center items-center" images={images}>
       <motion.div
         initial={{
           opacity: 0,
@@ -67,7 +67,7 @@ export default function Slide() {
         {/* <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           The hero section slideshow <br /> nobody asked for
         </motion.p> */}
-        <div className="md:w-[100px] lg:w-[210px] px-4 py-2 backdrop-blur-sm border bg-gradient-to-r text-white ml-[300px] mt-[-50px] text-center rounded-lg relative"style={{}}>
+        <div className="md:w-[100px] lg:w-[210px] 2xl:w-[300px] px-4 py-2 backdrop-blur-sm border bg-gradient-to-r text-white ml-[300px] mt-[-50px] text-center rounded-lg relative"style={{}}>
           <p className="lg:text-xs md:text-[6px]">
           Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays  et organisations internationales
           </p>
@@ -75,12 +75,12 @@ export default function Slide() {
               <DialogTrigger asChild>
                 <button className="hover:bg-slate-500 px-2 py-2 backdrop-blur-sm border bg-gradient-to-r from-cyan-900 to-sky-950  border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
                   <Link href="/">
-                    <span className="lg:text-sm md:text-xs">Nous contacter</span>
+                    <span className="2xl:text-md lg:text-sm md:text-xs">Nous contacter</span>
                   </Link>
                   <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-teal-900 to-sky-950" />
                 </button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[400px] items-center justify-center">
+              <DialogContent className="2xl:max-w-[600px] lg:max-w-[400px] items-center justify-center">
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-center mb-1">Centre Régional de Fusion d'Informations Maritimes</CardTitle>

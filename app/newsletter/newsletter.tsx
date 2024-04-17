@@ -16,13 +16,13 @@ function Newsletter() {
   return (
     <div className='w-full h-[190px]  justify-center items-center py-[40px]'>
         
-        <div className='w-[1000px] h-[120px] border border-[#85268D] rounded-lg justify-center items-center ml-[35px]'>
-            <div className='bg-white w-[450px] h-[50px] justify-center items-center ml-[265px] mt-[-20px] py-[10px]'>
+        <div className='2xl:w-[1480px] lg:w-[1000px] h-[120px] border border-[#85268D] rounded-lg justify-center items-center ml-[35px]'>
+            <div className='bg-white w-[450px] h-[50px] justify-center items-center 2xl:ml-[520px] lg:ml-[265px] mt-[-20px] py-[10px]'>
                 <p className='text-black text-lg font-bold text-center'>
                     Vous abonner à notre Newsletter
                 </p>
             </div>
-            <div className="px-2 ml-[-310px] justify-center items-center drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] w-[1200px]">
+            <div className="px-2 2xl:ml-[-50px] lg:ml-[-310px] justify-center items-center drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] w-[1200px]">
                 <span onChange={handleChange} className=" ml-[410px] bg-white inline-flex h-[50px] w-full cursor-pointer items-center justify-center rounded-full px-2 py-2 text-sm font-medium text-slate-700 backdrop-blur-3xl">
                     <Input type="email" placeholder="Entrer votre addresse email..." className='bg-white w-full ml-[50px]' value={message}/>
                 </span>

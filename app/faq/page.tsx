@@ -51,7 +51,7 @@ function Faq() {
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Qu'est-ce que le C.R.F.I.M ?</p>
                         {/* Contenu */}
-                        <p className='text-sm w-[1000px]'>
+                        <p className='text-sm 2xl:w-[1480px] lg:w-[1000px]'>
                         Le CRFIM est une organisation régionale basée à Madagascar, spécialisée dans la surveillance, l'analyse et le partage d'informations cruciales pour la sécurité maritime dans la région.
                       
                         </p>
@@ -63,7 +63,7 @@ function Faq() {
                         {/* Titre */}
                         <p className='text-[20px] text-cyan-700 font-bold underline mb-2'>Comment je peux contacter le CRFIM ?</p>
                         {/* Contenu */}
-                        <div className='grid grid-cols-2 grid-flow-row'>
+                        <div className='grid grid-cols-2 grid-flow-row '>
                             <div className='mb-2'>
                                 <p className='text-blue-800 font-bold'>
                                     Par telephone :
@@ -73,7 +73,7 @@ function Faq() {
                                     +261 34 05 414 12
                                 </p>
                             </div>
-                            <div className='mb-2'>
+                            <div className='2xl:ml-[100px] mb-2'>
                                 <p className='text-blue-800 font-bold'>
                                     Par email :
                                 </p>
@@ -97,7 +97,7 @@ function Faq() {
                                         
                                       </button>
                                     </div>
-                                    <div className='ml-[-230px] mt-1 hover:text-blue-600'>
+                                    <div className='2xl:ml-[-350px] lg:ml-[-230px] mt-1 hover:text-blue-600'>
                                       RMIFCenter
                                     </div>
                                   </div>
@@ -113,18 +113,18 @@ function Faq() {
                                         
                                       </button>
                                     </div>
-                                    <div className='ml-[-230px] mt-1 hover:text-blue-600'>
+                                    <div className=' 2xl:ml-[-350px] lg:ml-[-230px] mt-1 hover:text-blue-600'>
                                       @rmifcenter-madagascar
                                     </div>
                                   </div>
                                 </Link>
                             </div>
-                            <div className='mb-2'>
+                            <div className='2xl:ml-[100px] mb-2'>
                                 <p className='text-blue-800 font-bold'>
                                     Adresse postale
                                 </p>
 
-                                <p className='text-sm w-[500px]'>
+                                <p className='text-sm 2xl:w-[800px] lg:w-[500px]'>
                                     Bâtiment CFIM, Rez de chaussé, Soanierana-Ankaditoho, 
                                     Antananarivo, Madagascar 
                                 </p>
@@ -280,10 +280,10 @@ function Faq() {
                             placeholder="Formuler une question..."
                             value={commentText}
                             onChange={handleCommentChange}
-                            className="ml-[50px] w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            className="ml-[50px] 2xl:w-[1400px] lg:w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                         />
                         <button
-                            type="submit"
+                            type="submit" 
                             className="bg-blue-500 text-white font-bold p-2 rounded-full hover:bg-blue-700"
                             onClick={handleCommentSubmit}
                         >

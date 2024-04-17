@@ -51,11 +51,11 @@ function Mase() {
             opts={{
                 align: "start",
             }}
-            className="w-full max-w-lg"
+            className="w-full lg:max-w-lg 2xl:max-w-2xl"
             >
             <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 2xl:basis-1/4">
                     <div className="">
                     <Card className="bg-transparent border-none">
                         <CardContent className="flex aspect-square items-center justify-center p-10 ">
