@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         
-        <div className="bg-white sm:bg-[url('/HomePage(2).png')] md:bg-[url('/HomePage(2).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
+        <div className="bg-white md:bg-[url('/HomePage(2).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
           <div className="bg-cover grid grid-cols-1">
               <div> 
                 <MenuBar/>
@@ -35,13 +35,13 @@ export default function Home() {
                 </div> 
               </div>
           </div>
-          <div className=" ml-[20px] bg-cover grid grid-cols-2 items-center justify-center">
+          <div className=" ml-[20px] bg-cover grid md:grid-cols-2 items-center justify-center">
             <div className="bg-cover grid grid-cols-1  items-center justify-center">
               < div className="ml-3 relative mt-[50px]">
                 <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px]">
                   <Slide/>
                 </div> 
-                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] ml-[55px]  mt-[-50px]">
+                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] md:ml-[15px] sm:ml-[120px] mt-[-50px]">
                   <Mase/>
                 </div>
                 {/* Reseaux Sociaux */}
@@ -114,16 +114,16 @@ export default function Home() {
                 Ressources
               </span>
             </div>
-            <div className="sm:ml-[30px] mt-[50px]">
+            <div className="md:ml-[30px] mt-[50px]">
               <Ressource/>
             </div>
-            <div className="sm:ml-[30px] mt-[80px]">
+            <div className="md:ml-[30px] mt-[80px]">
               <Partenaire/>
             </div>
-            <div className="sm:ml-[30px] mt-[50px]">
+            <div className="md:ml-[30px] mt-[50px]">
               <Vcr/>
             </div>
-            <div className="sm:ml-[30px] mt-[50px]">
+            <div className="md:ml-[30px] mt-[50px]">
               <Newsletter/>
             </div>
             <div className="mt-[30px]">

@@ -14,7 +14,7 @@ function Vcr() {
     "/VCR1.png"
   ];
   return (
-    <div className='sm:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] sm:h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] justify-center items-center py-[40px]'>
+    <div className='md:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] sm:h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] justify-center items-center py-[40px]'>
         <div className='grid grid-rows-1 grid-flow-col'>
           <div className='ml-[20px] mt-[-20px] hidden sm:block'>
           <ImagesSlider className=" drop-shadow flex h-[250px] 2xl:w-[650px] lg:w-[450px] justify-center items-center" images={images}>

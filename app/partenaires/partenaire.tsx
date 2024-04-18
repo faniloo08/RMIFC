@@ -5,7 +5,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix
 function Partenaire() {
   return (
     <div>
-        <div className='grid grid-rows-1 grid-flow-col 2xl:gap-6 lg:gap-4 sm:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] h-[125px] justify-center items-center py-[40px]'>
+        <div className='grid grid-rows-1 grid-flow-col 2xl:gap-6 lg:gap-4 md:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] h-[125px] justify-center items-center py-[40px]'>
             <div>
             <TooltipProvider>
                 <Tooltip>

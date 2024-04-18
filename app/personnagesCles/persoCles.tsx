@@ -34,7 +34,7 @@ function PersoCles() {
                   {QUOTES[currentQuoteIndex].text}
                   </motion.div>
               </div>
-              <div className="hidden sm:flex 2xl:ml-[550px] lg:ml-[320px] mt-[-150px] h-[50px]  items-center justify-center w-full">
+              <div className="hidden md:flex 2xl:ml-[550px] lg:ml-[320px] mt-[-150px] h-[50px]  items-center justify-center w-full">
                   <CardStack items={CARDS} />
               </div> 
           </div>

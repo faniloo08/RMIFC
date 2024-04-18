@@ -16,7 +16,7 @@ function Newsletter() {
   return (
     <div className='w-full h-[190px]  justify-center items-center py-[40px]'>
         
-        <div className='2xl:w-[1480px] lg:w-[1000px] h-[120px] border border-[#85268D] rounded-lg justify-center items-center sm:ml-[35px]'>
+        <div className='2xl:w-[1480px] lg:w-[1000px] h-[120px] border border-[#85268D] rounded-lg justify-center items-center md:ml-[35px]'>
             <div className='bg-white sm:w-[450px] h-[50px] justify-center items-center 2xl:ml-[520px] lg:ml-[265px] mt-[-20px] py-[10px]'>
                 <p className='text-black text-xs md:text-lg font-bold text-center'>
                     Vous abonner à notre Newsletter
