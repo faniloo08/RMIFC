@@ -25,7 +25,7 @@ function PersoCles() {
               {/*1er personnage*/}
               <div>
                   <motion.div
-                  className="text-md 2xl:w-[950px] lg:w-[500px] font-bold italic"
+                  className="text-xs md:text-md 2xl:w-[950px] lg:w-[500px] font-bold italic"
                   key={currentQuoteIndex}
                   initial={{ opacity: 0.0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ function PersoCles() {
                   {QUOTES[currentQuoteIndex].text}
                   </motion.div>
               </div>
-              <div className="2xl:ml-[550px] lg:ml-[320px] mt-[-150px] h-[50px] flex items-center justify-center w-full">
+              <div className="hidden sm:flex 2xl:ml-[550px] lg:ml-[320px] mt-[-150px] h-[50px]  items-center justify-center w-full">
                   <CardStack items={CARDS} />
               </div> 
           </div>

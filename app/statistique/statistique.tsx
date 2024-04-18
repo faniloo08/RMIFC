@@ -3,7 +3,7 @@ import React from 'react'
 function Statistique() {
   return (
     <div>
-      <p className='mb-[30px] text-slate-950 font-bold text-[18px] lg:w-[400px] 2xl:w-[600px]'>Quelques statistiques durant l'année en cours</p>
+      <p className='mb-[30px] 2xl:mb-[50px]  text-slate-950 font-bold text-[18px] lg:w-[400px] 2xl:w-[600px]'>Quelques statistiques durant l'année en cours</p>
       <div className='grid grid-rows-2 grid-flow-col gap-3'>
         <div>
           <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

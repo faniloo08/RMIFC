@@ -34,7 +34,7 @@ function Recherche({ placeholder }: { placeholder: string }) {
   return (
     <div className='w-full h-[190px] bg-gradient-to-r from-[#ADD9D4] to-[#999797] justify-center items-center py-[40px]'>
         
-        <div className='lg:w-[1000px] 2xl:w-[1480px] h-[120px] border border-white rounded-lg justify-center items-center ml-[70px] py-3'>
+        <div className='lg:w-[1000px] 2xl:w-[1480px] h-[120px] border border-white rounded-lg justify-center items-center lg:ml-[70px] py-3'>
             <div className=''>
                 <p className='text-white text-lg font-bold text-center '>
                     Rechercher des articles

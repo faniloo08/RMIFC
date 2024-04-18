@@ -4,7 +4,7 @@ import Link from 'next/link'
 function Ressource() {
   return (
     <div>
-        <div className='ml-[40px] 2xl:w-[1480px] lg:w-[1000px] 2xl:h-[700px] lg:h-[600px] bg-gradient-to-r from-[#5DB4D9] to-[#181C70] justify-center items-center py-[10px]'>
+        <div className='sm:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] 2xl:h-[700px] lg:h-[600px] bg-gradient-to-r from-[#5DB4D9] to-[#181C70] justify-center items-center py-[10px]'>
             <h2 className='font-bold text-lg text-center text-white'>
               Des données fiables et à jour
             </h2>

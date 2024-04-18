@@ -112,16 +112,16 @@ function Contenus(
                 <div className="flex items-center justify-center"> 
                     <NavBar/>
                 </div>
-                <div className='grid grid-cols-3 grid-flow-row'>
+                <div className='grid md:grid-cols-3 grid-flow-row'>
                     {/* Article */}
                     <div className='col-span-2'>
-                        <div className="ml-[50px] mt-[30px] flex ">
-                            <p className='text-[40px] 2xl:w-[1000px] lg:w-[630px] md:w-[300px] font-bold'>
+                        <div className=" md:ml-[50px] mt-[30px] flex ">
+                            <p className='text-[25px] md:text-[40px] 2xl:w-[1000px] lg:w-[630px] md:w-[300px] font-bold'>
                                 {/* Titre de l'article cliqué */}
                                 {grosTitre}
                             </p>
                         </div>
-                        <div className="grid grid-cols-2 ml-[50px] space-x-[-220px]">
+                        <div className="grid grid-cols-2  md:ml-[50px] space-x-[-220px]">
                             <div >
                                 {/* Catégorie */}
                                 <Link href="/contenu/tous">
@@ -130,10 +130,10 @@ function Contenus(
                             </div>
                             <div>
                                 {/* Date */}
-                                <p className='mt-[5px] font-light text-[13px]'>{date}</p>
+                                <p className='ml-[250px] sm:ml-[0px] mt-[5px] font-light text-[13px]'>{date}</p>
                             </div>
                         </div>
-                        <div className='ml-[50px] mt-[30px]'>
+                        <div className=' md:ml-[50px] mt-[30px]'>
                             {/* Cover */}
                             <img src="/A1.jpg" alt="" width={600} height={350} className='2xl:w-[90%]'/>
                             {/* <p className='mt-1 text-xs mb-1 text-center w-[300px]'>
@@ -141,7 +141,7 @@ function Contenus(
                             </p> */}
                         </div>
                         <div className="items-center justify-center">
-                            <div className='mt-[30px] ml-[50px] 2xl:w-[920px] lg:w-[600px] md:w-[300px]'>
+                            <div className='mt-[30px] text-xs md:text-md md:ml-[50px] 2xl:w-[920px] lg:w-[600px] md:w-[300px]'>
                                 {/* Article */}
                                 <p>
                                     <Suspense fallback={<Loading />}>
@@ -154,7 +154,7 @@ function Contenus(
                         
                         </div>
                     </div>
-                    <div className='mt-[50px] mr-[50px]'>
+                    <div className='hidden md:block mt-[50px] mr-[50px]'>
                         <img src="/Piraterie.jpg" alt="" width={450} height={250} className='hover:scale-110'/>
                         {/* Texte */}
                         <div className='mt-[30px] lg:w-[330px] md:w-[150px] text-[15px]'>
@@ -206,7 +206,7 @@ function Contenus(
                     </div>
                 </div>
                 
-                <div className='ml-[50px] mt-[30px]'>
+                <div className=' md:ml-[50px] mt-[30px]'>
                         {/*Auteur*/}
                         <span className="bg-[url('/Auteur2.png')] inline-flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white">
                         </span>
@@ -234,8 +234,8 @@ function Contenus(
                   </button>
                 </div>
                 {/* Photos liées à l’article */}
-                <p className='font-bold text-lg mt-[50px] ml-[50px]'>Galerie d'images</p>
-                <div className="2xl:mt-[50px] lg:mt-[30px] 2xl:ml-[180px] lg:ml-[50px] grid grid-cols-3 gap-1 items-center justify-center">
+                <p className='font-bold text-lg mt-[50px]  md:ml-[50px]'>Galerie d'images</p>
+                <div className="2xl:mt-[50px] lg:mt-[30px] 2xl:ml-[180px] lg: md:ml-[50px] grid md:grid-cols-3 gap-1 items-center justify-center">
                     <div>
                         {/* Photo1 */}
                         <img src="/CD3(1).jpg" alt="" width={300} height={250} className='hover:scale-110'/>
@@ -260,7 +260,7 @@ function Contenus(
                 </div>
 
                 {/* Commentaires */}
-                <div className="ml-[50px] grid grid-row-3 gap-1 ">
+                <div className=" md:ml-[50px] grid grid-row-3 gap-1 ">
                     <p className='font-bold text-lg mt-[90px] mb-[50px]'>Commentaires</p>
                     {displayedComments.length > 0 && (
                     <div className="w-full">
@@ -290,7 +290,7 @@ function Contenus(
                                         </button>
                                     </div>
                                 </div>
-                                <div className='mt-[20px] ml-[50px]'>
+                                <div className='mt-[20px]  md:ml-[50px]'>
                                     {/*Photo de Profil*/}
                                     <span className="bg-[url('/rmifc.png')] inline-flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white">
                                     </span>
@@ -327,7 +327,7 @@ function Contenus(
                             placeholder="Votre Commentaire"
                             value={commentText}
                             onChange={handleCommentChange}
-                            className="ml-[50px] 2xl:w-[1400px] lg:w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            className=" md:ml-[50px] 2xl:w-[1400px] lg:w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                         />
                         <button
                             type="submit"

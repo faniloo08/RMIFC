@@ -43,7 +43,7 @@ function Mase() {
 
   return (
     <div>
-        <div className="text-white mt-[-60px] ml-[55px] font-bold mb-2 shadow-sm">
+        <div className="text-white mt-[-60px] ml-[55px] font-bold mb-2 shadow-sm lg:text-md text-xs">
             Programme MASE
         </div>
         <div>
@@ -51,7 +51,7 @@ function Mase() {
             opts={{
                 align: "start",
             }}
-            className="w-full lg:max-w-lg 2xl:max-w-2xl"
+            className="w-1/2 lg:max-w-lg 2xl:max-w-2xl"
             >
             <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (

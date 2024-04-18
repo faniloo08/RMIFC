@@ -5,7 +5,7 @@ import Link from 'next/link';
 function Footer() {
   return (
     <div className='w-full h-[308px] bg-gradient-to-r from-[#163583] to-[#4FFFAA] justify-center items-center py-[30px]'>
-      <div className="relative ml-[100px] grid grid-rows-2 grid-flow-col gap-1">
+      <div className="relative sm:ml-[100px] grid grid-rows-2 grid-flow-col gap-1">
         <div className='col-start-1 col-end-3 mb-[-20px]'>
           <Image
               className="dark-logo"
@@ -32,79 +32,79 @@ function Footer() {
       <div className="2xl:ml-[120px] lg:ml-[60px] mt-[35px] grid grid-rows-1 grid-flow-col">
         <div className='grid grid-rows-4 grid-flow-col'>
           <div>
-            <p className='text-white text-md font-bold mt-[-5px] relative mb-[5px]'>A propos</p>
+            <p className='text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[5px]'>A propos</p>
           </div>
           <div>
             <Link href="/historique">
-              <p className='text-sm text-white underline hover:text-blue-500'>Historique</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500'>Historique</p>
             </Link>
           </div>
           <div>
             <Link href="/historique">
-              <p className='text-sm text-white underline hover:text-blue-500'>Missions et Valeurs</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500'>Missions et Valeurs</p>
             </Link>
           </div>
           <div>
             <Link href="/historique">
-              <p className='text-sm text-white underline hover:text-blue-500'>Objectifs</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500'>Objectifs</p>
             </Link>
           </div>
         </div>
         <div>
           <div>
-            <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Mentions Légales</p>
+            <p className='text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]'>Mentions Légales</p>
           </div>
           <div>
             <Link href="/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Informations sur les droits d'auteurs</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'>Informations sur les droits d'auteurs</p>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Politiques de Confidentialité</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'>Politiques de Confidentialité</p>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Conditions d'utilisation</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'>Conditions d'utilisation</p>
             </Link>
           </div>
         </div>
         <div>
           <div>
-            <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Contact</p>
+            <p className='text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]'>Contact</p>
           </div>
           <div>
-            <p className='text-sm text-white w-[200px]'>Ankaditoho, Soanierana, Antananarivo</p>
+            <p className='text-xs sm:text-sm text-white w-[200px]'>Ankaditoho, Soanierana, Antananarivo</p>
           </div>
           <div>
             <Link href="/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'> +261 34 05 414 12</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'> +261 34 05 414 12</p>
             </Link>
           </div>
           <div>
             <Link href="https://mail.google.com/mail/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>assistante.communication@crfimmadagascar.org</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'>assistante.communication@crfimmadagascar.org</p>
             </Link>
           </div>
         </div>
         <div>
           <div>
-            <p className='text-white text-md font-bold mt-[-5px] relative mb-[7px]'>Liens</p>
+            <p className='text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]'>Liens</p>
           </div>
           <div>
             <Link href="https://cfimmadagascar.org/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>CFIM</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'>CFIM</p>
             </Link>
           </div>
           <div>
             <Link href="https://www.meteomadagascar.mg/meteo-madagascar/a-propos-de-meteo/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Météorologie</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'>Météorologie</p>
             </Link>
           </div>
           <div>
             <Link href="https://www.primature.gov.mg/index.php/primature/organismes-rattaches/">
-              <p className='text-sm text-white underline hover:text-blue-500 mb-[2px]'>Primature Malgache</p>
+              <p className='text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]'>Primature Malgache</p>
             </Link>
           </div>
         </div>

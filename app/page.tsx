@@ -41,9 +41,11 @@ export default function Home() {
                 <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px]">
                   <Slide/>
                 </div> 
-                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] mt-[-50px]">
+                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] ml-[55px]  mt-[-50px]">
                   <Mase/>
                 </div>
+                {/* Reseaux Sociaux */}
+                {/* fb */}
                 <div className=" relative ml-[30px] mt-[50px]">
                   <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                     <Link href="https://www.facebook.com/RMIFCenter">
@@ -53,6 +55,7 @@ export default function Home() {
                     </Link>
                   </button>
                 </div>
+                {/*X*/}
                 <div className=" relative ml-[125px] mt-[-38px]">
                   <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                     <Link href="/">
@@ -64,23 +67,25 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" relative hidden sm:hidden md:block md:ml-[170px] lg:ml-[165px] 2xl:ml-[180px] md:mt-[0px] lg:mt-[-220px] 2xl:mt-[-320px]">
-                <p className="text-sky-950 font-bold md:text-[20px] text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
-                <PresText/>
-            </div>
-            <div className="relative hidden sm:hidden md:block 2xl:ml-[980px] lg:ml-[725px] lg:mt-[-170px] 2xl:mt-[-350px]">
-              <Statistique/>
+            <div className=" relative hidden sm:hidden md:block md:ml-[170px] lg:ml-[165px] 2xl:ml-[180px] md:mt-[0px] lg:mt-[10px] 2xl:mt-[-10px]">
+              <div>
+                  <p className="text-sky-950 font-bold md:text-[20px] text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
+                  <PresText/>
+              </div>
+              <div className="xl:mt-[50px] 2xl:mt-[150px] ">
+                <Statistique/>
+              </div>
             </div>
           </div>
-          <div className="2xl:mt-[10px] lg:mt-[20px] bg-white bg-center items-center justify-center">
-            <div className="grid grid-flow-row grid-cols-2 lg:space-x-[350px] 2xl:space-x-[600px]">
+          <div className="bg-white bg-center items-center justify-center">
+            <div className="2xl:mt-[50px] lg:mt-[50px] grid grid-flow-row grif-cols-1 lg:grid-cols-2 lg:space-x-[350px] 2xl:space-x-[600px]">
               <div className="ml-[28px] bg-[url('/fleche.png')] w-[228px] h-[52px] ">
                 <span className="inline-flex justify-center items-center mt-2 ml-4 font-bold text-[#092933]">
                   Dernières Actualités
                 </span>
               </div>
               <div>
-                <Link href="/contenu/tous" className='text-cyan-400 underline text-sm 2xl:ml-[1400px] lg:ml-[920px] mt-[-150px]' >
+                <Link href="/contenu/tous" className='text-cyan-400 underline text-sm 2xl:ml-[1400px] lg:ml-[920px] ml-[50px] mt-[-150px]' >
                     voir toutes les actualités
                 </Link>
               </div>
@@ -109,16 +114,16 @@ export default function Home() {
                 Ressources
               </span>
             </div>
-            <div className="ml-[30px] mt-[50px]">
+            <div className="sm:ml-[30px] mt-[50px]">
               <Ressource/>
             </div>
-            <div className="ml-[30px] mt-[80px]">
+            <div className="sm:ml-[30px] mt-[80px]">
               <Partenaire/>
             </div>
-            <div className="ml-[30px] mt-[50px]">
+            <div className="sm:ml-[30px] mt-[50px]">
               <Vcr/>
             </div>
-            <div className="ml-[30px] mt-[50px]">
+            <div className="sm:ml-[30px] mt-[50px]">
               <Newsletter/>
             </div>
             <div className="mt-[30px]">

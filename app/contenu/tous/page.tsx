@@ -120,22 +120,22 @@ function Contenus() {
                 <div className="flex items-center justify-center"> 
                     <NavBar/>
                 </div>
-                <div className='grid grid-cols-3 grid-flow-row'>
+                <div className='grid md:grid-cols-3 grid-flow-row'>
                     {/* Article1 */}
                     <div className='col-span-2'>
                         <div className="ml-[50px] mt-[30px] flex ">
-                            <p className='text-[40px] lg:w-[630px] md:w-[300px] font-bold'>
+                            <p className='md:text-[40px] lg:w-[630px] md:w-[300px] font-bold'>
                                 {/* Titre de l'Article1 cliqué */}
                                 Tous les articles
                             </p>
                         </div>
                         {/* 1 */}
-                        <div className='ml-[50px] mt-[30px]'>
-                            <img src='/Auxilum.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110"/>
-                            <div className='relative ml-[380px] mt-[-190px]'>
+                        <div className='sm:ml-[50px] ml-[5px] mt-[30px]'>
+                            <img src='/Auxilum.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110 sm:w-[50%] md:w-[90%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] w-[50%]"/>
+                            <div className='relative md:ml-[380px] md:mt-[-190px]'>
                                 <button className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri1}</button>
                             </div>
-                            <div className='ml-[380px]' >
+                            <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
                                     <Link href="/contenu">
@@ -147,7 +147,7 @@ function Contenus() {
                                     Du 20 au 26 avril 2023, les Centres Régionaux de Fusion de l’Information Maritime (CRFIM) et de Coordination des Opérations ....
                                 </p>
                             </div>
-                            <div className='ml-[380px]'>
+                            <div className='md:ml-[380px]'>
                                 {/*Auteur*/}
                                 <span className="bg-[url('/Auteur1.png')] inline-flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white">
                                 </span>
@@ -165,12 +165,12 @@ function Contenus() {
                             </div>
                         </div>
                         {/* 2 */}
-                        <div className='ml-[50px] mt-[30px]'>
-                            <img src='/Visite.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110"/>
-                            <div className='relative ml-[380px] mt-[-190px]'>
+                        <div className='sm:ml-[50px] ml-[5px] mt-[30px]'>
+                            <img src='/Visite.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110 sm:w-[50%] md:w-[90%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] w-[50%]"/>
+                            <div className='relative md:ml-[380px] md:mt-[-190px]'>
                                 <button className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri2}</button>
                             </div>
-                            <div className='ml-[380px]' >
+                            <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
                                     <Link href="/contenu">
@@ -182,7 +182,7 @@ function Contenus() {
                                     Les participants du « forum du réseau des procureurs » a effectué une visite au sein du Centre Régional de fusion d’....
                                 </p>
                             </div>
-                            <div className='ml-[380px]'>
+                            <div className='md:ml-[380px]'>
                             {/*Auteur*/}
                                 <span className="bg-[url('/Auteur1.png')] inline-flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white">
                                 </span>
@@ -200,12 +200,12 @@ function Contenus() {
                             </div>
                         </div>
                         {/* 3 */}
-                        <div className='ml-[50px] mt-[30px]'>
-                            <img src='/FBI.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110"/>
-                            <div className='relative ml-[380px] mt-[-190px]'>
+                        <div className='sm:ml-[50px] ml-[5px] mt-[30px]'>
+                            <img src='/FBI.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110 sm:w-[50%] md:w-[90%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] w-[50%]"/>
+                            <div className='relative md:ml-[380px] md:mt-[-190px]'>
                                 <button className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri3}</button>
                             </div>
-                            <div className='ml-[380px]' >
+                            <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
                                     <Link href="/contenu">
@@ -217,7 +217,7 @@ function Contenus() {
                                     Entrevue avec l'équipe du CRFIM et la délégation du FBI\nLa délégation de l’ambassade des États-Unis située à Antananarivo et à Pretoria ....
                                 </p>
                             </div>
-                            <div className='ml-[380px]'>
+                            <div className='md:ml-[380px]'>
                                 {/*Auteur*/}
                                 <span className="bg-[url('/Auteur1.png')] inline-flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white">
                                 </span>
@@ -235,12 +235,12 @@ function Contenus() {
                             </div>
                         </div>
                         {/* 4 */}
-                        <div className='ml-[50px] mt-[30px]'>
-                            <img src='/Cutlass.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110"/>
-                            <div className='relative ml-[380px] mt-[-190px]'>
+                        <div className='sm:ml-[50px] ml-[5px] mt-[30px]'>
+                            <img src='/Cutlass.png' width={350} height={200} className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110 sm:w-[50%] md:w-[90%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] w-[50%]"/>
+                            <div className='relative md:ml-[380px] md:mt-[-190px]'>
                                 <button className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri4}</button>
                             </div>
-                            <div className='ml-[380px]' >
+                            <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
                                     <Link href="/contenu">
@@ -252,7 +252,7 @@ function Contenus() {
                                     Comme chaque année, le CRFIM prend part à l'exercice multilatéral #CUTLASSEXPRESS organisé par l’US Naval Force ....
                                 </p>
                             </div>
-                            <div className='ml-[380px]'>
+                            <div className='md:ml-[380px]'>
                                 {/*Auteur*/}
                                 <span className="bg-[url('/Auteur1.png')] inline-flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white">
                                 </span>
@@ -269,11 +269,11 @@ function Contenus() {
                                 </button>
                             </div>
                         </div>
-                        <div className='ml-[50px] mt-[30px]'>
+                        <div className='ml-[-300px] md:ml-[50px] mt-[30px]'>
                             <PaginationDemo />
                         </div>
                     </div>
-                    <div className='mt-[50px] mr-[50px]'>
+                    <div className='hidden md:block mt-[50px] mr-[50px]'>
                         <img src="/Piraterie.jpg" alt="" width={450} height={250} className='hover:scale-110'/>
                         {/* Texte */}
                         <div className='mt-[30px] lg:w-[330px] md:w-[150px] text-[15px]'>
@@ -332,14 +332,14 @@ function Contenus() {
 
                 {/* Commentaires */}
                 <div className="ml-[50px] grid grid-row-3 gap-1 ">
-                    <p className='font-bold text-lg mt-[90px] '>Rechercher des Article1s</p>
+                    <p className='font-bold text-lg mt-[90px] '>Rechercher des Articles</p>
                     <div className="flex items-center" cmdk-input-wrapper="">
                         <input
                             type="text"
-                            placeholder="Votre Commentaire"
+                            placeholder="Taper ici..."
                             value={commentText}
                             onChange={handleCommentChange}
-                            className="w-[1050px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                            className="lg:w-[1050px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                         />
                         <Search className="ml-[-50px] mr-2 h-4 w-4 shrink-0 opacity-50" />
                         

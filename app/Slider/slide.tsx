@@ -67,15 +67,15 @@ export default function Slide() {
         {/* <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           The hero section slideshow <br /> nobody asked for
         </motion.p> */}
-        <div className="md:w-[100px] lg:w-[210px] 2xl:w-[300px] px-4 py-2 backdrop-blur-sm border bg-gradient-to-r text-white ml-[300px] mt-[-50px] text-center rounded-lg relative"style={{}}>
-          <p className="lg:text-xs md:text-[6px]">
+        <div className="w-[100px] md:w-[100px] lg:w-[210px] 2xl:w-[300px] px-2 lg:px-4 py-1 lg:py-2 backdrop-blur-sm border bg-gradient-to-r text-white lg:ml-[300px] 2xl:ml-[450px] lg:mt-[-50px] ml-[80px] text-center rounded-lg relative"style={{}}>
+          <p className="lg:text-xs md:text-[10px] text-[6px]">
           Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays  et organisations internationales
           </p>
           <Dialog>
               <DialogTrigger asChild>
-                <button className="hover:bg-slate-500 px-2 py-2 backdrop-blur-sm border bg-gradient-to-r from-cyan-900 to-sky-950  border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+                <button className="hover:bg-slate-500 lg:px-2 lg:py-2 py-[2px] px-[2px] backdrop-blur-sm border bg-gradient-to-r from-cyan-900 to-sky-950  border-emerald-500/20 text-white mx-auto text-center item-center justify-center rounded-[8px] lg:rounded-full relative mt-4">
                   <Link href="/">
-                    <span className="2xl:text-md lg:text-sm md:text-xs">Nous contacter</span>
+                    <span className="text-[6px] 2xl:text-md lg:text-sm md:text-xs">Nous contacter</span>
                   </Link>
                   <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-teal-900 to-sky-950" />
                 </button>
