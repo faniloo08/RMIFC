@@ -1,7 +1,7 @@
 "use client"
 
-//import {DataToTable} from '../../../lib/api';
-import {Donnees} from '../../../lib/donnes'; //récupération des données.
+import {DataToTable} from '../../../lib/api';
+//import {Donnees} from '../../../lib/donnes'; //récupération des données.
 // import {Donnees1} from '../../lib/tempdesc'; //description
 // import {Donnees2} from '../../lib/tempdate'; //date
 // import {Donnees3} from '../../lib/tempcont'; //contenu
@@ -34,32 +34,54 @@ function Contenus(
     useEffect(() => {
         const fetchDonnees = async () => {
             // Appelez la fonction Donnees pour obtenir les données
-            const titres  = await Donnees();
-
-            //Exemple de titre  
-            const grosTitre  = titres[4].titre;
-            console.log(grosTitre);
-            setGrosTitre(grosTitre);
-
-            //Exemple de description
-            const descri = titres[4].description;
-            console.log(descri);
-            setDescri(descri);
-
-            //Exemple de date
-            const date = titres[4].date
-            console.log(date);
-            setDate(date);
+            const titres  = await DataToTable();
+            // const slug = titres[4].slug;
+            // console.log(slug);
+            // setSlug(slug); 
+            var slugs = [];
+            //Tirons tous les slugs : 
             
-            //Exemple de contenu
-            const article = titres[4].article;
-            console.log(article);
-            setArticle(article);
+            for (var i = 1; i < titres.length; i++) {
+                var slugart = titres[i].slug; 
+                //setSlugart(slugart);
+                slugs.push(slugart);
+            }
+            //console.log("slugs des articles : ", slugs);
 
-            //Exemple de slug
-            const slug = titres[4].slug;
-            console.log(slug);
-            setSlug(slug);
+            //Testons à quel slug correspond les urlparams
+            for (var i = 0; i < slugs.length; i++) {
+                if (query == slugs[i]) {
+                    console.log("le slug du lien correspond au ",i+1,"ème slug");
+
+                    //Fetcher les données correspondants
+
+                    //Exemple de titre  
+                    const grosTitre  = titres[i+1].titre;
+                    console.log(grosTitre);
+                    setGrosTitre(grosTitre);
+
+                    //Exemple de description
+                    const descri = titres[i+1].description;
+                    //console.log(descri);
+                    setDescri(descri);
+
+                    //Exemple de date
+                    const date = titres[i+1].date
+                    //console.log(date);
+                    setDate(date);
+
+                    //Exemple de contenu
+                    const article = titres[i+1].article;
+                    //console.log(article);
+                    setArticle(article);
+
+
+                    //Forcer l'arret de la boucle
+                    break;
+                }
+            }
+
+           
         };
         fetchDonnees();
     }, []);
@@ -67,16 +89,17 @@ function Contenus(
     const [descri, setDescri] = useState('');
     const [date, setDate] = useState('');
     const [article, setArticle] = useState('');
-    const [slug, setSlug] = useState('');
+    //const [slugart, setSlugart] = useState('');
 
     //Test slug
     
-    const pathname = usePathname();
-    const { replace } = useRouter()
-    const params = new URLSearchParams(searchParams);
-    params.set('page', '1');
-    params.set('query', slug);
-    replace(`${pathname}?${params.toString()}`)
+    // const pathname = usePathname();
+    // const { replace } = useRouter()
+    // const params = new URLSearchParams(searchParams);
+    // params.set('page', '1');
+    // params.set('query', slug);
+    // replace(`${pathname}?${params.toString()}`);
+
     //User interactions
     const [liked, setLiked] = useState(false);
     const [liked1, setLiked1] = useState(false);
@@ -141,7 +164,7 @@ function Contenus(
                             </p> */}
                         </div>
                         <div className="items-center justify-center">
-                            <div className='mt-[30px] text-xs md:text-md md:ml-[50px] 2xl:w-[920px] lg:w-[600px] md:w-[300px]'>
+                            <div className='mt-[30px] text-xs lg:text-[15px] md:text-md md:ml-[50px] 2xl:w-[920px] lg:w-[600px] md:w-[300px]'>
                                 {/* Article */}
                                 <p>
                                     <Suspense fallback={<Loading />}>

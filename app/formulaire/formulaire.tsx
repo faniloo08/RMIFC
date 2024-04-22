@@ -11,19 +11,48 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card2";
+import {sendInfo} from '@/lib/sendInfo';
+
 function Formulaire() {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        alert("Form submitted");
-        e.currentTarget.submit();
-      };
-      
-      const [message, setMessage] = useState('');
+  const [nom, setNom] = useState('');
+  const [prenom, setPrenom] = useState('');
+  const [email, setEmail] = useState('');
+  const [mdp, setMdp] = useState('');
+  const [fonction, setFonction] = useState('');
+  const [message, setMessage] = useState('');
+  const [Photos, setPhotos] = useState(null);
 
-      const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setMessage(event.target.value);
-      };
-
+  const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      try {
+        if (!nom) {
+          alert("Veuillez saisir votre nom d'utilisateur avant d'envoyer le formulaire.");
+          return; // Arrête l'exécution de la fonction
+        }
+        await sendInfo(nom, prenom, email, mdp, fonction, message, Photos);
+        setNom('');
+        setPrenom('');
+        setEmail('');
+        setMdp('');
+        setFonction('');
+        setMessage('');
+        setPhotos(null);
+        alert("Message Sent");
+        window.location.reload();
+      } catch (error) {
+          console.error('An error occurred while sending the message:', error);
+          alert("Message Not sent");
+          window.location.reload();
+      }
+  };
+  // Gérer le changement de fichier sélectionné
+  const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]; // Récupérer le premier fichier sélectionné
+    setPhotos(file); // Mettre à jour le state avec le fichier sélectionné
+  };
+    // const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    //   setMessage(event.target.value);
+    // };
       return (
         <Card className='relative'>
           <CardHeader>
@@ -32,47 +61,54 @@ function Formulaire() {
           </CardHeader>
           <CardContent>
             <form className="my-2" onSubmit={handleSubmit}>
-              <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-                <LabelInputContainer>
-                  <Label htmlFor="firstname">Nom</Label>
-                  <Input id="firstname" placeholder="Tyler" type="text" />
-                </LabelInputContainer>
-                <LabelInputContainer>
-                  <Label htmlFor="lastname">Prenom</Label>
-                  <Input id="lastname" placeholder="Durden" type="text" />
-                </LabelInputContainer>
+              <div className='grid grid-cols-2 grid-flow-row '>
+                <div className='mr-1'>
+                  {/* Nom à fonction */}
+                  <div className="grid grid-cols-2 grid-flow-row space-y-2 ">
+                    <div className='mr-1'>
+                      <LabelInputContainer>
+                        <Label htmlFor="nom">Nom</Label>
+                        <Input id="firstname" placeholder="Tyler" type="text" value={nom} onChange={(e) => setNom(e.target.value)}/>
+                      </LabelInputContainer>
+                    </div>
+                    <div >
+                      <LabelInputContainer className='mt-[-12px]'>
+                        <Label htmlFor="nom">Prenom</Label>
+                        <Input id="prenom" placeholder="Durden" type="text" value={prenom} onChange={(e) => setPrenom(e.target.value)} />
+                      </LabelInputContainer>
+                    </div>
+                  </div>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="email">Adresse email </Label>
+                    <Input id="email" placeholder="projectmayhem@fc.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="mdp">Mot de Passe</Label>
+                    <Input id="mdp" placeholder="••••••••" type="password" value={mdp} onChange={(e) => setMdp(e.target.value)} />
+                  </LabelInputContainer>
+                </div>
+                <div>
+                  {/* fonction à message */}
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="fonction">Votre fonction</Label>
+                    <Input
+                      id="fonction"
+                      placeholder="Personnel du ministère de la pêche"
+                      type="text"
+                      value={fonction} onChange={(e) => setFonction(e.target.value)}
+                    />
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="message">Votre Message</Label>
+                    <Input id="message" type="textarea" placeholder='Votre message ici...' value={message} onChange={(e) => setMessage(e.target.value)}/>
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-3">
+                    <Label htmlFor="Photos">Importer une photo</Label>
+                    <Input id="Photos" type="file" accept="image/*" onChange={handleImageChange} />
+                  </LabelInputContainer>
+                </div>
               </div>
-              <LabelInputContainer className="mb-4">
-                <Label htmlFor="email">Adresse email </Label>
-                <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-              </LabelInputContainer>
-              <LabelInputContainer className="mb-4">
-                <Label htmlFor="password">Mot de Passe</Label>
-                <Input id="password" placeholder="••••••••" type="password" />
-              </LabelInputContainer>
-              <LabelInputContainer className="mb-4">
-                <Label htmlFor="twitterpassword">Votre fonction</Label>
-                <Input
-                  id="fonction"
-                  placeholder="Personnel du ministère de la pêche"
-                  type="text"
-                />
-              </LabelInputContainer>
-              <LabelInputContainer className="mb-4">
-                <Label htmlFor="twitterpassword">Votre Message</Label>
-                {/* <Input
-                  id="fonction"
-                  placeholder="..."
-                  type="texta"
-                /> */}
-                <Input id="message" type="text" placeholder='Votre message ici...'/>
-                
-              </LabelInputContainer>
-              <LabelInputContainer className="mb-3">
-                <Label htmlFor="picture">Importer une photo</Label>
-                <Input id="picture" type="file"/>
-              </LabelInputContainer>
-              <div className="justify-center items-center ml-[185px]">
+              <div className="justify-center items-center ml-[350px]">
                 <button
                   className=" relative bg-gradient-to-r from-cyan-900 to-sky-950 text-white rounded-lg p-1"
                   type="submit"
@@ -81,7 +117,7 @@ function Formulaire() {
                   <BottomGradient />
                 </button>
               </div>
-              <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+              <div/>
             </form>
           </CardContent>
           </Card>

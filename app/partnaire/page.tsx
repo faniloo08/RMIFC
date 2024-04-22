@@ -127,7 +127,7 @@ function Partenaires() {
                         <img src="/UE.png" alt="" width={200} height={150}/>
                     </div>
                 </div>
-                <p className='text-[20px] text-cyan-700 font-bold underline mb-2 mt-[30px] ml-[50px] w-[600px]'>Les pays signatiares</p>
+                <p className='text-[20px] text-cyan-700 font-bold underline mb-2 mt-[30px] ml-[50px] w-[600px]'>Les pays signataires</p>
                 <div className="mt-[30px] 2xl:ml-[100px] lg:ml-[50px] grid grid-cols-7 items-center justify-center">
                     <div>
                         {/* Photo1 */}

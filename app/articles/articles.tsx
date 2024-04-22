@@ -52,10 +52,18 @@ function Articles() {
             console.log(Date3);
             setDate3(Date3);
 
-            //Exemple de slug
-            const slug = titres[1].slug
-            console.log(slug);
-            setSlug(slug);
+            //Exemples de slug
+            const Slug1 = titres[1].slug
+            console.log(Slug1);
+            setSlug1(Slug1);
+
+            const Slug2 = titres[2].slug
+            console.log(Slug2);
+            setSlug2(Slug2);
+
+            const Slug3 = titres[3].slug
+            console.log(Slug3);
+            setSlug3(Slug3);
         };
         fetchDonnees();
     }, []);
@@ -68,7 +76,9 @@ function Articles() {
     const [Date1, setDate1] = useState('');
     const [Date2, setDate2] = useState('');
     const [Date3, setDate3] = useState('');
-    const  [slug, setSlug] = useState('');
+    const [Slug1, setSlug1] = useState('');
+    const [Slug2, setSlug2] = useState('');
+    const [Slug3, setSlug3] = useState('');
     // const [Article1, setArticle1] = useState([]);
     // const [Article2, setArticle2] = useState([]);
     // const [Article3, setArticle3] = useState([]);
@@ -95,14 +105,15 @@ function Articles() {
 
     const handleClick = () => {
         // Modifier l'URL avec un query spécifique lorsque le lien est cliqué
-        const searchParams = useSearchParams();
-        const pathname = usePathname();
-        const { replace } = useRouter()
-        const params = new URLSearchParams(searchParams);
-        params.set('page', '1');
-        params.set('query', slug);
-        replace(`${pathname}?${params.toString()}`)
+        // const searchParams = useSearchParams();
+        // const pathname = usePathname();
+        // const { replace } = useRouter()
+        // const params = new URLSearchParams(searchParams);
+        // params.set('page', '1');
+        // params.set('query', Slug1);
+        // replace(`${pathname}?${params.toString()}`)
     };
+
   return (
     <div>
          <ul className="grid gap-3 p-2  lg:grid-cols-[.75fr_1fr]">
@@ -124,7 +135,7 @@ function Articles() {
                             <div >
                                 <p className="hover:underline text-lg justify-center items-center font-bold py-4" onClick={handleClick}>
                                     {/*Articles phares title*/}
-                                    <Link href="/contenu">
+                                    <Link href ={`/contenu?query=${Slug1}`}>
                                         {Titre1}
                                     </Link>
                                 </p>
@@ -170,7 +181,7 @@ function Articles() {
                         <div className='2xl:mb-[20px]'>
                             <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                 {/*Articles phares title*/}
-                                <Link href="/contenu">
+                                <Link href={`/contenu?query=${Slug2}`}>
                                     {Titre2}
                                 </Link>
                             </p>
@@ -210,7 +221,7 @@ function Articles() {
                         <div className='2xl:mb-[20px]' >
                             <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                 {/*Articles phares title*/}
-                                <Link href="/contenu">
+                                <Link href={`/contenu?query=${Slug3}`}>
                                     {Titre3}
                                 </Link>
                             </p>

@@ -55,7 +55,7 @@ function Contenus() {
             console.log(Descri4);
             setDescri4(Descri4);
 
-            //Exemple de Date1
+            //Exemple de Date
             const Date1 = titres[1].date
             console.log(Date1);
             setDate1(Date1);
@@ -71,6 +71,24 @@ function Contenus() {
             const Date4 = titres[4].date
             console.log(Date4);
             setDate4(Date4);
+
+            //Exemple de Slug
+            const Slug1 = titres[1].slug
+            console.log(Slug1);
+            setSlug1(Slug1);
+
+            const Slug2 = titres[2].slug
+            console.log(Slug2);
+            setSlug2(Slug2);
+
+            const Slug3 = titres[3].slug
+            console.log(Slug3);
+            setSlug3(Slug3);
+
+            const Slug4 = titres[4].slug
+            console.log(Slug4);
+            setSlug4(Slug4);
+
         };
         fetchDonnees();
     }, []);
@@ -86,6 +104,10 @@ function Contenus() {
     const [Date2, setDate2] = useState('');
     const [Date3, setDate3] = useState('');
     const [Date4, setDate4] = useState('');
+    const [Slug1, setSlug1] = useState('');
+    const [Slug2, setSlug2] = useState('');
+    const [Slug3, setSlug3] = useState('');
+    const [Slug4, setSlug4] = useState('');
     // const Titre1 = Donnees
     const [liked, setLiked] = useState(false);
     const [liked1, setLiked1] = useState(false);
@@ -138,7 +160,7 @@ function Contenus() {
                             <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
-                                    <Link href="/contenu">
+                                    <Link href={`/contenu?query=${Slug1}`}>
                                         {Titre1}
                                     </Link>
                                 </p>
@@ -173,7 +195,7 @@ function Contenus() {
                             <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
-                                    <Link href="/contenu">
+                                    <Link href={`/contenu?query=${Slug2}`}>
                                         {Titre2}
                                     </Link>
                                 </p>
@@ -208,7 +230,7 @@ function Contenus() {
                             <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
-                                    <Link href="/contenu">
+                                    <Link href={`/contenu?query=${Slug3}`}>
                                         {Titre3}
                                     </Link>
                                 </p>
@@ -243,7 +265,7 @@ function Contenus() {
                             <div className='md:ml-[380px]' >
                                 <p className=" mt-[10px] hover:underline text-[15px] justify-center items-center font-bold" >
                                     {/*Article1s phares title*/}
-                                    <Link href="/contenu">
+                                    <Link href={`/contenu?query=${Slug4}`}>
                                         {Titre4}
                                     </Link>
                                 </p>

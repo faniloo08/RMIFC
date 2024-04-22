@@ -143,7 +143,7 @@ export function NavBar() {
                   {
                     //Présentation du Centre
                     title: "Le CRFIM",
-                    href: "/",
+                    href: "/historique",
                     description:
                       "Le Centre Régionale de Fusion d'Informations Maritimes est ...",
                     date:"",
@@ -151,7 +151,7 @@ export function NavBar() {
                   },
                   { //Evenements Clés
                     title: "Evenements Clés",
-                    href: "/",
+                    href: "/historique",
                     description:
                     "Découvrez les évenements marquants du Centre ...",
                     date:"",
@@ -160,7 +160,7 @@ export function NavBar() {
                   {
                     //Persepectives Futures
                     title: "Persepectives Futures",
-                    href: "/",
+                    href: "/historique",
                     description:
                     "Nos projets pour les prochaines années ...",
                     date: "",
@@ -175,7 +175,7 @@ export function NavBar() {
                   {
                     // Qu'est-ce que le Centre Régional de Fusion d'Informations Maritimes (CRFIM) ?
                     title: "Présentation",
-                    href: "/",
+                    href: "/faq",
                     description:
                       "Qu'est-ce que le Centre Régional de Fusion d'Informations ...",
                     date:"",
@@ -183,7 +183,7 @@ export function NavBar() {
                   },
                   { //Comment puis-je contacter le CRFIM ?
                     title: "Contact",
-                    href: "/",
+                    href: "/faq",
                     description:
                     "Comment puis-je contacter le CRFIM?",
                     date:"",
@@ -192,7 +192,7 @@ export function NavBar() {
                   {
                     //Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?
                     title: "Informations",
-                    href: "/",
+                    href: "/faq",
                     description:
                     "Comment puis-je obtenir des informations sur les conditions maritimes ...",
                     date: "",
@@ -208,7 +208,7 @@ export function NavBar() {
                     {
                       // COI
                       title: "C.O.I",
-                      href: "/",
+                      href: "/partnaire",
                       description:
                         "Commission de l'Océan Indien ",
                       date:"",
@@ -216,7 +216,7 @@ export function NavBar() {
                     },
                     { //UE
                       title: "U.E",
-                      href: "/",
+                      href: "/partnaire",
                       description:
                       "Union Européene",
                       date:"",
@@ -225,7 +225,7 @@ export function NavBar() {
                     {
                       //INGAD
                       title: "I.G.A.D",
-                      href: "/",
+                      href: "/partnaire",
                       description:
                       "Intergovernemental Authority on Development",
                       date: "",
@@ -240,7 +240,7 @@ export function NavBar() {
                   {
                     //Conventions Internationaux
                     title: "Conventions Internationaux",
-                    href: "/",
+                    href: "/cadres",
                     description:
                       "Conventions Internationaux auxquelles le CRFIM a par-...",
                     date:"",
@@ -248,7 +248,7 @@ export function NavBar() {
                   },
                   { //Legislation Nationale
                     title: "Legislation Nationale",
-                    href: "/",
+                    href: "/cadres",
                     description:
                     "Collaboration avec les autorités nationales compétentes",
                     date:"",
@@ -257,7 +257,7 @@ export function NavBar() {
                   {
                     //Protocoles d'Entente et Memoranda d'Entente
                     title: "Protocoles d'Entente",
-                    href: "/",
+                    href: "/cadres",
                     description:
                     "Protocoles d'Entente et Memoranda d'Entente",
                     date: "",
@@ -271,7 +271,7 @@ export function NavBar() {
                   onMouseEnter={() => handleLinkHover([
                   {
                     title: "Exercice Cutlass",
-                    href: "/",
+                    href: "/contenu",
                     description:
                       "L’exercice Cutlass Express est un exercice naval ...",
                     date:"01/04/2024",
@@ -279,7 +279,7 @@ export function NavBar() {
                   },
                   {
                     title: "Ministère du Transport",
-                    href: "/",
+                    href: "/contenu",
                     description:
                     "Visite du ministère du transport au sein du CRFIM ...",
                     date:"20/02/2024",
@@ -287,7 +287,7 @@ export function NavBar() {
                   },
                   {
                     title: "NMIFC and RMIFC",
-                    href: "/",
+                    href: "/contenu",
                     description:
                     "Visit by an American delegation to the National and ...",
                     date: "13/02/2024",
@@ -298,7 +298,7 @@ export function NavBar() {
                 </Link>
               </div>
               {itemListContent.map((component) => (
-                  <ListItem
+                <ListItem
                   key={component.title}
                   title={component.title}
                   href={component.href}

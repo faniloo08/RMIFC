@@ -25,7 +25,7 @@ function PersoCles() {
               {/*1er personnage*/}
               <div>
                   <motion.div
-                  className="text-xs md:text-md 2xl:w-[950px] lg:w-[500px] font-bold italic"
+                  className="text-xs lg:text-lg md:text-md 2xl:w-[950px] lg:w-[500px] font-bold italic"
                   key={currentQuoteIndex}
                   initial={{ opacity: 0.0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
