@@ -75,6 +75,10 @@ function Contenus(
                     //console.log(article);
                     setArticle(article);
 
+                    //Couverture
+                    const couverture = titres[i+1].cover;
+                    //console.log(couverture);
+                    setCouverture(couverture);
 
                     //Forcer l'arret de la boucle
                     break;
@@ -89,6 +93,7 @@ function Contenus(
     const [descri, setDescri] = useState('');
     const [date, setDate] = useState('');
     const [article, setArticle] = useState('');
+    const [couverture, setCouverture] = useState('');
     //const [slugart, setSlugart] = useState('');
 
     //Test slug
@@ -144,7 +149,7 @@ function Contenus(
                                 {grosTitre}
                             </p>
                         </div>
-                        <div className="grid grid-cols-2  md:ml-[50px] space-x-[-220px]">
+                        <div className="grid grid-cols-2  md:ml-[50px] space-x-[20px]">
                             <div >
                                 {/* Catégorie */}
                                 <Link href="/contenu/tous">
@@ -158,7 +163,7 @@ function Contenus(
                         </div>
                         <div className=' md:ml-[50px] mt-[30px]'>
                             {/* Cover */}
-                            <img src="/A1.jpg" alt="" width={600} height={350} className='2xl:w-[90%]'/>
+                            <img src={couverture} alt="" width={600} height={350} className='2xl:w-[90%]'/>
                             {/* <p className='mt-1 text-xs mb-1 text-center w-[300px]'>
                                 Signature en ligne du Memorandum d'entente: Auxillum worldwide, CRCO, et  CRFIM joinent leurs forces, 19 dec 2023, Madagascar, Antananarivo.
                             </p> */}
