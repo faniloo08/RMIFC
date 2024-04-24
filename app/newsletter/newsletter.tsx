@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Link from 'next/link'
-import { cn } from '@/lib/utils';
 import { Input } from '@/components/ui/input';
 
 function Newsletter() {

@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
@@ -13,7 +12,8 @@ function Recherche({ placeholder }: { placeholder: string }) {
       console.log(`Searching... ${term}`);
     //   replace('/contenu?page=1');
       //URLSearchParams is a web API used to set search params
-      const params = new URLSearchParams(searchParams);
+    if (searchParams) {
+      const params = new URLSearchParams(searchParams || '');
       params.set('page', '1');
       if (term) {
         params.set('query', term);
@@ -21,8 +21,8 @@ function Recherche({ placeholder }: { placeholder: string }) {
         params.delete('query');
       }
       replace(`/contenu${pathname}?${params.toString()}`);
-    },1000);
-
+    };
+  },2000);
     const [message, setMessage] = useState('');
     const handleClick = () => {
         alert('Recherche en cours')
@@ -31,6 +31,7 @@ function Recherche({ placeholder }: { placeholder: string }) {
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setMessage(event.target.value);
     };
+
   return (
     <div className='w-full h-[190px] bg-gradient-to-r from-[#ADD9D4] to-[#999797] justify-center items-center py-[40px]'>
         
@@ -44,11 +45,11 @@ function Recherche({ placeholder }: { placeholder: string }) {
                 <span className=" ml-[410px] bg-white inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 text-sm font-medium text-slate-700 backdrop-blur-3xl">
                 <input
                     className="block w-full rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
-                    placeholder="Exercices 2023"
+                    placeholder="Ex: operation-auxilium"
                     onChange={(e) => {
                     handleSearch(e.target.value);
                     }}
-                    defaultValue={searchParams.get('query')?.toString()}
+                    // defaultValue={searchParams.get('query')?.toString()}
                 />
                 </span>
                 <button className='relative ml-[-180px]' onClick={handleClick}>
@@ -56,7 +57,7 @@ function Recherche({ placeholder }: { placeholder: string }) {
                     width={30}
                     height={30}
                     src={"/Recherche.png" }
-                    alt="Connexion"
+                    alt="recherche"
                     />
                 </button>
             </div>

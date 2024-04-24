@@ -4,7 +4,7 @@ import { NavBar } from '../navbar/nav';
 import { MenuBar } from '../menubar/menu';
 import Footer from "../footer/footer";
 import Link from 'next/link';
-import { Input } from '@/components/ui/input';
+
 
 function Categorie() {
   return (

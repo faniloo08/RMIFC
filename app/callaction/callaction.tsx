@@ -1,9 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import { Dialog, 
     DialogContent,
-    DialogDescription,
-    DialogTitle,
     DialogTrigger, } 
 from '@radix-ui/react-dialog'
 

@@ -8,7 +8,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"  
 
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Link from "next/link";
 
 function Mase() {

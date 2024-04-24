@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { NavBar } from "./navbar/nav";
 import {MenuBar} from "./menubar/menu";
 import Slide from "./Slider/slide";
@@ -17,7 +16,7 @@ import Partenaire from "./partenaires/partenaire";
 import Vcr from "./vcr/vcr";
 import Newsletter from "./newsletter/newsletter";
 import Footer from "./footer/footer";
-import { PaginationDemo } from "./pagination/pagination1";
+
 
 export default function Home() {
   return (
@@ -26,11 +25,11 @@ export default function Home() {
         
         <div className="bg-white md:bg-[url('/HomePage(2).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
           <div className="bg-cover grid grid-cols-1">
-              <div> 
+              <div className="mb-1"> 
                 <MenuBar/>
               </div>
               <div className="flex items-center justify-center">
-                <div>
+                <div className="fixed z-50">
                   <NavBar/>
                 </div> 
               </div>
@@ -95,14 +94,12 @@ export default function Home() {
               <Articles/>
             </div>
             <div className="mt-[100px]">
-              <Recherche/>
+              <Recherche placeholder=""/>
             </div>
             <div className="mt-[50px]">
               <Exercices/>
             </div>
-            <div className="mt-[50px]">
-              <PaginationDemo/>
-            </div>
+
             <div className="mt-[50px]">
               <Callaction/>
             </div>

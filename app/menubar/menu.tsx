@@ -4,21 +4,13 @@ import React, { useState }  from "react"
 import Link from "next/link"
 import Image from 'next/image';
 
-import { cn } from "@/lib/utils"
-
 import {
     Menubar,
     MenubarCheckboxItem,
     MenubarContent,
     MenubarItem,
     MenubarMenu,
-    MenubarRadioGroup,
-    MenubarRadioItem,
-    MenubarSeparator,
     MenubarShortcut,
-    MenubarSub,
-    MenubarSubContent,
-    MenubarSubTrigger,
     MenubarTrigger,
   } from "@/components/ui/menubar"
   
@@ -30,10 +22,13 @@ export function MenuBar() {
       setLanguage(language === 'FR' ? 'EN' : 'FR');
     };
     const [connexion, setConnexion] = useState<string>('Connexion');
+    const [deconnexion, setDeconnexion] = useState<string>('Deconnexion');
     const handleConnexionChange = () => {
         // Fonction pour basculer entre les langues
         setConnexion(connexion === 'Connexion' ? 'Deconnexion' : 'Connexion');
-      };
+        setDeconnexion(deconnexion === 'Deconnexion' ? 'Connexion' : 'Deconnexion');
+    };
+
     return (
         <Menubar className="flex justify-between items-center">
         <MenubarMenu>
@@ -52,12 +47,11 @@ export function MenuBar() {
         <div className="flex  space-x-1">
         <MenubarMenu>
             <MenubarTrigger>
-            <button className="text-slate-900 text-xs hover:text-slate-400 font-bold p-1 rounded-lg"
-            >
-                {/* Ajoute un gestionnaire de clic pour basculer entre les langues */}
-            {language}
-            </button>
-
+                <button className="text-slate-900 text-xs hover:text-slate-400 font-bold p-1 rounded-lg"
+                >
+                    {/* Ajoute un gestionnaire de clic pour basculer entre les langues */}
+                    {language}
+                </button>
             </MenubarTrigger>
             <MenubarContent>
                 <MenubarItem onClick={handleLanguageChange}  > 
@@ -82,7 +76,7 @@ export function MenuBar() {
                 </button> 
             </MenubarTrigger>
             <MenubarContent>
-            <MenubarCheckboxItem onClick={handleConnexionChange}>Deconnexion</MenubarCheckboxItem>
+            <MenubarCheckboxItem onClick={handleConnexionChange}>{deconnexion}</MenubarCheckboxItem>
             </MenubarContent>
         </MenubarMenu>
         </div>

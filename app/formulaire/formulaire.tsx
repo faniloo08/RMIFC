@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, ChangeEvent } from 'react'
 import { cn } from '@/lib/utils'
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -7,7 +7,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card2";
@@ -20,7 +19,7 @@ function Formulaire() {
   const [mdp, setMdp] = useState('');
   const [fonction, setFonction] = useState('');
   const [message, setMessage] = useState('');
-  const [Photos, setPhotos] = useState(null);
+  const [Photos, setPhotos] = useState<File | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
       e.preventDefault();
@@ -48,7 +47,9 @@ function Formulaire() {
   // Gérer le changement de fichier sélectionné
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]; // Récupérer le premier fichier sélectionné
-    setPhotos(file); // Mettre à jour le state avec le fichier sélectionné
+    if (file !== undefined) {
+      setPhotos(file); // Mettre à jour le state avec le fichier sélectionné
+    }
   };
     // const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     //   setMessage(event.target.value);
@@ -64,7 +65,7 @@ function Formulaire() {
               <div className='grid grid-cols-2 grid-flow-row '>
                 <div className='mr-1'>
                   {/* Nom à fonction */}
-                  <div className="grid grid-cols-2 grid-flow-row space-y-2 ">
+                  <div className="grid grid-cols-2 grid-flow-row space-y-2 mb-4">
                     <div className='mr-1'>
                       <LabelInputContainer>
                         <Label htmlFor="nom">Nom</Label>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import {CardStack} from '@/components/ui/card-stack';
-import { cn } from "@/lib/utils"; 
 import { useState, useEffect } from "react";
 
 function PersoCles() {

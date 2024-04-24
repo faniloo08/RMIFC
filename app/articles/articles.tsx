@@ -1,72 +1,12 @@
 "use client"
 
 import React, {useState, useEffect} from 'react'
-import { Card, CardContent } from "@/components/ui/card"
 import Link from 'next/link'
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-import { Donnees } from '@/lib/donnes';
+import { useRouter } from 'next/navigation';
+import {DataToTable} from '@/lib/api';
 
 //Partie dynamique,interaction permanente avec le back-end
 function Articles() {
-    useEffect(() => {
-        const fetchDonnees = async () => {
-            // Appelez la fonction Donnees pour obtenir les données
-            const titres  = await Donnees();
-
-            //Exemple de titre  
-            const Titre1  = titres[1].titre;
-            console.log(Titre1);
-            setTitre1(Titre1);
-
-            const Titre2  = titres[2].titre;
-            console.log(Titre2);
-            setTitre2(Titre2);
-
-            const Titre3  = titres[3].titre;
-            console.log(Titre3);
-            setTitre3(Titre3);
-
-            //Exemple de Descri1ption
-            const Descri1 = titres[1].description;
-            console.log(Descri1);
-            setDescri1(Descri1);
-
-            const Descri2 = titres[2].description;
-            console.log(Descri2);
-            setDescri2(Descri2);
-
-            const Descri3 = titres[3].description;
-            console.log(Descri3);
-            setDescri3(Descri3);
-
-            //Exemple de Date1
-            const Date1 = titres[1].date
-            console.log(Date1);
-            setDate1(Date1);
-
-            const Date2 = titres[2].date
-            console.log(Date2);
-            setDate2(Date2);
-            
-            const Date3 = titres[3].date
-            console.log(Date3);
-            setDate3(Date3);
-
-            //Exemples de slug
-            const Slug1 = titres[1].slug
-            console.log(Slug1);
-            setSlug1(Slug1);
-
-            const Slug2 = titres[2].slug
-            console.log(Slug2);
-            setSlug2(Slug2);
-
-            const Slug3 = titres[3].slug
-            console.log(Slug3);
-            setSlug3(Slug3);
-        };
-        fetchDonnees();
-    }, []);
     const [Titre1, setTitre1] = useState('');
     const [Titre2, setTitre2] = useState('');
     const [Titre3, setTitre3] = useState('');
@@ -79,39 +19,38 @@ function Articles() {
     const [Slug1, setSlug1] = useState('');
     const [Slug2, setSlug2] = useState('');
     const [Slug3, setSlug3] = useState('');
-    // const [Article1, setArticle1] = useState([]);
-    // const [Article2, setArticle2] = useState([]);
-    // const [Article3, setArticle3] = useState([]);
-    // useEffect(() => {
-    //     const fetchDonnees = async () => {
-    //         try {
-    //             const data = await Donnees();
-    //             // Tri des articles par date
-    //             const sortedArticles = data.sort((a, b) => new Date(b.date) - new Date(a.date));
-    //             // Obtenir les trois articles les plus récents
-    //             const [Article1, Article2, Article3] = sortedArticles.slice(0, 3);
-    //             // Mettre à jour les états correspondant aux articles
-    //             setArticle1(Article1);
-    //             setArticle2(Article2);
-    //             setArticle3(Article3);
-    //         } catch (error) {
-    //             console.error("Erreur lors de la récupération des données:", error);
-    //         }
-    //     };
-    //     fetchDonnees();
-    // }, []);
 
+    useEffect(() => {
+        const fetchDonnees = async () => {
+            // Appelez la fonction Donnees pour obtenir les données
+            const titres  = await DataToTable();
+
+            if (titres && titres.length >= 3) {
+                setTitre1(titres[0].titre || '');
+                setTitre2(titres[2].titre || '');
+                setTitre3(titres[3].titre || '');
+
+                setDescri1(titres[0].description || '');
+                setDescri2(titres[2].description || '');
+                setDescri3(titres[3].description || '');
+
+                setDate1(titres[0].date || '');
+                setDate2(titres[2].date || '');
+                setDate3(titres[3].date || '');
+
+                setSlug1(titres[0].slug || '');
+                setSlug2(titres[2].slug || '');
+                setSlug3(titres[3].slug || '');
+            }
+        };
+        fetchDonnees();
+    }, []);
+    
+    
     const router = useRouter();
 
     const handleClick = () => {
-        // Modifier l'URL avec un query spécifique lorsque le lien est cliqué
-        // const searchParams = useSearchParams();
-        // const pathname = usePathname();
-        // const { replace } = useRouter()
-        // const params = new URLSearchParams(searchParams);
-        // params.set('page', '1');
-        // params.set('query', Slug1);
-        // replace(`${pathname}?${params.toString()}`)
+        
     };
 
   return (
