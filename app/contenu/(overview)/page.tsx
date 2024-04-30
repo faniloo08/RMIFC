@@ -299,7 +299,7 @@ function Contenus(
                 </button>
             </div>
             {/* Photos liées à l'article */}
-            <p className="font-bold text-lg mt-[50px]  md:ml-[50px]">{Texte[6]}</p>
+            <p className="font-bold text-lg mt-[50px]  md:ml-[50px]">{Texte[7]}</p>
             <div className="2xl:mt-[50px] lg:mt-[30px] 2xl:ml-[180px] lg: md:ml-[50px] grid md:grid-cols-3 gap-1 items-center justify-center">
                 <div>
                     {/* Photo1 */}
