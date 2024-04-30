@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/exocard"
-import useEmblaCarousel, {
+import {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 import {
@@ -12,6 +12,7 @@ import {
   CarouselNext
 } from "@/components/ui/carousel1"
 import Link from 'next/link'
+import Image from 'next/image';
 type CarouselApi = UseEmblaCarouselType[1]
 
 
@@ -33,14 +34,13 @@ export default function Exercices() {
     });
   }, [api]);
 
-  const articleImages = ['/Ex1.png', '/Ex2.png', '/Ex3.png', '/Ex4.png','/Ex1.png', '/Ex4.png', '/Ex2.png', '/Ex3.png','/Ex3.png'];
-  const articleTitles = ['Exercice CUTLASS EXPRESS', 'Formation sur le "Maritime Domain Awareness"', 'Exercice TTX WIOPOLREX', 'Conférence « The southern Drug Route Partnership »', 'Exercice AEREZREZ 1', 'Exercice AEREZREZ 2', 'Exercice AEREZREZ 3', 'Exercice AEREZREZ 4','Exercice AEREZREZ 4'];
-  const articleDates = ['01/03/24', '16/10/23', '27/07/23', '20/04/23', '01/01/24', '01/01/24', '01/01/24', '01/01/24','01/01/24'];
+  const articleImages = ['/Ex1.png', '/Ex2.png', '/Ex3.png', '/Ex4.png','/Ex1.png', '/Ex4.png', '/Ex2.png', '/Ex3.png'];
+  const articleTitles = ['Exercice CUTLASS EXPRESS', 'Formation sur le "Maritime Domain Awareness"', 'Exercice TTX WIOPOLREX', 'Conférence « The southern Drug Route Partnership »', 'Exercice AEREZREZ 1', 'Exercice AEREZREZ 2', 'Exercice AEREZREZ 3', 'Exercice AEREZREZ 4'];
+  const articleDates = ['01/03/24', '16/10/23', '27/07/23', '20/04/23', '01/01/24', '01/01/24', '01/01/24', '01/01/24'];
   const articleLink = ["https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02D2dZQcbiXg7HzuCT77956JecdVJgZFdvAPnnFoJeBTmBuKgr74s8fDv8eZYjJWVbl&show_text=true&width=500", 
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid03AvBL76ondEthbHejn7nDjECRNE2TyrtvsEfrp8PPXM4yy9KXYqZJ1hdnbg8kdfel&show_text=true&width=500",
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02iXQcUeAMH4yYThmPYSJkAjihKjLZFvMWFNCH5DjcWHDhv76BpBtgUxZmFR34q2hhl&show_text=true&width=500",
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02qhLXCdNZ6mC2FGqAWbBaQbkQoNEjeRjTpxwH6kPexqkvWvpeMwQhHJn1D8gPfAPl&show_text=true&width=500",
-  "",
   "",
   "",
   "",
@@ -68,21 +68,25 @@ export default function Exercices() {
                             return null; // Si l'indice dépasse la longueur du tableau, on ne rend rien
                           }
                           return (
-                            <div key={itemIndex} className='justify-center items-center'>
-                              <div className='mt-[50px] '>
+                            <div key={itemIndex} className="justify-center items-center">
+                              <div className="mt-[50px] ">
                                 {/*Cover*/}
-                                <span
-                                  className={`bg-[url('${articleImages[index * 4 + itemIndex]}')] inline-flex h-[70px] w-[70px] cursor-pointer items-center justify-center rounded-full text-xl hover:text-2xl font-medium text-white`}
+                                <Image 
+                                src = {`${articleImages[index * 4 + itemIndex]}`}
+                                alt = "image cover"
+                                width={70}
+                                height={70}
+                                  className="inline-flex cursor-pointer items-center justify-center rounded-full text-xl hover:text-2xl font-medium text-white"
                                 />
                                 {/* Titre */}
                                 <Link
                                   href={`${articleLink[articleIndex]}`}
                                   className="hover:text-sky-600"
                                 >
-                                  <p className='ml-[80px] mt-[-60px] font-bold text-sm'>
+                                  <p className="ml-[80px] mt-[-60px] font-bold text-sm">
                                     {articleTitles[articleIndex]}
                                   </p>
-                                  <p className='ml-[80px] font-light text-sm'>
+                                  <p className="ml-[80px] font-light text-sm">
                                     {articleDates[articleIndex]}
                                   </p>
                                 </Link>

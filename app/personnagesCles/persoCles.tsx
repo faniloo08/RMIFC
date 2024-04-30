@@ -2,7 +2,9 @@ import React from 'react'
 import { motion } from "framer-motion";
 import {CardStack} from '@/components/ui/card-stack';
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 
+const cote = '"'
 function PersoCles() {
     const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
 
@@ -15,12 +17,12 @@ function PersoCles() {
       }, []);
 
   return (
-    <div className='w-full h-[300px] bg-gradient-to-r from-[#208674] to-[#0B0A35] justify-center items-center py-[50px] px-[40px]'>
-        <div className='ml-[30px]'>
-          <p className=' italic font-bold text-[48px]'>
-              "
+    <div className="w-full h-[300px] bg-gradient-to-r from-[#208674] to-[#0B0A35] justify-center items-center py-[50px] px-[40px]">
+        <div className="ml-[30px]">
+          <p className=" italic font-bold text-[48px]">
+              {cote}
           </p>
-          <div className='grid grid-rows-1'>
+          <div className="grid grid-rows-1">
               {/*1er personnage*/}
               <div>
                   <motion.div
@@ -52,7 +54,11 @@ const CARDS = [
       name: "RALAIARIVONY Alex",
       designation: "Capitaine de Vaisseau, Directeur du CRFIM",
       content: (
-        <img src="/MrDr.png" alt="Mr le Directeur" width={150} height={200} />
+        <Image 
+        src="/MrDr.png" 
+        alt="Mr le Directeur" 
+        width={150} 
+        height={200} />
       ),
     },
     {
@@ -60,7 +66,11 @@ const CARDS = [
       name: "MAHATANTE Paubert",
       designation: "Ministre de la pêche et de l'économie bleu",
       content: (
-        <img src="/Ministre.png" alt="Mr le Directeur" width={150} height={200} />
+        <Image 
+        src="/Ministre.png" 
+        alt="Mr le Ministre" 
+        width={150} 
+        height={200} />
       ),
     },
     {
@@ -68,7 +78,11 @@ const CARDS = [
       name: "MARIMOUTOU Vêlayoudom",
       designation: "Secrétaire général de la COI",
       content: (
-        <img src="/COI.png" alt="Mr le Directeur" width={150} height={200} />
+        <Image 
+        src="/COI.png" 
+        alt="Mr le Secrétaire Général" 
+        width={150} 
+        height={200} />
       ),
     },
 ];

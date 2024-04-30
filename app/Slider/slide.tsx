@@ -32,6 +32,11 @@ export default function Slide() {
     "/SlideA.png",
     "/SlideB.png"
   ];
+  const Texte = [
+    "Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays  et organisations internationales",
+    "Centre Régional de Fusion d'Informations Maritimes",
+    "Adresse email : assistante.communication@crfimmadagascar.org",
+  ]
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Empêche la soumission par défaut du formulaire
 
@@ -69,7 +74,7 @@ export default function Slide() {
         </motion.p> */}
         <div className="w-[100px] md:w-[100px] lg:w-[210px] 2xl:w-[300px] px-2 lg:px-4 py-1 lg:py-2 backdrop-blur-sm border bg-gradient-to-r text-white lg:ml-[300px] 2xl:ml-[450px] lg:mt-[-50px] ml-[80px] text-center rounded-lg relative"style={{}}>
           <p className="lg:text-xs md:text-[10px] text-[6px]">
-          Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays  et organisations internationales
+            {Texte[0]}
           </p>
           <Dialog>
               <DialogTrigger asChild>
@@ -83,8 +88,8 @@ export default function Slide() {
               <DialogContent className="2xl:max-w-[600px] lg:max-w-[400px] items-center justify-center">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-center mb-1">Centre Régional de Fusion d'Informations Maritimes</CardTitle>
-                    <CardDescription className="text-center">Adresse email : assistante.communication@crfimmadagascar.org</CardDescription>
+                    <CardTitle className="text-center mb-1">{Texte[1]}</CardTitle>
+                    <CardDescription className="text-center">{Texte[2]}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <form onSubmit={handleSubmit}>

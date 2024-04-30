@@ -12,6 +12,10 @@ import {
 } from "@/components/ui/card2";
 import {sendInfo} from '@/lib/sendInfo';
 
+const Texte = [
+  "Bienvenue sur la section de déposition d'information du CRFIM",
+  "Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile, veuillez la déposer ici"
+]
 function Formulaire() {
   const [nom, setNom] = useState('');
   const [prenom, setPrenom] = useState('');
@@ -55,25 +59,25 @@ function Formulaire() {
     //   setMessage(event.target.value);
     // };
       return (
-        <Card className='relative'>
+        <Card className="relative">
           <CardHeader>
-            <CardTitle className="text-center mb-1">Bienvenue sur la section de déposition d'information du CRFIM</CardTitle>
-            <CardDescription className="text-center">Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile, veuillez la déposer ici</CardDescription>
+            <CardTitle className="text-center mb-1">{Texte[0]}</CardTitle>
+            <CardDescription className="text-center">{Texte[1]}</CardDescription>
           </CardHeader>
           <CardContent>
             <form className="my-2" onSubmit={handleSubmit}>
-              <div className='grid grid-cols-2 grid-flow-row '>
-                <div className='mr-1'>
+              <div className="grid grid-cols-2 grid-flow-row ">
+                <div className="mr-1">
                   {/* Nom à fonction */}
                   <div className="grid grid-cols-2 grid-flow-row space-y-2 mb-4">
-                    <div className='mr-1'>
+                    <div className="mr-1">
                       <LabelInputContainer>
                         <Label htmlFor="nom">Nom</Label>
                         <Input id="firstname" placeholder="Tyler" type="text" value={nom} onChange={(e) => setNom(e.target.value)}/>
                       </LabelInputContainer>
                     </div>
                     <div >
-                      <LabelInputContainer className='mt-[-12px]'>
+                      <LabelInputContainer className="mt-[-12px]">
                         <Label htmlFor="nom">Prenom</Label>
                         <Input id="prenom" placeholder="Durden" type="text" value={prenom} onChange={(e) => setPrenom(e.target.value)} />
                       </LabelInputContainer>
@@ -101,7 +105,7 @@ function Formulaire() {
                   </LabelInputContainer>
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="message">Votre Message</Label>
-                    <Input id="message" type="textarea" placeholder='Votre message ici...' value={message} onChange={(e) => setMessage(e.target.value)}/>
+                    <Input id="message" type="textarea" placeholder="Votre message ici..." value={message} onChange={(e) => setMessage(e.target.value)}/>
                   </LabelInputContainer>
                   <LabelInputContainer className="mb-3">
                     <Label htmlFor="Photos">Importer une photo</Label>

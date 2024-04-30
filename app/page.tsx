@@ -16,7 +16,7 @@ import Partenaire from "./partenaires/partenaire";
 import Vcr from "./vcr/vcr";
 import Newsletter from "./newsletter/newsletter";
 import Footer from "./footer/footer";
-
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -41,28 +41,36 @@ export default function Home() {
                   <Slide/>
                 </div> 
                 <div className=" relative 2xl:ml-[120px] lg:ml-[75px] md:ml-[15px] sm:ml-[120px] mt-[-50px]">
-                  <Mase/>
+                  <Mase/> 
                 </div>
                 {/* Reseaux Sociaux */}
-                {/* fb */}
-                <div className=" relative ml-[30px] mt-[50px]">
-                  <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                    <Link href="https://www.facebook.com/RMIFCenter">
-                      <span className="bg-[url('/Ellipse4.png')] hover:text-white inline-flex h-[30px] w-[40px] cursor-pointer items-center justify-center rounded-full px-1 py-1 text-xl hover:text-2xl font-medium text-white backdrop-blur-3xl">
-                        
-                      </span>
-                    </Link>
-                  </button>
-                </div>
-                {/*X*/}
-                <div className=" relative ml-[125px] mt-[-38px]">
-                  <button className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                
+                <div className="grid grid-cols-2 grid-flow-row md:space-x-[-150px] 2xl:space-x-[-250px] ml-[30px] mt-[50px]">
+                  {/* fb */}
+                  <div className="">
+                      <Link href="https://www.facebook.com/RMIFCenter">
+                        <Image 
+                        src ="/Ellipse4.png"
+                        alt="FB"
+                        width={50}
+                        height={50}
+                        className=" hover:text-white inline-flex cursor-pointer items-center justify-center rounded-full px-1 py-1 text-xl hover:text-2xl font-medium text-white backdrop-blur-3xl"
+                        />
+                      </Link>
+                  </div>
+                    
+                  {/*X*/}
+                  <div className="">
                     <Link href="/">
-                      <span className=" bg-[url('/Ellipse5.png')] hover:text-white inline-flex h-[30px] w-[40px] cursor-pointer items-center justify-center rounded-full px-1 py-1 text-xl hover:text-2xl font-medium text-white backdrop-blur-3xl">
-                        
-                      </span>
+                      <Image
+                      src= "/Ellipse5.png"
+                      alt="X"
+                      width={50}
+                      height={50}
+                      className="hover:text-white inline-flex cursor-pointer items-center justify-center rounded-full px-1 py-1 text-xl hover:text-2xl font-medium text-white backdrop-blur-3xl"
+                      />
                     </Link>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>

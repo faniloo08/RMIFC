@@ -3,7 +3,13 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Link from "next/link";
 import { ImagesSlider } from "@/components/ui/images-slider";
+import Image from 'next/image';
 
+const Texte = [
+  "Devenir Volontaire aux CRFIM Madagascar",
+  "Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous.",
+  "Télécharger le formulaire"
+]
 function Vcr() {
   const [isHovered, setIsHovered] = useState(false);
   const handleDownload = () => {
@@ -14,9 +20,9 @@ function Vcr() {
     "/VCR1.png"
   ];
   return (
-    <div className='md:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] sm:h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] justify-center items-center py-[40px]'>
-        <div className='grid grid-rows-1 grid-flow-col'>
-          <div className='ml-[20px] mt-[-20px] hidden sm:block'>
+    <div className="md:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] sm:h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] justify-center items-center py-[40px]">
+        <div className="grid grid-rows-1 grid-flow-col">
+          <div className="ml-[20px] mt-[-20px] hidden sm:block">
           <ImagesSlider className=" drop-shadow flex h-[250px] 2xl:w-[650px] lg:w-[450px] justify-center items-center" images={images}>
             <motion.div
               initial={{
@@ -37,25 +43,23 @@ function Vcr() {
           </ImagesSlider>
           </div>
           <div>
-            <div className='2xl:w-[650px] lg:w-[450px]'>
-              <p className=' text-white mt-[-20px] scroll-m-20 border-b pb-2 font-semibold tracking-tight first:mt-0'>Devenir Volontaire aux CRFIM Madagascar</p>
-              <p className='text-sm  text-white font-light mt-[10px]'>
-                Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. 
-                En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan. 
-                Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous.
+            <div className="2xl:w-[650px] lg:w-[450px]">
+              <p className=" text-white mt-[-20px] scroll-m-20 border-b pb-2 font-semibold tracking-tight first:mt-0">{Texte[0]}</p>
+              <p className="text-sm  text-white font-light mt-[10px]">
+                  {Texte[1]}
               </p>
-              <Link href='https://docs.google.com/forms/d/e/1FAIpQLSc0YNS8mpJ9nURTH-mY7eoMgCX7Sby4MoaML4Etr5zwKkHa6Q/viewform?usp=sf_link'>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc0YNS8mpJ9nURTH-mY7eoMgCX7Sby4MoaML4Etr5zwKkHa6Q/viewform?usp=sf_link">
                 <button className="mt-[20px] drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px]"                     onMouseEnter={() => setIsHovered(true)}
                       onMouseLeave={() => setIsHovered(false)}
                       onClick={handleDownload}>
-                      <img src={isHovered ? "/Download1.png" : "/Download.png"} 
+                      <Image src={isHovered ? "/Download1.png" : "/Download.png"} 
                       alt="Telecharger" 
                       width={25} height={25} 
-                      className='mt-[10px]' 
+                      className="mt-[10px]" 
 
                       />
                       <span className="hover:text-yellow-300 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 py-2 text-sm font-medium text-white backdrop-blur-3xl">
-                          Télécharger le formulaire
+                          {Texte[2]}
                       </span>
                 </button>
               </Link>

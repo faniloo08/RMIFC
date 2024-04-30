@@ -11,7 +11,6 @@ import {
     MenubarItem,
     MenubarMenu,
     MenubarShortcut,
-    MenubarTrigger,
   } from "@/components/ui/menubar"
   
 export function MenuBar() {
@@ -46,13 +45,13 @@ export function MenuBar() {
         </MenubarMenu> 
         <div className="flex  space-x-1">
         <MenubarMenu>
-            <MenubarTrigger>
+            {/* <MenubarTrigger>*/}
                 <button className="text-slate-900 text-xs hover:text-slate-400 font-bold p-1 rounded-lg"
-                >
-                    {/* Ajoute un gestionnaire de clic pour basculer entre les langues */}
+                > 
+                    {/* Ajoute un gestionnaire de clic pour basculer entre les langues  */}
                     {language}
-                </button>
-            </MenubarTrigger>
+                 </button>
+            {/*</MenubarTrigger> */}
             <MenubarContent>
                 <MenubarItem onClick={handleLanguageChange}  > 
                     {language === 'FR' ? 'EN' : 'FR'}<MenubarShortcut>{language === 'FR' ? '⌘E' : '⌘F'}</MenubarShortcut>
@@ -60,9 +59,9 @@ export function MenuBar() {
             </MenubarContent>
         </MenubarMenu>
         <MenubarMenu >
-            <MenubarTrigger>     
+            {/* <MenubarTrigger>  */}   
                 <button className="drop-shadow relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                    {/* <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B70A0_0%,#393BB2_50%,#011764_100%)]" /> */}
+                    {/* <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B70A0_0%,#393BB2_50%,#011764_100%)]" />  */}
                     <span className="text-xs hover:bg-cyan-900 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-sky-950 px-1 py-1 font-medium text-white backdrop-blur-3xl">
                         <Image
                         className="dark-logo"
@@ -71,10 +70,10 @@ export function MenuBar() {
                         src={"/connexion.png" }
                         alt="Connexion"
                         />
-                        {connexion}
-                    </span>
+                        {connexion} 
+                     </span>
                 </button> 
-            </MenubarTrigger>
+            {/*</MenubarTrigger> */}
             <MenubarContent>
             <MenubarCheckboxItem onClick={handleConnexionChange}>{deconnexion}</MenubarCheckboxItem>
             </MenubarContent>
