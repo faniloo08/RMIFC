@@ -19,13 +19,10 @@ import Image from 'next/image';
 const Texte = [
     "Le Centre de fusion de l'information maritime (CRFIM) a été présenté 11e Foire Internationale de Madagascar (FIM) organisée à Antananarivo du 19 au 22 mai. Ce Centre a été mis en place dans le cadre des activités pilotées par la Commission de l'océan Indien (COI) dans le cadre du programme régional de sécurité maritime (MASE) sur financement européen. Installé à proximité de l'entrée du grand hall international, le stand présentant le CRFIM, ses objectifs et l'enjeu de l'échange d'information pour la sécurité et la sûreté maritimes a bénéficié d'une forte visibilité. ",
     "Le CRFIM permet d'échanger et de fusionner des informations maritimes sur une zone allant du cap de Bonne Esperance (Afrique du Sud) au détroit de Bab-El-Mandeb (Djibouti) afin de renforcer la sécurité et la sureté maritime dans la région, en luttant notamment contre les trafics et crimes commis en mer.",
-    "EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars",
-    "Comme chaque année, le CRFIM prend part à l'exercice multilatéral #CUTLASSEXPRESS organisé par l'...",
-    "OPERATION AUXILUM 2023 du 20 au 26 avril",
-    "Du 20 au 26 avril 2023, les Centres Régionaux de Fusion de l'Information Maritime (CRFIM)...",
-    "Signature en ligne du Memorandum d'entente: Auxillum worldwide, CRCO, et  CRFIM joinent leurs forces, 19 dec 2023, Madagascar, Antananarivo.",
-    "Galerie d'images"
 ]
+
+const Galerie = "Galerie d'images";
+
 
 function Contenus(
 
@@ -55,12 +52,33 @@ function Contenus(
             console.log(Slug0);
             setSlug0(Slug0);
 
-
             const Slug3 = titres[3].slug
             console.log(Slug3);
             setSlug3(Slug3);
 
+            const Titre0 = titres[0].titre
+            console.log(Titre0);
+            setTitre0(Titre0);
 
+            const Titre3 = titres[3].titre
+            console.log(Titre3);
+            setTitre3(Titre3);
+
+            const Cover0 = titres[0].cover
+            console.log(Cover0);
+            setCover0(Cover0);
+
+            const Cover3 = titres[3].cover
+            console.log(Cover3);
+            setCover3(Cover3);
+
+            const Article0 = titres[0].article
+            console.log(Article0);
+            setArticle0(Article0);
+
+            const Article3 = titres[3].article
+            console.log(Article3);
+            setArticle3(Article3);
 
             //pour les exploitation de slug
             var slugs = [];
@@ -121,6 +139,13 @@ function Contenus(
     const [couverture, setCouverture] = useState('');
     const [Slug0, setSlug0] = useState('');
     const [Slug3, setSlug3] = useState('');
+    const [Titre0, setTitre0] = useState('');
+    const [Titre3, setTitre3] = useState('');
+    const [Cover0, setCover0] = useState('');
+    const [Cover3, setCover3] = useState('');
+    const [Article0, setArticle0] = useState('');
+    const [Article3, setArticle3] = useState('');
+
     //User interactions
     const [liked, setLiked] = useState(false);
     const [liked1, setLiked1] = useState(false);
@@ -146,6 +171,15 @@ function Contenus(
         setLiked1(!liked1); 
     };
     const displayedComments = comments.slice(0, 2);
+
+    //génération de l'apperçu : 
+    const generatePreview = (content: string): string => {
+        // Tu peux mettre ici la logique de génération d'aperçu que tu veux
+        // Par exemple, tu peux simplement retourner les premiers 100 caractères du contenu
+        const preview = content.slice(0, 50);
+        return preview
+    };
+
   return (
     <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
@@ -226,18 +260,21 @@ function Contenus(
                             {/* Article1 */}
                             <div className="mr-2">
                                 {/* cover */}
-                                <Image 
-                                src="/Cutlass.png" 
+                                <img
+                                src={Cover3}
                                 alt="" 
                                 width={195} 
                                 height={175}/>
                                 <div className="mt-1">
                                     <Link href={`/contenu?query=${Slug3}`} className="hover:text-[#00A2E8]">
                                         <p className="text-[13px] font-bold">
-                                            {Texte[2]}
+                                            {Titre3}
                                         </p>
                                         <p className=" text-[11px]">
-                                            {Texte[3]}
+                                            <ReactMarkdown> 
+                                                {generatePreview(Article3)}
+                                            </ReactMarkdown>
+                                            ...
                                         </p>
                                     </Link>
                                 </div>
@@ -245,18 +282,21 @@ function Contenus(
                             {/* Article2 */}
                             <div className="ml-2">
                                 {/* cover */}
-                                <Image 
-                                src="/Auxilum.png" 
+                                <img 
+                                src={Cover0} 
                                 alt="" 
                                 width={195} 
                                 height={175}/>
                                 <div className="mt-1">
                                     <Link href={`/contenu?query=${Slug0}`} className="hover:text-[#00A2E8]">
                                         <p className="text-[13px] font-bold">
-                                            {Texte[4]}
+                                            {Titre0}
                                         </p>
                                         <p className="text-[11px]">
-                                            {Texte[5]}
+                                            <ReactMarkdown> 
+                                                {generatePreview(Article0)}
+                                            </ReactMarkdown>
+                                            ...
                                         </p>
                                     </Link>
                                 </div>
@@ -299,7 +339,7 @@ function Contenus(
                 </button>
             </div>
             {/* Photos liées à l'article */}
-            <p className="font-bold text-lg mt-[50px]  md:ml-[50px]">{Texte[7]}</p>
+            <p className="font-bold text-lg mt-[50px]  md:ml-[50px]">{Galerie}</p>
             <div className="2xl:mt-[50px] lg:mt-[30px] 2xl:ml-[180px] lg: md:ml-[50px] grid md:grid-cols-3 gap-1 items-center justify-center">
                 <div>
                     {/* Photo1 */}

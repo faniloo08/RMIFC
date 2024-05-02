@@ -8,31 +8,40 @@ import {
     PaginationPrevious,
 } from '@/components/ui/pagination';
 
-export function PaginationDemo() {
+interface PaginationProps {
+  articlesPerPage: number;
+  totalArticles: number;
+  currentPage : number;
+  paginate: (pageNumber: number) => void;
+}
+
+export function PaginationDemo({ articlesPerPage, totalArticles, currentPage, paginate }: PaginationProps) {
+  const pageNumbers = [];
+
+  for (let i = 1; i <= Math.ceil(totalArticles / articlesPerPage); i++) {
+      pageNumbers.push(i);
+  }
     return (
       <Pagination>
         <PaginationContent>
           <PaginationItem>
-            <PaginationPrevious href="#" />
-          </PaginationItem>
+            <PaginationPrevious onClick={() => paginate(currentPage - 1)} href="#" className="page-link" />
+          </PaginationItem>        
+          {pageNumbers.map((number) => ( 
+            <li key={number} className="page-item">
+              <a onClick={() => paginate(number)} href="#" className="page-link">
+                <PaginationItem>
+                  <PaginationLink href="#">
+                    {number}
+                  </PaginationLink>
+                </PaginationItem>
+              </a>
+            </li>
+          ))}
           <PaginationItem>
-            <PaginationLink href="#">1</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#" isActive>
-              2
-            </PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationLink href="#">3</PaginationLink>
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationEllipsis />
-          </PaginationItem>
-          <PaginationItem>
-            <PaginationNext href="#" />
+            <PaginationNext onClick={() => paginate(currentPage + 1)} href="#" className="page-link" />
           </PaginationItem>
         </PaginationContent>
-      </Pagination>
+      </Pagination> 
     )
 }
