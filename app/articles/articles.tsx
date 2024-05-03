@@ -91,11 +91,11 @@ function Articles() {
                     alt=""
                     width={450}
                     height={350}
-                    className="lg:w-[100%] 2xl:w-[95%] rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
+                    className="lg:w-[100%] 2xl:w-[100%] 2xl:h-[100%] rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"/>
                     <div className="lg:ml-[-10px] 2xl:ml-[50px]" >
                         {/* Article.Catégorie */}
 
-                        <div className="drop-shadow-lg 2xl:w-[400px] lg:w-[330px] h-[225px] bg-white text-black mt-[-70px] md:ml-[60px] md:mt-[-120px] text-center rounded-[25px] relative justify-center items-center py-2"style={{}}>
+                        <div className="drop-shadow-lg 2xl:w-[400px] lg:w-[330px] h-[225px] bg-white text-black 2xl:mt-[-65px] lg:mt-[-70px] md:ml-[60px] md:mt-[-120px] text-center rounded-[25px] relative justify-center items-center py-2"style={{}}>
                             <div className="md:hidden relative">
                                 <button className="bg-gradient-to-r from-[#DEE218] to-[#E37C1C]  px-4 py-1 text-sm text-white font-semibold rounded-full hover:text-[#DEE218] hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri1}</button>
                             </div>
@@ -146,14 +146,14 @@ function Articles() {
             </li>
             <li>
                 {/*Art2*/}
-                <div className="grid grid-cols-2 grid-flow-row lg:space-x-[-50px] mb-1">
-                    <div>
+                <div className="grid grid-cols-2 grid-flow-row lg:space-x-[-50px] mb-1 2xl:mb-[-30px]">
+                    <div className=''>
                         <img 
                             src={Cover2}
                             alt=""
                             width={225}
                             height={165}
-                            className=" 2xl:w-[33%] lg:w-225px 2xl:h-200px lg:h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"
+                            className=" 2xl:w-[80%] lg:w-225px 2xl:h-200px lg:h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"
                         />
                     </div>
                    
@@ -210,7 +210,7 @@ function Articles() {
                             alt="" 
                             width={225}
                             height={165}
-                            className="2xl:w-[33%] lg:w-225px h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"
+                            className="2xl:w-[80%] lg:w-225px h-165px rounded-lg transition-transform duration-300 transform-gpu hover:scale-110"
                         />
                     </div>
                     <div className="relative">

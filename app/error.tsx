@@ -1,5 +1,6 @@
 "use client"
 
+import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // import FooterOne from "../common/elements/footer/FooterOne";
@@ -9,7 +10,7 @@ import Link from "next/link";
 // import { fetchAPI, getAllPosts } from "../../lib/api2";
 // import { getGlobalMeta } from "../../lib/api2";
 
-const Error404 = () => {
+const Error404: FC = () => {
   return (
     <>
       {/* <HeadTitle pageTitle={meta} /> */}

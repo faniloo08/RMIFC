@@ -57,17 +57,17 @@ function Footer() {
             <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[5px]">{Texte[0]}</p>
           </div>
           <div>
-            <Link href="/historique">
+            <Link href="/infopages/historique">
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Texte[1]}</p>
             </Link>
           </div>
           <div>
-            <Link href="/historique">
+            <Link href="/infopages/historique">
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Texte[2]}</p>
             </Link>
           </div>
           <div>
-            <Link href="/historique">
+            <Link href="/infopages/historique">
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Texte[3]}</p>
             </Link>
           </div>

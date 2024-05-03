@@ -14,7 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-import ScrollMenu from "../scrollmenu/scrollmenu"
+import ScrollMenu from "../../scrollmenu/scrollmenu"
 
 
 import { 
@@ -142,13 +142,13 @@ export function NavBar() {
           <NavigationMenuContent>
             <ul className=" bg-white text-slate-800 grid w-[500px] gap-3 p-4 md:w-[500px] md:grid-cols-4 lg:w-[600px] ">
               <div>
-                <Link href="/historique">
+                <Link href="/infopages/historique">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
                     //Présentation du Centre
                     title: "Le CRFIM",
-                    href: "/historique",
+                    href: "/infopages/historique",
                     description:
                       "Le Centre Régionale de Fusion d'Informations Maritimes est ...",
                     date:"",
@@ -156,7 +156,7 @@ export function NavBar() {
                   },
                   { //Evenements Clés
                     title: "Evenements Clés",
-                    href: "/historique",
+                    href: "/infopages/historique",
                     description:
                     "Découvrez les évenements marquants du Centre ...",
                     date:"",
@@ -165,7 +165,7 @@ export function NavBar() {
                   {
                     //Persepectives Futures
                     title: "Persepectives Futures",
-                    href: "/historique",
+                    href: "/infopages/historique",
                     description:
                     "Nos projets pour les prochaines années ...",
                     date: "",
@@ -174,13 +174,13 @@ export function NavBar() {
                   ])}
                   >Historique</p>
                 </Link>
-                <Link href="/faq">
+                <Link href="/infopages/faq">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline" 
                   onMouseEnter={() => handleLinkHover([
                   {
                     // Qu'est-ce que le Centre Régional de Fusion d'Informations Maritimes (CRFIM) ?
                     title: "Présentation",
-                    href: "/faq",
+                    href: "/infopages/faq",
                     description:
                       "Qu'est-ce que le Centre Régional de Fusion d'Informations ...",
                     date:"",
@@ -188,7 +188,7 @@ export function NavBar() {
                   },
                   { //Comment puis-je contacter le CRFIM ?
                     title: "Contact",
-                    href: "/faq",
+                    href: "/infopages/faq",
                     description:
                     "Comment puis-je contacter le CRFIM?",
                     date:"",
@@ -197,7 +197,7 @@ export function NavBar() {
                   {
                     //Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?
                     title: "Informations",
-                    href: "/faq",
+                    href: "/infopages/faq",
                     description:
                     "Comment puis-je obtenir des informations sur les conditions maritimes ...",
                     date: "",
@@ -207,13 +207,13 @@ export function NavBar() {
                   FAQ
                   </p>
                 </Link>
-                <Link href="/partnaire">
+                <Link href="/infopages/partnaire">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                    onMouseEnter={() => handleLinkHover([
                     {
                       // COI
                       title: "C.O.I",
-                      href: "/partnaire",
+                      href: "/infopages/partnaire",
                       description:
                         "Commission de l'Océan Indien ",
                       date:"",
@@ -221,7 +221,7 @@ export function NavBar() {
                     },
                     { //UE
                       title: "U.E",
-                      href: "/partnaire",
+                      href: "/infopages/partnaire",
                       description:
                       "Union Européene",
                       date:"",
@@ -230,7 +230,7 @@ export function NavBar() {
                     {
                       //INGAD
                       title: "I.G.A.D",
-                      href: "/partnaire",
+                      href: "/infopages/partnaire",
                       description:
                       "Intergovernemental Authority on Development",
                       date: "",
@@ -239,13 +239,13 @@ export function NavBar() {
                     ])}
                   >Partenaires</p>
                 </Link>
-                <Link href="/cadres">
+                <Link href="/infopages/cadres">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
                     //Conventions Internationaux
                     title: "Conventions Internationaux",
-                    href: "/cadres",
+                    href: "/infopages/cadres",
                     description:
                       "Conventions Internationaux auxquelles le CRFIM a par-...",
                     date:"",
@@ -253,7 +253,7 @@ export function NavBar() {
                   },
                   { //Legislation Nationale
                     title: "Legislation Nationale",
-                    href: "/cadres",
+                    href: "/infopages/cadres",
                     description:
                     "Collaboration avec les autorités nationales compétentes",
                     date:"",
@@ -262,7 +262,7 @@ export function NavBar() {
                   {
                     //Protocoles d'Entente et Memoranda d'Entente
                     title: "Protocoles d'Entente",
-                    href: "/cadres",
+                    href: "/infopages/cadres",
                     description:
                     "Protocoles d'Entente et Memoranda d'Entente",
                     date: "",
@@ -352,7 +352,7 @@ export function NavBar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/contact" legacyBehavior passHref>
+          <Link href="/infopages/contact" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <span className=" drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" onClick={() => setCurrentPage('contact')}>
                 {currentPage === 'contact' && (
@@ -390,7 +390,7 @@ export function NavBar() {
                         <span>Evenement</span>
                       </CommandItem>
                     </Link>
-                    <Link href="/faq">
+                    <Link href="/infopages/faq">
                       <CommandItem>
                         <BadgeHelp className="mr-2 h-4 w-4" />
                         <span>FAQ</span>

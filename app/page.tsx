@@ -1,6 +1,6 @@
 "use client"
-import { NavBar } from "./navbar/nav";
-import {MenuBar} from "./menubar/menu";
+import { NavBar } from "./common/navbar/nav";
+import {MenuBar} from "./common/menubar/menu";
 import Slide from "./Slider/slide";
 import Mase from "./mase/mase";
 import { PresText } from "./presentation/prestext";
@@ -15,24 +15,22 @@ import Ressource from "./ressources/ressource";
 import Partenaire from "./partenaires/partenaire";
 import Vcr from "./vcr/vcr";
 import Newsletter from "./newsletter/newsletter";
-import Footer from "./footer/footer";
+import Footer from "./common/footer/footer";
 import Image from "next/image";
-
 export default function Home() {
   return (
     <>
       <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-        
-        <div className="bg-white md:bg-[url('/HomePage(2).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
-          <div className="bg-cover grid grid-cols-1">
-              <div className="mb-1"> 
+        <div className="bg-white md:bg-[url('/HomePage(2).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat items-center justify-center w-[85%] h-4/5 bg-cover">
+          <div className="bg-cover grid grid-cols-1"> 
+            <div className="mb-1"> 
                 <MenuBar/>
-              </div>
-              <div className="flex items-center justify-center">
+            </div>
+            <div className="flex items-center justify-center"> 
                 <div className="fixed z-50">
-                  <NavBar/>
+                    <NavBar/>
                 </div> 
-              </div>
+            </div>
           </div>
           <div className=" ml-[20px] bg-cover grid md:grid-cols-2 items-center justify-center">
             <div className="bg-cover grid grid-cols-1  items-center justify-center">
@@ -76,8 +74,8 @@ export default function Home() {
             </div>
             <div className=" relative hidden sm:hidden md:block md:ml-[170px] lg:ml-[165px] 2xl:ml-[180px] md:mt-[0px] lg:mt-[10px] 2xl:mt-[-10px]">
               <div>
-                  <p className="text-sky-950 font-bold md:text-[20px] text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
-                  <PresText/>
+                <p className="text-sky-950 font-bold md:text-[20px] text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
+                <PresText/>
               </div>
               <div className="xl:mt-[50px] 2xl:mt-[150px] ">
                 <Statistique/>
@@ -85,6 +83,7 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white bg-center items-center justify-center">
+
             <div className="2xl:mt-[50px] lg:mt-[50px] grid grid-flow-row grif-cols-1 lg:grid-cols-2 lg:space-x-[350px] 2xl:space-x-[600px]">
               <div className="ml-[28px] bg-[url('/fleche.png')] w-[228px] h-[52px] ">
                 <span className="inline-flex justify-center items-center mt-2 ml-4 font-bold text-[#092933]">
@@ -96,7 +95,6 @@ export default function Home() {
                     voir toutes les actualités
                 </Link>
               </div>
-              
             </div>
             <div className="ml[30px] mt-[30px]">
               <Articles/>
@@ -107,7 +105,6 @@ export default function Home() {
             <div className="mt-[50px]">
               <Exercices/>
             </div>
-
             <div className="mt-[50px]">
               <Callaction/>
             </div>
@@ -131,12 +128,13 @@ export default function Home() {
             <div className="md:ml-[30px] mt-[50px]">
               <Newsletter/>
             </div>
+
             <div className="mt-[30px]">
               <Footer/>
             </div>
+
           </div> 
         </div>
-        
       </div>
     </>
   );

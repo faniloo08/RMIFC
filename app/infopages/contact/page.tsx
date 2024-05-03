@@ -1,17 +1,18 @@
 "use client"
 import React from 'react'
-import { NavBar } from '../navbar/nav';
-import { MenuBar } from '../menubar/menu';
-import Footer from "../footer/footer";
+// import { NavBar } from '../navbar/nav';
+// import { MenuBar } from '../menubar/menu';
+// import Footer from "../footer/footer";
 import Link from 'next/link';
 // import GoogleMapComponent from '@/components/ui/google-map';
 import Image from 'next/image';
 
 function Contact() {
   return (
-    <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-        <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
-            <div className="bg-cover grid grid-cols-1">
+    // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
+    <>
+        {/* <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover"> */}
+            {/* <div className="bg-cover grid grid-cols-1">
                 <div className="mb-1"> 
                     <MenuBar/>
                 </div>
@@ -20,7 +21,7 @@ function Contact() {
                         <NavBar/>
                     </div> 
                 </div>
-            </div>
+            </div> */}
             <div className="ml-[50px] mt-[50px] text-sm ">
                 <Link href="/" className="mr-1 hover:underline hover:text-blue-500">
                     Accueil 
@@ -64,12 +65,14 @@ function Contact() {
                 </div>
             </div>
 
-            <div className="mt-[50px]">
+            {/* <div className="mt-[50px]">
                 <Footer/>
-            </div>
+            </div> */}
             
-        </div>
-    </div>
+        {/* </div> */}
+    </>
+
+    // </div>
   )
 }
 
