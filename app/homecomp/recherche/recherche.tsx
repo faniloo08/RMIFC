@@ -7,16 +7,26 @@ function Recherche({ placeholder }: { placeholder: string }) {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter()
-  
+    function slugify (text: string) {
+      return text
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, '-') // Replace spaces with -
+        .replace(/[^\w-]+/g, '') // Remove all non-word chars
+        .replace(/--+/g, '-') // Replace multiple - with single -
+        .replace(/^-+/, '') // Trim - from start of text
+        .replace(/-+$/, '') // Trim - from end of text
+    }
+    
     const handleSearch = useDebouncedCallback((term) => {
       console.log(`Searching... ${term}`);
-    //   replace('/contenu?page=1');
+      //replace('/contenu?page=1');
       //URLSearchParams is a web API used to set search params
     if (searchParams) {
       const params = new URLSearchParams(searchParams || '');
       params.set('page', '1');
       if (term) {
-        params.set('query', term);
+        params.set('query', slugify(term));
       } else {
         params.delete('query');
       }
@@ -26,11 +36,13 @@ function Recherche({ placeholder }: { placeholder: string }) {
     const [message, setMessage] = useState('');
     const handleClick = () => {
         alert('Recherche en cours')
+        handleSearch;
     };
 
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setMessage(event.target.value);
     };
+   
 
   return (
     <div className="w-full h-[190px] bg-gradient-to-r from-[#ADD9D4] to-[#999797] justify-center items-center py-[40px]">
@@ -45,7 +57,7 @@ function Recherche({ placeholder }: { placeholder: string }) {
                 <span className=" ml-[410px] bg-white inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 text-sm font-medium text-slate-700 backdrop-blur-3xl">
                 <input
                     className="block w-full rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
-                    placeholder="Ex: operation-auxilium"
+                    placeholder="Ex: Operation Auxilium"
                     onChange={(e) => {
                     handleSearch(e.target.value);
                     }}

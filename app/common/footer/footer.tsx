@@ -104,7 +104,7 @@ function Footer() {
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]"> +261 34 05 414 12</p>
             </Link>
           </div>
-          <div>
+          <div className='w-[10%]'>
             <Link href="https://mail.google.com/mail/">
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">assistante.communication@crfimmadagascar.org</p>
             </Link>

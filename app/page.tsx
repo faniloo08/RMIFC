@@ -1,20 +1,20 @@
 "use client"
 import { NavBar } from "./common/navbar/nav";
 import {MenuBar} from "./common/menubar/menu";
-import Slide from "./Slider/slide";
-import Mase from "./mase/mase";
-import { PresText } from "./presentation/prestext";
-import Statistique from "./statistique/statistique";
+import Slide from "./homecomp/Slider/slide";
+import Mase from "./homecomp/mase/mase";
+import { PresText } from "./homecomp/presentation/prestext";
+import Statistique from "./homecomp/statistique/statistique";
 import Link from "next/link";
-import Articles from "./articles/articles";
-import Callaction from "./callaction/callaction";
-import Exercices from "./exercices/exercices";
-import Recherche from "./recherche/recherche";
-import PersoCles from "./personnagesCles/persoCles";
-import Ressource from "./ressources/ressource";
-import Partenaire from "./partenaires/partenaire";
-import Vcr from "./vcr/vcr";
-import Newsletter from "./newsletter/newsletter";
+import Articles from "./homecomp/articles/articles";
+import Callaction from "./homecomp/callaction/callaction";
+import Exercices from "./homecomp/exercices/exercices";
+import Recherche from "./homecomp/recherche/recherche";
+import PersoCles from "./homecomp/personnagesCles/persoCles";
+import Ressource from "./homecomp/ressources/ressource";
+import Partenaire from "./homecomp/partenaires/partenaire";
+import Vcr from "./homecomp/vcr/vcr";
+import Newsletter from "./homecomp/newsletter/newsletter";
 import Footer from "./common/footer/footer";
 import Image from "next/image";
 export default function Home() {

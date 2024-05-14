@@ -1,7 +1,7 @@
 "use client"
 
 import {DataToTable} from '@/lib/api';
-import { PaginationDemo } from '@/app/pagination/pagination';
+import { PaginationDemo } from '@/app/homecomp/pagination/pagination';
 import React ,{ useState, useEffect } from 'react'
 // import { NavBar } from '@/app/navbar/nav';
 // import { MenuBar } from '@/app//menubar/menu';

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import React from "react";
+import React , {useState} from "react";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import Link from "next/link";
 import { 
@@ -28,6 +28,11 @@ import {
 } from "@/components/ui/select";
 
 export default function Slide() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+  const [body, setBody] = useState('')
   const images = [
     "/SlideA.png",
     "/SlideB.png"
@@ -37,11 +42,38 @@ export default function Slide() {
     "Centre Régional de Fusion d'Informations Maritimes",
     "Adresse email : assistante.communication@crfimmadagascar.org",
   ]
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault(); // Empêche la soumission par défaut du formulaire
 
     const nameInput = event.currentTarget.elements.namedItem('name') as HTMLInputElement; // Récupère l'élément input avec l'id "name"
     const nameValue = nameInput.value.trim(); // Récupère la valeur de l'input en supprimant les espaces vides avant et après
+    
+    const formEvent = event as React.FormEvent<HTMLFormElement>;
+
+    // Récupérez l'élément de formulaire HTML
+    const formElement = formEvent.currentTarget;
+
+    // Créez l'objet FormData avec l'élément de formulaire HTML
+    const formData = new FormData(formElement);
+    try {
+
+        const response = await fetch('/api/contact', {
+            method: 'post',
+            body: formData,
+        });
+
+        if (!response.ok) {
+            console.log("falling over")
+            throw new Error(`response status: ${response.status}`);
+        }
+        const responseData = await response.json();
+        console.log(responseData['message'])
+
+        alert('Message successfully sent');
+    } catch (err) {
+        console.error(err);
+        alert("Error, please try resubmitting the form");
+    }
 
     if (!nameValue) {
       // Si le champ "Name" est vide, affiche une alerte
@@ -96,11 +128,11 @@ export default function Slide() {
                       <div className="grid w-full items-center gap-2">
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="name">Nom*</Label>
-                          <Input id="name" placeholder="DOE John" required/>
+                          <Input id="name" placeholder="DOE John" autoComplete="name" required/>
                         </div>
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="name">Email*</Label>
-                          <Input id="email" placeholder="johndoe00@gmail.com" required/>
+                          <Input id="email" placeholder="johndoe00@gmail.com" autoComplete="email" required/>
                         </div>
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="framework">Topic</Label>
@@ -117,8 +149,8 @@ export default function Slide() {
                           </Select>
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <Label htmlFor="name">Message</Label>
-                          <Input id="text" placeholder="Votre message"/>
+                          <Label htmlFor="message">Message</Label>
+                          <Input id="text" placeholder="Votre message" />
                         </div>
                       </div>
                       <button type="submit" className=" outline relative rounded-full p-1 ml-[250px] mt-[40px] hover:bg-gradient-to-r from-cyan-900 to-sky-950 hover:text-white">Envoyer</button>

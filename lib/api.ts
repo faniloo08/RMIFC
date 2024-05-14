@@ -1,8 +1,11 @@
-const url: string = 'https://backend.crfimmadagascar.org/api/articles?populate=*';
+const url: string = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*`;
 
 async function getData(): Promise<any> {
     try {
-        const resp = await fetch(url);
+        const resp = await fetch(url, {
+            method: 'GET',
+            mode: 'no-cors', //Définition du mode de requête sur 'no-cors'
+        });
         const result = await resp.json();
         if (resp.status === 200) {
             console.log('Success :', result);
@@ -78,7 +81,7 @@ export async function DataToTable(): Promise<Article[]> {
 
         for (let i = 0; i < tableauDeDonnees.length; i++) {
             const coverUrl = tableauDeDonnees[i][9].data.attributes.url;
-            const src = "https://backend.crfimmadagascar.org" + coverUrl;
+            const src = process.env.NEXT_PUBLIC_STRAPI_API_URL + coverUrl;
             tousLesCovers.push(src);
         }
 
@@ -103,3 +106,5 @@ export async function DataToTable(): Promise<Article[]> {
         return [];
     }
 }
+
+

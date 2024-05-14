@@ -14,7 +14,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-import ScrollMenu from "../../scrollmenu/scrollmenu"
+import ScrollMenu from "../../homecomp/scrollmenu/scrollmenu"
 
 
 import { 
@@ -271,12 +271,12 @@ export function NavBar() {
                   ])}
                   >Cadres juridique</p>
                 </Link>
-                <Link href="/contenu">
+                <Link href="/contenu/tous">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
                     title: "Exercice Cutlass",
-                    href: "/contenu",
+                    href: "/contenu/tous",
                     description:
                       "L’exercice Cutlass Express est un exercice naval ...",
                     date:"01/04/2024",
@@ -284,7 +284,7 @@ export function NavBar() {
                   },
                   {
                     title: "Ministère du Transport",
-                    href: "/contenu",
+                    href: "/contenu/tous",
                     description:
                     "Visite du ministère du transport au sein du CRFIM ...",
                     date:"20/02/2024",
@@ -292,7 +292,7 @@ export function NavBar() {
                   },
                   {
                     title: "NMIFC and RMIFC",
-                    href: "/contenu",
+                    href: "/contenu/tous",
                     description:
                     "Visit by an American delegation to the National and ...",
                     date: "13/02/2024",
@@ -384,7 +384,7 @@ export function NavBar() {
                 <CommandList>
                   <CommandEmpty>No results found.</CommandEmpty>
                   <CommandGroup heading="Suggestions">
-                    <Link href="/contenu">
+                    <Link href="/contenu/tous">
                       <CommandItem>
                         <Calendar className="mr-2 h-4 w-4" />
                         <span>Evenement</span>
@@ -396,7 +396,7 @@ export function NavBar() {
                         <span>FAQ</span>
                       </CommandItem>
                     </Link>
-                    <Link href="/contenu/tous">
+                    <Link href="/contenu/tous/tous">
                       <CommandItem>
                         <Album className="mr-2 h-4 w-4" />
                         <span>Articles</span>
