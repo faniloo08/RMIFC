@@ -12,7 +12,7 @@ const Card = React.forwardRef<
       "rounded-md border bg-card text-card-foreground shadow-sm",
       className
     )}
-    style={{ width: '800px', height: '480px' }}
+    style={{width: '800px', height: '480px' }}
     {...props}
   />
 ))

@@ -1,8 +1,7 @@
 "use client"
-import React from 'react'
-// import { NavBar } from '../navbar/nav';
-// import { MenuBar } from '../menubar/menu';
-// import Footer from "../footer/footer";
+import React ,{ useState, useEffect } from 'react'
+import { NavBar } from "../../common/navbar/nav";
+import {MenuBuger} from "../../common/navbar/menuburger";
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -24,20 +23,31 @@ const Contenu = [
     "L'Union européenne (UE) est une union politico-économique sui generis de vingt-sept États européens qui délèguent ou transmettent par traité l'exercice de certaines compétences à des organes communautaires."
 ]
 function Partenaires() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768); // Utilise la largeur de 768px comme seuil pour les appareils mobiles
+      };
+  
+      handleResize(); // Vérifie la taille de l'écran au chargement de la page
+      window.addEventListener('resize', handleResize); // Écoute les changements de taille de l'écran
+  
+      return () => {
+        window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
+      };
+    }, []);
   return (
     // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
     <>
-        {/* <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">*/}
-            {/* <div className="bg-cover grid grid-cols-1"> 
-                <div className="mb-1"> 
-                    <MenuBar/>
-                </div>
+        <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
+            <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
                     <div className="fixed z-50">
-                        <NavBar/>
+                        {isMobile ? <MenuBuger/> : <NavBar />}
                     </div> 
                 </div>
-            </div> */}
+            </div>
             <div className="mt-[30px] flex items-center justify-center">
                 <p className="text-[50px] font-bold">
                     Partenaires et organisations impliquées
@@ -245,11 +255,7 @@ function Partenaires() {
                 </div>
             </div>
 
-            {/* <div className="mt-[50px]">
-                <Footer/>
-            </div> */}
-
-        {/* </div> */}
+        </div>
     </>
 
     // </div>

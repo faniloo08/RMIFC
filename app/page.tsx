@@ -1,6 +1,8 @@
 "use client"
-import { NavBar } from "./common/navbar/nav";
+import { useState, useEffect } from 'react';
 import {MenuBar} from "./common/menubar/menu";
+import { NavBar } from "./common/navbar/nav";
+import {MenuBuger} from "./common/navbar/menuburger";
 import Slide from "./homecomp/Slider/slide";
 import Mase from "./homecomp/mase/mase";
 import { PresText } from "./homecomp/presentation/prestext";
@@ -18,6 +20,20 @@ import Newsletter from "./homecomp/newsletter/newsletter";
 import Footer from "./common/footer/footer";
 import Image from "next/image";
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Utilise la largeur de 768px comme seuil pour les appareils mobiles
+    };
+
+    handleResize(); // Vérifie la taille de l'écran au chargement de la page
+    window.addEventListener('resize', handleResize); // Écoute les changements de taille de l'écran
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
+    };
+  }, []);
   return (
     <>
       <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
@@ -28,7 +44,7 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center"> 
                 <div className="fixed z-50">
-                    <NavBar/>
+                  {isMobile ? <MenuBuger/> : <NavBar />}
                 </div> 
             </div>
           </div>
@@ -42,7 +58,6 @@ export default function Home() {
                   <Mase/> 
                 </div>
                 {/* Reseaux Sociaux */}
-                
                 <div className="grid grid-cols-2 grid-flow-row md:space-x-[-150px] 2xl:space-x-[-250px] ml-[30px] mt-[50px]">
                   {/* fb */}
                   <div className="">

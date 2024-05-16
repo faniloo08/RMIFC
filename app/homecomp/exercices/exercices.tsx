@@ -59,7 +59,7 @@ export default function Exercices() {
         <CarouselContent>
           {Array.from({ length: Math.ceil(articleImages.length / 4) }).map((_, index) => (
                 <CarouselItem key={index}>
-                  <div className="p-3 items-center justify-center">
+                  <div className="md:p-3 items-center justify-center">
                     <Card>
                       <CardContent className="grid grid-rows-2 grid-flow-col gap-4 justify-center items-center">
                         {Array.from({ length: 4 }).map((_, itemIndex: number) => {

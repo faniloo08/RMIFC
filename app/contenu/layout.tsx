@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import "@/app/globals.css";
+import "../globals.css";
 // import ColorSwitcher from "./color-switcher/ColorSwitcher";
 import { cn } from "@/lib/utils"
-import { NavBar } from "@/app/common/navbar/nav";
-import {MenuBar} from "@/app/common/menubar/menu";
-import Footer from "@/app/common/footer/footer";
+import {MenuBar} from "../common/menubar/menu";
+import Footer from "../common/footer/footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 import { Inter as FontSans } from "next/font/google"
@@ -40,11 +39,6 @@ export default function RootLayout({
             <div className="bg-cover grid grid-cols-1"> 
               <div className="mb-1"> 
                   <MenuBar/>
-              </div>
-              <div className="flex items-center justify-center"> 
-                  <div className="fixed z-50">
-                      <NavBar/>
-                  </div> 
               </div>
             </div>
             {children}

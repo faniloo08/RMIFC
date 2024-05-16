@@ -37,12 +37,7 @@ function Recherche({ placeholder }: { placeholder: string }) {
     const handleClick = () => {
         alert('Recherche en cours')
         handleSearch;
-    };
-
-    const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setMessage(event.target.value);
-    };
-   
+    };   
 
   return (
     <div className="w-full h-[190px] bg-gradient-to-r from-[#ADD9D4] to-[#999797] justify-center items-center py-[40px]">

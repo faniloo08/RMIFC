@@ -2,20 +2,34 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Texte = [
-  "A propos",
+const Apropos = [
   "Historique",
   "Missions et Valeurs",
-  "Objectifs",
-  "Mentions Légales",
+  "Objectifs"
+]
+const Mentions = [
+  "",
   "Informations sur les droits d'auteurs",
   "Politiques de Confidentialité",
   "Conditions d'utilisation"
 ]
+
+const Contact = [
+  "Ankaditoho, Soanierana, Antananarivo",
+  "+261 34 05 414 12",
+  "assistante.communication@crfimmadagascar.org"
+
+]
+
+const Liens = [
+  "CFIM",
+  "Météorologie",
+  "Primature Malgache"
+]
 function Footer() {
   return (
-    <div className="w-full h-[308px] bg-gradient-to-r from-[#163583] to-[#4FFFAA] justify-center items-center py-[30px]">
-      <div className="relative sm:ml-[100px] grid grid-rows-2 grid-flow-col gap-1">
+    <div className="w-full md:h-[308px] bg-gradient-to-r from-[#163583] to-[#4FFFAA] justify-center items-center py-[30px]">
+      <div className="relative  sm:ml-[100px] grid grid-rows-2 grid-flow-col gap-1">
         <div className="col-start-1 col-end-3 mb-[-20px]">
           <Image
               className="dark-logo"
@@ -51,82 +65,82 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="2xl:ml-[120px] lg:ml-[60px] mt-[35px] grid grid-rows-1 grid-flow-col">
-        <div className="grid grid-rows-4 grid-flow-col">
+      <div className=" ml-[20px] 2xl:ml-[120px] lg:ml-[60px] mt-[35px] grid md:grid-rows-1 md:grid-flow-col">
+        <div className="grid grid-rows-4 grid-flow-col mb-1">
           <div>
-            <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[5px]">{Texte[0]}</p>
+            <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[5px]">A propos</p>
           </div>
           <div>
             <Link href="/infopages/historique">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Texte[1]}</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Apropos[0]}</p>
             </Link>
           </div>
           <div>
             <Link href="/infopages/historique">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Texte[2]}</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Apropos[1]}</p>
             </Link>
           </div>
           <div>
             <Link href="/infopages/historique">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Texte[3]}</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500">{Apropos[2]}</p>
             </Link>
           </div>
         </div>
-        <div>
+        <div className='mb-1'>
           <div>
-            <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]">{Texte[4]}</p>
+            <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]">Mentions Légales</p>
           </div>
           <div>
             <Link href="/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Texte[5]}</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Mentions[0]}</p>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Texte[6]}</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Mentions[1]}</p>
             </Link>
           </div>
           <div>
             <Link href="/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Texte[7]}</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Mentions[2]}</p>
             </Link>
           </div>
         </div>
-        <div>
+        <div className='mb-1'>
           <div>
             <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]">Contact</p>
           </div>
           <div>
-            <p className="text-xs sm:text-sm text-white w-[200px]">Ankaditoho, Soanierana, Antananarivo</p>
+            <p className="text-xs sm:text-sm text-white w-[200px]">{Contact[0]}</p>
           </div>
           <div>
             <Link href="/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]"> +261 34 05 414 12</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]"> {Contact[1]}</p>
             </Link>
           </div>
-          <div className='w-[10%]'>
+          <div>
             <Link href="https://mail.google.com/mail/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">assistante.communication@crfimmadagascar.org</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Contact[2]}</p>
             </Link>
           </div>
         </div>
-        <div>
+        <div className='mb-1'>
           <div>
             <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]">Liens</p>
           </div>
           <div>
             <Link href="https://cfimmadagascar.org/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">CFIM</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Liens[0]}</p>
             </Link>
           </div>
           <div>
             <Link href="https://www.meteomadagascar.mg/meteo-madagascar/a-propos-de-meteo/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">Météorologie</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Liens[1]}</p>
             </Link>
           </div>
           <div>
             <Link href="https://www.primature.gov.mg/index.php/primature/organismes-rattaches/">
-              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">Primature Malgache</p>
+              <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Liens[2]}</p>
             </Link>
           </div>
         </div>

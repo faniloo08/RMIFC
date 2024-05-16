@@ -3,9 +3,8 @@
 import {DataToTable} from '@/lib/api';
 import { PaginationDemo } from '@/app/homecomp/pagination/pagination';
 import React ,{ useState, useEffect } from 'react'
-// import { NavBar } from '@/app/navbar/nav';
-// import { MenuBar } from '@/app//menubar/menu';
-// import Footer from "@/app/footer/footer";
+import { NavBar } from "../../common/navbar/nav";
+import {MenuBuger} from "../../common/navbar/menuburger";
 import Link from 'next/link';
 import { Search } from "lucide-react"
 import Image from 'next/image';
@@ -128,22 +127,30 @@ function Contenus() {
         };
     },2000);
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768); // Utilise la largeur de 768px comme seuil pour les appareils mobiles
+      };
+  
+      handleResize(); // Vérifie la taille de l'écran au chargement de la page
+      window.addEventListener('resize', handleResize); // Écoute les changements de taille de l'écran
+  
+      return () => {
+        window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
+      };
+    }, []);
   return (
-    // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-        // <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
-        <>    
-        {/* Nav et menu bar */}
-            {/* <div className="bg-cover grid grid-cols-1">
-                <div className="mb-1"> 
-                    <MenuBar/>
-                </div>
+    <>    
+        <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
+            <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
                     <div className="fixed z-50">
-                        <NavBar/>
+                        {isMobile ? <MenuBuger/> : <NavBar />}
                     </div> 
                 </div>
-            </div> */}
-            
+            </div>
             {/* Les articles dynamiques */}
             <div className="grid md:grid-cols-3 grid-flow-row">
                 <div className="col-span-2">
@@ -310,13 +317,8 @@ function Contenus() {
                     
                 </div>
             </div>
-
-            {/* <div className="mt-[50px]">
-                <Footer/>
-            </div> */}
-        </>  
-        // </div>
-    // </div>
+        </div>
+    </>  
   )
 }
 
