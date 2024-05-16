@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { NextResponse, NextRequest } from "next/server";
+//import { NextResponse, NextRequest } from "next/server";
 import {authHandler} from '@/lib/authentification';
 
 const LoginForm = () => {
-  const [usernameOrEmail, setUsernameOrEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    const InfoForm = [
+        "Nom d'utilisateur ou Email :",
+        "Mot de passe :",
+    ]
+
+    const [usernameOrEmail, setUsernameOrEmail] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
         //Vérification de l'entrée du nom de l'utilisateur
@@ -16,9 +21,14 @@ const LoginForm = () => {
             // Si le champ "Name" est vide, affiche une alerte
             alert("Veuillez remplir le champ Username.");
         }
-        await authHandler(usernameOrEmail, password);
+        var isconnected = await authHandler(usernameOrEmail, password);
+        if (isconnected) {
+            localStorage.setItem('username', usernameOrEmail);
+        } else {
+            alert("Connexion failed");
+        }
         setUsernameOrEmail('');
-        alert("connected successfully");
+        // alert("connected successfully"); 
         window.location.reload();
     } catch (error) {
         console.error('An error occurred while processing the connexion:', error);
@@ -31,7 +41,7 @@ const LoginForm = () => {
     <form onSubmit={handleSubmit}>
         <div className="grid w-full items-center gap-2">
             <div className="flex flex-col space-y-1">
-                <Label htmlFor="usernameOrEmail">Nom d'utilisateur ou Email :</Label>
+                <Label htmlFor="usernameOrEmail">{InfoForm[0]}</Label>
                 <Input
                 type="text"
                 id="usernameOrEmail"
@@ -41,7 +51,7 @@ const LoginForm = () => {
                 />
             </div>
             <div className="flex flex-col space-y-1">
-                <Label htmlFor="password">Mot de passe :</Label>
+                <Label htmlFor="password">{InfoForm[1]}</Label>
                 <Input
                 type="password"
                 id="password"

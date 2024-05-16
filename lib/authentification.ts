@@ -1,31 +1,33 @@
-import { NextResponse, NextApiRequest } from 'next';
-import {middleware} from '@/app/middleware';
+//import { NextResponse, NextRequest } from 'next/server';
+// import {middleware} from '@/app/middleware';
 
-export const authHandler = async(usernameOrEmail, password) => {
-    try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/utilisateurs?filters[username][$eq]=${usernameOrEmail}`);
-        if (response.ok) {
+export const authHandler = async (usernameOrEmail: string, password: string) => {
+  try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/utilisateurs?filters[username][$eq]=${usernameOrEmail}`);
+      if (response.ok) {
           const userData = await response.json();
-          if (userData.length === 1) {
-            // Utilisateur trouvé, vérifier le mot de passe
-            const user = userData[0].attributes;
-            if (user.password === password) {
-              // Mot de passe correct, autoriser la connexion
-              return NextResponse.redirect("/");
-            } else {
-                alert('Please verify the password')
-            }
+          if (userData) {
+              const user = userData.data[0].attributes;
+              if (user.password === password) {
+                  alert("Connexion réussie !");
+                  return true;
+              } else {
+                  alert('Veuillez vérifier le mot de passe.');
+                  return false;
+              }
+          } else {
+              alert("Nom d'utilisateur ou mot de passe incorrect.");
+              return false;
           }
-        }
-      
-        // Si l'utilisateur n'est pas trouvé ou le mot de passe est incorrect, renvoyer un message d'erreur
-        return new Response("Nom d'utilisateur ou mot de passe incorrect.", { status: 401 });
-    } catch (error) {
+      } else {
+          alert("Une erreur s'est produite lors de l'appel à l'API.");
+          return false;
+      }
+  } catch (error) {
       console.error("Error logging in:", error);
-      // Gérer les erreurs de connexion, comme afficher un message d'erreur à l'utilisateur
-    }
-}
-
+      return false;
+  }
+};
 // // Interface personnalisée étendant NextApiRequest et ajoutant les propriétés manquantes
 // interface CustomNextRequest extends NextApiRequest {
 //     geo: any;

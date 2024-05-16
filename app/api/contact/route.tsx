@@ -1,48 +1,44 @@
-import { NextResponse, NextRequest } from 'next/server';
-import nodemailer from 'nodemailer'
+import { NextRequest, NextResponse } from 'next/server';
+//import nodemailer from 'nodemailer';
 
-// Handles POST requests to /api
 export async function POST(request: NextRequest) {
-    const username = process.env.NEXT_PUBLIC_BURNER_USERNAME;
-    const password = process.env.NEXT_PUBLIC_BURNER_PASSWORD;
-    const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
-
-    console.log("dealing with request");
-    const formData = await request.formData();
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
-
-    // create transporter object
-    const transporter = nodemailer.createTransport({
-        host: "smtp-mail.outlook.com",
-        port: 587,
-        tls: {
-            ciphers: "SSLv3",
-            rejectUnauthorized: false,
-        },
-        auth: {
-            user: username,
-            pass: password
-        }
-    });
-
+    const nodemailer = require("nodemailer");
     try {
+        // Analyse du corps de la requête pour obtenir les données du formulaire
+        const formData = await request.formData();
+        const name = formData.get('name') as string;
+        const email = formData.get('email') as string;
+        const topic = formData.get('topic') as string;
+        const message = formData.get('message') as string;
+
+        // Configuration de Nodemailer avec Gmail
+        const transporter = nodemailer.createTransport({
+            service: "Gmail",
+            host: "smtp.gmail.com",
+            port: 465,
+            auth: {
+                user: process.env.NEXT_PUBLIC_EMAIL_USERNAME,
+                pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD
+            }
+        });
+
+        // Envoi de l'e-mail
         const mail = await transporter.sendMail({
-            from: username,
-            to: myEmail,
+            from: email, // L'e-mail de l'utilisateur
+            to: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
             replyTo: email,
-            subject: `Website activity from ${email}`,
+            subject: `Message from ${name} - ${topic}`,
             html: `
-                <p>Name: ${name} </p>
-                <p>Email: ${email} </p>
-                <p>Message: ${message} </p>
+                <p>Name: ${name}</p>
+                <p>Email: ${email}</p>
+                <p>Topic: ${topic}</p>
+                <p>Message: ${message}</p>
             `,
         });
 
         return NextResponse.json({ message: "Success: email was sent" });
     } catch (error) {
-        console.log(error);
-        return new Response("COULD NOT SEND MESSAGE", { status: 500 });
+        console.error(error);
+        return NextResponse.error();
     }
 }

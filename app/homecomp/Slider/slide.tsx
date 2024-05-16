@@ -27,12 +27,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import {messageFonc} from '@/lib/message';
+
 export default function Slide() {
-  const [name, setName] = useState('')
+  const [nom, setNom] = useState('')
   const [email, setEmail] = useState('')
+  const [topic, setTopic] = useState('');
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const [body, setBody] = useState('')
+
   const images = [
     "/SlideA.png",
     "/SlideB.png"
@@ -42,49 +45,33 @@ export default function Slide() {
     "Centre Régional de Fusion d'Informations Maritimes",
     "Adresse email : assistante.communication@crfimmadagascar.org",
   ]
+  // Modifie la fonction handleSubmit pour utiliser la fonction post
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault(); // Empêche la soumission par défaut du formulaire
-
-    const nameInput = event.currentTarget.elements.namedItem('name') as HTMLInputElement; // Récupère l'élément input avec l'id "name"
-    const nameValue = nameInput.value.trim(); // Récupère la valeur de l'input en supprimant les espaces vides avant et après
-    
-    const formEvent = event as React.FormEvent<HTMLFormElement>;
-
-    // Récupérez l'élément de formulaire HTML
-    const formElement = formEvent.currentTarget;
-
-    // Créez l'objet FormData avec l'élément de formulaire HTML
-    const formData = new FormData(formElement);
+    event.preventDefault();
     try {
-
-        const response = await fetch('/api/contact', {
-            method: 'post',
-            body: formData,
-        });
-
-        if (!response.ok) {
-            console.log("falling over")
-            throw new Error(`response status: ${response.status}`);
-        }
-        const responseData = await response.json();
-        console.log(responseData['message'])
-
-        alert('Message successfully sent');
-    } catch (err) {
-        console.error(err);
-        alert("Error, please try resubmitting the form");
+      if (!nom) {
+        alert("Veuillez saisir votre nom d'utilisateur avant d'envoyer le formulaire.");
+        return; // Arrête l'exécution de la fonction
+      }
+      await messageFonc(nom, email, topic, message); 
+      setNom('');
+      setEmail('');
+      setTopic('');
+      setMessage('');
+      alert("Message Sent");
+      window.location.reload();
+    } catch (error) {
+        console.error('An error occurred while sending the message:', error);
+        alert("Message Not sent");
+        window.location.reload();
     }
+  }
+  
+  // Définit une fonction pour mettre à jour l'état lorsque la sélection change
+  const handleTopicChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setTopic(event.target.value); // Met à jour l'état avec la valeur sélectionnée
+  };
 
-    if (!nameValue) {
-      // Si le champ "Name" est vide, affiche une alerte
-      alert("Veuillez remplir le champ Name.");
-    } else {
-      // Sinon, le formulaire est valide, vous pouvez soumettre le formulaire ou effectuer d'autres actions ici
-      // Par exemple, vous pouvez envoyer les données à un backend ou naviguer vers une autre page
-      // Soumet le formulaire
-      event.currentTarget.submit();
-    }
-};
   return (
     <ImagesSlider className="drop-shadow flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem] w-[17rem] sm:w-[30rem] md:w-[30rem] lg:w-[36rem] xl:w-[41rem] 2xl:w-[57rem] justify-center items-center" images={images}>
       <motion.div
@@ -110,6 +97,7 @@ export default function Slide() {
           </p>
           <Dialog>
               <DialogTrigger asChild>
+                {/* Appel au formulaire */}
                 <button className="hover:bg-slate-500 lg:px-2 lg:py-2 py-[2px] px-[2px] backdrop-blur-sm border bg-gradient-to-r from-cyan-900 to-sky-950  border-emerald-500/20 text-white mx-auto text-center item-center justify-center rounded-[8px] lg:rounded-full relative mt-4">
                   <Link href="/">
                     <span className="text-[6px] 2xl:text-md lg:text-sm md:text-xs">Nous contacter</span>
@@ -118,6 +106,7 @@ export default function Slide() {
                 </button>
               </DialogTrigger>
               <DialogContent className="2xl:max-w-[600px] lg:max-w-[400px] items-center justify-center">
+                {/*Le formulaire*/}
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-center mb-1">{Texte[1]}</CardTitle>
@@ -128,35 +117,34 @@ export default function Slide() {
                       <div className="grid w-full items-center gap-2">
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="name">Nom*</Label>
-                          <Input id="name" placeholder="DOE John" autoComplete="name" required/>
+                          <Input id="name" placeholder="DOE John" value={nom} onChange={(e) => setNom(e.target.value)} required/>
                         </div>
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="name">Email*</Label>
-                          <Input id="email" placeholder="johndoe00@gmail.com" autoComplete="email" required/>
+                          <Input id="email" placeholder="johndoe00@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                         </div>
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="framework">Topic</Label>
                           <Select>
                             <SelectTrigger id="framework">
-                              <SelectValue placeholder="Select" />
+                              <SelectValue placeholder="Select" onChange={handleTopicChange}/>
                             </SelectTrigger>
                             <SelectContent position="popper">
-                              <SelectItem value="next">Informations</SelectItem>
-                              <SelectItem value="sveltekit">Prendre rendez-vous</SelectItem>
-                              <SelectItem value="astro">Services aux CRFIM</SelectItem>
-                              <SelectItem value="nuxt">Autres</SelectItem>
+                              <SelectItem value="Informations">Informations</SelectItem>
+                              <SelectItem value="Prendre rendez-vous">Prendre rendez-vous</SelectItem>
+                              <SelectItem value="Services aux CRFIM">Services aux CRFIM</SelectItem>
+                              <SelectItem value="Autres">Autres</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="message">Message</Label>
-                          <Input id="text" placeholder="Votre message" />
+                          <Input id="text" placeholder="Votre message" value={message} onChange={(e) => setMessage(e.target.value)}/>
                         </div>
                       </div>
                       <button type="submit" className=" outline relative rounded-full p-1 ml-[250px] mt-[40px] hover:bg-gradient-to-r from-cyan-900 to-sky-950 hover:text-white">Envoyer</button>
                     </form>
                   </CardContent>
-                 
                 </Card>
               </DialogContent>
           </Dialog>

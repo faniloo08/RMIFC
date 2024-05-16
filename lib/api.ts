@@ -4,7 +4,7 @@ async function getData(): Promise<any> {
     try {
         const resp = await fetch(url, {
             method: 'GET',
-            mode: 'no-cors', //Définition du mode de requête sur 'no-cors'
+            // mode: 'no-cors', //Définition du mode de requête sur 'no-cors'
         });
         const result = await resp.json();
         if (resp.status === 200) {
@@ -106,5 +106,3 @@ export async function DataToTable(): Promise<Article[]> {
         return [];
     }
 }
-
-
