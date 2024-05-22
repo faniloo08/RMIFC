@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip'
 import Image from 'next/image';
-
+import Link from 'next/link';
 const partenaire = [
     "Intergovernmental Authority on Development",
     "East African Community",
@@ -17,11 +17,13 @@ function Partenaire() {
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <Image 
-                        src="/Igad.png" 
-                        alt="Intergovernmental Authority on Development" 
-                        width={190} 
-                        height={125}/>
+                        <Link href="https://igad.int/">
+                            <Image 
+                            src="/Igad.png" 
+                            alt="Intergovernmental Authority on Development" 
+                            width={190} 
+                            height={125}/>
+                        </Link>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p className="mb-[5px] text-center text-xs w-[200px]">{partenaire[0]}</p>
@@ -33,11 +35,13 @@ function Partenaire() {
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <Image 
-                        src="/EAC.png" 
-                        alt="East African Community" 
-                        width={190} 
-                        height={125} />
+                        <Link href="https://www.eac.int/">
+                            <Image 
+                            src="/EAC.png" 
+                            alt="East African Community" 
+                            width={190} 
+                            height={125} />
+                        </Link>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p className="mb-[5px] text-center text-xs">{partenaire[1]}</p>
@@ -49,11 +53,13 @@ function Partenaire() {
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <Image 
-                        src="/Comesa.png" 
-                        alt="Common Market for Eastern and Southern Africa" 
-                        width={190} 
-                        height={125} />
+                        <Link href="https://www.comesa.int/?lang=fr">
+                            <Image 
+                            src="/Comesa.png" 
+                            alt="Common Market for Eastern and Southern Africa" 
+                            width={190} 
+                            height={125} />
+                        </Link>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p className="mb-[5px] text-center text-xs w-[200px]">{partenaire[2]}</p>
@@ -65,11 +71,13 @@ function Partenaire() {
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <Image 
-                        src="/OI.png" 
-                        alt="Comission de l'Océan Indien" 
-                        width={190} 
-                        height={125}/>
+                        <Link href="https://www.commissionoceanindien.org/">
+                            <Image 
+                            src="/OI.png" 
+                            alt="Comission de l'Océan Indien" 
+                            width={190} 
+                            height={125}/>
+                        </Link>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p className="mb-[5px] text-center text-xs">{partenaire[3]}</p>
@@ -81,11 +89,13 @@ function Partenaire() {
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
-                        <Image 
-                        src="/UE.png" 
-                        alt="Union Européenne" 
-                        width={190} 
-                        height={125}/>
+                        <Link href="https://european-union.europa.eu/index_fr">
+                            <Image 
+                            src="/UE.png" 
+                            alt="Union Européenne" 
+                            width={190} 
+                            height={125}/>
+                        </Link>
                     </TooltipTrigger>
                     <TooltipContent>
                         <p className="mb-[5px] text-center text-xs">{partenaire[4]}</p>

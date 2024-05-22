@@ -24,6 +24,7 @@ interface Article {
     slug: string;
     cover: string;
     article: string;
+    gallerie: string[];
 }
 
 export async function DataToTable(): Promise<Article[]> {
@@ -36,6 +37,11 @@ export async function DataToTable(): Promise<Article[]> {
     const toutesLesArticles: string[] = [];
     const tousLesSlugs: string[] = [];
     const tousLesCovers: string[] = [];
+    const ImagesGallerie: any[] = [];
+    //Pour la gallerie d'images
+    const imageRegex = /!\[.*?\]\((.*?)\)/g;
+    const image:string[] = [];
+    let match;
 
     if (typeof elements === 'object' && elements !== null && elements.data) {
         elements.data.forEach((item: any) => {
@@ -76,8 +82,15 @@ export async function DataToTable(): Promise<Article[]> {
 
         for (let i = 0; i < tableauDeDonnees.length; i++) {
             const articleContent = tableauDeDonnees[i][11][0].body;
+            //Gallerie d'images
+            while ((match = imageRegex.exec(articleContent)) !== null) {
+                image.push(match[1]);
+            }
+            // console.log(image);
+            ImagesGallerie.push(image);
             toutesLesArticles.push(articleContent);
         }
+        console.log(ImagesGallerie);
 
         for (let i = 0; i < tableauDeDonnees.length; i++) {
             const coverUrl = tableauDeDonnees[i][9].data.attributes.url;
@@ -93,6 +106,7 @@ export async function DataToTable(): Promise<Article[]> {
                 slug: tousLesSlugs[i],
                 cover: tousLesCovers[i],
                 article: toutesLesArticles[i],
+                gallerie: ImagesGallerie[i],
             };
             articles.push(article);
         }

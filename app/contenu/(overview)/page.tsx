@@ -119,6 +119,17 @@ function Contenus(
                     //console.log(couverture);
                     setCouverture(couverture);
 
+
+                    //Gallerie d'images
+                    if (Array.isArray(titres[i].gallerie)) {
+                        const gallerie = titres[i].gallerie;
+                        console.log(gallerie);
+                        setGallerie(gallerie);
+
+                    } else {
+                        console.error("titres[i].gallerie n'est pas un tableau :", titres[i].gallerie);
+                    }
+                    break;
                     //Forcer l'arret de la boucle
                     break;
                 }
@@ -133,6 +144,7 @@ function Contenus(
     const [date, setDate] = useState('');
     const [article, setArticle] = useState('');
     const [couverture, setCouverture] = useState('');
+    const [gallerie, setGallerie] = useState<string[]>([]);
     const [Slug0, setSlug0] = useState('');
     const [Slug3, setSlug3] = useState('');
     const [Titre0, setTitre0] = useState('');
@@ -350,43 +362,21 @@ function Contenus(
             {/* Photos liées à l'article */}
             <p className="font-bold text-lg mt-[50px]  md:ml-[50px]">{Galerie}</p>
             <div className="2xl:mt-[50px] lg:mt-[30px] 2xl:ml-[180px] lg: md:ml-[50px] grid md:grid-cols-3 gap-1 items-center justify-center">
-                <div>
-                    {/* Photo1 */}
-                    <Image 
-                    src="/CD3(1).jpg" 
-                    alt="" 
-                    width={300} 
-                    height={250} 
-                    className="hover:scale-110"/>
-                    <p className="mt-1 text-xs mb-1 text-center w-[300px]">
-                        {Texte[6]}
-                    </p> 
-                </div>
-                <div>
-                    {/* Photo2 */}
-                    <Image 
-                    src="/CD3.jpg" 
-                    alt="" 
-                    width={300} 
-                    height={250} 
-                    className="hover:scale-110"/>
-                    <p className="mt-1 text-xs mb-1 text-center w-[300px]">
-                        {Texte[6]}
-                    </p> 
-                </div>
-                <div>
-                    {/* Photo3 */}
-                    <Image 
-                    src="/B1.jpg" 
-                    alt="" 
-                    width={300} 
-                    height={250} 
-                    className="hover:scale-110"/>
-                    <p className="mt-1 text-xs mb-1 text-center w-[300px]">
-                    {Texte[6]}
-                    </p> 
-                </div>
-            </div>
+                {gallerie.length > 0 ? (
+                    gallerie.map((src, index) => (
+                        <img
+                            key={index}
+                            src={src}
+                            alt={`Image ${index + 1}`}
+                            width={300}
+                            height={250}
+                            className="hover:scale-110"
+                        />
+                    ))
+                ) : (
+                    <p>Aucune image trouvée</p>
+                )}
+            </div> 
 
             {/* Commentaires */}
             <div className=" md:ml-[50px] grid grid-row-3 gap-1 ">

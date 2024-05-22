@@ -14,7 +14,7 @@ import {sendInfo} from '@/lib/sendInfo';
 
 const Texte = [
   "Bienvenue sur la section de déposition d'information du CRFIM",
-  "Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile, veuillez la déposer ici"
+  "Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile :  pêche illégale, entrées et sorties des bateaux, trafics, tourisme, et plus encore, veuillez la déposer ici"
 ]
 function Formulaire() {
   const [nom, setNom] = useState('');

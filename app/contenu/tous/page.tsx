@@ -144,7 +144,7 @@ function Contenus() {
   return (
     <>    
         <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
-            <div className="bg-cover grid grid-cols-1">
+            <div className="bg-cover grid grid-cols-1 gap-2 space-x-4">
                 <div className="flex items-center justify-center"> 
                     <div className="fixed z-50">
                         {isMobile ? <MenuBuger/> : <NavBar />}
@@ -172,7 +172,7 @@ function Contenus() {
                                     className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110 sm:w-[50%] md:w-[90%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] w-[50%]"
                                 />
                             </div>
-                            <div>
+                            <div className='ml-[50px]'>
                                 {/* Description */}
                                 <div className="">
                                     <span className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{article.description}</span>
@@ -185,7 +185,7 @@ function Contenus() {
                                             {article.titre}
                                         </Link>
                                     </p>
-                                    <p className="text-[13px] py-1 w-[320px]">
+                                    <p className="text-[13px] py-1 w-[300px]">
                                         {/* Apperçu */}
                                         <ReactMarkdown> 
                                             {generatePreview(article.article)}
@@ -229,7 +229,7 @@ function Contenus() {
                         />
                     </div>
                 </div>
-                <div className="hidden md:block mt-[50px] mr-[50px]">
+                <div className="hidden md:block mt-[50px] ml-[90px]">
                     <Image 
                     src="/Piraterie.jpg" 
                     alt="" 
@@ -237,7 +237,7 @@ function Contenus() {
                     height={250} 
                     className="hover:scale-110"/>
                     {/* Texte */}
-                    <div className="mt-[30px] lg:w-[330px] md:w-[150px] text-[15px]">
+                    <div className="mt-[30px] lg:w-[300px] md:w-[150px] text-[15px]">
                         <p>
                             {Texte[0]}
                         </p>
@@ -306,7 +306,7 @@ function Contenus() {
                 <p className="font-bold text-lg mt-[90px] ">Rechercher des Articles</p>
                 <div className="flex items-center" cmdk-input-wrapper="">
                     <input
-                        className="block w-[95%] rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
+                        className="block w-[100%] rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
                         placeholder="Ex: operation-auxilium"
                         onChange={(e) => {
                         handleSearch(e.target.value);
@@ -314,7 +314,6 @@ function Contenus() {
                         // defaultValue={searchParams.get('query')?.toString()}
                     />
                     <Search className="ml-[-50px] mr-2 h-4 w-4 shrink-0 opacity-50" />
-                    
                 </div>
             </div>
         </div>

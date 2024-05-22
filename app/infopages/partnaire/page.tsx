@@ -55,7 +55,7 @@ function Partenaires() {
             </div>
             <div className="grid grid-cols-2 items-center justify-center">
                 <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
-                    {/* Le CRFIM */}
+                    {/* Le CRCO */}
                     {/* Titre */}
                     <Link href="https://crcoseychelles.org/">
                         <p className="text-[20px] text-cyan-700 font-bold underline mb-2">{Titre[0]}</p>

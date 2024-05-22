@@ -52,12 +52,12 @@ function Vcr() {
                 <button className="mt-[20px] drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px]"                     onMouseEnter={() => setIsHovered(true)}
                       onMouseLeave={() => setIsHovered(false)}
                       onClick={handleDownload}>
-                      <Image src={isHovered ? "/Download1.png" : "/Download.png"} 
+                      <Image src={isHovered ? "/Download1(1).png" : "/Download.png"} 
                       alt="Telecharger" 
                       width={25} height={25} 
                       className="mt-[10px]" 
                       />
-                      <span className="hover:text-yellow-300 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 py-2 text-sm font-medium text-white backdrop-blur-3xl">
+                      <span className="hover:text-green-200 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 py-2 text-sm font-medium text-white backdrop-blur-3xl">
                           {Texte[2]}
                       </span>
                 </button>

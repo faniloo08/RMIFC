@@ -5,13 +5,15 @@ import Image from 'next/image'
 const Texte = [
   "Le front froid axé au Sud-Est de Madagascar affectera le temps",
   "Des averses isolées localement orageuses seront attendues sur MELAKY, BONGOLAVA, BETSIBOKA, ATSIMO ATSINANANA, VATOVAVY, FITOVINANY, la partie Ouest de BOENY, les parties Sud d’ALAOTRA MANGORO et ATSINANANA ainsi que les hautes terres centrales. Quelques averses locales seront probables sur Ambilobe, Nosy .",
-  "21/03/24",
+  "",
   "Brunvoll Propulsion Chosen for ESVAGT's Growing Fleet of Service Operation Vessels",
   "Brunvoll has once again been chosen as supplier of the propulsion and manoeuvring system for one of ESVAGT’s new service operation vessels (SOV). This will be the fourth ESVAGT vessel currently undergoing construction. The vessel is designed by HAV …",
-  "21/03/24",
+  "",
   "Weather Forecast"
 ]
 function Ressource() {
+  const today = new Date();
+  const formattedDate = today.toLocaleDateString('fr-FR')
   return (
     <div>
         <div className="lg:ml-[40px] sm:ml-[0px] 2xl:w-[1480px] lg:w-[1000px] 2xl:h-[700px] lg:h-[600px] bg-gradient-to-r from-[#5DB4D9] to-[#181C70] justify-center items-center py-[10px]">
@@ -40,7 +42,7 @@ function Ressource() {
                     {Texte[1]}
                   </p>
                   <p className="text-[12px] fond-extralight">
-                    {Texte[2]}
+                    {formattedDate}
                   </p>
                 </div>
               </div>
@@ -56,7 +58,7 @@ function Ressource() {
                     {Texte[4]}
                   </p>
                   <p className="text-[12px] fond-extralight">
-                    {Texte[5]}
+                    {formattedDate}
                   </p>
                 </div>
                 <div>

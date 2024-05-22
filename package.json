@@ -22,6 +22,7 @@
     "@react-google-maps/api": "^2.19.3",
     "@tabler/icons-react": "^3.1.0",
     "@vercel/otel": "^1.8.2",
+    "axios": "^1.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^1.0.0",

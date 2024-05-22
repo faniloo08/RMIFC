@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Stat = [
-  "Quelques statistiques durant l'année en cours",
+  "Visualisez les statistiques clés de nos activités de surveillance maritime.",
   "Pays signataires",
   "Centres régionaux",
   "Formations dans l'année",
