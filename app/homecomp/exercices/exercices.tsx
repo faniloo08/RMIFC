@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/exocard"
 import {
   type UseEmblaCarouselType,
@@ -46,7 +46,27 @@ export default function Exercices() {
   "",
   ""
   ];
+  //génération de l'apperçu : 
+  const generatePreview = (content: any): string => {
+      // Tu peux mettre ici la logique de génération d'aperçu que tu veux
+      // Par exemple, tu peux simplement retourner les premiers 100 caractères du contenu
+      const preview = content.slice(0, 10);
+      return preview + '..'
+  };
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Utilise la largeur de 768px comme seuil pour les appareils mobiles
+    };
+
+    handleResize(); // Vérifie la taille de l'écran au chargement de la page
+    window.addEventListener('resize', handleResize); // Écoute les changements de taille de l'écran
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
+    };
+  }, []);
   return (
     <div>
       <div>
@@ -61,32 +81,37 @@ export default function Exercices() {
                 <CarouselItem key={index}>
                   <div className="md:p-3 items-center justify-center">
                     <Card>
-                      <CardContent className="grid grid-rows-2 grid-flow-col gap-4 justify-center items-center">
+                      <CardContent className="grid grid-rows-2 grid-flow-col gap-2 md:gap-4 justify-center items-center">
                         {Array.from({ length: 4 }).map((_, itemIndex: number) => {
                           const articleIndex = index * 4 + itemIndex;
                           if (articleIndex >= articleImages.length) {
                             return null; // Si l'indice dépasse la longueur du tableau, on ne rend rien
                           }
                           return (
-                            <div key={itemIndex} className="justify-center items-center">
-                              <div className="mt-[50px] ">
+                            <div key={itemIndex} className="grid grid-cols-2 grid-flow-row justify-center items-center">
+                              {/* <div className="mt-[50px] "> */}
+                              <div>
                                 {/*Cover*/}
                                 <Image 
-                                src = {`${articleImages[index * 4 + itemIndex]}`}
-                                alt = "image cover"
-                                width={70}
-                                height={70}
+                                  src = {`${articleImages[index * 4 + itemIndex]}`}
+                                  alt = "image cover"
+                                  width={70}
+                                  height={70}
                                   className="inline-flex cursor-pointer items-center justify-center rounded-full text-xl hover:text-2xl font-medium text-white"
                                 />
+                              </div>
+                              <div>
                                 {/* Titre */}
                                 <Link
                                   href={`${articleLink[articleIndex]}`}
                                   className="hover:text-sky-600"
                                 >
-                                  <p className="ml-[80px] mt-[-60px] font-bold text-sm">
-                                    {articleTitles[articleIndex]}
+                                  <p className="font-bold text-sm">
+                                  {/* <p className="ml-[80px] mt-[-60px] font-bold text-sm"> */}
+                                    {isMobile ? `${generatePreview(`${articleTitles[articleIndex]}`)}` : `${articleTitles[articleIndex]}`}
                                   </p>
-                                  <p className="ml-[80px] font-light text-sm">
+                                  <p className="font-light text-sm">
+                                  {/* <p className="ml-[80px] font-light text-sm"> */}
                                     {articleDates[articleIndex]}
                                   </p>
                                 </Link>

@@ -161,7 +161,7 @@ function Contenus() {
                     </div>
                     {/* Articles */}
                     {articles.slice((currentPage - 1) * articlesPerPage, currentPage * articlesPerPage).map((article, index) => (
-                        <div key = {index} className="grid grid-cols-2 grid-flow-row ml-[50px] mt-[30px]">
+                        <div key = {index} className="grid md:grid-cols-2 grid-flow-row ml-[50px] mt-[30px]">
                             <div className="lg:w-[650px] 2xl:w-[1200px]">
                                 {/* cover */}
                                 <img 
@@ -172,7 +172,7 @@ function Contenus() {
                                     className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110 sm:w-[50%] md:w-[90%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] w-[50%]"
                                 />
                             </div>
-                            <div className='ml-[50px]'>
+                            <div className='md:ml-[50px]'>
                                 {/* Description */}
                                 <div className="">
                                     <span className="bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-sm text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{article.description}</span>
@@ -185,7 +185,7 @@ function Contenus() {
                                             {article.titre}
                                         </Link>
                                     </p>
-                                    <p className="text-[13px] py-1 w-[300px]">
+                                    <p className="text-[13px] py-1 md:w-[300px]">
                                         {/* Apperçu */}
                                         <ReactMarkdown> 
                                             {generatePreview(article.article)}

@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from "lucide-react"
 import Image from "next/image"
 import { cn } from "@/lib/utils"
 
@@ -14,7 +13,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn("border-b", className)}
+    className={cn("border-b flex justify-center", className)}
     {...props}
   />
 ))
@@ -28,7 +27,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-2 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+        "flex flex-1 justify-between py-2 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
         className
       )}
       {...props}
@@ -36,7 +35,8 @@ const AccordionTrigger = React.forwardRef<
       {children}
       <Image src="/Burger.png"
         alt="Telecharger" 
-        width={25} height={25}  
+        width={25} height={25}
+        className="mt-[5px]"  
       />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
@@ -49,7 +49,7 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    className="bg-white/70  flex justify-center mt-[50px] fixed text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
     <div className={cn("pb-0 pt-0", className)}>{children}</div>

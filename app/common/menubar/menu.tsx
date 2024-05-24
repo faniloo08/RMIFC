@@ -144,6 +144,20 @@ export function MenuBar() {
         setShowLoginForm(false);
     };
 
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768); // Utilise la largeur de 768px comme seuil pour les appareils mobiles
+      };
+  
+      handleResize(); // Vérifie la taille de l'écran au chargement de la page
+      window.addEventListener('resize', handleResize); // Écoute les changements de taille de l'écran
+  
+      return () => {
+        window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
+      };
+    }, []);
 
     return (
         <Menubar className="flex justify-between items-center">
@@ -182,14 +196,15 @@ export function MenuBar() {
                                 {/* Bouton de connexion */}
                                 <span onClick={handleLoginButtonClick} className="drop-shadow relative inline-flex overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                                     {/* <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#3B70A0_0%,#393BB2_50%,#011764_100%)]" />  */}
-                                    <span className="text-xs hover:bg-cyan-900 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-sky-950 px-1 py-1 font-medium text-white backdrop-blur-3xl">
+                                    <span className="text-xs hover:bg-cyan-900 inline-flex h-full w-full cursor-pointer items-center justify-center md:rounded-full bg-sky-950 px-1 py-1 font-medium text-white backdrop-blur-3xl">
+                                     {isMobile ? "" : 
                                         <Image
                                         className="dark-logo"
                                         width={30}
                                         height={30}
                                         src={"/connexion.png" }
                                         alt="Connexion"
-                                        />
+                                        /> }
                                         {/* Affichez le nom d'utilisateur s'il est disponible, sinon affichez "Connexion" */}
                                         {isLoggedIn ? localStorage.getItem('username') : "Connexion"}
                                         {/* Connexion */}

@@ -70,7 +70,7 @@ function Contact() {
                         Soanierana,Ankaditoho
                     </p>
                     <div className="">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7547.471296333994!2d47.52388640226706!3d-18.943091663657594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07dfb7b450ceb%3A0xc7870ae0535c14d4!2sCentre%20R%C3%A9gional%20de%20Fusion%20d&#39;Information%20Maritime%20-%20CRFIM!5e0!3m2!1sfr!2smg!4v1711546167685!5m2!1sfr!2smg" width="500" height="250"   loading="lazy" className="w-[90%] 2xl:w-[90%] lg:w-[90%]"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7547.471296333994!2d47.52388640226706!3d-18.943091663657594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07dfb7b450ceb%3A0xc7870ae0535c14d4!2sCentre%20R%C3%A9gional%20de%20Fusion%20d&#39;Information%20Maritime%20-%20CRFIM!5e0!3m2!1sfr!2smg!4v1711546167685!5m2!1sfr!2smg" width="500" height="250" loading="lazy" className="w-[90%] 2xl:w-[90%] lg:w-[90%]"></iframe>
                     </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@ export default function Home() {
                 <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px]">
                   <Slide/>
                 </div> 
-                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] md:ml-[15px] sm:ml-[120px] mt-[-50px]">
+                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] md:ml-[15px] sm:ml-[120px] mt-[30px] md:mt-[-50px]">
                   <Mase/> 
                 </div>
                 {/* Reseaux Sociaux */}

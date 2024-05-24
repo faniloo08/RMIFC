@@ -65,7 +65,7 @@ function Formulaire() {
             <CardDescription className="text-center">{Texte[1]}</CardDescription>
           </CardHeader>
           <CardContent>
-            <form className="my-2" onSubmit={handleSubmit}>
+            <form id="infoForm" className="my-2" onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 grid-flow-row ">
                 <div className="mr-1">
                   {/* Nom à fonction */}

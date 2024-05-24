@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/select";
 
 import {messageFonc} from '@/lib/message';
+import { sendEmail } from "@/lib/mailService";
 
 export default function Slide() {
   const [nom, setNom] = useState('')
@@ -113,21 +114,21 @@ export default function Slide() {
                     <CardDescription className="text-center">{Texte[2]}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <form onSubmit={handleSubmit}>
+                    <form id="messageForm" onSubmit={handleSubmit} action={sendEmail}>
                       <div className="grid w-full items-center gap-2">
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="name">Nom*</Label>
-                          <Input id="name" placeholder="DOE John" value={nom} onChange={(e) => setNom(e.target.value)} required/>
+                          <Input id="name" name="name" placeholder="DOE John" value={nom} onChange={(e) => setNom(e.target.value)} required/>
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <Label htmlFor="name">Email*</Label>
-                          <Input id="email" placeholder="johndoe00@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                          <Label htmlFor="email">Email*</Label>
+                          <Input id="email" name="email" placeholder="johndoe00@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <Label htmlFor="framework">Topic</Label>
-                          <Select>
+                          <Label htmlFor="topic">Topic</Label>
+                          <Select name="topic">
                             <SelectTrigger id="framework">
-                              <SelectValue placeholder="Select" onChange={handleTopicChange}/>
+                              <SelectValue placeholder="Select"  onChange={handleTopicChange}/>
                             </SelectTrigger>
                             <SelectContent position="popper">
                               <SelectItem value="Informations">Informations</SelectItem>
@@ -139,7 +140,7 @@ export default function Slide() {
                         </div>
                         <div className="flex flex-col space-y-1">
                           <Label htmlFor="message">Message</Label>
-                          <Input id="text" placeholder="Votre message" value={message} onChange={(e) => setMessage(e.target.value)}/>
+                          <Input id="text" name="message" placeholder="Votre message" value={message} onChange={(e) => setMessage(e.target.value)}/>
                         </div>
                       </div>
                       <button type="submit" className=" outline relative rounded-full p-1 ml-[250px] mt-[40px] hover:bg-gradient-to-r from-cyan-900 to-sky-950 hover:text-white">Envoyer</button>

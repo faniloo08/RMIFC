@@ -127,7 +127,7 @@ export function MenuBuger() {
                 </AccordionTrigger>
                 <AccordionContent>
                     {/* Contenu du navbar */}
-                    <NavigationMenu>
+                    <NavigationMenu className="justify-center">
                         <NavigationMenuList>
                             <NavigationMenuItem>
                                 <Link href="/">
