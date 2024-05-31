@@ -411,12 +411,12 @@ const Map = () => {
   }
 
   return (
-    <div className="w-[450px] h-[150px] 2xl:w-[100%] 2xl:ml-[-30px]">
+    <div className="2xl:w-[100%] 2xl:ml-[-30px]">
         <MapContainer
         center={[-20.0, 60.0]} // Center the map to the Indian Ocean
         zoom={5}
-        style={{ height: '150px', width: '450px', borderRadius: '20px', boxShadow:'6px 6px 10px 0px rgba(0, 0, 0, 0.4)'}}
-        >
+        style={{ borderRadius: '20px', boxShadow:'6px 6px 10px 0px rgba(0, 0, 0, 0.4)'}}
+        className="h-[150px] w-[450px] md:w-[90%] lg:w-[90%] xl:w-[100%] ">
         <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

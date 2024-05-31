@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
       <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-        <div className="bg-white md:bg-[url('/HomePage(2).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat items-center justify-center w-[85%] h-4/5 bg-cover">
+        <div className="bg-white md:bg-[url('/HomePage2(1).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat items-center justify-center w-[85%] h-4/5 bg-cover">
           <div className="bg-cover grid grid-cols-1"> 
             <div className="mb-1"> 
                 <MenuBar/>
@@ -48,13 +48,13 @@ export default function Home() {
                 </div> 
             </div>
           </div>
-          <div className=" ml-[20px] bg-cover grid md:grid-cols-2 items-center justify-center">
-            <div className="bg-cover grid grid-cols-1  items-center justify-center">
-              < div className="ml-3 relative mt-[50px]">
-                <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px]">
+          <div className="bg-cover grid md:grid-cols-3 gap-3 items-center justify-center">
+            <div className="bg-cover grid grid-cols-1 items-center justify-center md:col-span-2">
+              <div className="relative mt-[50px]">
+                <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px] w-[92%] md:w-[90%] lg:w-[94%] xl:w-[91%] 2xl:w-[88%] ml-[20px]">
                   <Slide/>
                 </div> 
-                <div className=" relative 2xl:ml-[120px] lg:ml-[75px] md:ml-[15px] sm:ml-[120px] mt-[30px] md:mt-[-50px]">
+                <div className="md:flex justify-center items-center relative mt-[30px] sm:mt-[10px] md:mt-[0px] ml-[25%] sm:ml-[35%] md:ml-[10%] lg:ml-[0%] 2xl:ml-[-5%]">
                   <Mase/> 
                 </div>
                 {/* Reseaux Sociaux */}
@@ -87,12 +87,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className=" relative hidden sm:hidden md:block md:ml-[170px] lg:ml-[165px] 2xl:ml-[180px] md:mt-[0px] lg:mt-[10px] 2xl:mt-[-10px]">
+            <div className="hidden sm:hidden md:block md:mt-[0px] lg:mt-[10px] 2xl:mt-[-10px] w-[92%]">
               <div>
-                <p className="text-sky-950 font-bold md:text-[20px] text-[24px] relative mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
+                <p className="text-sky-950 font-bold lg:text-[18px] md:text-[20px] text-[24px] mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
                 <PresText/>
               </div>
-              <div className="xl:mt-[50px] 2xl:mt-[150px] ">
+              <div className="lg: mt-[50px] xl:mt-[50px] 2xl:mt-[150px]">
                 <Statistique/>
               </div>
             </div>
@@ -111,10 +111,10 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="ml[30px] mt-[30px]">
+            <div className="flex justify-center items-center mt-[30px]">
               <Articles/>
             </div>
-            <div className="mt-[100px]">
+            <div className="mt-[50px]">
               <Recherche placeholder=""/>
             </div>
             <div className="mt-[50px]">
@@ -131,16 +131,16 @@ export default function Home() {
                 Ressources
               </span>
             </div>
-            <div className="md:ml-[30px] mt-[50px]">
+            <div className="mt-[50px]">
               <Ressource/>
             </div>
-            <div className="md:ml-[30px] mt-[80px]">
+            <div className="mt-[80px]">
               <Partenaire/>
             </div>
-            <div className="md:ml-[30px] mt-[50px]">
+            <div className="flex justify-center items-center mt-[50px]">
               <Vcr/>
             </div>
-            <div className="md:ml-[30px] mt-[50px]">
+            <div className="mt-[50px]">
               <Newsletter/>
             </div>
 

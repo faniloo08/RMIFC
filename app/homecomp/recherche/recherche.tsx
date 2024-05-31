@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import Image from 'next/image'
+//import Image from 'next/image'
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
-
+import { Search } from "lucide-react"
+import { PlaceholdersAndVanishInput } from '@/components/ui/placeholders-and-vanish-input';
 function Recherche({ placeholder }: { placeholder: string }) {
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -33,42 +34,67 @@ function Recherche({ placeholder }: { placeholder: string }) {
       replace(`/contenu${pathname}?${params.toString()}`);
     };
   },2000);
-    const [message, setMessage] = useState('');
-    const handleClick = () => {
-        alert('Recherche en cours')
-        handleSearch;
-    };   
-
+    const placeholders = [
+      "OPERATION AUXILIUM",
+      "Visite des participants du forum du réseau des procureurs au CRFIM",
+      "Réunion avec le FBI",
+      "EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars",
+      "Les douanes du Qatar saisissent 90 kg de haschisch dissimulés dans une cargaison de pastèques",
+    ];
+   
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+      console.log(e.target.value);
+    };
+    const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      console.log("submitted");
+    };
   return (
-    <div className="w-full h-[190px] bg-gradient-to-r from-[#ADD9D4] to-[#999797] justify-center items-center py-[40px]">
-        
-        <div className="lg:w-[1000px] 2xl:w-[1480px] h-[120px] border border-white rounded-lg justify-center items-center lg:ml-[70px] py-3">
-            <div className="">
-                <p className="text-white text-lg font-bold text-center ">
-                    Rechercher des articles
-                </p>
-            </div>
-            <div className="ml-[-310px] justify-center items-center drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] lg:w-[1200px] 2xl:w-[1680px]">           
-                <span className=" ml-[410px] bg-white inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 text-sm font-medium text-slate-700 backdrop-blur-3xl">
-                <input
-                    className="block w-full rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
-                    placeholder="Ex: Operation Auxilium"
-                    onChange={(e) => {
-                    handleSearch(e.target.value);
-                    }}
-                    // defaultValue={searchParams.get('query')?.toString()}
-                />
-                </span>
-                <button className="relative ml-[-180px]" onClick={handleClick}>
-                    <Image
-                    width={30}
-                    height={30}
-                    src={"/Recherche.png" }
-                    alt="recherche"
-                    />
-                </button>
-            </div>
-        </div>
+    <div className=" flex bg-center bg-cover w-full h-[190px] bg-gradient-to-r from-[#ADD9D4] to-[#999797] justify-center items-center py-[40px]">
+      <div className="bg-center bg-no-repeat w-[85%]  bg-cover h-[120px] border border-white rounded-lg justify-center items-center py-3">
+          <div className="">
+              <p className="text-white text-lg font-bold text-center ">
+                  Rechercher des articles
+              </p>
+          </div>
+
+          {/* <div className="justify-center items-center drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] w-[85%]">           
+              <span className="bg-white inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 text-sm font-medium text-slate-700 backdrop-blur-3xl">
+              <input
+                  className="flex w-full rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
+                  placeholder="Ex: Operation Auxilium"
+                  onChange={(e) => {
+                  handleSearch(e.target.value);
+                  }}
+                  // defaultValue={searchParams.get('query')?.toString()}
+              />
+              </span>
+              <button className="relative" onClick={handleClick}>
+                  <Image
+                  width={25}
+                  height={25}
+                  src={"/Recherche.png" }
+                  alt="recherche"
+                  />
+              </button>
+          </div> */}
+          <div className="flex justify-center items-cente" cmdk-input-wrapper="">
+              {/* <input
+                  className="block w-[80%] rounded-full justify-center items-center border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
+                  placeholder="Ex: Operation Auxilium"
+                  onChange={(e) => {
+                  handleSearch(e.target.value);
+                  }}
+                  // defaultValue={searchParams.get('query')?.toString()}
+              /> */}
+              <PlaceholdersAndVanishInput
+                placeholders={placeholders}
+                onChange={handleChange}
+                onSubmit={onSubmit}
+              />
+              <Search className="mt-[8px] ml-[-30px] mr-2 h-4 w-4 shrink-0 opacity-50"/>
+          </div>
+      </div>
     </div>
   )
 }

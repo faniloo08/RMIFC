@@ -1,10 +1,14 @@
 import React, {useState, useEffect} from 'react'
+import SearchBar from './SearchBar';
+import WeatherDisplay from './WeatherDisplay';
+import { useWeather } from '@/lib/useWeather';
 import Link from 'next/link'
 import Image from 'next/image'
 //import { NextPage } from 'next';
 import { format, addDays, subDays } from 'date-fns';
 import dynamic from 'next/dynamic';
-
+import { HeroHighlight, Highlight } from '@/components/ui/hero-highlight';
+import { motion } from "framer-motion";
 // Dynamically import the Map component to avoid SSR issues
 const Map = dynamic(() => import('@/components/ui/map'), {
   ssr: false,
@@ -19,6 +23,9 @@ const Texte = [
   "",
   "Weather Forecast"
 ]
+
+
+
 function Ressource() {
   const today = new Date();
   const formattedDate = today.toLocaleDateString('fr-FR')
@@ -56,14 +63,62 @@ function Ressource() {
       window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
     };
   }, []);
+
+  //Recherche meteo suivant l'endroit
+
+  // const [query, setQuery] = useState('')
+  // const form = useForm({
+  //   initialValues: {
+  //     locationQuery: '',
+  //   },
+  // })
+  // const { isLoading, data } = useLocation(query, {
+  //   enabled: !!query,
+  // })
+
+  // const formHandler = (values : any) => {
+  //   const { locationQuery } = values
+  //   setQuery(locationQuery)
+  // }
+
+  // const searchResultHandler = (latlon: any) => {
+    
+  // }
+  // const [city, setCity] = useState<string>('');
+
+  // const { data: weather, error, isLoading } = useWeather(city);
+
+  // const handleSearch = (city: string) => {
+  //   setCity(city);
+  // };
+
   return (
-    <div>
-        <div className="lg:ml-[40px] sm:ml-[0px] 2xl:w-[1480px] lg:w-[1000px] 2xl:h-[700px] lg:h-[600px] bg-gradient-to-r from-[#5DB4D9] to-[#181C70] justify-center items-center py-[10px]">
-            <h2 className="font-bold text-lg text-center text-white">
-              Des données fiables et à jour
-            </h2>
-            <div className="grid grid-rows-3">
-              <div className="grid grid-rows-1 grid-flow-col gap-1 mt-[30px]">
+    <div className="flex items-center justify-center">
+        <div className="w-[85%] 2xl:h-[700px] lg:h-[600px] bg-gradient-to-r from-[#5DB4D9] to-[#181C70] justify-center items-center py-[10px]">
+          <HeroHighlight>
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: [20, -5, 0],
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.4, 0.0, 0.2, 1],
+              }}
+              className="font-bold  text-white dark:text-black "
+            >
+              Des données 
+              <Highlight className="text-black dark:text-white">
+                fiables et à jour.
+              </Highlight>
+            </motion.h1>
+          </HeroHighlight>
+            <div className="grid grid-rows-3 grid-flow-col">
+              <div className="grid grid-cols-2 grid-flow-row gap-1 mt-[30px]">
                 <div className="ml-[20px]">
                   {/* image */}
                   <Image 
@@ -71,9 +126,9 @@ function Ressource() {
                   alt="Météo" 
                   width={470} 
                   height={150} 
-                  className="2xl:w-[100%]"/>
+                  className=""/>
                 </div>
-                <div className="2xl:ml-[50px] 2xl:w-[750px] lg:w-[450px]">
+                <div className="mr-[20px]">
                   {/*Text*/}
                   <Link href="https://www.meteomadagascar.mg/">
                     <h3 className="font-bold text-[16px] mb-1 hover:text-blue-700">
@@ -88,8 +143,8 @@ function Ressource() {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-rows-1 grid-flow-col 2xl:ml-[30px] lg:ml-[20px] mt-[15px]">
-                <div className="2xl:w-[750px] lg:w-[450px]">
+              <div className="grid grid-cols-2 grid-flow-row gap-1 mt-[30px]">
+                <div className="ml-[20px]">
                   {/*Text*/}
                   <Link href="https://www.vesselfinder.com/fr/news/27730-Brunvoll-Propulsion-Chosen-for-ESVAGTs-Growing-Fleet-of-Service-Operation-Vessels">
                     <h3 className="font-bold text-[16px] mb-1 hover:text-blue-700">
@@ -103,25 +158,43 @@ function Ressource() {
                     {formattedDate}
                   </p>
                 </div>
-                <div>
+                <div className="mr-[20px]">
                   {isMobile ? <Image 
                   src="/Carte(1).png" 
                   alt="Météo" width={470} 
                   height={150} 
-                  className="2xl:w-[100%] 2xl:ml-[-30px]"/> : <Map />}
+                  className=""/> : <Map />}
                 </div>
               </div>
-              <div className="grid grid-rows-1 grid-flow-col">
+              {/* Meteo */}
+              <div className="grid grid-cols-2 grid-flow-row gap-1">
+                {/* <form onSubmit={form.onSubmit((values) => formHandler(values))}>
+                  <TextInput
+                    label="Search location"
+                    size={'lg'}
+                    rightSection={
+                      <Search />
+                    }
+                    {...form.getInputProps('locationQuery')}
+                  />
+                </form>
+
+                {!!query ? (
+                  <div>
+                    <LocationResult
+                      locations={data}
+                      locationHandler={searchResultHandler}
+                    />
+                  </div>
+                ) : null} */}
                 <div className="ml-[20px]">
-                {/* image */}
-                  <Image 
-                  src="/Port(1).png" 
-                  alt="Météo" 
-                  width={470} 
-                  height={150} 
-                  className="2xl:w-[100%]"/>
+                  <div className="flex flex-1 w-full h-full rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+      
+                  </div>
+                  {/* <SearchBar onSearch={handleSearch} /> */}
                 </div>
-                <div className="2xl:ml-[50px] 2xl:w-[750px] lg:w-[450px]">
+
+                <div className="">
                   {/*Text*/}
                   <Link href="https://www.vesselfinder.com/fr/ports/MGANM001">
                     <h3 className="font-bold text-[16px] mb-1 hover:text-blue-700">
@@ -151,9 +224,13 @@ function Ressource() {
                         </div>
                       </div>
                   </div>
+                  {/* {isLoading && <p className="text-center mt-10">Loading...</p>}
+                  {error && <p className="text-center mt-10">Error fetching data</p>}
+                  {weather && <WeatherDisplay weather={weather} />} */}
                 </div>
               </div>
             </div>
+            
         </div>
     </div>
   )

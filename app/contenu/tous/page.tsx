@@ -170,6 +170,7 @@ function Contenus() {
                                     width={350} 
                                     height={180} 
                                     className="rounded-md transition-transform duration-300 transform-gpu hover:scale-110 sm:w-[50%] md:w-[90%] lg:w-[65%] xl:w-[50%] 2xl:w-[35%] w-[50%]"
+                                    loading="lazy"
                                 />
                             </div>
                             <div className='md:ml-[50px]'>
@@ -219,13 +220,12 @@ function Contenus() {
                         </div>
                         )
                     )}
-                    <div className="ml-[-300px] md:ml-[50px] mt-[30px]">
+                    <div className="md:ml-[50px] mt-[30px]">
                         <PaginationDemo
                             articlesPerPage={articlesPerPage}
                             totalArticles={articles.length}
                             currentPage={currentPage}
                             paginate={paginate}
-
                         />
                     </div>
                 </div>
@@ -254,12 +254,13 @@ function Contenus() {
                             {/* Article1 */}
                             <div className="grid grid-cols-2 grid-flow-row ">
                                 <div className="mr-2">
-                                {/* cover */}
-                                <img 
+                                    {/* cover */}
+                                    <img 
                                     src={Cover3}  
                                     alt="" 
                                     width={175} 
-                                    height={150}/>
+                                    height={150}
+                                    loading="lazy"/>
                                 </div>
                                 {/* cover */}
                                 <div className="">
@@ -276,12 +277,13 @@ function Contenus() {
                             {/* Article2 */}
                             <div className=" grid grid-cols-2 grid-flow-row mt-4">
                                 <div className="mr-2">
-                                {/* cover */}
-                                <img 
+                                    {/* cover */}
+                                    <img 
                                     src={Cover0} 
                                     alt="" 
                                     width={175} 
-                                    height={150}/>
+                                    height={150}
+                                    loading="lazy"/>
                                 </div>
                                 {/* cover */}
                                 
@@ -302,7 +304,7 @@ function Contenus() {
             </div>
 
             {/* Recherche */}
-            <div className="ml-[50px] grid grid-row-3 gap-1 ">
+            <div className="ml-[50px] grid grid-row-1 gap-1 ">
                 <p className="font-bold text-lg mt-[90px] ">Rechercher des Articles</p>
                 <div className="flex items-center" cmdk-input-wrapper="">
                     <input

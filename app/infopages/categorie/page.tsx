@@ -62,12 +62,12 @@ function Categorie() {
                 </div>
             </div>
             <div className="mt-[30px] flex items-center justify-center">
-                <p className="text-[21px] md:text-[30px] lg:text-[50px] font-bold">
-                    Les domaines pris en charges par le CRFIM
+                <p className="text-[21px] md:text-[25px] lg:text-[40px] font-bold text-center">
+                    Les domaines pris en charges par le CRFIM dans le cadre du Maritime Domaine Awareness
                 </p>
             </div>
-            <div className="grid  items-center justify-center">
-                <div className="mt-[30px] md:w-[1000px]">
+            <div className="flex items-center justify-center">
+                <div className="mt-[30px] w-[85%]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <div>

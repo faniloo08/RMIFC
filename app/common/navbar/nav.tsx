@@ -140,7 +140,7 @@ export function NavBar() {
             </span>
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className=" bg-white text-slate-800 grid w-[500px] gap-3 p-4 md:w-[500px] md:grid-cols-4 lg:w-[600px] ">
+            <ul className=" bg-white text-slate-800 grid gap-3 p-4 md:w-[500px] md:grid-cols-4 lg:w-[600px] ">
               <div>
                 <Link href="/infopages/historique">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
@@ -438,7 +438,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <img src={coverImage} alt={title} className="w-full h-[60px]"/>
+          <img src={coverImage} alt={title} className="w-full h-[60px]" loading="lazy"/>
           <div className="text-sm leading-none text-teal-600 font-bold text-center">{title}</div>
           {React.Children.map(children, (child, index) => (
             <div className="line-clamp-2 text-sm leading-snug text-muted-foreground text-center text-slate-800" key={index}>{child}</div>

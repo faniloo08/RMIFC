@@ -43,7 +43,7 @@ function Mase() {
     ]
 
   return (
-    <div>
+    <div className="">
         <div className="text-white mt-[-60px] ml-[55px] font-bold mb-2 shadow-sm lg:text-md text-xs">
             Programme MASE
         </div>
@@ -56,14 +56,14 @@ function Mase() {
             >
             <CarouselContent>
                 {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="md:basis-1 lg:basis-1/3 2xl:basis-1/4">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 2xl:basis-1/4">
                     <div className="">
                     <Card className="bg-transparent border-none">
                         <CardContent className="flex aspect-square items-center justify-center p-10 ">
                             <Link href="https://www.commissionoceanindien.org/securite-maritime-mase/">
                                 <div className="mb-6 grid grid-cols-1">
                                     <div>
-                                    <img src={images[`${index}`]} alt={`Image ${index + 1}`} className="w-full h-auto transition-transform duration-300 transform-gpu hover:scale-110"/>
+                                    <img src={images[`${index}`]} alt={`Image ${index + 1}`} className="w-full h-auto transition-transform duration-300 transform-gpu hover:scale-110" loading="lazy"/>
                                     </div>
                                     <div className="hover:text-[#7A1A1A]">
                                         <div>

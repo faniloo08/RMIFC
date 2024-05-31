@@ -74,7 +74,7 @@ export default function Slide() {
   };
 
   return (
-    <ImagesSlider className="drop-shadow flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem] w-[17rem] sm:w-[30rem] md:w-[30rem] lg:w-[36rem] xl:w-[41rem] 2xl:w-[57rem] justify-center items-center" images={images}>
+    <ImagesSlider className="drop-shadow-lg flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem]  justify-center items-center" images={images}>
       <motion.div
         initial={{
           opacity: 0,

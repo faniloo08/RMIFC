@@ -52,36 +52,33 @@ import {
 interface Component{
   title: string;
   href: string;
-  coverImage: string;
+//    string;
   description: string;
   date: string;
 }
 
-const componentsEC: { title: string; href: string; description: string; date: string; coverImage: string;}[] = [
+const componentsEC: { title: string; href: string; description: string; date: string; }[] = [
   //Evenements aux CRFIM
   {
     title: "Exercice Cutlass",
     href: "/",
     description:
       "L’exercice Cutlass Express est un exercice naval ...",
-    date:"01/04/2024",
-    coverImage:"/A1.jpg",
+    date:"01/04/2024"
   },
   {
     title: "Ministère du Transport",
     href: "/",
     description:
     "Visite du ministère du transport au sein du CRFIM ...",
-    date:"20/02/2024",
-    coverImage:"/A2.jpg",
+    date:"20/02/2024"
   },
   {
     title: "NMIFC and RMIFC",
     href: "/",
     description:
     "Visit by an American delegation to the National and ...",
-    date: "13/02/2024",
-    coverImage:"/A3.jpg",
+    date: "13/02/2024"
   }
 ]
 
@@ -92,24 +89,21 @@ export function MenuBuger() {
           href: "/",
           description:
             "L’exercice Cutlass Express est un exercice naval ...",
-          date:"01/04/2024",
-          coverImage:"/A1.jpg",
+          date:"01/04/2024"
         },
         {
           title: "Ministère du Transport",
           href: "/",
           description:
           "Visite du ministère du transport au sein du CRFIM ...",
-          date:"20/02/2024",
-          coverImage:"/A2.jpg",
+          date:"20/02/2024"
         },
         {
           title: "NMIFC and RMIFC",
           href: "/",
           description:
           "Visit by an American delegation to the National and ...",
-          date: "13/02/2024",
-          coverImage:"/A3.jpg",
+          date: "13/02/2024"
         }
       
     ]);
@@ -155,7 +149,7 @@ export function MenuBuger() {
                                     </span>
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
-                                    <ul className=" bg-white text-slate-800 grid w-[500px] gap-3 p-4 md:w-[500px] md:grid-cols-4 lg:w-[600px] ">
+                                    <ul className=" bg-white text-slate-800 grid gap-3 p-4 md:w-[500px] md:grid-cols-4 lg:w-[600px] ">
                                     <div>
                                         <Link href="/infopages/historique">
                                         <p className="text-sm font-bold hover:text-blue-500 hover:underline"
@@ -166,16 +160,14 @@ export function MenuBuger() {
                                             href: "/infopages/historique",
                                             description:
                                             "Le Centre Régionale de Fusion d'Informations Maritimes est ...",
-                                            date:"",
-                                            coverImage:"/Hist1.png",
+                                            date:""
                                         },
                                         { //Evenements Clés
                                             title: "Evenements Clés",
                                             href: "/infopages/historique",
                                             description:
                                             "Découvrez les évenements marquants du Centre ...",
-                                            date:"",
-                                            coverImage:"/Hist2.png",
+                                            date:""
                                         },
                                         {
                                             //Persepectives Futures
@@ -183,8 +175,7 @@ export function MenuBuger() {
                                             href: "/infopages/historique",
                                             description:
                                             "Nos projets pour les prochaines années ...",
-                                            date: "",
-                                            coverImage:"/Hist3.png",
+                                            date: ""
                                         }
                                         ])}
                                         >Historique</p>
@@ -198,16 +189,14 @@ export function MenuBuger() {
                                             href: "/infopages/faq",
                                             description:
                                             "Qu'est-ce que le Centre Régional de Fusion d'Informations ...",
-                                            date:"",
-                                            coverImage:"/FAQ1.png",
+                                            date:""
                                         },
                                         { //Comment puis-je contacter le CRFIM ?
                                             title: "Contact",
                                             href: "/infopages/faq",
                                             description:
                                             "Comment puis-je contacter le CRFIM?",
-                                            date:"",
-                                            coverImage:"/FAQ3.png",
+                                            date:""
                                         },
                                         {
                                             //Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?
@@ -215,8 +204,7 @@ export function MenuBuger() {
                                             href: "/infopages/faq",
                                             description:
                                             "Comment puis-je obtenir des informations sur les conditions maritimes ...",
-                                            date: "",
-                                            coverImage:"/FAQ2.png",
+                                            date: ""
                                         }
                                         ])}>
                                         FAQ
@@ -231,16 +219,14 @@ export function MenuBuger() {
                                             href: "/infopages/partnaire",
                                             description:
                                                 "Commission de l'Océan Indien ",
-                                            date:"",
-                                            coverImage:"/Partenaire3.png",
+                                            date:""
                                             },
                                             { //UE
                                             title: "U.E",
                                             href: "/infopages/partnaire",
                                             description:
                                             "Union Européene",
-                                            date:"",
-                                            coverImage:"/Partenaire2.png",
+                                            date:""
                                             },
                                             {
                                             //INGAD
@@ -248,8 +234,7 @@ export function MenuBuger() {
                                             href: "/infopages/partnaire",
                                             description:
                                             "Intergovernemental Authority on Development",
-                                            date: "",
-                                            coverImage:"/Partenaire1.png",
+                                            date: ""
                                             }
                                             ])}
                                         >Partenaires</p>
@@ -263,16 +248,14 @@ export function MenuBuger() {
                                             href: "/infopages/cadres",
                                             description:
                                             "Conventions Internationaux auxquelles le CRFIM a par-...",
-                                            date:"",
-                                            coverImage:"/CD1.png",
+                                            date:""
                                         },
                                         { //Legislation Nationale
                                             title: "Legislation Nationale",
                                             href: "/infopages/cadres",
                                             description:
                                             "Collaboration avec les autorités nationales compétentes",
-                                            date:"",
-                                            coverImage:"/CD3.jpg",
+                                            date:""
                                         },
                                         {
                                             //Protocoles d'Entente et Memoranda d'Entente
@@ -280,8 +263,7 @@ export function MenuBuger() {
                                             href: "/infopages/cadres",
                                             description:
                                             "Protocoles d'Entente et Memoranda d'Entente",
-                                            date: "",
-                                            coverImage:"/CD2.png",
+                                            date: ""
                                         }
                                         ])}
                                         >Cadres juridique</p>
@@ -294,24 +276,21 @@ export function MenuBuger() {
                                             href: "/contenu/tous",
                                             description:
                                             "L’exercice Cutlass Express est un exercice naval ...",
-                                            date:"01/04/2024",
-                                            coverImage:"/A1.jpg",
+                                            date:"01/04/2024"
                                         },
                                         {
                                             title: "Ministère du Transport",
                                             href: "/contenu/tous",
                                             description:
                                             "Visite du ministère du transport au sein du CRFIM ...",
-                                            date:"20/02/2024",
-                                            coverImage:"/A2.jpg",
+                                            date:"20/02/2024"
                                         },
                                         {
                                             title: "NMIFC and RMIFC",
                                             href: "/contenu/tous",
                                             description:
                                             "Visit by an American delegation to the National and ...",
-                                            date: "13/02/2024",
-                                            coverImage:"/A3.jpg",
+                                            date: "13/02/2024"
                                         }
                                         ])}
                                         >Evènements aux CRFIM</p>
@@ -322,7 +301,6 @@ export function MenuBuger() {
                                         key={component.title}
                                         title={component.title}
                                         href={component.href}
-                                        coverImage={component.coverImage}
                                         >
                                         {component.description}
                                         {component.date}
@@ -344,7 +322,7 @@ export function MenuBuger() {
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="bg-white grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                                    <li className="row-span-3">
+                                    {/* <li className="row-span-3">
                                         <NavigationMenuLink asChild>
                                         <a
                                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -358,7 +336,7 @@ export function MenuBuger() {
                                             </p>
                                         </a>
                                         </NavigationMenuLink>
-                                    </li>
+                                    </li> */}
                                     <li>
                                         <ScrollMenu/>
                                     </li>
@@ -442,8 +420,8 @@ export function MenuBuger() {
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & { title: string; coverImage: string }
->(({ className, title, children, coverImage, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<"a"> & { title: string }
+>(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -455,7 +433,6 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <img src={coverImage} alt={title} className="w-full h-[60px]"/>
           <div className="text-sm leading-none text-teal-600 font-bold text-center">{title}</div>
           {React.Children.map(children, (child, index) => (
             <div className="line-clamp-2 text-sm leading-snug text-muted-foreground text-center text-slate-800" key={index}>{child}</div>

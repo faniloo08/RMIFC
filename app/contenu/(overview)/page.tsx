@@ -237,7 +237,7 @@ function Contenus(
                     </div>
                     <div className=" md:ml-[50px] mt-[30px]">
                         {/* Cover */}
-                        <img src={`${couverture}`} alt="" width={600} height={350} className="2xl:w-[90%]"/>
+                        <img src={`${couverture}`} alt="" width={600} height={350} className="2xl:w-[90%]" loading="lazy"/>
                         {/* <p className="mt-1 text-xs mb-1 text-center w-[300px]">
                             Signature en ligne du Memorandum d'entente: Auxillum worldwide, CRCO, et  CRFIM joinent leurs forces, 19 dec 2023, Madagascar, Antananarivo.
                         </p> */}
@@ -285,7 +285,8 @@ function Contenus(
                                 src={Cover3}
                                 alt="" 
                                 width={195} 
-                                height={175}/>
+                                height={175}
+                                loading="lazy"/>
                                 <div className="mt-1">
                                     <Link href={`/contenu?query=${Slug3}`} className="hover:text-[#00A2E8]">
                                         <p className="text-[13px] font-bold">
@@ -307,7 +308,8 @@ function Contenus(
                                 src={Cover0} 
                                 alt="" 
                                 width={195} 
-                                height={175}/>
+                                height={175}
+                                loading="lazy"/>
                                 <div className="mt-1">
                                     <Link href={`/contenu?query=${Slug0}`} className="hover:text-[#00A2E8]">
                                         <p className="text-[13px] font-bold">
@@ -371,6 +373,7 @@ function Contenus(
                             width={300}
                             height={250}
                             className="hover:scale-110"
+                            loading="lazy"
                         />
                     ))
                 ) : (

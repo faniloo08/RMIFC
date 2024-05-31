@@ -71,8 +71,8 @@ function Cadres() {
                 </p>
             </div>
             
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <p className="text-[20px] text-cyan-700 font-bold underline mb-2">{Titre[0]}</p>
@@ -106,7 +106,7 @@ function Cadres() {
                     </div>
                     
                 </div>
-                <div className=" 2xl:ml-[400px] lg:ml-[130px] ">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/CD1.png" 
@@ -118,8 +118,8 @@ function Cadres() {
                     </p>
                 </div>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Les évènements clés */}
                     {/* Titre */}
                     <p className="text-[20px] text-cyan-700 font-bold underline mb-2">{Titre[1]}</p>
@@ -167,8 +167,8 @@ function Cadres() {
                     {/* Cover */}
                 </div>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Les perspectives futurs */}
                     {/* Titre */}
                     <p className="text-[20px] text-cyan-700 font-bold underline mb-2">{Titre[2]}</p>
@@ -199,7 +199,7 @@ function Cadres() {
                     </div>
                     
                 </div>
-                <div className=" 2xl:ml-[400px] lg:ml-[130px] ">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/CD2.png" 
@@ -213,8 +213,8 @@ function Cadres() {
             </div>
             
             {/* Photos liées à l'article */}
-            <p className="font-bold text-lg mt-[50px] ml-[50px]">{Galerie}</p>
-            <div className="mt-[30px] ml-[50px] grid 2xl:grid-cols-4 lg:grid-cols-3 gap-1 items-center justify-center">
+            <p className="font-bold text-lg mt-[50px] md:ml-[50px]">{Galerie}</p>
+            <div className="mt-[30px] md:ml-[50px] grid 2xl:grid-cols-4 lg:grid-cols-3 gap-1 items-center justify-center">
                 <div>
                     {/* Photo1 */}
                     <Image 

@@ -53,8 +53,8 @@ function Partenaires() {
                     Partenaires et organisations impliquées
                 </p>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRCO */}
                     {/* Titre */}
                     <Link href="https://crcoseychelles.org/">
@@ -65,7 +65,7 @@ function Partenaires() {
                         {Contenu[0]}
                     </p>
                 </div>
-                <div className="2xl:ml-[400px] lg:ml-[130px] ">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/SlideB.png" 
@@ -74,8 +74,8 @@ function Partenaires() {
                     height={200}/>
                 </div>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <Link href="https://igad.int/">
@@ -87,7 +87,7 @@ function Partenaires() {
                         {Contenu[1]}
                     </p>
                 </div>
-                <div className="2xl:ml-[400px] lg:ml-[130px] mt-[20px]">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/Igad.png" 
@@ -96,8 +96,8 @@ function Partenaires() {
                     height={150}/>
                 </div>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <Link href="https://www.eac.int/">
@@ -108,7 +108,7 @@ function Partenaires() {
                         {Contenu[2]}
                     </p>
                 </div>
-                <div className="2xl:ml-[400px] lg:ml-[130px] mt-[20px]">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/EAC.png" 
@@ -117,8 +117,8 @@ function Partenaires() {
                     height={150}/>
                 </div>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <Link href="https://www.comesa.int/?lang=fr">
@@ -129,7 +129,7 @@ function Partenaires() {
                         {Contenu[3]}
                     </p>
                 </div>
-                <div className="2xl:ml-[400px] lg:ml-[130px] mt-[20px]">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/Comesa.png" 
@@ -138,8 +138,8 @@ function Partenaires() {
                     height={150}/>
                 </div>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <Link href="https://www.commissionoceanindien.org/">
@@ -150,7 +150,7 @@ function Partenaires() {
                         {Contenu[4]}
                     </p>
                 </div>
-                <div className="2xl:ml-[400px] lg:ml-[130px] mt-[20px]">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/OI.png" 
@@ -159,8 +159,8 @@ function Partenaires() {
                     height={150}/>
                 </div>
             </div>
-            <div className="grid grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] ml-[50px] 2xl:w-[1000px] lg:w-[600px]">
+            <div className="grid sm:grid-cols-2 items-center justify-center">
+                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <Link href="https://european-union.europa.eu/index_fr">
@@ -172,7 +172,7 @@ function Partenaires() {
                         {Contenu[5]}
                     </p>
                 </div>
-                <div className="2xl:ml-[400px] lg:ml-[130px] mt-[20px]">
+                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
                     src="/UE.png" 

@@ -22,9 +22,9 @@ function PersoCles() {
           <p className=" italic font-bold text-[48px]">
               {cote}
           </p>
-          <div className="grid grid-rows-1">
+          <div className="grid grid-cols-4 grid-flow-row">
               {/*1er personnage*/}
-              <div>
+              <div className="col-span-3">
                   <motion.div
                   className="text-xs lg:text-lg md:text-md 2xl:w-[950px] lg:w-[500px] font-bold italic"
                   key={currentQuoteIndex}
@@ -35,7 +35,7 @@ function PersoCles() {
                   {QUOTES[currentQuoteIndex].text}
                   </motion.div>
               </div>
-              <div className="hidden md:flex 2xl:ml-[550px] lg:ml-[320px] mt-[-150px] h-[50px]  items-center justify-center w-full">
+              <div className="hidden md:flex mt-[-20px] h-[50px]  items-center justify-center w-full">
                   <CardStack items={CARDS} />
               </div> 
           </div>

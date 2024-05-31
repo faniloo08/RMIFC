@@ -11,9 +11,9 @@ const partenaire = [
 ]
 function Partenaire() {
   return (
-    <div>
-        <div className="grid grid-rows-1 grid-flow-col 2xl:gap-6 lg:gap-4 md:ml-[40px] 2xl:w-[1480px] lg:w-[1000px] h-[125px] justify-center items-center py-[40px]">
-            <div>
+    <div className='flex items-center justify-center'>
+        <div className="grid grid-rows-1 grid-flow-col place-content-center gap-2  2xl:w-[1480px] lg:w-[1000px] h-[125px] justify-center items-center py-[40px]">
+            <div className="relative justify-center items-center">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
@@ -21,7 +21,7 @@ function Partenaire() {
                             <Image 
                             src="/Igad.png" 
                             alt="Intergovernmental Authority on Development" 
-                            width={190} 
+                            width={180} 
                             height={125}/>
                         </Link>
                     </TooltipTrigger>
@@ -31,7 +31,7 @@ function Partenaire() {
                 </Tooltip>
             </TooltipProvider>
             </div>
-            <div>
+            <div className="relative justify-center items-center">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
@@ -39,7 +39,7 @@ function Partenaire() {
                             <Image 
                             src="/EAC.png" 
                             alt="East African Community" 
-                            width={190} 
+                            width={180} 
                             height={125} />
                         </Link>
                     </TooltipTrigger>
@@ -49,7 +49,7 @@ function Partenaire() {
                 </Tooltip>
             </TooltipProvider>
             </div>
-            <div>
+            <div className="relative justify-center items-center">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
@@ -57,7 +57,7 @@ function Partenaire() {
                             <Image 
                             src="/Comesa.png" 
                             alt="Common Market for Eastern and Southern Africa" 
-                            width={190} 
+                            width={180} 
                             height={125} />
                         </Link>
                     </TooltipTrigger>
@@ -67,7 +67,7 @@ function Partenaire() {
                 </Tooltip>
             </TooltipProvider>
             </div>
-            <div>
+            <div className="relative justify-center items-center">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
@@ -75,7 +75,7 @@ function Partenaire() {
                             <Image 
                             src="/OI.png" 
                             alt="Comission de l'Océan Indien" 
-                            width={190} 
+                            width={180} 
                             height={125}/>
                         </Link>
                     </TooltipTrigger>
@@ -85,7 +85,7 @@ function Partenaire() {
                 </Tooltip>
             </TooltipProvider>
             </div>
-            <div>
+            <div className="relative justify-center items-center">
             <TooltipProvider>
                 <Tooltip>
                     <TooltipTrigger asChild>
@@ -93,7 +93,7 @@ function Partenaire() {
                             <Image 
                             src="/UE.png" 
                             alt="Union Européenne" 
-                            width={190} 
+                            width={180} 
                             height={125}/>
                         </Link>
                     </TooltipTrigger>

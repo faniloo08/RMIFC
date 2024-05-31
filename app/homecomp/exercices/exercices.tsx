@@ -14,7 +14,16 @@ import {
 import Link from 'next/link'
 import Image from 'next/image';
 type CarouselApi = UseEmblaCarouselType[1]
-
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import {
+  IconArrowWaveRightUp,
+  IconBoxAlignRightFilled,
+  IconBoxAlignTopLeft,
+  IconClipboardCopy,
+  IconFileBroken,
+  IconSignature,
+  IconTableColumn,
+} from "@tabler/icons-react";
 
 export default function Exercices() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -34,9 +43,7 @@ export default function Exercices() {
     });
   }, [api]);
 
-  const articleImages = ['/Ex1.png', '/Ex2.png', '/Ex3.png', '/Ex4.png','/Ex1.png', '/Ex4.png', '/Ex2.png', '/Ex3.png'];
-  const articleTitles = ['Exercice CUTLASS EXPRESS', 'Formation sur le "Maritime Domain Awareness"', 'Exercice TTX WIOPOLREX', 'Conférence « The southern Drug Route Partnership »', 'Exercice AEREZREZ 1', 'Exercice AEREZREZ 2', 'Exercice AEREZREZ 3', 'Exercice AEREZREZ 4'];
-  const articleDates = ['01/03/24', '16/10/23', '27/07/23', '20/04/23', '01/01/24', '01/01/24', '01/01/24', '01/01/24'];
+  //const articleImages = ['/Ex1.png', '/Ex2.png', '/Ex3.png', '/Ex4.png','/Ex1.png', '/Ex4.png', '/Ex2.png', '/Ex3.png'];
   const articleLink = ["https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02D2dZQcbiXg7HzuCT77956JecdVJgZFdvAPnnFoJeBTmBuKgr74s8fDv8eZYjJWVbl&show_text=true&width=500", 
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid03AvBL76ondEthbHejn7nDjECRNE2TyrtvsEfrp8PPXM4yy9KXYqZJ1hdnbg8kdfel&show_text=true&width=500",
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02iXQcUeAMH4yYThmPYSJkAjihKjLZFvMWFNCH5DjcWHDhv76BpBtgUxZmFR34q2hhl&show_text=true&width=500",
@@ -67,6 +74,12 @@ export default function Exercices() {
       window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
     };
   }, []);
+
+  const groupedItems = [];
+  for (let i = 0; i < items.length; i += 3) {
+    groupedItems.push(items.slice(i, i + 3));
+  }
+
   return (
     <div>
       <div>
@@ -74,68 +87,88 @@ export default function Exercices() {
           EXERCICES REALISES
         </p>
       </div>
-      <div className="relative items-center justify-center overflow-hidden">
-      <Carousel setApi={setApi} className="md:w-full md:h-full">
-        <CarouselContent>
-          {Array.from({ length: Math.ceil(articleImages.length / 4) }).map((_, index) => (
-                <CarouselItem key={index}>
-                  <div className="md:p-3 items-center justify-center">
-                    <Card>
-                      <CardContent className="grid grid-rows-2 grid-flow-col gap-2 md:gap-4 justify-center items-center">
-                        {Array.from({ length: 4 }).map((_, itemIndex: number) => {
-                          const articleIndex = index * 4 + itemIndex;
-                          if (articleIndex >= articleImages.length) {
-                            return null; // Si l'indice dépasse la longueur du tableau, on ne rend rien
-                          }
-                          return (
-                            <div key={itemIndex} className="grid grid-cols-2 grid-flow-row justify-center items-center">
-                              {/* <div className="mt-[50px] "> */}
-                              <div>
-                                {/*Cover*/}
-                                <Image 
-                                  src = {`${articleImages[index * 4 + itemIndex]}`}
-                                  alt = "image cover"
-                                  width={70}
-                                  height={70}
-                                  className="inline-flex cursor-pointer items-center justify-center rounded-full text-xl hover:text-2xl font-medium text-white"
-                                />
-                              </div>
-                              <div>
-                                {/* Titre */}
-                                <Link
-                                  href={`${articleLink[articleIndex]}`}
-                                  className="hover:text-sky-600"
-                                >
-                                  <p className="font-bold text-sm">
-                                  {/* <p className="ml-[80px] mt-[-60px] font-bold text-sm"> */}
-                                    {isMobile ? `${generatePreview(`${articleTitles[articleIndex]}`)}` : `${articleTitles[articleIndex]}`}
-                                  </p>
-                                  <p className="font-light text-sm">
-                                  {/* <p className="ml-[80px] font-light text-sm"> */}
-                                    {articleDates[articleIndex]}
-                                  </p>
-                                </Link>
-                              </div>
-                            </div>
-                          );
-                        })}
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              )
-            )}
-          </CarouselContent>
-          <div className="hidden">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
+      <div className="relative flex items-center justify-center overflow-hidden">
+        <Carousel setApi={setApi} className="md:w-full md:h-full">
+          <CarouselContent>
+            {groupedItems.map((group, index) => (
+              <CarouselItem key={index}>
+                <BentoGrid className="max-w-4xl mx-auto">
+                  {group.map((item, i) => (
+                    <BentoGridItem
+                      key={i}
+                      title={item.title}
+                      date={item.date}
+                      header={item.header}
+                      icon={item.icon}
+                      link={item.link}
+                    />
+                  ))}
+                </BentoGrid>
+              </CarouselItem>
+            ))}
+        </CarouselContent>
         </Carousel>
       </div>
-
       <div className="py-4 text-center text-sm text-muted-foreground">
         Page {current} of {count}
       </div>
     </div>
+
   );
 }
+const Skeleton = () => (
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+    
+  </div>
+);
+const items = [
+  {
+    title: "Exercice CUTLASS EXPRESS",
+    date: "01/03/24",
+    header: <Image src="/A1.jpg" alt="" width={200} height={120} className="rounded-lg ml-[15px]"/>,
+    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02D2dZQcbiXg7HzuCT77956JecdVJgZFdvAPnnFoJeBTmBuKgr74s8fDv8eZYjJWVbl&show_text=true&width=500"
+  },
+  {
+    title: "Formation sur le 'Maritime Domain Awareness'",
+    date: "16/10/23",
+    header:<Image src="/B1.jpg" alt="" width={200} height={120} className="rounded-lg ml-[15px]"/>,
+    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid03AvBL76ondEthbHejn7nDjECRNE2TyrtvsEfrp8PPXM4yy9KXYqZJ1hdnbg8kdfel&show_text=true&width=500"
+  },
+  {
+    title: "Exercice TTX WIOPOLREX",
+    date: "27/07/23",
+    header: <Image src="/B2.jpg" alt="" width={200} height={120} className="rounded-lg ml-[15px]"/>,
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid03AvBL76ondEthbHejn7nDjECRNE2TyrtvsEfrp8PPXM4yy9KXYqZJ1hdnbg8kdfel&show_text=true&width=500"
+  },
+  {
+    title: "Conférence « The southern Drug Route Partnership »",
+    date: "20/04/23",
+    header: <Image src="/B3.jpg" alt="" width={200} height={120} className="rounded-lg ml-[15px]"/>,
+    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    link: "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02qhLXCdNZ6mC2FGqAWbBaQbkQoNEjeRjTpxwH6kPexqkvWvpeMwQhHJn1D8gPfAPl&show_text=true&width=500"
+  },
+  {
+    title: "The Pursuit of Knowledge",
+    date: "Join the quest for understanding and enlightenment.",
+    header: <Skeleton />,
+    icon: <IconArrowWaveRightUp className="h-4 w-4 text-neutral-500" />,
+    link: ""
+  },
+  {
+    title: "The Joy of Creation",
+    date: "Experience the thrill of bringing ideas to life.",
+    header: <Skeleton />,
+    icon: <IconBoxAlignTopLeft className="h-4 w-4 text-neutral-500" />,
+    link: ""
+  },
+  {
+    title: "The Spirit of Adventure",
+    date: "Embark on exciting journeys and thrilling discoveries.",
+    header: <Skeleton />,
+    icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
+    link: ""
+  },
+];
