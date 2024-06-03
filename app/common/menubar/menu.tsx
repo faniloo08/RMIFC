@@ -93,11 +93,6 @@ export function MenuBar() {
     const [connexion, setConnexion] = useState<string>('Connexion');
     const [deconnexion, setDeconnexion] = useState<string>('Deconnexion');
     
-    const handleConnexionChange = () => {
-        // Fonction pour basculer entre les langues
-        setConnexion(connexion === 'Connexion' ? 'Deconnexion' : 'Connexion');
-        setDeconnexion(deconnexion === 'Deconnexion' ? 'Connexion' : 'Deconnexion');
-    };
     
 
     //Info connexion
@@ -134,13 +129,6 @@ export function MenuBar() {
         // Déconnectez l'utilisateur et cachez le formulaire de connexion
         setIsLoggedIn(false);
         localStorage.removeItem('username');
-        setShowLoginForm(false);
-    };
-
-    const handleLoginFormSubmit = () => {
-        // Mettez à jour l'état pour indiquer que l'utilisateur est connecté
-        
-        // Cachez le formulaire de connexion après une connexion réussie
         setShowLoginForm(false);
     };
 

@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import React , {useState} from "react";
 import { ImagesSlider } from "@/components/ui/images-slider";
-import Link from "next/link";
 import { 
   Dialog,
   DialogContent,
@@ -35,11 +34,10 @@ export default function Slide() {
   const [email, setEmail] = useState('')
   const [topic, setTopic] = useState('');
   const [message, setMessage] = useState('')
-  const [submitted, setSubmitted] = useState(false)
 
   const images = [
-    "/SlideA.png",
-    "/SlideB.png"
+    "/SlideA.webp",
+    "/SlideB.webp"
   ];
   const Texte = [
     "Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays  et organisations internationales",
@@ -74,7 +72,7 @@ export default function Slide() {
   };
 
   return (
-    <ImagesSlider className="drop-shadow-lg flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem]  justify-center items-center" images={images}>
+    <ImagesSlider className="drop-shadow-lg flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem] justify-center items-center" images={images}>
       <motion.div
         initial={{
           opacity: 0,
@@ -85,7 +83,7 @@ export default function Slide() {
           y: 0,
         }}
         transition={{
-          duration: 0.6,
+          duration: 0.5,
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
@@ -99,12 +97,10 @@ export default function Slide() {
           <Dialog>
               <DialogTrigger asChild>
                 {/* Appel au formulaire */}
-                <button className="hover:bg-slate-500 lg:px-2 lg:py-2 py-[2px] px-[2px] backdrop-blur-sm border bg-gradient-to-r from-cyan-900 to-sky-950  border-emerald-500/20 text-white mx-auto text-center item-center justify-center rounded-[8px] lg:rounded-full relative mt-4">
-                  <Link href="/">
+                  <button className="hover:bg-slate-500 lg:px-2 lg:py-2 py-[2px] px-[2px] backdrop-blur-sm border bg-gradient-to-r from-cyan-900 to-sky-950  border-emerald-500/20 text-white mx-auto text-center item-center justify-center rounded-[8px] lg:rounded-full relative mt-4">
                     <span className="text-[6px] 2xl:text-md lg:text-sm md:text-xs">Nous contacter</span>
-                  </Link>
-                  <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-teal-900 to-sky-950" />
-                </button>
+                    <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-teal-900 to-sky-950" />
+                  </button>
               </DialogTrigger>
               <DialogContent className="2xl:max-w-[600px] lg:max-w-[400px] items-center justify-center">
                 {/*Le formulaire*/}

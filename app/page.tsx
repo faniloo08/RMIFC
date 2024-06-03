@@ -36,7 +36,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
+      <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         <div className="bg-white md:bg-[url('/HomePage2(1).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat items-center justify-center w-[85%] h-4/5 bg-cover">
           <div className="bg-cover grid grid-cols-1"> 
             <div className="mb-1"> 
@@ -74,7 +74,7 @@ export default function Home() {
                     
                   {/*X*/}
                   <div className="">
-                    <Link href="/">
+                    <Link href="https://twitter.com/RMIFCenter">
                       <Image
                       src= "/Ellipse5.png"
                       alt="X"

@@ -138,6 +138,7 @@ export const ImagesSlider = ({
           <motion.img
             key={currentIndex}
             src={loadedImages[currentIndex]}
+            alt="Slider"
             initial="initial"
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}

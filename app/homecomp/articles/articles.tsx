@@ -127,10 +127,9 @@ function Articles() {
                             <p className="ml-[-37px] font-light text-sm">{Date1}</p>
                         </div>
                         <div className="ml-[170px] mt-[-25px]">
-                            <button className=" drop-shadow relative inline-flex overflow-hidden   focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                            <button className=" drop-shadow relative inline-flex overflow-hidden   focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" id="share1">
                                 <Link href="/">
                                     <span className=" bg-[url('/share.png')] inline-flex h-[20px] w-[20px] cursor-pointer items-center justify-center px-1 py-1 text-xl hover:text-2xl font-medium text-white ">
-                                    
                                     </span>
                                 </Link>
                             </button>
@@ -182,7 +181,7 @@ function Articles() {
                             <p className="ml-[50px] font-light text-[11px]">{Date2}</p>
                         </div>
                         <div className="ml-[170px] mt-[-25px]">
-                            <button className="drop-shadow relative inline-flex overflow-hidden   focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                            <button className="drop-shadow relative inline-flex overflow-hidden   focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" id="share2">
                                 <Link href="/">
                                     <span className=" bg-[url('/share.png')] inline-flex h-[20px] w-[20px] cursor-pointer items-center justify-center px-1 py-1 text-xl hover:text-2xl font-medium text-white ">
                                     
@@ -234,7 +233,7 @@ function Articles() {
                             <p className="ml-[50px] font-light text-[11px]">{Date3}</p>
                         </div>
                         <div className="ml-[170px] mt-[-25px]">
-                            <button className=" drop-shadow relative inline-flex overflow-hidden   focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+                            <button className=" drop-shadow relative inline-flex overflow-hidden   focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50" id="share3">
                                 <Link href="/">
                                     <span className=" bg-[url('/share.png')] inline-flex h-[20px] w-[20px] cursor-pointer items-center justify-center px-1 py-1 text-xl hover:text-2xl font-medium text-white ">
                                     

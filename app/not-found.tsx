@@ -1,21 +1,5 @@
 // import { FC } from "react";
 import Image from "next/image";
-// import Link from "next/link";
-// // import FooterOne from "../common/elements/footer/FooterOne";
-// // import HeaderOne from "../common/elements/header/HeaderOne";
-// // // import { getAllPosts } from "../../lib/api";
-// // import HeadTitle from "../common/elements/head/HeadTitle";
-// // import { fetchAPI, getAllPosts } from "../../lib/api2";
-// // import { getGlobalMeta } from "../../lib/api2";
-
-// const Error404: FC = () => {
-//   return (
-//     
-//   );
-// };
-
-// export default Error404;
-
 import Link from 'next/link'
  
 export default function NotFound() {

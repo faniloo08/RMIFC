@@ -1,6 +1,4 @@
 import * as React from "react";
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from "@/components/ui/exocard"
 import {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
@@ -8,10 +6,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
-  CarouselNext
 } from "@/components/ui/carousel1"
-import Link from 'next/link'
 import Image from 'next/image';
 type CarouselApi = UseEmblaCarouselType[1]
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
@@ -43,37 +38,15 @@ export default function Exercices() {
     });
   }, [api]);
 
-  //const articleImages = ['/Ex1.png', '/Ex2.png', '/Ex3.png', '/Ex4.png','/Ex1.png', '/Ex4.png', '/Ex2.png', '/Ex3.png'];
-  const articleLink = ["https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02D2dZQcbiXg7HzuCT77956JecdVJgZFdvAPnnFoJeBTmBuKgr74s8fDv8eZYjJWVbl&show_text=true&width=500", 
-  "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid03AvBL76ondEthbHejn7nDjECRNE2TyrtvsEfrp8PPXM4yy9KXYqZJ1hdnbg8kdfel&show_text=true&width=500",
-  "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02iXQcUeAMH4yYThmPYSJkAjihKjLZFvMWFNCH5DjcWHDhv76BpBtgUxZmFR34q2hhl&show_text=true&width=500",
-  "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FRMIFCenter%2Fposts%2Fpfbid02qhLXCdNZ6mC2FGqAWbBaQbkQoNEjeRjTpxwH6kPexqkvWvpeMwQhHJn1D8gPfAPl&show_text=true&width=500",
-  "",
-  "",
-  "",
-  ""
-  ];
+
   //génération de l'apperçu : 
-  const generatePreview = (content: any): string => {
-      // Tu peux mettre ici la logique de génération d'aperçu que tu veux
-      // Par exemple, tu peux simplement retourner les premiers 100 caractères du contenu
-      const preview = content.slice(0, 10);
-      return preview + '..'
-  };
-  const [isMobile, setIsMobile] = useState(false);
+  // const generatePreview = (content: any): string => {
+  //     // Tu peux mettre ici la logique de génération d'aperçu que tu veux
+  //     // Par exemple, tu peux simplement retourner les premiers 100 caractères du contenu
+  //     const preview = content.slice(0, 10);
+  //     return preview + '..'
+  // };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Utilise la largeur de 768px comme seuil pour les appareils mobiles
-    };
-
-    handleResize(); // Vérifie la taille de l'écran au chargement de la page
-    window.addEventListener('resize', handleResize); // Écoute les changements de taille de l'écran
-
-    return () => {
-      window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
-    };
-  }, []);
 
   const groupedItems = [];
   for (let i = 0; i < items.length; i += 3) {

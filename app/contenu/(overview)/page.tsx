@@ -218,7 +218,7 @@ function Contenus(
                 {/* Article */}
                 <div className="col-span-2">
                     <div className=" md:ml-[50px] mt-[30px] flex ">
-                        <p className="text-[25px] md:text-[40px] 2xl:w-[1000px] lg:w-[630px] md:w-[300px] font-bold">
+                        <p className="text-[25px] font-bold">
                             {/* Titre de l'article cliqué */}
                             {grosTitre}
                         </p>
@@ -243,7 +243,7 @@ function Contenus(
                         </p> */}
                     </div>
                     <div className="items-center justify-center">
-                        <div className="mt-[30px] text-xs lg:text-[15px] md:text-md md:ml-[50px] 2xl:w-[920px] lg:w-[600px] md:w-[300px]">
+                        <div className="mt-[30px] text-xs lg:text-[15px] md:text-md md:ml-[50px] w-[90%]">
                             {/* Article */}
                             <p>
                                 <Suspense fallback={<Loading />}>
@@ -453,13 +453,13 @@ function Contenus(
             </div>
             {/* Commenter */}
             <div className="mt-[30px] flex">
-                <div className="flex w-full items-center space-x-2">
+                <div className="flex w-full items-center justify-center space-x-2">
                     <input
                         type="text"
                         placeholder="Votre Commentaire"
                         value={commentText}
                         onChange={handleCommentChange}
-                        className=" md:ml-[50px] 2xl:w-[1400px] lg:w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        className=" md:ml-[50px] w-[80%] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                     />
                     <button
                         type="submit"

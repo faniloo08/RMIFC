@@ -66,31 +66,13 @@ function Ressource() {
 
   //Recherche meteo suivant l'endroit
 
-  // const [query, setQuery] = useState('')
-  // const form = useForm({
-  //   initialValues: {
-  //     locationQuery: '',
-  //   },
-  // })
-  // const { isLoading, data } = useLocation(query, {
-  //   enabled: !!query,
-  // })
+  const [city, setCity] = useState<string>('');
 
-  // const formHandler = (values : any) => {
-  //   const { locationQuery } = values
-  //   setQuery(locationQuery)
-  // }
+  const { data: weather, error, isLoading } = useWeather(city);
 
-  // const searchResultHandler = (latlon: any) => {
-    
-  // }
-  // const [city, setCity] = useState<string>('');
-
-  // const { data: weather, error, isLoading } = useWeather(city);
-
-  // const handleSearch = (city: string) => {
-  //   setCity(city);
-  // };
+  const handleSearch = (city: string) => {
+    setCity(city);
+  };
 
   return (
     <div className="flex items-center justify-center">
@@ -188,10 +170,10 @@ function Ressource() {
                   </div>
                 ) : null} */}
                 <div className="ml-[20px]">
-                  <div className="flex flex-1 w-full h-full rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
+                  {/* <div className="flex flex-1 w-full h-full rounded-xl bg-gradient-to-br from-neutral-200 dark:from-neutral-900 dark:to-neutral-800 to-neutral-100">
       
-                  </div>
-                  {/* <SearchBar onSearch={handleSearch} /> */}
+                  </div> */}
+                  <SearchBar onSearch={handleSearch} />
                 </div>
 
                 <div className="">
@@ -201,7 +183,7 @@ function Ressource() {
                       {Texte[6]}
                     </h3>
                   </Link>
-                  <div className="grid grid-rows-3 grid-flow-col">
+                  {/* <div className="grid grid-rows-3 grid-flow-col">
                       <div className="grid grid-rows-1 2xl:gap-6 grid-flow-col">
                         <div className="text-[13px] mb-1 font-bold">{formatDate(yesterday)}</div>
                         <div className="text-[13px] mb-1 font-bold">26 °C</div>
@@ -223,10 +205,10 @@ function Ressource() {
                           3.1 kn-1.6 m/s
                         </div>
                       </div>
-                  </div>
-                  {/* {isLoading && <p className="text-center mt-10">Loading...</p>}
+                  </div> */}
+                  {isLoading && <p className="text-center mt-10">Loading...</p>}
                   {error && <p className="text-center mt-10">Error fetching data</p>}
-                  {weather && <WeatherDisplay weather={weather} />} */}
+                  {weather && <WeatherDisplay weather={weather} />}
                 </div>
               </div>
             </div>

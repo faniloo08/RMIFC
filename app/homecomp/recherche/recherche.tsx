@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 //import Image from 'next/image'
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
@@ -57,27 +57,6 @@ function Recherche({ placeholder }: { placeholder: string }) {
                   Rechercher des articles
               </p>
           </div>
-
-          {/* <div className="justify-center items-center drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px] w-[85%]">           
-              <span className="bg-white inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 text-sm font-medium text-slate-700 backdrop-blur-3xl">
-              <input
-                  className="flex w-full rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
-                  placeholder="Ex: Operation Auxilium"
-                  onChange={(e) => {
-                  handleSearch(e.target.value);
-                  }}
-                  // defaultValue={searchParams.get('query')?.toString()}
-              />
-              </span>
-              <button className="relative" onClick={handleClick}>
-                  <Image
-                  width={25}
-                  height={25}
-                  src={"/Recherche.png" }
-                  alt="recherche"
-                  />
-              </button>
-          </div> */}
           <div className="flex justify-center items-cente" cmdk-input-wrapper="">
               {/* <input
                   className="block w-[80%] rounded-full justify-center items-center border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
@@ -89,7 +68,9 @@ function Recherche({ placeholder }: { placeholder: string }) {
               /> */}
               <PlaceholdersAndVanishInput
                 placeholders={placeholders}
-                onChange={handleChange}
+                onChange={(e) => {
+                handleSearch(e.target.value);
+                }}
                 onSubmit={onSubmit}
               />
               <Search className="mt-[8px] ml-[-30px] mr-2 h-4 w-4 shrink-0 opacity-50"/>

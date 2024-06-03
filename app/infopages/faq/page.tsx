@@ -199,16 +199,16 @@ function Faq() {
             
             {/* Questions-réposes */}
             <p className="font-bold text-lg mt-[50px] ml-[10px] sm:ml-[50px]">Questions</p>
-            <div className="mt-[30px] ml-[10px] sm:ml-[50px] grid grid-row-3 gap-1 md:w-[80%]">
+            <div className="mt-[30px] ml-[10px] sm:ml-[50px] grid grid-row-3 gap-1 w-[80%]">
                 <div>
                     {/*Photo de Profil*/}
                     <span className="bg-[url('/Connection.png')] inline-flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white">
                     </span>
                     {/* Titre */}
                     <p className="ml-[80px] mt-[-60px] font-bold text-xs md:text-sm">User1_Name@00</p>
-                    <p className="ml-[80px] font-light text-xs md:text-sm"> {Question[0]}</p>
+                    <p className="ml-[80px] font-light text-xs md:text-sm w-[80%]"> {Question[0]}</p>
                     <p className="mt-[50px] ml-[80px] font-light text-xs">26/07/23</p>
-                    <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px]">
+                    <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px] w-[80%]">
                         <div>
                             <p className="font-light text-xs hover:text-sky-600">répondre</p>
                         </div>
@@ -230,7 +230,7 @@ function Faq() {
                     </span>
                     {/* Titre */}
                     <p className="ml-[80px] mt-[-60px] font-bold text-xs md:text-sm">Crfim_madagascar</p>
-                    <p className="ml-[80px] font-light text-xs md:text-sm">{Reponse[0]}</p>
+                    <p className="ml-[80px] font-light text-xs md:text-sm w-[80%]">{Reponse[0]}</p>
                     <p className="mt-[50px] ml-[80px] font-light text-xs">26/07/23</p>
                     <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px]">
                         <div>
@@ -317,7 +317,7 @@ function Faq() {
                         placeholder="Formuler une question..."
                         value={commentText}
                         onChange={handleCommentChange}
-                        className="sm:ml-[10px] md:ml-[50px] 2xl:w-[1400px] lg:w-[900px] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                        className="sm:ml-[10px] md:ml-[50px] w-[80%] p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
                     />
                     <button
                         type="submit" 

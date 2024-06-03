@@ -1,3 +1,4 @@
+// hooks/useWeather.ts
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
@@ -19,7 +20,7 @@ interface WeatherData {
 }
 
 const fetchWeather = async (city: string): Promise<WeatherData> => {
-  const apiKey = process.env.OPENWEATHER_API_KEY;
+  const apiKey = 'YOUR_OPENWEATHER_API_KEY';
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   const { data } = await axios.get(url);
   return data;
@@ -32,5 +33,3 @@ export const useWeather = (city: string) => {
     enabled: Boolean(city),
   });
 };
-
-
