@@ -1,42 +1,51 @@
 interface WeatherDisplayProps {
-    weather: {
+    weathers: {
       main: {
-        temp: number;
-        temp_max: number;
-        temp_min: number;
-        humidity: number;
+        temp: string;
+        temp_max: string;
+        temp_min: string;
+        humidity: string;
       };
       wind: {
-        speed: number;
+        speed: string;
       };
       weather: {
         icon: string;
         description: string;
-      }[];
+      };
       name: string;
     };
   }
   
-  export default function WeatherDisplay({ weather }: WeatherDisplayProps) {
-    if (!weather) return null;
+  export default function WeatherDisplay({ weathers }: WeatherDisplayProps) {
+    if (!weathers) return null;
   
-    const { main, wind, weather: weatherDetails, name } = weather;
-  
+    const { weather, main, wind, name } = weathers;
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('fr-FR');
     return (
-      <div className="mt-10 p-4 bg-white rounded-lg shadow-md">
-        <h2 className="text-xl font-bold">{name}</h2>
-        <div className="flex items-center">
-          <img
-            src={`http://openweathermap.org/img/wn/${weatherDetails[0].icon}.png`}
-            alt="weather icon"
-            className="w-16 h-16"
-          />
-          <div className="ml-4">
-            <p>Température: {main.temp} °C</p>
-            <p>Température Max: {main.temp_max} °C</p>
-            <p>Température Min: {main.temp_min} °C</p>
-            <p>Humidité: {main.humidity} %</p>
-            <p>Vitesse du vent: {wind.speed} m/s</p>
+      <div className="p-2 rounded-lg shadow-md mr-3">
+        <h2 className="text-md font-bold">{name}</h2>
+        <div className="md:grid grid-cols-3 grid-flow-row gap-2 items-center">
+          <div>
+            <img
+              src={weather.icon}
+              alt="weather icon"
+              // className="w-16 h-12"
+            />
+            <p className="text-[11px] mb-1 text-white font-bold">{weather.description}</p>
+          </div>
+          
+          <div className="mr-1">
+            <p className="text-[11px] mb-1 font-semibold">Température: {main.temp} °C</p>
+            <p className="text-[11px] mb-1 font-semibold">Température Max: {main.temp_max} °C</p>
+            <p className="text-[11px] mb-1 font-semibold">Température Min: {main.temp_min} °C</p>        
+          </div>
+
+          <div>
+            <p className="text-[11px] mb-1 font-semibold">Humidité: {main.humidity} %</p>
+            <p className="text-[11px] mb-1 font-semibold">Vitesse du vent: {wind.speed} m/s</p>
+            <p className="text-[11px] mb-1 font-semibold">{formattedDate}</p>
           </div>
         </div>
       </div>

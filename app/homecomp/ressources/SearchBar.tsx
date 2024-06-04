@@ -1,4 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
+import { Search } from "lucide-react"
 
 interface SearchBarProps {
   onSearch: (city: string) => void;
@@ -13,21 +14,21 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    console.log('City submitted:', city); // Ajout du log
     onSearch(city);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex items-center justify-center mt-10">
-      <input
-        type="text"
-        value={city}
-        onChange={handleChange}
-        placeholder="Enter city"
-        className="px-4 py-2 border border-gray-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      />
-      <button type="submit" className="ml-4 px-4 py-2 bg-blue-500 text-white rounded-md">
-        Search
-      </button>
-    </form>
+    <div className="grid grid-row-1 gap-1 ">
+      <div className="flex items-center" cmdk-input-wrapper="">
+          <input
+              className="block w-[100%] rounded-md shadow-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
+              placeholder="Search City"
+              onChange={handleChange}
+              // defaultValue={searchParams.get('query')?.toString()}
+          />
+          <Search className="ml-[-50px] mr-2 h-4 w-4 shrink-0 opacity-50" onClick={handleSubmit}/>
+      </div>
+    </div>
   );
 }
