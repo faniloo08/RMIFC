@@ -205,7 +205,6 @@ function Contenus(
 
   return (
     // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-    <>
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -471,8 +470,6 @@ function Contenus(
                 </div>
             </div>
         </div>
-    </>
-    // </div>
   )
 }
 

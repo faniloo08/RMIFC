@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import WeatherDisplay from './WeatherDisplay';
 import { getWeather, WeatherData } from '@/lib/useWeather';
 import Link from 'next/link';
-import Image from 'next/image';
+//import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { HeroHighlight, Highlight } from '@/components/ui/hero-highlight';
 import { motion } from 'framer-motion';

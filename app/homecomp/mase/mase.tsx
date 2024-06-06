@@ -14,11 +14,11 @@ import Link from "next/link";
 
 function Mase() {
     const images = [
-        "/Mase1.png",
-        "/Mase2.png",
-        "/Mase3.png",
-        "/Mase4.png",
-        "/Mase5.png",
+        "/Mase1.webp",
+        "/Mase2.webp",
+        "/Mase3.webp",
+        "/Mase4.webp",
+        "/Mase5.webp",
     ];
     const catégories = [
         "Action pour la Somalie",

@@ -50,33 +50,6 @@ interface Component{
   date: string;
 }
 
-const componentsEC: { title: string; href: string; description: string; date: string; coverImage: string;}[] = [
-  //Evenements aux CRFIM
-  {
-    title: "Exercice Cutlass",
-    href: "/",
-    description:
-      "L’exercice Cutlass Express est un exercice naval ...",
-    date:"01/04/2024",
-    coverImage:"/A1.jpg",
-  },
-  {
-    title: "Ministère du Transport",
-    href: "/",
-    description:
-    "Visite du ministère du transport au sein du CRFIM ...",
-    date:"20/02/2024",
-    coverImage:"/A2.jpg",
-  },
-  {
-    title: "NMIFC and RMIFC",
-    href: "/",
-    description:
-    "Visit by an American delegation to the National and ...",
-    date: "13/02/2024",
-    coverImage:"/A3.jpg",
-  }
-]
 
 export function NavBar() {
   const [itemListContent, setItemListContent] = useState<Component[]>([
@@ -86,7 +59,7 @@ export function NavBar() {
     description:
       "L’exercice Cutlass Express est un exercice naval ...",
     date:"01/04/2024",
-    coverImage:"/A1.jpg",
+    coverImage:"/A1.webp",
   },
   {
     title: "Ministère du Transport",
@@ -94,7 +67,7 @@ export function NavBar() {
     description:
     "Visite du ministère du transport au sein du CRFIM ...",
     date:"20/02/2024",
-    coverImage:"/A2.jpg",
+    coverImage:"/A2.webp",
   },
   {
     title: "NMIFC and RMIFC",
@@ -102,7 +75,7 @@ export function NavBar() {
     description:
     "Visit by an American delegation to the National and ...",
     date: "13/02/2024",
-    coverImage:"/A3.jpg",
+    coverImage:"/A3.webp",
   }
 
   ]);
@@ -152,7 +125,7 @@ export function NavBar() {
                     description:
                       "Le Centre Régionale de Fusion d'Informations Maritimes est ...",
                     date:"",
-                    coverImage:"/Hist1.png",
+                    coverImage:"/Hist1.webp",
                   },
                   { //Evenements Clés
                     title: "Evenements Clés",
@@ -160,7 +133,7 @@ export function NavBar() {
                     description:
                     "Découvrez les évenements marquants du Centre ...",
                     date:"",
-                    coverImage:"/Hist2.png",
+                    coverImage:"/Hist2.webp",
                   },
                   {
                     //Persepectives Futures
@@ -169,7 +142,7 @@ export function NavBar() {
                     description:
                     "Nos projets pour les prochaines années ...",
                     date: "",
-                    coverImage:"/Hist3.png",
+                    coverImage:"/Hist3.webp",
                   }
                   ])}
                   >Historique</p>
@@ -184,7 +157,7 @@ export function NavBar() {
                     description:
                       "Qu'est-ce que le Centre Régional de Fusion d'Informations ...",
                     date:"",
-                    coverImage:"/FAQ1.png",
+                    coverImage:"/FAQ1.webp",
                   },
                   { //Comment puis-je contacter le CRFIM ?
                     title: "Contact",
@@ -192,7 +165,7 @@ export function NavBar() {
                     description:
                     "Comment puis-je contacter le CRFIM?",
                     date:"",
-                    coverImage:"/FAQ3.png",
+                    coverImage:"/FAQ3.webp",
                   },
                   {
                     //Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?
@@ -201,7 +174,7 @@ export function NavBar() {
                     description:
                     "Comment puis-je obtenir des informations sur les conditions maritimes ...",
                     date: "",
-                    coverImage:"/FAQ2.png",
+                    coverImage:"/FAQ2.webp",
                   }
                   ])}>
                   FAQ
@@ -217,7 +190,7 @@ export function NavBar() {
                       description:
                         "Commission de l'Océan Indien ",
                       date:"",
-                      coverImage:"/Partenaire3.png",
+                      coverImage:"/Partenaire3.webp",
                     },
                     { //UE
                       title: "U.E",
@@ -225,7 +198,7 @@ export function NavBar() {
                       description:
                       "Union Européene",
                       date:"",
-                      coverImage:"/Partenaire2.png",
+                      coverImage:"/Partenaire2.webp",
                     },
                     {
                       //INGAD
@@ -234,7 +207,7 @@ export function NavBar() {
                       description:
                       "Intergovernemental Authority on Development",
                       date: "",
-                      coverImage:"/Partenaire1.png",
+                      coverImage:"/Partenaire1.webp",
                     }
                     ])}
                   >Partenaires</p>
@@ -249,7 +222,7 @@ export function NavBar() {
                     description:
                       "Conventions Internationaux auxquelles le CRFIM a par-...",
                     date:"",
-                    coverImage:"/CD1.png",
+                    coverImage:"/CD1.webp",
                   },
                   { //Legislation Nationale
                     title: "Legislation Nationale",
@@ -257,7 +230,7 @@ export function NavBar() {
                     description:
                     "Collaboration avec les autorités nationales compétentes",
                     date:"",
-                    coverImage:"/CD3.jpg",
+                    coverImage:"/CD3.webp",
                   },
                   {
                     //Protocoles d'Entente et Memoranda d'Entente
@@ -266,7 +239,7 @@ export function NavBar() {
                     description:
                     "Protocoles d'Entente et Memoranda d'Entente",
                     date: "",
-                    coverImage:"/CD2.png",
+                    coverImage:"/CD2.webp",
                   }
                   ])}
                   >Cadres juridique</p>
@@ -280,7 +253,7 @@ export function NavBar() {
                     description:
                       "L’exercice Cutlass Express est un exercice naval ...",
                     date:"01/04/2024",
-                    coverImage:"/A1.jpg",
+                    coverImage:"/A1.webp",
                   },
                   {
                     title: "Ministère du Transport",
@@ -288,7 +261,7 @@ export function NavBar() {
                     description:
                     "Visite du ministère du transport au sein du CRFIM ...",
                     date:"20/02/2024",
-                    coverImage:"/A2.jpg",
+                    coverImage:"/A2.webp",
                   },
                   {
                     title: "NMIFC and RMIFC",
@@ -296,7 +269,7 @@ export function NavBar() {
                     description:
                     "Visit by an American delegation to the National and ...",
                     date: "13/02/2024",
-                    coverImage:"/A3.jpg",
+                    coverImage:"/A3.webp",
                   }
                   ])}
                   >Evènements aux CRFIM</p>

@@ -55,7 +55,7 @@ const CARDS = [
       designation: "Capitaine de Vaisseau, Directeur du CRFIM",
       content: (
         <Image 
-        src="/MrDr.png" 
+        src="/MrDr.webp" 
         alt="Mr le Directeur" 
         width={150} 
         height={200} />
@@ -67,7 +67,7 @@ const CARDS = [
       designation: "Ministre de la pêche et de l'économie bleu",
       content: (
         <Image 
-        src="/Ministre.png" 
+        src="/Ministre.webp" 
         alt="Mr le Ministre" 
         width={150} 
         height={200} />
@@ -79,7 +79,7 @@ const CARDS = [
       designation: "Secrétaire général de la COI",
       content: (
         <Image 
-        src="/COI.png" 
+        src="/COI.webp" 
         alt="Mr le Secrétaire Général" 
         width={150} 
         height={200} />

@@ -54,9 +54,8 @@ function Cadres() {
       };
     }, []);
   return (
-    // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
+    // <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         // <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
-    <> 
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -109,7 +108,7 @@ function Cadres() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/CD1.png" 
+                    src="/CD1.webp" 
                     alt="" 
                     width={350} 
                     height={250}/>
@@ -202,7 +201,7 @@ function Cadres() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/CD2.png" 
+                    src="/CD2.webp" 
                     alt="" 
                     width={357} 
                     height={398}/>
@@ -218,7 +217,7 @@ function Cadres() {
                 <div>
                     {/* Photo1 */}
                     <Image 
-                    src="/CD1.png" 
+                    src="/CD1.webp" 
                     alt="" 
                     width={300} 
                     height={250} className="hover:scale-110"/>
@@ -226,7 +225,7 @@ function Cadres() {
                 <div>
                     {/* Photo2 */}
                     <Image 
-                    src="/CD2.png" 
+                    src="/CD2.webp" 
                     alt="" 
                     width={300} 
                     height={250} className="hover:scale-110"/>
@@ -250,7 +249,6 @@ function Cadres() {
                 </div>
             </div>
         </div>
-    </>
     // </div>
   )
 }

@@ -38,8 +38,7 @@ function Partenaires() {
       };
     }, []);
   return (
-    // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-    <>
+    // <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -68,7 +67,7 @@ function Partenaires() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/SlideB.png" 
+                    src="/SlideB.webp" 
                     alt="" 
                     width={357} 
                     height={200}/>
@@ -90,7 +89,7 @@ function Partenaires() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/Igad.png" 
+                    src="/Igad.webp" 
                     alt="" 
                     width={200} 
                     height={150}/>
@@ -111,7 +110,7 @@ function Partenaires() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/EAC.png" 
+                    src="/EAC.webp" 
                     alt="" 
                     width={200} 
                     height={150}/>
@@ -132,7 +131,7 @@ function Partenaires() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/Comesa.png" 
+                    src="/Comesa.webp" 
                     alt="" 
                     width={200} 
                     height={150}/>
@@ -153,7 +152,7 @@ function Partenaires() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/OI.png" 
+                    src="/OI.webp" 
                     alt="" 
                     width={200} 
                     height={150}/>
@@ -175,7 +174,7 @@ function Partenaires() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/UE.png" 
+                    src="/UE.webp" 
                     alt="" 
                     width={200} 
                     height={150}/>
@@ -186,7 +185,7 @@ function Partenaires() {
                 <div>
                     {/* Photo1 */}
                     <Image 
-                    src="/Comores.jpg"
+                    src="/Comores.webp"
                     alt="Comores" 
                     title="Comores" 
                     width={100} 
@@ -216,7 +215,7 @@ function Partenaires() {
                 <div>
                     {/* Photo3 */}
                     <Image 
-                    src="/Kenya.png"
+                    src="/Kenya.webp"
                     alt="Kenya" 
                     title="Kenya" 
                     width={100} 
@@ -226,7 +225,7 @@ function Partenaires() {
                 <div>
                     {/* Photo3 */}
                     <Image 
-                    src="/Madagascar.png" 
+                    src="/Madagascar.webp" 
                     alt="Madagascar" 
                     title="Madagascar"  
                     width={100} 
@@ -246,7 +245,7 @@ function Partenaires() {
                 <div>
                     {/* Photo3 */}
                     <Image 
-                    src="/Seychelles.png" 
+                    src="/Seychelles.webp" 
                     alt="Seychelles" 
                     title="Seychelles" 
                     width={100} 
@@ -256,7 +255,6 @@ function Partenaires() {
             </div>
 
         </div>
-    </>
 
     // </div>
   )

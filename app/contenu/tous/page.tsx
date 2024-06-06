@@ -231,7 +231,7 @@ function Contenus() {
                 </div>
                 <div className="hidden md:block mt-[50px] ml-[90px]">
                     <Image 
-                    src="/Piraterie.jpg" 
+                    src="/Piraterie.webp" 
                     alt="" 
                     width={450} 
                     height={250} 

@@ -42,8 +42,7 @@ function Historique() {
       };
     }, []);
   return (
-    // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-    <>
+    // <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -79,7 +78,7 @@ function Historique() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/histo1.png" 
+                    src="/histo1.webp" 
                     alt="" 
                     width={350} 
                     height={250} 
@@ -152,7 +151,7 @@ function Historique() {
                 <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/gris.png" 
+                    src="/gris.webp" 
                     alt="" 
                     width={357} 
                     height={398} 
@@ -194,7 +193,7 @@ function Historique() {
                 <div className="2xl:ml-[280px] lg:ml-[130px] ">
                     {/* Cover */}
                     <Image 
-                    src="/gris.png" 
+                    src="/gris.webp" 
                     alt="" 
                     width={357} 
                     height={398} 
@@ -208,7 +207,7 @@ function Historique() {
                 <div>
                     {/* Photo1 */}
                     <Image 
-                    src="/Hist1.png" 
+                    src="/Hist1.webp" 
                     alt="" 
                     width={300} 
                     height={250} 
@@ -217,7 +216,7 @@ function Historique() {
                 <div>
                     {/* Photo2 */}
                     <Image 
-                    src="/Hist2.png" 
+                    src="/Hist2.webp" 
                     alt="" 
                     width={300} 
                     height={250} 
@@ -226,7 +225,7 @@ function Historique() {
                 <div>
                     {/* Photo3 */}
                     <Image 
-                    src="/Hist3.png" 
+                    src="/Hist3.webp" 
                     alt="" 
                     width={300} 
                     height={250} 
@@ -235,8 +234,6 @@ function Historique() {
             </div>
 
         </div>
-    </>
-       
     // </div>
   )
 }

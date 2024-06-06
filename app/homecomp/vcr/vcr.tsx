@@ -16,8 +16,8 @@ function Vcr() {
     window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSc0YNS8mpJ9nURTH-mY7eoMgCX7Sby4MoaML4Etr5zwKkHa6Q/viewform?usp=sf_link';
   };
   const images = [
-    "/VCR.png",
-    "/VCR1.png"
+    "/VCR.webp",
+    "/VCR1.webp"
   ];
   return (
     <div className="w-[85%] sm:h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] bg-cover flex bg-center justify-center items-center py-[40px]">
