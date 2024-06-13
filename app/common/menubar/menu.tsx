@@ -34,23 +34,24 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 import {registerUser} from '@/lib/registerUser';
-
+import { useLocale } from "@/context/LocalContext";
+import { translate } from "@/lib/translate";
 
 export function MenuBar() {
 
     const Texte = [
-        "Centre Régional de Fusion d'Informations Maritimes",
-        "Connexion",
-        "Inscription"
+        `${translate("Centre Régional de Fusion d'Informations Maritimes")}`,
+        `${translate("Connexion")}`,
+        `${translate("Inscription")}`
     ]
 
     const InfoForm = [
-        "Nom*",
-        "Prenom ",
-        "Email*",
-        "Nom d'utilisateur*",
-        "Mot de passe*",
-        "S'inscrire"
+        `${translate("Nom")}*`,
+        `${translate("Prenom")}`,
+        `${translate("Email")}*`,
+        `${translate("Nom d'utilisateur")}*`,
+        `${translate("Mot de passe")}*`,
+        `${translate("S'inscrire")}`
     ]
 
     //Info inscription
@@ -84,12 +85,16 @@ export function MenuBar() {
     };
 
 
-    const [language, setLanguage] = useState<string>('FR'); // État initial du bouton de langue
+    //Internationalisation
+    const { locale, setLocale } = useLocale();
 
-    const handleLanguageChange = () => {
-      // Fonction pour basculer entre les langues
-      setLanguage(language === 'FR' ? 'EN' : 'FR');
+    const handlelocaleChange = () => {
+        setLocale(locale === 'fr' ? 'en' : 'fr');
     };
+
+
+
+
     const [connexion, setConnexion] = useState<string>('Connexion');
     const [deconnexion, setDeconnexion] = useState<string>('Deconnexion');
     
@@ -147,6 +152,7 @@ export function MenuBar() {
       };
     }, []);
 
+    // Exemple d'utilisation de la fonction translate()
     return (
         <Menubar className="flex justify-between items-center">
             <MenubarMenu>
@@ -168,12 +174,15 @@ export function MenuBar() {
                         <span className="text-slate-900 text-xs hover:text-slate-400 font-bold p-1 rounded-lg"
                         > 
                             {/* Ajoute un gestionnaire de clic pour basculer entre les langues  */}
-                            {language}
+                            {locale.toUpperCase()}
                         </span>
+                        {/* <p>
+                            {translate("Accueil")}
+                        </p> */}
                     </MenubarTrigger>
                     <MenubarContent>
-                        <MenubarItem onClick={handleLanguageChange}  > 
-                            {language === 'FR' ? 'EN' : 'FR'}<MenubarShortcut>{language === 'FR' ? '⌘E' : '⌘F'}</MenubarShortcut>
+                        <MenubarItem onClick={handlelocaleChange}  > 
+                            {locale === 'fr' ? 'EN' : 'FR'}<MenubarShortcut>{locale === 'FR' ? '⌘E' : '⌘F'}</MenubarShortcut>
                         </MenubarItem>
                     </MenubarContent>
                 </MenubarMenu>
@@ -208,11 +217,11 @@ export function MenuBar() {
                                         {/* <LoginForm/> */}
                                         {showLoginForm && <LoginForm/>}
                                     </CardContent>
-                                    <CardFooter>
-                                        <p className="font-bold italic text-sm ml-[30px] text-center">Pas encore de compte ? </p>
+                                    <CardFooter className="flex items-center justify-center">
+                                        <p className="font-bold italic text-sm ml-[30px] text-center">{translate("Pas encore de compte ?")}</p>
                                         <Dialog>
                                             <DialogTrigger asChild>
-                                                <p className="font-bold italic text-sm text-cyan-900 hover:underline">Vous inscrire</p>
+                                                <p className="font-bold italic text-sm text-cyan-900 hover:underline">{translate("Vous inscrire")}</p>
                                             </DialogTrigger>
                                             <DialogContent className="2xl:max-w-[600px] lg:max-w-[400px] items-center justify-center">
                                                 <Card>

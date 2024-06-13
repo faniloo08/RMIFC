@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 // import ColorSwitcher from "./color-switcher/ColorSwitcher";
 import { cn } from "@/lib/utils"
-
+import { LocaleProvider } from "@/context/LocalContext";
 // const inter = Inter({ subsets: ["latin"] });
 import { Inter as FontSans } from "next/font/google"
 const fontSans = FontSans({
@@ -35,7 +35,9 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-       {children}
+        <LocaleProvider>
+          {children}
+        </LocaleProvider>
       </body>
     {/* <ColorSwitcher/> */}
     </html>

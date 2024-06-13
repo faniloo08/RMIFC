@@ -23,3 +23,13 @@ export async function middleware(request: NextRequest) {
   // Si l'utilisateur n'est pas trouvé ou le mot de passe est incorrect, renvoyer un message d'erreur
   return new Response("Nom d'utilisateur ou mot de passe incorrect.", { status: 401 });
 }
+// import createMiddleware from 'next-intl/middleware';
+
+// export default createMiddleware({
+//     locales: ['en', 'fr'],
+//     defaultLocale: 'fr'
+// });
+
+// export const config = {
+//     matcher: ['/((?!api|_next|.*\\..*).*)'],
+// };

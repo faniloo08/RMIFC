@@ -2,9 +2,9 @@
 // const nextConfig = {};
 
 module.exports = {
-    experimental: {
-      instrumentationHook: true,
-    },
+  experimental: {
+    instrumentationHook: true,
+  },
 }
 
 // export default nextConfig;

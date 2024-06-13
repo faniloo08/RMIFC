@@ -4,11 +4,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 //import { NextResponse, NextRequest } from "next/server";
 import {authHandler} from '@/lib/authentification';
+import { translate } from "@/lib/translate";
 
 const LoginForm = () => {
     const InfoForm = [
-        "Nom d'utilisateur ou Email :",
-        "Mot de passe :",
+        `${translate("Nom d'utilisateur ou Email :")}`,
+        `${translate("Mot de passe :")}`,
     ]
 
     const [usernameOrEmail, setUsernameOrEmail] = useState<string>("");
@@ -19,13 +20,13 @@ const LoginForm = () => {
         //Vérification de l'entrée du nom de l'utilisateur
         if (!usernameOrEmail) {
             // Si le champ "Name" est vide, affiche une alerte
-            alert("Veuillez remplir le champ Username.");
+            alert(`${translate("Veuillez remplir le champ Username.")}`);
         }
         var isconnected = await authHandler(usernameOrEmail, password);
         if (isconnected) {
             localStorage.setItem('username', usernameOrEmail);
         } else {
-            alert("Connexion failed");
+            alert(`${translate("Connexion failed")}`);
         }
         setUsernameOrEmail('');
         // alert("connected successfully"); 
@@ -60,14 +61,14 @@ const LoginForm = () => {
                 required
                 />
             </div>
-            <div>
-                <button type="submit" className=" outline relative rounded-full p-1 justify-center items-center ml-[110px] mt-[40px] hover:bg-gradient-to-r from-cyan-900 to-sky-950 hover:text-white">
-                    Se connecter
+            <div className="flex items-center justify-center">
+                <button type="submit" className=" outline relative rounded-full p-1 justify-center items-center mt-[40px] hover:bg-gradient-to-r from-cyan-900 to-sky-950 hover:text-white">
+                    {translate("Se connecter")}
                 </button>
             </div>
-            <div className="justify-end items-end mt-[10px] ml-[190px]">
+            <div className="flex justify-end items-end mt-[10px]">
                 <Link href = "/" className="hover:underline text-xs text-blue-500">
-                    Mot de passe oublié
+                    {translate("Mot de passe oublié")}
                 </Link>
             </div>
         </div>

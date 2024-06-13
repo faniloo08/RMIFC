@@ -128,7 +128,7 @@ function Ressource() {
               </Link>
             </div>
             <div className="mr-[20px]">
-              <Navire />
+              <Navire/>
               {/* {isMobile ? (
                 <Image 
                   src="/Carte(1).png" 

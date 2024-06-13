@@ -66,7 +66,7 @@ function Callaction() {
                                 Déposer une information
                             </button>
                         </DialogTrigger>
-                        <DialogContent className=" bg-white/50 relative mt-[-400px] justify-center items-center sm:max-w-[500px] rounded-lg">
+                        <DialogContent className=" bg-white/50 relative mt-[-400px] flex justify-center items-center rounded-lg">
                             <Formulaire/>
                         </DialogContent>
                     </Dialog>

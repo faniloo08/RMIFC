@@ -2,7 +2,7 @@
 
 import React, {useState } from "react"
 import Link from "next/link"
-
+import { translate } from "@/lib/translate";
 import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/navigation-menu"
 
 import ScrollMenu from "../../homecomp/scrollmenu/scrollmenu"
-
 
 import { 
   Dialog,
@@ -96,7 +95,7 @@ export function NavBar() {
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#299EF2_0%,#A6138E_50%,#011764_100%)]" />
                 )}
                   <span className=" hover:bg-sky-950 hover:text-white bg-white  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-black backdrop-blur-3xl">
-                    Accueil
+                    {translate("Accueil")}
                   </span>
             </span>
           </Link>
@@ -108,7 +107,7 @@ export function NavBar() {
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#299EF2_0%,#A6138E_50%,#011764_100%)]" />
                 )}
                   <span className=" hover:bg-sky-950 hover:text-white bg-white  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-black backdrop-blur-3xl">
-                    Qui sommes-nous ?
+                    {translate("Qui sommes-nous ?")}
                   </span>
             </span>
           </NavigationMenuTrigger>
@@ -120,64 +119,64 @@ export function NavBar() {
                   onMouseEnter={() => handleLinkHover([
                   {
                     //Présentation du Centre
-                    title: "Le CRFIM",
+                    title: `${translate("Le CRFIM")}`,
                     href: "/infopages/historique",
                     description:
-                      "Le Centre Régionale de Fusion d'Informations Maritimes est ...",
+                      `${translate("Le Centre Régionale de Fusion d'Informations Maritimes est ...")}`,
                     date:"",
                     coverImage:"/Hist1.webp",
                   },
                   { //Evenements Clés
-                    title: "Evenements Clés",
+                    title: `${translate("Evenements Clés")}`,
                     href: "/infopages/historique",
                     description:
-                    "Découvrez les évenements marquants du Centre ...",
+                    `${translate("Découvrez les évenements marquants du Centre ...")}`,
                     date:"",
                     coverImage:"/Hist2.webp",
                   },
                   {
                     //Persepectives Futures
-                    title: "Persepectives Futures",
+                    title: `${translate("Persepectives Futures")}`,
                     href: "/infopages/historique",
                     description:
-                    "Nos projets pour les prochaines années ...",
+                    `${translate("Nos projets pour les prochaines années ...")}`,
                     date: "",
                     coverImage:"/Hist3.webp",
                   }
                   ])}
-                  >Historique</p>
+                  >{translate("Historique")}</p>
                 </Link>
                 <Link href="/infopages/faq">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline" 
                   onMouseEnter={() => handleLinkHover([
                   {
                     // Qu'est-ce que le Centre Régional de Fusion d'Informations Maritimes (CRFIM) ?
-                    title: "Présentation",
+                    title: `${translate("Présentation")}`,
                     href: "/infopages/faq",
                     description:
-                      "Qu'est-ce que le Centre Régional de Fusion d'Informations ...",
+                      `${translate("Qu'est-ce que le Centre Régional de Fusion d'Informations ...")}`,
                     date:"",
                     coverImage:"/FAQ1.webp",
                   },
                   { //Comment puis-je contacter le CRFIM ?
-                    title: "Contact",
+                    title: `${translate("Contact")}`,
                     href: "/infopages/faq",
                     description:
-                    "Comment puis-je contacter le CRFIM?",
+                    `${translate("Comment puis-je contacter le CRFIM?")}`,
                     date:"",
                     coverImage:"/FAQ3.webp",
                   },
                   {
                     //Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?
-                    title: "Informations",
+                    title: `${translate("Informations")}`,
                     href: "/infopages/faq",
                     description:
-                    "Comment puis-je obtenir des informations sur les conditions maritimes ...",
+                    `${translate("Comment puis-je obtenir des informations sur les conditions maritimes ...")}`,
                     date: "",
                     coverImage:"/FAQ2.webp",
                   }
                   ])}>
-                  FAQ
+                  {translate("FAQ")}
                   </p>
                 </Link>
                 <Link href="/infopages/partnaire">
@@ -185,94 +184,94 @@ export function NavBar() {
                    onMouseEnter={() => handleLinkHover([
                     {
                       // COI
-                      title: "C.O.I",
+                      title: `${translate("C.O.I")}`,
                       href: "/infopages/partnaire",
                       description:
-                        "Commission de l'Océan Indien ",
+                        `${translate("Commission de l'Océan Indien")}`,
                       date:"",
                       coverImage:"/Partenaire3.webp",
                     },
                     { //UE
-                      title: "U.E",
+                      title: `${translate("U.E")}`,
                       href: "/infopages/partnaire",
                       description:
-                      "Union Européene",
+                      `${translate("Union Européene")}`,
                       date:"",
                       coverImage:"/Partenaire2.webp",
                     },
                     {
                       //INGAD
-                      title: "I.G.A.D",
+                      title: `${translate("I.G.A.D")}`,
                       href: "/infopages/partnaire",
                       description:
-                      "Intergovernemental Authority on Development",
+                      `${translate("Intergovernemental Authority on Development")}`,
                       date: "",
                       coverImage:"/Partenaire1.webp",
                     }
                     ])}
-                  >Partenaires</p>
+                  >{translate("Partenaires")}</p>
                 </Link>
                 <Link href="/infopages/cadres">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
                     //Conventions Internationaux
-                    title: "Conventions Internationaux",
+                    title: `${translate("Conventions Internationaux")}`,
                     href: "/infopages/cadres",
                     description:
-                      "Conventions Internationaux auxquelles le CRFIM a par-...",
+                      `${translate("Conventions Internationaux auxquelles le CRFIM a par-...")}`,
                     date:"",
                     coverImage:"/CD1.webp",
                   },
                   { //Legislation Nationale
-                    title: "Legislation Nationale",
+                    title: `${translate("Legislation Nationale")}`,
                     href: "/infopages/cadres",
                     description:
-                    "Collaboration avec les autorités nationales compétentes",
+                    `${translate("Collaboration avec les autorités nationales compétentes")}`,
                     date:"",
                     coverImage:"/CD3.webp",
                   },
                   {
                     //Protocoles d'Entente et Memoranda d'Entente
-                    title: "Protocoles d'Entente",
+                    title: `${translate("Protocoles d'Entente")}`,
                     href: "/infopages/cadres",
                     description:
-                    "Protocoles d'Entente et Memoranda d'Entente",
+                    `${translate("Protocoles d'Entente et Memoranda d'Entente")}`,
                     date: "",
                     coverImage:"/CD2.webp",
                   }
                   ])}
-                  >Cadres juridique</p>
+                  >{translate("Cadres juridique")}</p>
                 </Link>
                 <Link href="/contenu/tous">
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
-                    title: "Exercice Cutlass",
+                    title: `${translate("Exercice Cutlass")}`,
                     href: "/contenu/tous",
                     description:
-                      "L’exercice Cutlass Express est un exercice naval ...",
+                      `${translate("L'exercice Cutlass Express est un exercice naval ...")}`,
                     date:"01/04/2024",
                     coverImage:"/A1.webp",
                   },
                   {
-                    title: "Ministère du Transport",
+                    title: `${translate("Ministère du Transport")}`,
                     href: "/contenu/tous",
                     description:
-                    "Visite du ministère du transport au sein du CRFIM ...",
+                    `${translate("Visite du ministère du transport au sein du CRFIM ...")}`,
                     date:"20/02/2024",
                     coverImage:"/A2.webp",
                   },
                   {
-                    title: "NMIFC and RMIFC",
+                    title: `${translate("NMIFC and RMIFC")}`,
                     href: "/contenu/tous",
                     description:
-                    "Visit by an American delegation to the National and ...",
+                    `${translate("Visit by an American delegation to the National and ...")}`,
                     date: "13/02/2024",
                     coverImage:"/A3.webp",
                   }
                   ])}
-                  >Evènements aux CRFIM</p>
+                  >{translate("Evènements aux CRFIM")}</p>
                 </Link>
               </div>
               {itemListContent.map((component) => (
@@ -297,7 +296,7 @@ export function NavBar() {
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#299EF2_0%,#A6138E_50%,#011764_100%)]" />
                 )}
                 <span className=" hover:bg-sky-950 hover:text-white bg-white  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-black backdrop-blur-3xl">
-                  Ce que nous faisons ?
+                  {translate("Ce que nous faisons ?")}
                 </span>
           </span>
           </NavigationMenuTrigger>
@@ -310,10 +309,10 @@ export function NavBar() {
                     href="/"
                   >
                     <div className="mb-2 mt-4 text-lg font-bold text-cyan-700 ">
-                      12 pillars
+                      {translate("12 pillars")}
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Principaux domaines pris en Charges pas le Centre
+                      {translate("Principaux domaines pris en Charges pas le Centre")}
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -332,7 +331,7 @@ export function NavBar() {
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#299EF2_0%,#A6138E_50%,#011764_100%)]" />
                 )}
                 <span className=" hover: hover:bg-white hover:text-black bg-sky-950  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                  Contact
+                  {translate("Contact")}
                 </span>
               </span>
             </NavigationMenuLink>
@@ -347,41 +346,41 @@ export function NavBar() {
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#299EF2_0%,#A6138E_50%,#011764_100%)]" />
                   )}
                     <span className=" hover:bg-white hover:text-black bg-sky-950  inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-1 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                      Recherche
+                      {translate("Recherche")}
                     </span>
                 </button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-[500px]">
               <Command className="rounded-lg border shadow-md">
-                <CommandInput placeholder="Taper ici pour rechercher..." />
+                <CommandInput placeholder={translate("Taper ici pour rechercher...")} />
                 <CommandList>
-                  <CommandEmpty>No results found.</CommandEmpty>
-                  <CommandGroup heading="Suggestions">
+                  <CommandEmpty>{translate("No results found.")}</CommandEmpty>
+                  <CommandGroup heading={translate("Suggestions")}>
                     <Link href="/contenu/tous">
                       <CommandItem>
                         <Calendar className="mr-2 h-4 w-4" />
-                        <span>Evenement</span>
+                        <span>{translate("Evenement")}</span>
                       </CommandItem>
                     </Link>
                     <Link href="/infopages/faq">
                       <CommandItem>
                         <BadgeHelp className="mr-2 h-4 w-4" />
-                        <span>FAQ</span>
+                        <span>{translate("FAQ")}</span>
                       </CommandItem>
                     </Link>
                     <Link href="/contenu/tous/tous">
                       <CommandItem>
                         <Album className="mr-2 h-4 w-4" />
-                        <span>Articles</span>
+                        <span>{translate("Articles")}</span>
                         <CommandShortcut>⌘A</CommandShortcut>
                       </CommandItem>
                     </Link>
                   </CommandGroup>
                   <CommandSeparator />
-                  <CommandGroup heading="Réglages">
+                  <CommandGroup heading={translate("Réglages")}>
                     <CommandItem>
                       <User className="mr-2 h-4 w-4" />
-                      <span>Profil</span>
+                      <span>{translate("Profil")}</span>
                       <CommandShortcut>⌘P</CommandShortcut>
                     </CommandItem>
                   </CommandGroup>

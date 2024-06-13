@@ -59,7 +59,7 @@ function Formulaire() {
     //   setMessage(event.target.value);
     // };
       return (
-        <Card className="relative">
+        <Card className="relative flew items-center justify-center ">
           <CardHeader>
             <CardTitle className="text-center mb-1">{Texte[0]}</CardTitle>
             <CardDescription className="text-center">{Texte[1]}</CardDescription>

@@ -19,6 +19,8 @@ import Vcr from "./homecomp/vcr/vcr";
 import Newsletter from "./homecomp/newsletter/newsletter";
 import Footer from "./common/footer/footer";
 import Image from "next/image";
+
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -34,6 +36,7 @@ export default function Home() {
       window.removeEventListener('resize', handleResize); // Nettoie l'écouteur d'événements lors du démontage du composant
     };
   }, []);
+
   return (
     <>
       <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
@@ -50,7 +53,7 @@ export default function Home() {
           </div>
           <div className="bg-cover grid md:grid-cols-3 gap-3 items-center justify-center">
             <div className="bg-cover grid grid-cols-1 items-center justify-center md:col-span-2">
-              <div className="relative mt-[50px]">
+              <div className="relative mt-[50px] md:mt-[0px]">
                 <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px] w-[92%] md:w-[90%] lg:w-[94%] xl:w-[91%] 2xl:w-[88%] ml-[20px]">
                   <Slide/>
                 </div> 
