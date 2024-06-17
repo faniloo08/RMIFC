@@ -1,5 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { Search } from "lucide-react"
+import { translate } from '@/lib/translate';
 
 interface SearchBarProps {
   onSearch: (city: string) => void;
@@ -23,7 +24,7 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
       <div className="flex items-center" cmdk-input-wrapper="">
           <input
               className="block w-[100%] rounded-md shadow-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"
-              placeholder="Search City"
+              placeholder={translate("Search City")}
               onChange={handleChange}
               // defaultValue={searchParams.get('query')?.toString()}
           />

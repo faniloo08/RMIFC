@@ -6,6 +6,7 @@ interface TranslationData {
   
   export function translate(text: string): string {
     const { locale } = useLocale();
+    // const locale = "fr"
     try {
       const translations: TranslationData = require(`../public/locales/${locale}/common.json`);
       return translations[text] || text; // Retourne la traduction si elle existe, sinon retourne le texte original

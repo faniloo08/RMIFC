@@ -11,11 +11,9 @@ import {
   CardTitle,
 } from "@/components/ui/card2";
 import {sendInfo} from '@/lib/sendInfo';
+import { translate } from '@/lib/translate';
 
-const Texte = [
-  "Bienvenue sur la section de déposition d'information du CRFIM",
-  "Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile :  pêche illégale, entrées et sorties des bateaux, trafics, tourisme, et plus encore, veuillez la déposer ici"
-]
+
 function Formulaire() {
   const [nom, setNom] = useState('');
   const [prenom, setPrenom] = useState('');
@@ -58,6 +56,10 @@ function Formulaire() {
     // const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     //   setMessage(event.target.value);
     // };
+    const Texte = [
+      `${translate("Bienvenue sur la section de déposition d'information du CRFIM")}`,
+      `${translate("Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile :  pêche illégale, entrées et sorties des bateaux, trafics, tourisme, et plus encore, veuillez la déposer ici")}`
+    ]
       return (
         <Card className="relative flew items-center justify-center ">
           <CardHeader>
@@ -72,43 +74,43 @@ function Formulaire() {
                   <div className="grid grid-cols-2 grid-flow-row space-y-2 mb-4">
                     <div className="mr-1">
                       <LabelInputContainer>
-                        <Label htmlFor="nom">Nom</Label>
+                        <Label htmlFor="nom">{translate("Nom")}</Label>
                         <Input id="firstname" placeholder="Tyler" type="text" value={nom} onChange={(e) => setNom(e.target.value)}/>
                       </LabelInputContainer>
                     </div>
                     <div >
                       <LabelInputContainer className="mt-[-12px]">
-                        <Label htmlFor="nom">Prenom</Label>
+                        <Label htmlFor="nom">{translate("Prenom")}</Label>
                         <Input id="prenom" placeholder="Durden" type="text" value={prenom} onChange={(e) => setPrenom(e.target.value)} />
                       </LabelInputContainer>
                     </div>
                   </div>
                   <LabelInputContainer className="mb-4">
-                    <Label htmlFor="email">Adresse email </Label>
+                    <Label htmlFor="email">{translate("Adresse email")} </Label>
                     <Input id="email" placeholder="projectmayhem@fc.com" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                   </LabelInputContainer>
                   <LabelInputContainer className="mb-4">
-                    <Label htmlFor="mdp">Mot de Passe</Label>
+                    <Label htmlFor="mdp">{translate("Mot de Passe")}</Label>
                     <Input id="mdp" placeholder="••••••••" type="password" value={mdp} onChange={(e) => setMdp(e.target.value)} />
                   </LabelInputContainer>
                 </div>
                 <div>
                   {/* fonction à message */}
                   <LabelInputContainer className="mb-4">
-                    <Label htmlFor="fonction">Votre fonction</Label>
+                    <Label htmlFor="fonction">{translate("Votre fonction")}</Label>
                     <Input
                       id="fonction"
-                      placeholder="Personnel du ministère de la pêche"
+                      placeholder={translate("Personnel du ministère de la pêche")}
                       type="text"
                       value={fonction} onChange={(e) => setFonction(e.target.value)}
                     />
                   </LabelInputContainer>
                   <LabelInputContainer className="mb-4">
-                    <Label htmlFor="message">Votre Message</Label>
-                    <Input id="message" type="textarea" placeholder="Votre message ici..." value={message} onChange={(e) => setMessage(e.target.value)}/>
+                    <Label htmlFor="message">{translate("Votre Message")}</Label>
+                    <Input id="message" type="textarea" placeholder={translate("Votre message ici...")} value={message} onChange={(e) => setMessage(e.target.value)}/>
                   </LabelInputContainer>
                   <LabelInputContainer className="mb-3">
-                    <Label htmlFor="Photos">Importer une photo</Label>
+                    <Label htmlFor="Photos">{translate("Importer une photo")}</Label>
                     <Input id="Photos" type="file" accept="image/*" onChange={handleImageChange} />
                   </LabelInputContainer>
                 </div>
@@ -118,7 +120,7 @@ function Formulaire() {
                   className=" relative bg-gradient-to-r from-cyan-900 to-sky-950 text-white rounded-lg p-1"
                   type="submit"
                 >
-                  Déposer &rarr;
+                  {translate("Déposer")} &rarr;
                   <BottomGradient />
                 </button>
               </div>

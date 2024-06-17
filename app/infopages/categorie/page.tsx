@@ -5,7 +5,7 @@ import {MenuBuger} from "../../common/navbar/menuburger";
 // import { MenuBar } from '../menubar/menu';
 // import Footer from "../footer/footer";
 import Link from 'next/link';
-
+import { translate } from '@/lib/translate';
 const Titre = [
     "Maritime Incident",
     "Arms Trafficking smuggling by sea",

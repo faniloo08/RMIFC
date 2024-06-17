@@ -7,6 +7,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { HeroHighlight, Highlight } from '@/components/ui/hero-highlight';
 import { motion } from 'framer-motion';
+import { translate } from '@/lib/translate';
 
 const Map = dynamic(() => import('@/components/ui/map'), {
   ssr: false,
@@ -16,15 +17,7 @@ const Navire = dynamic(() => import('@/components/ui/navire'), {
   ssr: false,
 });
 
-const Texte = [
-  "Le front axé au Sud-Est de l'Océan Indien",
-  "Cette carte interactive présente notre zone de couverture, qui englobe la partie sud-est de l'Océan Indien. Vous pouvez explorer les différentes zones d'intérêt, les routes maritimes clés, ainsi que les points critiques de surveillance.  ",
-  "",
-  "Trouvez toutes les activités des vaisseaux repertoriés ici.",
-  "Nous vous garantissons des informations à jours et fiables concernants toutes activités des vaisseaux dans la zone de l'Océan Indien et bien plus. En collaboration avec des ressources officiels comme Vesselfinder ou la plateforme du 'Sea Vision', nous ne communiquons que les informations vérifiés par une communauté d'experts.",
-  "",
-  "Weather Forecast"
-];
+
 
 function Ressource() {
   const today = new Date();
@@ -57,6 +50,16 @@ function Ressource() {
     }
   }, [city]);
 
+  const Texte = [
+    `${translate("Le front axé au Centre et Sud de l'océan Indien")}`,
+    `${translate("Cette carte interactive présente notre zone de couverture, qui englobe la partie sud-est de l'Océan Indien. Vous pouvez explorer les différentes zones d'intérêt, les routes maritimes clés, ainsi que les points critiques de surveillance.")}`,
+    "",
+    `${translate("Trouvez toutes les activités des vaisseaux repertoriés ici.")}`,
+    `${translate("Nous vous garantissons des informations à jours et fiables concernants toutes activités des vaisseaux dans la zone de l'Océan Indien et bien plus. En collaboration avec des ressources officiels comme Vesselfinder ou la plateforme du 'Sea Vision', nous ne communiquons que les informations vérifiés par une communauté d'experts.")}`,
+    "",
+    `${translate("Weather Forecast")}`
+  ];
+
   const handleSearch = (city: string) => {
     console.log('Search triggered for city:', city); // Ajout du log
     setCity(city);
@@ -81,9 +84,9 @@ function Ressource() {
             }}
             className="font-bold text-white dark:text-black"
           >
-            Des données
+            {translate("Des données")}
             <Highlight className="text-black dark:text-white">
-              fiables et à jour.
+              {translate("fiables et à jour.")}
             </Highlight>
           </motion.h1>
         </HeroHighlight>
@@ -111,7 +114,7 @@ function Ressource() {
               </p> */}
             </div>
           </div>
-          <div className="grid grid-cols-2 grid-flow-row gap-1 mt-[30px]">
+          <div className="grid grid-cols-2 grid-flow-row gap-1 mt-[10px]">
             <div className="ml-[20px]">
               <Link href="https://www.vesselfinder.com/fr/news">
                 <h3 className="font-bold text-[16px] mb-1 hover:text-blue-700">
@@ -123,7 +126,7 @@ function Ressource() {
               </p>
               <Link href="https://www.vesselfinder.com/fr/news">
                 <p className="text-[12px] fond-extralight mb-1 hover:text-blue-700">
-                  En savoir plus
+                  {translate("En savoir plus")}
                 </p>
               </Link>
             </div>
@@ -142,11 +145,11 @@ function Ressource() {
               )} */}
             </div>
           </div>
-          <div className="grid grid-cols-2 grid-flow-row gap-1">
+          <div className="grid grid-cols-2 grid-flow-row gap-1 mt-[0px]">
             <div className="ml-[20px]">
-              <h3 className="font-bold text-[16px] mb-1 hover:text-blue-700">Weather Data</h3>
+              <h3 className="font-bold text-[16px] mb-1 hover:text-blue-700">{translate("Weather Data")}</h3>
               <p className="text-[11px] mb-1">
-                Type the city you want to know the weather of
+                {translate("Type the city you want to know the weather of")}
               </p>
               <SearchBar onSearch={handleSearch} />
             </div>
@@ -159,7 +162,7 @@ function Ressource() {
               {weather ? (
                 <WeatherDisplay weathers={weather} />
               ) : (
-                <p className="text-center text-[11px]">No weather data available.</p>
+                <p className="text-center text-[11px]">{translate("No weather data available.")}</p>
               )}
             </div>
           </div>

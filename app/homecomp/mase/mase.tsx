@@ -10,6 +10,7 @@ import {
 
 import React from "react"
 import Link from "next/link";
+import { translate } from "@/lib/translate";
 // import Image from "next/image";
 
 function Mase() {
@@ -21,18 +22,18 @@ function Mase() {
         "/Mase5.webp",
     ];
     const catégories = [
-        "Action pour la Somalie",
-        "Lutte contre la piraterie",
-        "Flux financiers illicites",
-        "Sécurité Maritime",
-        "Réseau d’informations"
+        `${translate("Action pour la Somalie")}`,
+        `${translate("Lutte contre la piraterie")}`,
+        `${translate("Flux financiers illicites")}`,
+        `${translate("Sécurité Maritime")}`,
+        `${translate("Réseau d'informations")}`
     ];
     const titres = [
-        "Le plan d'action national du WiMS marque l'about...",
-        "En 2022, « seulement » 300 actes de piraterie ...",
-        "L'Afrique perd chaque année environ 88,6 mill ...",
-        "De nouvelles propositions en faveur de trans...",
-        "Les Centres régionaux de fusion de l’information...",
+        `${translate("Le plan d'action national du WiMS marque l'about...")}`,
+        `${translate("En 2022, « seulement » 300 actes de piraterie ...")}`,
+        `${translate("L'Afrique perd chaque année environ 88,6 mill ...")}`,
+        `${translate("De nouvelles propositions en faveur de trans...")}`,
+        `${translate("Les Centres régionaux de fusion de l'information...")}`,
     ];
     const dates = [
         "01/01/2024",
@@ -45,7 +46,7 @@ function Mase() {
   return (
     <div className="">
         <div className="text-white mt-[-60px] ml-[55px] font-bold mb-2 shadow-sm lg:text-md text-xs">
-            Programme MASE
+            {translate("Programme MASE")}
         </div>
         <div>
         <Carousel

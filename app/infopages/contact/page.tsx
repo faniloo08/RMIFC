@@ -5,7 +5,7 @@ import {MenuBuger} from "../../common/navbar/menuburger";
 import Link from 'next/link';
 // import GoogleMapComponent from '@/components/ui/google-map';
 import Image from 'next/image';
-
+import { translate } from '@/lib/translate';
 function Contact() {
     const [isMobile, setIsMobile] = useState(false);
 

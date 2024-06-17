@@ -92,35 +92,23 @@ export function MenuBar() {
         setLocale(locale === 'fr' ? 'en' : 'fr');
     };
 
-
-
-
-    const [connexion, setConnexion] = useState<string>('Connexion');
-    const [deconnexion, setDeconnexion] = useState<string>('Deconnexion');
     
-    
-
     //Info connexion
     const [usernom, setUsernom] = useState<string>('');
+    const [deconnexion, setDeconnexion] = useState<string>('Deconnexion');
 
     useEffect(() => {
         // Récupérez le nom d'utilisateur depuis le stockage local lors du chargement du composant
         const storedUsername = localStorage.getItem('username');
         if (storedUsername) {
             setUsernom(storedUsername);
+            // Vérifiez si l'utilisateur est déjà connecté lors du chargement du composant
+            setIsLoggedIn(true);
         }
     }, []);
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
-
-    useEffect(() => {
-        // Vérifiez si l'utilisateur est déjà connecté lors du chargement du composant
-        const storedUsername = localStorage.getItem('username');
-        if (storedUsername) {
-            setIsLoggedIn(true);
-        }
-    }, []);
 
     const handleLoginButtonClick = () => {
         // Affichez le formulaire de connexion uniquement si l'utilisateur n'est pas déjà connecté

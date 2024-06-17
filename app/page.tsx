@@ -19,6 +19,7 @@ import Vcr from "./homecomp/vcr/vcr";
 import Newsletter from "./homecomp/newsletter/newsletter";
 import Footer from "./common/footer/footer";
 import Image from "next/image";
+import { translate } from '@/lib/translate';
 
 
 export default function Home() {
@@ -40,7 +41,7 @@ export default function Home() {
   return (
     <>
       <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-        <div className="bg-white md:bg-[url('/HomePage2(1).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat items-center justify-center w-[85%] h-4/5 bg-cover">
+        <div className="bg-white md:bg-[url('/HomePage2(1).png')] lg:bg-[url('/HomePage(2).png')] 2xl:bg-[url('/HomePage2.png')] bg-center bg-no-repeat items-center justify-center w-[90%] h-4/5 bg-cover">
           <div className="bg-cover grid grid-cols-1"> 
             <div className="mb-1"> 
                 <MenuBar/>
@@ -92,7 +93,7 @@ export default function Home() {
             </div>
             <div className="hidden sm:hidden md:block md:mt-[0px] lg:mt-[10px] 2xl:mt-[-10px] w-[92%]">
               <div>
-                <p className="text-sky-950 font-bold lg:text-[18px] md:text-[20px] text-[24px] mt-[35px] ">Centre Régional de Fusion de Information Maritimes</p>
+                <p className="text-sky-950 font-bold lg:text-[18px] md:text-[20px] text-[24px] mt-[35px] ">{translate("Centre Régional de Fusion de Information Maritimes")}</p>
                 <PresText/>
               </div>
               <div className="lg: mt-[50px] xl:mt-[50px] 2xl:mt-[150px]">
@@ -104,13 +105,15 @@ export default function Home() {
 
             <div className="2xl:mt-[50px] lg:mt-[50px] grid grid-flow-row grif-cols-1 lg:grid-cols-2 lg:space-x-[350px] 2xl:space-x-[600px]">
               <div className="ml-[28px] bg-[url('/fleche.png')] w-[228px] h-[52px] ">
-                <span className="inline-flex justify-center items-center mt-2 ml-4 font-bold text-[#092933]">
-                  Dernières Actualités
+                <span className="flex justify-center items-center mt-2 font-bold text-[#092933]">
+                  <p className="text-center">
+                    {translate("Dernières Actualités")}
+                  </p>
                 </span>
               </div>
               <div>
                 <Link href="/contenu/tous" className='text-cyan-400 underline text-sm 2xl:ml-[1400px] lg:ml-[920px] ml-[50px] mt-[-150px]' >
-                    voir toutes les actualités
+                    {translate("voir toutes les actualités")}
                 </Link>
               </div>
             </div>
@@ -131,7 +134,7 @@ export default function Home() {
             </div>
             <div className="mt-[50px] bg-[url('/fleche.png')] ml-[28px] w-[228px] h-[52px] ">
               <span className="inline-flex justify-center items-center mt-2 ml-5 font-bold text-[#092933]">
-                Ressources
+                {translate("Ressources")}
               </span>
             </div>
             <div className="mt-[50px]">

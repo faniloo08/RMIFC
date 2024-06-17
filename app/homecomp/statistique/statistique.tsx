@@ -1,20 +1,22 @@
 import React from 'react'
 import { FlipWords } from '@/components/ui/flip-words'
-const Stat = [
-  "",
-  "Pays signataires",
-  "Centres régionaux",
-  "Formations dans l'année",
-  "Missions effectuées"
-]
+import { translate } from '@/lib/translate';
+
 function Statistique() {
-  const words = ["Surveillance maritime", "Opérations en Mer", "Actions pour la MDA"];
+  const Stat = [
+    "",
+    `${translate("Pays signataires")}`,
+    `${translate("Centres régionaux")}`,
+    `${translate("Formations dans l'année")}`,
+    `${translate("Missions effectuées")}`
+  ]
+  const words = [`${translate("Surveillance maritime")}`, `${translate("Opérations en Mer")}`, `${translate("Actions pour la MDA")}`];
 
   return (
     <div className="w-[92%]">
       <div className="flex mb-[30px] 2xl:mb-[50px]  text-slate-950 font-bold text-[16px]">
         
-          Visualisez les statistiques clés de nos activités:
+          {translate("Visualisez les statistiques clés de nos activités:")}
           <FlipWords words={words} />
         
       </div>

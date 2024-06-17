@@ -4,7 +4,7 @@ import { NavBar } from "../../common/navbar/nav";
 import {MenuBuger} from "../../common/navbar/menuburger";
 import Link from 'next/link';
 import Image from 'next/image';
-
+import { translate } from '@/lib/translate';
 const Contenu = [
     "Le Centre Régional de Fusion d'Informations Maritimes (CRFIM) opère en conformité avec les conventions et traités internationaux relatifs à la sécurité maritime, y compris",
     "La Convention des Nations Unies sur le droit de la mer (UNCLOS) :",

@@ -61,28 +61,66 @@ interface Component{
 }
 
 export function MenuBuger() {
+    const titre = [
+        `${translate("Le CRFIM")}`,
+        `${translate("Evenements Clés")}`,
+        `${translate("Persepectives Futures")}`,
+        `${translate("Présentation")}`,
+        `${translate("Contact")}`,
+        `${translate("Informations")}`,
+        `${translate("C.O.I")}`,
+        `${translate("U.E")}`,
+        `${translate("I.G.A.D")}`,
+        `${translate("Conventions Internationaux")}`,
+        `${translate("Legislation Nationale")}`,
+        `${translate("Protocoles d'Entente")}`,
+        `${translate("Exercice Cutlass")}`,
+        `${translate("Ministère du Transport")}`,
+        `${translate("NMIFC and RMIFC")}`
+    
+      ]
+    
+      const description = [
+        `${translate("Le Centre Régionale de Fusion d'Informations Maritimes est ...")}`,
+        `${translate("Découvrez les évenements marquants du Centre ...")}`,
+        `${translate("Nos projets pour les prochaines années ...")}`,
+        `${translate("Qu'est-ce que le Centre Régional de Fusion d'Informations ...")}`,
+        `${translate("Comment puis-je contacter le CRFIM?")}`,
+        `${translate("Comment puis-je obtenir des informations sur les conditions maritimes ...")}`,
+        `${translate("Commission de l'Océan Indien")}`,
+        `${translate("Union Européene")}`,
+        `${translate("Intergovernemental Authority on Development")}`,
+        `${translate("Conventions Internationaux auxquelles le CRFIM a par-...")}`,
+        `${translate("Collaboration avec les autorités nationales compétentes")}`,
+        `${translate("Protocoles d'Entente et Memoranda d'Entente")}`,
+        `${translate("L'exercice Cutlass Express est un exercice naval ...")}`,
+        `${translate("Visite du ministère du transport au sein du CRFIM ...")}`,
+        `${translate("Visit by an American delegation to the National and ...")}`
+      ]
+
     const [itemListContent, setItemListContent] = useState<Component[]>([
-        {
-          title: "Exercice Cutlass",
-          href: "/",
-          description:
-            "L'exercice Cutlass Express est un exercice naval ...",
-          date:"01/04/2024"
-        },
-        {
-          title: "Ministère du Transport",
-          href: "/",
-          description:
-          "Visite du ministère du transport au sein du CRFIM ...",
-          date:"20/02/2024"
-        },
-        {
-          title: "NMIFC and RMIFC",
-          href: "/",
-          description:
-          "Visit by an American delegation to the National and ...",
-          date: "13/02/2024"
-        }
+    {
+      title: `${titre[12]}`,
+      href: "/contenu/tous",
+      description:
+        `${description[12]}`,
+      date:"01/04/2024",
+    },
+    {
+      title: `${titre[13]}`,
+      href: "/contenu/tous",
+      description:
+        `${description[13]}`,
+      date:"20/02/2024",
+
+    },
+    {
+      title: `${titre[14]}`,
+      href: "/contenu/tous",
+      description:
+        `${description[14]}`,
+      date: "13/02/2024",
+    }
       
     ]);
     
@@ -132,27 +170,27 @@ export function MenuBuger() {
                                     onMouseEnter={() => handleLinkHover([
                                     {
                                         //Présentation du Centre
-                                        title: `${translate("Le CRFIM")}`,
+                                        title: `${titre[0]}`,
                                         href: "/infopages/historique",
                                         description:
-                                        `${translate("Le Centre Régionale de Fusion d'Informations Maritimes est ...")}`,
+                                        `${description[0]}`,
                                         date:"",
                                         
                                     },
                                     { //Evenements Clés
-                                        title: `${translate("Evenements Clés")}`,
+                                        title: `${titre[1]}`,
                                         href: "/infopages/historique",
                                         description:
-                                        `${translate("Découvrez les évenements marquants du Centre ...")}`,
+                                        `${description[1]}`,
                                         date:"",
                                         
                                     },
                                     {
                                         //Persepectives Futures
-                                        title: `${translate("Persepectives Futures")}`,
+                                        title: `${titre[2]}`,
                                         href: "/infopages/historique",
                                         description:
-                                        `${translate("Nos projets pour les prochaines années ...")}`,
+                                        `${description[2]}`,
                                         date: "",
                                         
                                     }
@@ -164,27 +202,27 @@ export function MenuBuger() {
                                     onMouseEnter={() => handleLinkHover([
                                     {
                                         // Qu'est-ce que le Centre Régional de Fusion d'Informations Maritimes (CRFIM) ?
-                                        title: `${translate("Présentation")}`,
+                                        title: `${titre[3]}`,
                                         href: "/infopages/faq",
                                         description:
-                                        `${translate("Qu'est-ce que le Centre Régional de Fusion d'Informations ...")}`,
+                                        `${description[3]}`,
                                         date:"",
                                                         },
                                     { //Comment puis-je contacter le CRFIM ?
-                                        title: `${translate("Contact")}`,
+                                        title: `${titre[4]}`,
                                         href: "/infopages/faq",
                                         description:
-                                        `${translate("Comment puis-je contacter le CRFIM?")}`,
+                                        `${description[4]}`,
                                         date:"",
-                                    },
+                                                        },
                                     {
                                         //Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?
-                                        title: `${translate("Informations")}`,
+                                        title: `${titre[5]}`,
                                         href: "/infopages/faq",
                                         description:
-                                        `${translate("Comment puis-je obtenir des informations sur les conditions maritimes ...")}`,
+                                        `${description[5]}`,
                                         date: "",
-                                    }
+                                                        }
                                     ])}>
                                     {translate("FAQ")}
                                     </p>
@@ -194,26 +232,29 @@ export function MenuBuger() {
                                     onMouseEnter={() => handleLinkHover([
                                         {
                                         // COI
-                                        title: `${translate("C.O.I")}`,
+                                        title: `${titre[6]}`,
                                         href: "/infopages/partnaire",
                                         description:
-                                            `${translate("Commission de l'Océan Indien")}`,
+                                            `${description[6]}`,
                                         date:"",
+                                        
                                         },
                                         { //UE
-                                        title: `${translate("U.E")}`,
+                                        title: `${titre[7]}`,
                                         href: "/infopages/partnaire",
                                         description:
-                                        `${translate("Union Européene")}`,
+                                            `${description[7]}`,
                                         date:"",
+                                        
                                         },
                                         {
                                         //INGAD
-                                        title: `${translate("I.G.A.D")}`,
+                                        title: `${titre[8]}`,
                                         href: "/infopages/partnaire",
                                         description:
-                                        `${translate("Intergovernemental Authority on Development")}`,
+                                            `${description[8]}`,
                                         date: "",
+                                        
                                         }
                                         ])}
                                     >{translate("Partenaires")}</p>
@@ -223,27 +264,27 @@ export function MenuBuger() {
                                     onMouseEnter={() => handleLinkHover([
                                     {
                                         //Conventions Internationaux
-                                        title: `${translate("Conventions Internationaux")}`,
+                                        title: `${titre[9]}`,
                                         href: "/infopages/cadres",
                                         description:
-                                        `${translate("Conventions Internationaux auxquelles le CRFIM a par-...")}`,
+                                        `${description[9]}`,
                                         date:"",
                                                         },
                                     { //Legislation Nationale
-                                        title: `${translate("Legislation Nationale")}`,
+                                        title: `${titre[10]}`,
                                         href: "/infopages/cadres",
                                         description:
-                                        `${translate("Collaboration avec les autorités nationales compétentes")}`,
+                                        `${description[10]}`,
                                         date:"",
                                                         },
                                     {
                                         //Protocoles d'Entente et Memoranda d'Entente
-                                        title: `${translate("Protocoles d'Entente")}`,
+                                        title: `${titre[11]}`,
                                         href: "/infopages/cadres",
                                         description:
-                                        `${translate("Protocoles d'Entente et Memoranda d'Entente")}`,
+                                        `${description[11]}`,
                                         date: "",
-                                        }
+                                                        }
                                     ])}
                                     >{translate("Cadres juridique")}</p>
                                     </Link>
@@ -251,24 +292,24 @@ export function MenuBuger() {
                                     <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                                     onMouseEnter={() => handleLinkHover([
                                     {
-                                        title: `${translate("Exercice Cutlass")}`,
+                                        title: `${titre[12]}`,
                                         href: "/contenu/tous",
                                         description:
-                                        `${translate("L'exercice Cutlass Express est un exercice naval ...")}`,
+                                        `${description[12]}`,
                                         date:"01/04/2024",
-                                    },
+                                                        },
                                     {
-                                        title: `${translate("Ministère du Transport")}`,
+                                        title: `${titre[13]}`,
                                         href: "/contenu/tous",
                                         description:
-                                        `${translate("Visite du ministère du transport au sein du CRFIM ...")}`,
+                                        `${description[13]}`,
                                         date:"20/02/2024",
                                                         },
                                     {
-                                        title: `${translate("NMIFC and RMIFC")}`,
+                                        title: `${titre[14]}`,
                                         href: "/contenu/tous",
                                         description:
-                                        `${translate("Visit by an American delegation to the National and ...")}`,
+                                        `${description[14]}`,
                                         date: "13/02/2024",
                                                         }
                                     ])}

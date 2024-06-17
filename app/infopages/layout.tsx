@@ -4,7 +4,7 @@ import "../globals.css";
 import { cn } from "@/lib/utils"
 import {MenuBar} from "../common/menubar/menu";
 import Footer from "../common/footer/footer";
-
+import { LocaleProvider } from "@/context/LocalContext";
 // const inter = Inter({ subsets: ["latin"] });
 import { Inter as FontSans } from "next/font/google"
 const fontSans = FontSans({
@@ -45,7 +45,9 @@ export default function RootLayout({
                   <MenuBar/>
               </div>
             </div>
-            {children}
+              <LocaleProvider>
+                {children}
+              </LocaleProvider>
             <div className="mt-[50px]">
                 <Footer/>
             </div>

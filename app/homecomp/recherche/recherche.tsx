@@ -4,6 +4,7 @@ import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 import { Search } from "lucide-react"
 import { PlaceholdersAndVanishInput } from '@/components/ui/placeholders-and-vanish-input';
+import { translate } from '@/lib/translate';
 function Recherche({ placeholder }: { placeholder: string }) {
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -54,7 +55,7 @@ function Recherche({ placeholder }: { placeholder: string }) {
       <div className="bg-center bg-no-repeat w-[85%]  bg-cover h-[120px] border border-white rounded-lg justify-center items-center py-3">
           <div className="">
               <p className="text-white text-lg font-bold text-center ">
-                  Rechercher des articles
+                  {translate("Rechercher des articles")}
               </p>
           </div>
           <div className="flex justify-center items-cente" cmdk-input-wrapper="">

@@ -4,7 +4,7 @@ import { NavBar } from "../../common/navbar/nav";
 import {MenuBuger} from "../../common/navbar/menuburger";
 import Link from 'next/link';
 import Image from 'next/image';
-
+import { translate } from '@/lib/translate';
 const Titre = [
     "Le C.R.C.O",
     "L'I.Ga.D",

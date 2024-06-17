@@ -28,6 +28,7 @@ import {
 
 import {messageFonc} from '@/lib/message';
 import { sendEmail } from "@/lib/mailService";
+import { translate } from "@/lib/translate";
 
 export default function Slide() {
   const [nom, setNom] = useState('')
@@ -40,9 +41,9 @@ export default function Slide() {
     "/SlideB.webp"
   ];
   const Texte = [
-    "Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays  et organisations internationales",
-    "Centre Régional de Fusion d'Informations Maritimes",
-    "Adresse email : assistante.communication@crfimmadagascar.org",
+    `${translate("Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays et organisations internationales")}`,
+    `${translate("Centre Régional de Fusion d'Informations Maritimes")}`,
+    `${translate("Adresse email")} : assistante.communication@crfimmadagascar.org`,
   ]
   // Modifie la fonction handleSubmit pour utiliser la fonction post
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -98,7 +99,7 @@ export default function Slide() {
               <DialogTrigger asChild>
                 {/* Appel au formulaire */}
                   <button className="hover:bg-slate-500 lg:px-2 lg:py-2 py-[2px] px-[2px] backdrop-blur-sm border bg-gradient-to-r from-cyan-900 to-sky-950  border-emerald-500/20 text-white mx-auto text-center item-center justify-center rounded-[8px] lg:rounded-full relative mt-4">
-                    <span className="text-[6px] 2xl:text-md lg:text-sm md:text-xs">Nous contacter</span>
+                    <span className="text-[6px] 2xl:text-md lg:text-sm md:text-xs">{translate("Nous contacter")}</span>
                     <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-teal-900 to-sky-950" />
                   </button>
               </DialogTrigger>
@@ -113,30 +114,30 @@ export default function Slide() {
                     <form id="messageForm" onSubmit={handleSubmit} action={sendEmail}>
                       <div className="grid w-full items-center gap-2">
                         <div className="flex flex-col space-y-1">
-                          <Label htmlFor="name">Nom*</Label>
+                          <Label htmlFor="name">{translate("Nom")}*</Label>
                           <Input id="name" name="name" placeholder="DOE John" value={nom} onChange={(e) => setNom(e.target.value)} required/>
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <Label htmlFor="email">Email*</Label>
+                          <Label htmlFor="email">{translate("Email")}*</Label>
                           <Input id="email" name="email" placeholder="johndoe00@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <Label htmlFor="topic">Topic</Label>
+                          <Label htmlFor="topic">{translate("Topic")}</Label>
                           <Select name="topic">
                             <SelectTrigger id="framework">
-                              <SelectValue placeholder="Select"  onChange={handleTopicChange}/>
+                              <SelectValue placeholder={translate("Select")}  onChange={handleTopicChange}/>
                             </SelectTrigger>
                             <SelectContent position="popper">
-                              <SelectItem value="Informations">Informations</SelectItem>
-                              <SelectItem value="Prendre rendez-vous">Prendre rendez-vous</SelectItem>
-                              <SelectItem value="Services aux CRFIM">Services aux CRFIM</SelectItem>
-                              <SelectItem value="Autres">Autres</SelectItem>
+                              <SelectItem value="Informations">{translate("Informations")}</SelectItem>
+                              <SelectItem value="Prendre rendez-vous">{translate("Prendre rendez-vous")}</SelectItem>
+                              <SelectItem value="Services aux CRFIM">{translate("Services aux CRFIM")}</SelectItem>
+                              <SelectItem value="Autres">{translate("Autres")}</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
                         <div className="flex flex-col space-y-1">
-                          <Label htmlFor="message">Message</Label>
-                          <Input id="text" name="message" placeholder="Votre message" value={message} onChange={(e) => setMessage(e.target.value)}/>
+                          <Label htmlFor="message">{translate("Message")}</Label>
+                          <Input id="text" name="message" placeholder={translate("Votre message")} value={message} onChange={(e) => setMessage(e.target.value)}/>
                         </div>
                       </div>
                       <button type="submit" className=" outline relative rounded-full p-1 ml-[250px] mt-[40px] hover:bg-gradient-to-r from-cyan-900 to-sky-950 hover:text-white">Envoyer</button>

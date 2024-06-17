@@ -1,3 +1,5 @@
+import { translate } from "@/lib/translate";
+
 interface WeatherDisplayProps {
     weathers: {
       main: {
@@ -37,14 +39,14 @@ interface WeatherDisplayProps {
           </div>
           
           <div className="mr-1">
-            <p className="text-[11px] mb-1 font-semibold">Température: {main.temp} °C</p>
-            <p className="text-[11px] mb-1 font-semibold">Température Max: {main.temp_max} °C</p>
-            <p className="text-[11px] mb-1 font-semibold">Température Min: {main.temp_min} °C</p>        
+            <p className="text-[11px] mb-1 font-semibold">{translate("Température:")} {main.temp} °C</p>
+            <p className="text-[11px] mb-1 font-semibold">{translate("Température Max:")} {main.temp_max} °C</p>
+            <p className="text-[11px] mb-1 font-semibold">{translate("Température Min:")} {main.temp_min} °C</p>        
           </div>
 
           <div>
-            <p className="text-[11px] mb-1 font-semibold">Humidité: {main.humidity} %</p>
-            <p className="text-[11px] mb-1 font-semibold">Vitesse du vent: {wind.speed} m/s</p>
+            <p className="text-[11px] mb-1 font-semibold">{translate("Humidité:")} {main.humidity} %</p>
+            <p className="text-[11px] mb-1 font-semibold">{translate("Vitesse du vent:")} {wind.speed} m/s</p>
             <p className="text-[11px] mb-1 font-semibold">{formattedDate}</p>
           </div>
         </div>

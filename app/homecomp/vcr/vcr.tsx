@@ -4,12 +4,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ImagesSlider } from "@/components/ui/images-slider";
 import Image from 'next/image';
+import { translate } from "@/lib/translate";
 
-const Texte = [
-  "Devenir Volontaire aux CRFIM Madagascar",
-  "Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous.",
-  "Télécharger le formulaire"
-]
+
 function Vcr() {
   const [isHovered, setIsHovered] = useState(false);
   const handleDownload = () => {
@@ -19,6 +16,11 @@ function Vcr() {
     "/VCR.webp",
     "/VCR1.webp"
   ];
+  const Texte = [
+    `${translate("Devenir Volontaire aux CRFIM Madagascar")}`,
+    `${translate("Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous.")}`,
+    `${translate("Télécharger le formulaire")}`
+  ]
   return (
     <div className="w-[85%] sm:h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] bg-cover flex bg-center justify-center items-center py-[40px]">
         <div className="grid md:grid-cols-2 grid-flow-row gap-3 w-[90%] justify-center items-center">

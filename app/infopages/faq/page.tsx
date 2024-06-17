@@ -3,7 +3,7 @@ import React ,{ useState, useEffect } from 'react'
 import { NavBar } from "../../common/navbar/nav";
 import {MenuBuger} from "../../common/navbar/menuburger";
 import Link from 'next/link';
-
+import { translate } from '@/lib/translate';
 const Titre = [
     "Qu'est-ce que le C.R.F.I.M ?",
     "Comment je peux contacter le CRFIM ?",

@@ -11,6 +11,7 @@ import { Suspense } from 'react';
 // import { useSearchParams, usePathname, useRouter } from 'next/navigation'
 //import { SkeletonCard } from '../skeleton';
 import Image from 'next/image';
+import { translate } from '@/lib/translate';
 
 const Texte = [
     "Le Centre de fusion de l'information maritime (CRFIM) a été présenté 11e Foire Internationale de Madagascar (FIM) organisée à Antananarivo du 19 au 22 mai. Ce Centre a été mis en place dans le cadre des activités pilotées par la Commission de l'océan Indien (COI) dans le cadre du programme régional de sécurité maritime (MASE) sur financement européen. Installé à proximité de l'entrée du grand hall international, le stand présentant le CRFIM, ses objectifs et l'enjeu de l'échange d'information pour la sécurité et la sûreté maritimes a bénéficié d'une forte visibilité. ",

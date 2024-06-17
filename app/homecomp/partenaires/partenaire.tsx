@@ -2,14 +2,16 @@ import React from 'react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip'
 import Image from 'next/image';
 import Link from 'next/link';
-const partenaire = [
-    "Intergovernmental Authority on Development",
-    "East African Community",
-    "Common Market for Eastern and Southern Africa",
-    "Comission de l'Océan Indien",
-    "Union Européenne"
-]
+import { translate } from '@/lib/translate';
+
 function Partenaire() {
+    const partenaire = [
+        `${translate("Intergovernmental Authority on Development")}`,
+        `${translate("East African Community")}`,
+        `${translate("Common Market for Eastern and Southern Africa")}`,
+        `${translate("Comission de l'Océan Indien")}`,
+        `${translate("Union Européenne")}`
+    ]
   return (
     <div className='flex items-center justify-center'>
         <div className="grid grid-rows-1 grid-flow-col place-content-center gap-2  2xl:w-[1480px] lg:w-[1000px] h-[125px] justify-center items-center py-[40px]">

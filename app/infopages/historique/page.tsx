@@ -4,29 +4,31 @@ import { NavBar } from "../../common/navbar/nav";
 import {MenuBuger} from "../../common/navbar/menuburger";
 // import Footer from "../footer/footer";
 import Image from 'next/image';
+import { translate } from '@/lib/translate';
 
 
-const Contenu = [
-    "Le domaine maritime est communément connu pour être un terrain vaste pour la propagation de la criminalité de différentes natures alors qu'il constitue le facteur clé de la fluidité des échanges et du commerce internationaux. L'exploitation durable et responsable du domaine maritime passe avant tout par la maîtrise de la sécurité et la sûreté maritimes. Compte tenu de sa transversalité, sa préservation incombe au niveau national à différentes structures étatiques et également à ses usagers. Or, une absence de collaboration des entités concernés dans sa gestion et son exploitation a été dénotée depuis toujours, affaiblissant ainsi tout son potentiel.",
-    "Le Centre Régional de Fusion d'Informations Maritimes (CRFIM) a été fondé en 2017 en réponse à la nécessité croissante de renforcer la sécurité et la sûreté des eaux régionales autour de Madagascar. L'organisation a été établie dans le cadre d'une coopération étroite avec plusieurs partenaires internationaux, y compris la Commission de l'Océan Indien, l'Union Européenne, l'US Navy et d'autres institutions régionales et mondiales.",
-    "Dans cette entreprise, le CRFIM compte parmi ses parties prenantes et collaborateurs, les départements ministériels et organismes publics et/ou privés œuvrant dans le domaine maritime siégeant au sein de son Conseil d'Administration ou des tiers dont les rapports sont régis officiellement par des protocoles d'accord d'échange et de partage de données.",
-    "Nos missions sont vastes et variées : collecte et analyse de données, surveillance des activités maritimes, coordination des opérations de sauvetage sécurité et la sûreté maritime, la gestion des ressources marines, le suivi du trafic et des activités maritimes, la météorologie, les incidents maritimes. D'où la mise en place du programme M.A.S.E (Maritime Security)",
-    "Date de création du centre",
-    "Mises en place des infrastructures et des capacités opérationelles",
-    "Signatures de l'accord de collaboration entre les gouvernements partenaires et les organisations impliqués",
-    "Lancement officiel des opérations aux CRFIM",
-    "Reconnaissance internationale du CRFIM",
-    "Élargissement du mandat du CRFIM pour inclure la formation et le renforcement des capacités des acteurs régionaux dans le domaine de la sécurité maritime",
-    "1. Maintenir la qualité de travail et la capacité opérationelle de nos employés",
-    "2. Multiplier les efforts dans la promotion de la sécurité maritime ",
-    "3. Elargissement des partenariats stratégiques",
-    "4. Développement des initiatives innovantes",
-    "5. Faire fâce aux défis émergents en matière de sécurité maritime "
-];
-
-const Galerie = "Galerie d'images";
 
 function Historique() {
+    const Contenu = [
+        "Le domaine maritime est communément connu pour être un terrain vaste pour la propagation de la criminalité de différentes natures alors qu'il constitue le facteur clé de la fluidité des échanges et du commerce internationaux. L'exploitation durable et responsable du domaine maritime passe avant tout par la maîtrise de la sécurité et la sûreté maritimes. Compte tenu de sa transversalité, sa préservation incombe au niveau national à différentes structures étatiques et également à ses usagers. Or, une absence de collaboration des entités concernés dans sa gestion et son exploitation a été dénotée depuis toujours, affaiblissant ainsi tout son potentiel.",
+        "Le Centre Régional de Fusion d'Informations Maritimes (CRFIM) a été fondé en 2017 en réponse à la nécessité croissante de renforcer la sécurité et la sûreté des eaux régionales autour de Madagascar. L'organisation a été établie dans le cadre d'une coopération étroite avec plusieurs partenaires internationaux, y compris la Commission de l'Océan Indien, l'Union Européenne, l'US Navy et d'autres institutions régionales et mondiales.",
+        "Dans cette entreprise, le CRFIM compte parmi ses parties prenantes et collaborateurs, les départements ministériels et organismes publics et/ou privés œuvrant dans le domaine maritime siégeant au sein de son Conseil d'Administration ou des tiers dont les rapports sont régis officiellement par des protocoles d'accord d'échange et de partage de données.",
+        "Nos missions sont vastes et variées : collecte et analyse de données, surveillance des activités maritimes, coordination des opérations de sauvetage sécurité et la sûreté maritime, la gestion des ressources marines, le suivi du trafic et des activités maritimes, la météorologie, les incidents maritimes. D'où la mise en place du programme M.A.S.E (Maritime Security)",
+        "Date de création du centre",
+        "Mises en place des infrastructures et des capacités opérationelles",
+        "Signatures de l'accord de collaboration entre les gouvernements partenaires et les organisations impliqués",
+        "Lancement officiel des opérations aux CRFIM",
+        "Reconnaissance internationale du CRFIM",
+        "Élargissement du mandat du CRFIM pour inclure la formation et le renforcement des capacités des acteurs régionaux dans le domaine de la sécurité maritime",
+        "1. Maintenir la qualité de travail et la capacité opérationelle de nos employés",
+        "2. Multiplier les efforts dans la promotion de la sécurité maritime ",
+        "3. Elargissement des partenariats stratégiques",
+        "4. Développement des initiatives innovantes",
+        "5. Faire fâce aux défis émergents en matière de sécurité maritime "
+    ];
+    
+    const Galerie = "Galerie d'images";
+
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -53,7 +55,7 @@ function Historique() {
             </div>
             <div className="mt-[30px] flex items-center justify-center">
                 <p className="text-[50px] font-bold">
-                    Historique
+                    {translate("Historique")}
                 </p>
             </div>
             <div className="grid sm:grid-cols-2 items-center justify-center">

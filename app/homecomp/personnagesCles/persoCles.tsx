@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import {CardStack} from '@/components/ui/card-stack';
 import { useState, useEffect } from "react";
 import Image from 'next/image';
+import { translate } from '@/lib/translate';
 
 const cote = '"'
 function PersoCles() {
@@ -16,6 +17,59 @@ function PersoCles() {
         return () => clearInterval(interval);
       }, []);
 
+      const CARDS = [
+        {
+          id: 0,
+          name: "RALAIARIVONY Alex",
+          designation: `${translate("Capitaine de Vaisseau, Directeur du CRFIM")}`,
+          content: (
+            <Image 
+            src="/MrDr.webp" 
+            alt="Mr le Directeur" 
+            width={150} 
+            height={200} />
+          ),
+        },
+        {
+          id: 1,
+          name: "MAHATANTE Paubert",
+          designation: `${translate("Ministre de la pêche et de l'économie bleu")}`,
+          content: (
+            <Image 
+            src="/Ministre.webp" 
+            alt="Mr le Ministre" 
+            width={150} 
+            height={200} />
+          ),
+        },
+        {
+          id: 2,
+          name: "MARIMOUTOU Vêlayoudom",
+          designation: `${translate("Secrétaire général de la COI")}`,
+          content: (
+            <Image 
+            src="/COI.webp" 
+            alt="Mr le Secrétaire Général" 
+            width={150} 
+            height={200} />
+          ),
+        },
+    ];
+    
+    const QUOTES = [
+        {
+            id:0,
+            text: `${translate("Au CRFIM, nous nous engageons à assurer la sécurité et la sûreté des voies maritimes dans l'océan Indien, en collaborant étroitement avec nos partenaires nationaux et internationaux.")}`
+        },
+        {
+            id:1,
+            text:`${translate("La coopération régionale est essentielle pour relever les défis complexes de la surveillance maritime. Nous sommes fiers de collaborer avec le CRFIM pour renforcer la coordination et l'échange d'informations entre les États membres de la Commission de l'Océan Indien.")}`
+        },
+        {
+            id:2,
+            text:`${translate("La sécurité maritime est une priorité absolue pour notre gouvernement, et le travail du CRFIM dans le domaine de la surveillance et de l'échange d'informations joue un rôle essentiel dans la protection de nos eaux et de nos ressources marines.")}`
+        },  
+    ];
   return (
     <div className="w-full h-[300px] bg-gradient-to-r from-[#208674] to-[#0B0A35] justify-center items-center py-[50px] px-[40px]">
         <div className="ml-[30px]">
@@ -48,56 +102,3 @@ export default PersoCles
 
 
    
-const CARDS = [
-    {
-      id: 0,
-      name: "RALAIARIVONY Alex",
-      designation: "Capitaine de Vaisseau, Directeur du CRFIM",
-      content: (
-        <Image 
-        src="/MrDr.webp" 
-        alt="Mr le Directeur" 
-        width={150} 
-        height={200} />
-      ),
-    },
-    {
-      id: 1,
-      name: "MAHATANTE Paubert",
-      designation: "Ministre de la pêche et de l'économie bleu",
-      content: (
-        <Image 
-        src="/Ministre.webp" 
-        alt="Mr le Ministre" 
-        width={150} 
-        height={200} />
-      ),
-    },
-    {
-      id: 2,
-      name: "MARIMOUTOU Vêlayoudom",
-      designation: "Secrétaire général de la COI",
-      content: (
-        <Image 
-        src="/COI.webp" 
-        alt="Mr le Secrétaire Général" 
-        width={150} 
-        height={200} />
-      ),
-    },
-];
-
-const QUOTES = [
-    {
-        id:0,
-        text: "Au CRFIM, nous nous engageons à assurer la sécurité et la sûreté des voies maritimes dans l'océan Indien, en collaborant étroitement avec nos partenaires nationaux et internationaux."
-    },
-    {
-        id:1,
-        text:"La coopération régionale est essentielle pour relever les défis complexes de la surveillance maritime. Nous sommes fiers de collaborer avec le CRFIM pour renforcer la coordination et l'échange d'informations entre les États membres de la Commission de l'Océan Indien."
-    },
-    {
-        id:2,
-        text:"La sécurité maritime est une priorité absolue pour notre gouvernement, et le travail du CRFIM dans le domaine de la surveillance et de l'échange d'informations joue un rôle essentiel dans la protection de nos eaux et de nos ressources marines."
-    },  
-];

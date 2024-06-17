@@ -40,6 +40,7 @@ import {
   CommandSeparator,
   CommandShortcut,
  } from "@/components/ui/command"
+import { LocaleProvider } from "@/context/LocalContext";
 //Ceci est à remplacer par une fonction qui génèrerai ces contenus de manière à ce que les 3 articles de presses les plus récentes du CMS soit à afficher
 interface Component{
   title: string;
@@ -51,31 +52,67 @@ interface Component{
 
 
 export function NavBar() {
+  const titre = [
+    `${translate("Le CRFIM")}`,
+    `${translate("Evenements Clés")}`,
+    `${translate("Persepectives Futures")}`,
+    `${translate("Présentation")}`,
+    `${translate("Contact")}`,
+    `${translate("Informations")}`,
+    `${translate("C.O.I")}`,
+    `${translate("U.E")}`,
+    `${translate("I.G.A.D")}`,
+    `${translate("Conventions Internationaux")}`,
+    `${translate("Legislation Nationale")}`,
+    `${translate("Protocoles d'Entente")}`,
+    `${translate("Exercice Cutlass")}`,
+    `${translate("Ministère du Transport")}`,
+    `${translate("NMIFC and RMIFC")}`
+
+  ]
+
+  const description = [
+    `${translate("Le Centre Régionale de Fusion d'Informations Maritimes est ...")}`,
+    `${translate("Découvrez les évenements marquants du Centre ...")}`,
+    `${translate("Nos projets pour les prochaines années ...")}`,
+    `${translate("Qu'est-ce que le Centre Régional de Fusion d'Informations ...")}`,
+    `${translate("Comment puis-je contacter le CRFIM?")}`,
+    `${translate("Comment puis-je obtenir des informations sur les conditions maritimes ...")}`,
+    `${translate("Commission de l'Océan Indien")}`,
+    `${translate("Union Européene")}`,
+    `${translate("Intergovernemental Authority on Development")}`,
+    `${translate("Conventions Internationaux auxquelles le CRFIM a par-...")}`,
+    `${translate("Collaboration avec les autorités nationales compétentes")}`,
+    `${translate("Protocoles d'Entente et Memoranda d'Entente")}`,
+    `${translate("L'exercice Cutlass Express est un exercice naval ...")}`,
+    `${translate("Visite du ministère du transport au sein du CRFIM ...")}`,
+    `${translate("Visit by an American delegation to the National and ...")}`
+  ]
   const [itemListContent, setItemListContent] = useState<Component[]>([
-  {
-    title: "Exercice Cutlass",
-    href: "/",
-    description:
-      "L’exercice Cutlass Express est un exercice naval ...",
-    date:"01/04/2024",
-    coverImage:"/A1.webp",
-  },
-  {
-    title: "Ministère du Transport",
-    href: "/",
-    description:
-    "Visite du ministère du transport au sein du CRFIM ...",
-    date:"20/02/2024",
-    coverImage:"/A2.webp",
-  },
-  {
-    title: "NMIFC and RMIFC",
-    href: "/",
-    description:
-    "Visit by an American delegation to the National and ...",
-    date: "13/02/2024",
-    coverImage:"/A3.webp",
-  }
+    {
+      title: `${titre[12]}`,
+      href: "/contenu/tous",
+      description:
+        `${description[12]}`,
+      date:"01/04/2024",
+      coverImage:"/A1.webp",
+    },
+    {
+      title: `${titre[13]}`,
+      href: "/contenu/tous",
+      description:
+        `${description[13]}`,
+      date:"20/02/2024",
+      coverImage:"/A2.webp",
+    },
+    {
+      title: `${titre[14]}`,
+      href: "/contenu/tous",
+      description:
+        `${description[14]}`,
+      date: "13/02/2024",
+      coverImage:"/A3.webp",
+    }
 
   ]);
 
@@ -84,6 +121,8 @@ export function NavBar() {
   };
   
   const [currentPage, setCurrentPage] = useState('accueil');
+
+
 
   return (
     <NavigationMenu>
@@ -119,27 +158,27 @@ export function NavBar() {
                   onMouseEnter={() => handleLinkHover([
                   {
                     //Présentation du Centre
-                    title: `${translate("Le CRFIM")}`,
+                    title: `${titre[0]}`,
                     href: "/infopages/historique",
                     description:
-                      `${translate("Le Centre Régionale de Fusion d'Informations Maritimes est ...")}`,
+                      `${description[0]}`,
                     date:"",
                     coverImage:"/Hist1.webp",
                   },
                   { //Evenements Clés
-                    title: `${translate("Evenements Clés")}`,
+                    title: `${titre[1]}`,
                     href: "/infopages/historique",
                     description:
-                    `${translate("Découvrez les évenements marquants du Centre ...")}`,
+                      `${description[1]}`,
                     date:"",
                     coverImage:"/Hist2.webp",
                   },
                   {
                     //Persepectives Futures
-                    title: `${translate("Persepectives Futures")}`,
+                    title: `${titre[2]}`,
                     href: "/infopages/historique",
                     description:
-                    `${translate("Nos projets pour les prochaines années ...")}`,
+                    `${description[2]}`,
                     date: "",
                     coverImage:"/Hist3.webp",
                   }
@@ -151,27 +190,27 @@ export function NavBar() {
                   onMouseEnter={() => handleLinkHover([
                   {
                     // Qu'est-ce que le Centre Régional de Fusion d'Informations Maritimes (CRFIM) ?
-                    title: `${translate("Présentation")}`,
+                    title: `${titre[3]}`,
                     href: "/infopages/faq",
                     description:
-                      `${translate("Qu'est-ce que le Centre Régional de Fusion d'Informations ...")}`,
+                      `${description[3]}`,
                     date:"",
                     coverImage:"/FAQ1.webp",
                   },
                   { //Comment puis-je contacter le CRFIM ?
-                    title: `${translate("Contact")}`,
+                    title: `${titre[4]}`,
                     href: "/infopages/faq",
                     description:
-                    `${translate("Comment puis-je contacter le CRFIM?")}`,
+                      `${description[4]}`,
                     date:"",
                     coverImage:"/FAQ3.webp",
                   },
                   {
                     //Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?
-                    title: `${translate("Informations")}`,
+                    title: `${titre[5]}`,
                     href: "/infopages/faq",
                     description:
-                    `${translate("Comment puis-je obtenir des informations sur les conditions maritimes ...")}`,
+                      `${description[5]}`,
                     date: "",
                     coverImage:"/FAQ2.webp",
                   }
@@ -184,27 +223,27 @@ export function NavBar() {
                    onMouseEnter={() => handleLinkHover([
                     {
                       // COI
-                      title: `${translate("C.O.I")}`,
+                      title: `${titre[6]}`,
                       href: "/infopages/partnaire",
                       description:
-                        `${translate("Commission de l'Océan Indien")}`,
+                        `${description[6]}`,
                       date:"",
                       coverImage:"/Partenaire3.webp",
                     },
                     { //UE
-                      title: `${translate("U.E")}`,
+                      title: `${titre[7]}`,
                       href: "/infopages/partnaire",
                       description:
-                      `${translate("Union Européene")}`,
+                        `${description[7]}`,
                       date:"",
                       coverImage:"/Partenaire2.webp",
                     },
                     {
                       //INGAD
-                      title: `${translate("I.G.A.D")}`,
+                      title: `${titre[8]}`,
                       href: "/infopages/partnaire",
                       description:
-                      `${translate("Intergovernemental Authority on Development")}`,
+                        `${description[8]}`,
                       date: "",
                       coverImage:"/Partenaire1.webp",
                     }
@@ -216,27 +255,27 @@ export function NavBar() {
                   onMouseEnter={() => handleLinkHover([
                   {
                     //Conventions Internationaux
-                    title: `${translate("Conventions Internationaux")}`,
+                    title: `${titre[9]}`,
                     href: "/infopages/cadres",
                     description:
-                      `${translate("Conventions Internationaux auxquelles le CRFIM a par-...")}`,
+                      `${description[9]}`,
                     date:"",
                     coverImage:"/CD1.webp",
                   },
                   { //Legislation Nationale
-                    title: `${translate("Legislation Nationale")}`,
+                    title: `${titre[10]}`,
                     href: "/infopages/cadres",
                     description:
-                    `${translate("Collaboration avec les autorités nationales compétentes")}`,
+                      `${description[10]}`,
                     date:"",
                     coverImage:"/CD3.webp",
                   },
                   {
                     //Protocoles d'Entente et Memoranda d'Entente
-                    title: `${translate("Protocoles d'Entente")}`,
+                    title: `${titre[11]}`,
                     href: "/infopages/cadres",
                     description:
-                    `${translate("Protocoles d'Entente et Memoranda d'Entente")}`,
+                      `${description[11]}`,
                     date: "",
                     coverImage:"/CD2.webp",
                   }
@@ -247,26 +286,26 @@ export function NavBar() {
                   <p className="text-sm font-bold hover:text-blue-500 hover:underline"
                   onMouseEnter={() => handleLinkHover([
                   {
-                    title: `${translate("Exercice Cutlass")}`,
+                    title: `${titre[12]}`,
                     href: "/contenu/tous",
                     description:
-                      `${translate("L'exercice Cutlass Express est un exercice naval ...")}`,
+                      `${description[12]}`,
                     date:"01/04/2024",
                     coverImage:"/A1.webp",
                   },
                   {
-                    title: `${translate("Ministère du Transport")}`,
+                    title: `${titre[13]}`,
                     href: "/contenu/tous",
                     description:
-                    `${translate("Visite du ministère du transport au sein du CRFIM ...")}`,
+                      `${description[13]}`,
                     date:"20/02/2024",
                     coverImage:"/A2.webp",
                   },
                   {
-                    title: `${translate("NMIFC and RMIFC")}`,
+                    title: `${titre[14]}`,
                     href: "/contenu/tous",
                     description:
-                    `${translate("Visit by an American delegation to the National and ...")}`,
+                      `${description[14]}`,
                     date: "13/02/2024",
                     coverImage:"/A3.webp",
                   }
