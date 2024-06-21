@@ -1,0 +1,346 @@
+{
+    
+
+    "menubar" : {
+        "Connexion": "Log in",
+        "Deconnexion" : "Log Out",
+        "Inscription" : "Subscription"
+    },
+
+    "Connexion" : {
+        "Nom d'utilisateur ou Email" : "Username or email :",
+        "Veuillez remplir le champ Username." : "Please fill the Username field.",
+        "Mot de passe" : "Password",
+        "Se connecter" : "Log in",
+        "Mot de passe oublié" : "Forgot your password",
+        "Pas encore de compte ?" : "No account yet?",
+        "Vous inscrire" : "Subscribe"
+    },
+    "Inscription" : {
+        "Nom" : "Name",
+        "Prenom" : "First name", 
+        "Email" : "Email",
+        "Mot de passe" : "Password",
+        "Nom d'utilisateur" : "Username",
+        "S'inscrire" : "Subscribe"
+    },
+
+    "navbar" : {
+        "Accueil": "Home",
+        "Qui sommes-nous ?": "Who are we ?",
+        "Ce que nous faisons ?" : "What services do we offer?",
+        "Contact" : "Contact",
+        "Recherche" : "Search"
+    },
+
+    "Qui sommes-nous ?" :{
+        "Historique" : "History", 
+        "FAQ" : "FAQ",
+        "Partenaires" : "Partners",
+        "Cadres juridique" : "Legal frameworks",
+        "Evènements au CRFIM" : "Events at RMIFC"
+    },
+
+    "Historique" : {
+        "Le CRFIM" : "The RMIFC",
+        "Le Centre Régionale de Fusion d'Informations Maritimes est ..." : "The Regional Maritime Information Fusion Center is ...",
+        "Evenements Clés" : "Key Events",
+        "Découvrez les évenements marquants du Centre ..." : "Discover the Center's significant events...",
+        "Persepectives Futures" : "Future Outlook",
+        "Nos projets pour les prochaines années ..." : "Our plans for the coming years ..." 
+    },
+    "FAQ" : {
+        "Présentation" : "Introduction",
+        "Qu'est-ce que le Centre Régional de Fusion d'Informations ..." : "What is the Regional Information Fusion Center ...",
+        "Contact" : "Contact", 
+        "Comment puis-je contacter le CRFIM?" : "How can I contact the RMIFC?",
+        "Informations" : "Informations", 
+        "Comment puis-je obtenir des informations sur les conditions maritimes ..." : "How can I get information about shipping conditions ..."
+    },
+    "Partenaires" : {
+        "C.O.I" : "I.O.C",
+        "Commission de l'Océan Indien" : "Indian Ocean Commission",
+        "U.E" : "E.U",
+        "Union Européene" : "European Union",
+        "I.G.A.D" : "I.G.A.D",
+        "Intergovernemental Authority on Development" : "Intergovernemental Authority on Development"
+    },
+    "Cadres juridique" : {
+        "Conventions Internationaux" : "International Conventions",
+        "Conventions Internationaux auxquelles le CRFIM a par-..." : "International Conventions in which the CRFIM has par-...",
+        "Legislation Nationale" : "National Legislation",
+        "Collaboration avec les autorités nationales compétentes" : "Collaboration with competent national authorities",
+        "Protocoles d'Entente" : "Memorandums of Understanding",
+        "Protocoles d'Entente et Memoranda d'Entente" : "Protocols of Understanding and Memoranda of Understanding"        
+    },
+    "Evènements au CRFIM" : {
+        "Exercice Cutlass" : "Cutlass Exercise",
+        "L'exercice Cutlass Express est un exercice naval ..." : "Cutlass Express Exercise is a naval exercise ...",
+        "Ministère du Transport" : "Ministry of Transport",
+        "Visite du ministère du transport au sein du CRFIM ..." : "Visit of the Ministry of Transport to the CRFIM ...",
+        "NMIFC and RMIFC" : "NMIFC and RMIFC",
+        "Visit by an American delegation to the National and ..." : "Visit by an American delegation to the National and ..."
+    },
+
+    "Ce que nous faisons ?" : {
+        "12 pillars" : "12 pillars",
+        "Principaux domaines pris en Charges pas le Centre" : "Main areas supported by the Center",
+        "Maritime Incident" : "Maritime Incident",
+        "Arms Trafficking smuggling by sea" : "Arms Trafficking smuggling by sea" ,
+        "Maritime Environment" : "Maritime Environment",
+        "Maritime Critical Infrastructure" : "Maritime Critical Infrastructure",
+        "Maritime Cybercriminality" : "Maritime Cybercriminality",
+        "Natural events and HADR" : "Natural events and HADR",
+        "Others" : "Others",
+        "Violent acts at sea" : "Violent acts at sea",
+        "Weapon proliferation (PSI)" : "Weapon proliferation (PSI)",
+        "Yachting and Maritime Tourism" : "Yachting and Maritime Tourism",
+        "Illegal unregulated and unreported fishing by sea" : "Illegal unregulated and unreported fishing by sea" ,
+        "Illegal Migration and Human trafficking by sea" : "Illegal Migration and Human trafficking by sea"
+    },
+
+    "Recherche" : {
+        "Taper ici pour rechercher..." : "Tap here to search...",
+        "No results found." : "No results found.",
+        "Suggestions" : "Suggestions",
+        "Evenement" : "Event",
+        "Articles" : "Articles",
+        "Réglages" : "Settings",
+        "Profil" : "Profile"
+    },
+
+    "footer" : {
+        "A propos" : "About" , 
+        "Mentions légales" : "Legal Notice",
+        "Liens" : "Links" ,
+        "Contact" : "Contact",
+        "Tous droits réservés" : "All rights reserved"
+    },
+
+    "A propos" : {
+        "Historique":"History",
+        "Missions et Valeurs" : "Missions and Values",
+        "Objectifs" : "Goals" 
+    }, 
+    "Mentions légales" : {
+        "Informations sur les droits d'auteurs" : "Copyright information",
+        "Politiques de Confidentialité" : "Privacy Policies"
+    },
+    "Liens" : {
+        "CFIM" : "MIFC",
+        "Météorologie" : "Meteorology",
+        "Primature Malgache" : "Malagasy Prime Minister" 
+    }, 
+
+
+    "Centre Régional de Fusion de Information Maritimes" : "Regional Maritime Information Fusion Center",
+
+    "prestext" : {
+        "Découvrez l'excellence dans la surveillance et la coordination maritimes. Au cœur de l'océan, notre centre est un phare de sécurité et d'efficacité dans les eaux régionales. Forts de notre expertise, de nos technologies de pointe et de notre dévouement sans faille, nous veillons sur les mers avec vigilance et détermination. Nos missions sont vastes et variées ..." : "Discover excellence in maritime surveillance and coordination. At the heart of the ocean, our center is a beacon of security and efficiency in regional waters. Drawing on our expertise, cutting-edge technologies and dedication without fail, we watch over the seas with vigilance and determination. Our missions are vast and varied...",
+        "En savoir plus" : "Learn more"
+    },
+    
+    "slider" : {
+        "Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays et organisations internationales": "The RMIFC is a government organization that operates in the maritime sector, in cooperation with several countries and international organizations",
+        "Nous Contacter" : "Contact us",
+        "Centre Régional de Fusion de Information Maritimes" : "Regional Maritime Information Fusion Center",
+        "Adresse email : assistante.communication@crfimmadagascar.org" : "Email address: assistante.communication@crfimmadagascar.org",
+        "Nom" : "Name",
+        "Email" : "Email",
+        "Topic" : "Topic",
+        "Select" : "Select",
+        "Informations" : "Informations",
+        "Prendre rendez-vous" : "Make an appointment",
+        "Services aux CRFIM" : "Services to RMIFC",
+        "Autres" : "Others",
+        "Message" : "Message", 
+        "Votre Messge" : "Your Message" , 
+        "Envoyer" : "Send"
+    },
+    
+    "statistiques" : {
+        "Visualisez les statistiques clés de nos activités" : "View key statistics from our activities:",
+        "Opérations en Mer" : "Operations at Sea",
+        "Surveillance Maritime": "Maritime Surveillance",
+        "Actions pour la MDA" : "Actions for MDA",
+        "Pays signataires": "Signatory countries",
+        "Centres régionaux" : "Regional centers",
+        "Formations dans l'année" : "Trainings during the year",
+        "Missions effectuées" : "Missions carried out"
+    },
+
+    "mase" : {
+        "Programme MASE" : "MASE program",
+        "Action pour la Somalie" : "Action for Somalia",
+        "Le plan d'action national du WiMS marque l'about..." : "The WiMS national action plan marks the end...",
+        "Lutte contre la piraterie" : "Fight against piracy",
+        "En 2022, « seulement » 300 actes de piraterie ..." : "In 2022, “only” 300 acts of piracy ...",
+        "Flux financiers illicites" : "Illicit financial flows",
+        "L'Afrique perd chaque année environ 88,6 mill ..." : "Africa loses about 88.6 millions every year ...",
+        "Sécurité Maritime" : "Maritime Safety",
+        "De nouvelles propositions en faveur de trans..." : "New proposals in favor of trans...",
+        "Réseau d'informations" : "Information Network",
+        "Les Centres régionaux de fusion de l'information..." : "Regional Information Fusion Centers..."
+    },
+   
+    "Dernières Actualités" : "Last news",
+    "toutes les actualités" : "all the news" , 
+
+    "recherche" : {
+        "Rechercher des articles" : "Search for articles",
+        "OPERATION AUXILIUM" : "OPERATION AUXILIUM",
+        "Visite des participants du forum du réseau des procureurs au CRFIM" : "Visit of participants of the prosecutors' network forum to the CRFIM",
+        "Réunion avec le FBI" : "Meeting with the FBI",
+        "EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars" : "EXERCISE CUTLASS EXPRESS 2023 from March 6 to 17",
+        "Les douanes du Qatar saisissent 90 kg de haschisch dissimulés dans une cargaison de pastèques" : "Qatar customs seize 90 kg of hashish hidden in a shipment of watermelons"
+    },
+
+    "excercice" : {
+        "EXERCICES REALISES" : "EXERCISES CARRIED OUT",
+        "Exercice CUTLASS EXPRESS" : "CUTLASS EXPRESS Exercise",
+        "Formation sur le 'Maritime Domain Awareness'" : "Maritime Domain Awareness training",
+        "Exercice TTX WIOPOLREX" : "TTX WIOPOLREX exercise",
+        "Conférence « The southern Drug Route Partnership »" : "Conference “The Southern Drug Route Partnership”",
+        "of" : "of"
+    },
+
+    "callaction" : {
+        "Nous faire parvenir des Informations" : "Send us information",
+        "Entraidons-nous." : "Let's help each other.",
+        "Ensemble" : "Together",
+        "De" : "From ",
+        "n'importe où" : "everywhere",
+        "Et à" : "And at ",
+        "n'importe quand" : "anytime",
+        "Déposer une information": "Submit information"
+    },
+
+    "formulaire" : {
+       "Bienvenue sur la section de déposition d'information du CRFIM" : "Welcome to the RMIFC Information Deposition Section",
+        "Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile (  pêche illégale, entrées et sorties des bateaux, trafics, tourisme, et plus encore, veuillez la déposer ici" : "If you have any information at your disposal that you think could be useful to us: illegal fishing, boat entry and exit, traffic, tourism, and more, please submit it here",
+        "Nom" : "Name",
+        "Prenom" : "First name",
+        "Adresse email" : "Email address",
+        "Mot de Passe" : "Password",
+        "Votre fonction" : "Your function",
+        "Personnel du ministère de la pêche" : "Ministry of Fisheries staff",
+        "Votre Message" : "Your Message",
+        "Votre message ici..." : "Your message here...",
+        "Importer une photo" : "Import a picture" ,
+        "Déposer" : "Submit"
+    },
+
+    "persoclés" : {
+        "Au CRFIM, nous nous engageons à assurer la sécurité et la sûreté des voies maritimes dans l'océan Indien, en collaborant étroitement avec nos partenaires nationaux et internationaux." : "At the RMIFC, we are committed to ensuring the safety and security of sea lanes in the Indian Ocean, working closely with our national and international partners.",
+        "La coopération régionale est essentielle pour relever les défis complexes de la surveillance maritime. Nous sommes fiers de collaborer avec le CRFIM pour renforcer la coordination et l'échange d'informations entre les États membres de la Commission de l'Océan Indien." : "Regional cooperation is essential to address the complex challenges of maritime surveillance. We are proud to collaborate with the RMIFC to strengthen coordination and information exchange among member states of the Indian Ocean Commission.",
+        "La sécurité maritime est une priorité absolue pour notre gouvernement, et le travail du CRFIM dans le domaine de la surveillance et de l'échange d'informations joue un rôle essentiel dans la protection de nos eaux et de nos ressources marines." : "Maritime security is a top priority for our government, and the work of the IMFRC in monitoring and information sharing plays a vital role in protecting our waters and marine resources.",
+        "Capitaine de Vaisseau, Directeur du CRFIM" : "Ship Captain, Director of RMIFC",
+        "Ministre de la pêche et de l'économie bleu" : "Minister of Fisheries and the Blue Economy",
+        "Secrétaire général de la COI" : "Secretary General of the IOC"
+    },
+
+    "Ressources" : "Ressources",
+
+    "ressources" : {
+        "Des données" : "Datas that are",
+        "fiables et à jour." : "reliable and up to date.",
+        "Le front axé au Centre et Sud de l'océan Indien" : "The front focused on the Central and Southern of the Indian Ocean",
+        "Cette carte interactive présente notre zone de couverture, qui englobe la partie sud-est de l'Océan Indien. Vous pouvez explorer les différentes zones d'intérêt, les routes maritimes clés, ainsi que les points critiques de surveillance." : 
+        "This interactive map shows our coverage area, which encompasses the southeastern part of the Indian Ocean. You can explore different areas of interest, key shipping routes, as well as critical monitoring points.",
+        "Trouvez toutes les activités des vaisseaux repertoriés ici." : "Find all ship activities listed here.",
+        "Nous vous garantissons des informations à jours et fiables concernants toutes activités des vaisseaux dans la zone de l'Océan Indien et bien plus. En collaboration avec des ressources officiels comme Vesselfinder ou la plateforme du 'Sea Vision', nous ne communiquons que les informations vérifiés par une communauté d'experts." : 
+        "We guarantee you up-to-date and reliable information regarding all vessel activities in the Indian Ocean area and much more. In collaboration with official resources such as Vesselfinder or the 'Sea Vision' platform, we only communicate information verified by a community of experts.",
+        "Weather Data" : "Weather Data",
+        "Type the city you want to know the weather of" : "Type the city you want to know the weather of",
+        "Search City" : "Search City",
+        "Weather Forecast" : "Weather Forecast",
+        "No weather data available." : "No weather data available.",
+        "Température" : "Temperature:",
+        "Température Max" : "Max Temperature:",
+        "Température Min" : "Min Temperature:",
+        "Humidité" : "Humidity:",
+        "Vitesse du vent" : "Wind speed:"
+    },
+
+    "partenaires" : {
+        "Intergovernmental Authority on Development":"Intergovernmental Authority on Development",
+        "East African Community":"East African Community",
+        "Common Market for Eastern and Southern Africa":"Common Market for Eastern and Southern Africa",
+        "Comission de l'Océan Indien":"Indian Ocean Commission",
+        "Union Européenne":"European Union"
+     },
+
+    "vcr" : {
+        "Devenir Volontaire aux CRFIM Madagascar" : "Become a Volunteer at RMIFC Madagascar",
+        "Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous." : "Become a hero of the seas by joining the Maritime Information Fusion Center. As a volunteer, you will contribute to global maritime security by fighting illicit trafficking and coordinating operations with leading international organizations.Join- us to protect our oceans and ensure a secure future for all." ,
+        "Télécharger le formulaire" : "Download the form"
+    },
+
+    "newsletter" : {
+        "Vous abonner à notre Newsletter" : "Subscribe to our Newsletter",
+        "S'abonner" : "Subscribe",
+        "Entrer votre addresse email..." : "Enter your email address..."
+    },
+
+    "Loading..." : "Loading...",
+    "La quête du savoir" : "The Pursuit of Knowledge",
+    "La joie de la création" : "The Joy of Creation",
+    "L'esprit d'aventure" : "The Spirit of Adventure"
+    
+
+
+    
+    
+  
+
+
+    
+    
+ 
+
+
+
+    
+    
+    
+   
+
+
+   
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    
+    
+
+    
+
+    
+    
+
+    
+
+
+}

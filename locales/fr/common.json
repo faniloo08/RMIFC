@@ -1,0 +1,288 @@
+{
+    "menubar" : {
+        "Connexion": "Connexion",
+        "Deconnexion" : "Deconnexion",
+        "Inscription" : "Inscription"
+    },
+
+    "Connexion" : {
+        "Nom d'utilisateur ou Email" : "Nom d'utilisateur ou Email :",
+        "Veuillez remplir le champ Username." : "Veuillez remplir le champ Username.",
+        "Mot de passe" : "Mot de passe",
+        "Se connecter" : "Se connecter",
+        "Mot de passe oublié" : "Mot de passe oublié",
+        "Pas encore de compte ?" : "Pas encore de compte ?",
+        "Vous inscrire" : "Vous inscrire"
+    },
+    "Inscription" : {
+        "Nom" : "Nom",
+        "Prenom" : "Prenom", 
+        "Email" : "Email",
+        "Mot de passe" : "Mot de passe",
+        "Nom d'utilisateur" : "Nom d'utilisateur",
+        "S'inscrire" : "S'inscrire"
+    },
+
+    "navbar" : {
+        "Accueil": "Accueil",
+        "Qui sommes-nous ?": "Qui sommes-nous ?",
+        "Ce que nous faisons ?" : "Ce que nous faisons ?",
+        "Contact" : "Contact",
+        "Recherche" : "Recherche"
+    },
+
+    "Qui sommes-nous ?" :{
+        "Historique" : "Historique" ,
+        "FAQ" : "FAQ",
+        "Partenaires" : "Partenaires",
+        "Cadres juridique" : "Cadres juridique",
+        "Evènements au CRFIM" : "Evènements au CRFIM"
+    },
+    "Historique" : {
+        "Le CRFIM" : "Le CRFIM",
+        "Le Centre Régionale de Fusion d'Informations Maritimes est ..." : "Le Centre Régionale de Fusion d'Informations Maritimes est ...",
+        "Evenements Clés" : "Evenements Clés",
+        "Découvrez les évenements marquants du Centre ..." : "Découvrez les évenements marquants du Centre ...",
+        "Persepectives Futures" : "Persepectives Futurs",
+        "Nos projets pour les prochaines années ..." : "Nos projets pour les prochaines années ..."
+    },
+    "FAQ" : {
+        "Présentation" : "Présentation",
+        "Qu'est-ce que le Centre Régional de Fusion d'Informations ..." : "Qu'est-ce que le Centre Régional de Fusion d'Informations ...",
+        "Contact" : "Contact", 
+        "Comment puis-je contacter le CRFIM?" : "Comment puis-je contacter le CRFIM?",
+        "Informations" : "Informations", 
+        "Comment puis-je obtenir des informations sur les conditions maritimes ..." : "Comment puis-je obtenir des informations sur les conditions maritimes ..."
+    },
+    "Partenaires" : {
+        "C.O.I" : "C.O.I",
+        "Commission de l'Océan Indien" : "Commission de l'Océan Indien",
+        "U.E" : "U.E",
+        "Union Européene" : "Union Européene",
+        "I.G.A.D" : "I.G.A.D",
+        "Intergovernemental Authority on Development" : "Autorité Intergovernemental du Développement"
+    },
+    "Cadres juridique" : {
+        "Conventions Internationaux" : "Conventions Internationaux",
+        "Conventions Internationaux auxquelles le CRFIM a par-..." : "Conventions Internationaux auxquelles le CRFIM a par-...",
+        "Legislation Nationale" : "Legislation Nationale",
+        "Collaboration avec les autorités nationales compétentes" : "Collaboration avec les autorités nationales compétentes",
+        "Protocoles d'Entente" : "Protocoles d'Entente",
+        "Protocoles d'Entente et Memoranda d'Entente" : "Protocoles d'Entente et Memoranda d'Entente"
+    },
+    "Evènements au CRFIM" : {
+        "Exercice Cutlass" : "Exercice Cutlass",
+        "L'exercice Cutlass Express est un exercice naval ..." : "L'exercice Cutlass Express est un exercice naval ...",
+        "Ministère du Transport" : "Ministère du Transport",
+        "Visite du ministère du transport au sein du CRFIM ..." : "Visite du ministère du transport au sein du CRFIM ...",
+        "NMIFC and RMIFC" : "CNFIM et CRFIM",
+        "Visit by an American delegation to the National and ..." : "Visite d'une délégation Américiaine aux Centres Nationale et .."
+    },
+
+    "Ce que nous faisons ?" : {
+        "12 pillars" : "12 pilliers",
+        "Principaux domaines pris en Charges pas le Centre" : "Principaux domaines pris en Charges pas le Centre",
+        "Maritime Incident" : "Incident Maritime",
+        "Arms Trafficking smuggling by sea" : "Trafic d'armes, contrebande par voie maritime",
+        "Maritime Environment" : "Environnement Marins",
+        "Maritime Critical Infrastructure" : "Infrastructure Critique Maritime",
+        "Maritime Cybercriminality" : "Cybercriminalité Maritime",
+        "Natural events and HADR" : "Evènements naturels et AHCC",
+        "Others" : "Autres",
+        "Violent acts at sea" : "Actes Violents en mer",
+        "Weapon proliferation (PSI)" : "Prolifération d'armes (PSI)",
+        "Yachting and Maritime Tourism" : "Yachting et Tourisme Maritime",
+        "Illegal unregulated and unreported fishing by sea" : "Pêches illégales, non-régulées et non-rapportés en mer",
+        "Illegal Migration and Human trafficking by sea" : "Migration Illégale et Trafic d'Êtres Humains par voie maritime"
+    },
+
+    "Recherche" : {
+        "Taper ici pour rechercher..." : "Taper ici pour rechercher...",
+        "No results found." : "Aucun résultat trouvé",
+        "Suggestions" : "Suggestions",
+        "Evenement" : "Evenement",
+        "Articles" : "Articles",
+        "Réglages" : "Réglages",
+        "Profil" : "Profil"
+    },
+
+    "footer" : {
+        "A propos" : "A propos" , 
+        "Mentions légales" : "Mentions légales",
+        "Liens" : "Liens" ,
+        "Contact" : "Contact",
+        "Tous droits réservés" : "Tous droits réservés"
+    },
+
+    "A propos" : {
+        "Historique" : "Historique",
+        "Missions et Valeurs" : "Missions et Valeurs",
+        "Objectifs" : "Objectifs"
+    }, 
+    "Mentions légales" : {
+        "Informations sur les droits d'auteurs" : "Informations sur les droits d'auteurs",
+        "Politiques de Confidentialité" : "Politiques de Confidentialité"
+    },
+    "Liens" : {
+        "CFIM" : "CFIM",
+        "Météorologie" : "Météorologie",
+        "Primature Malgache" : "Primature Malgache"
+    }, 
+
+
+    "Centre Régional de Fusion de Information Maritimes" : "Centre Régional de Fusion de Information Maritimes",
+
+    "prestext" : {
+        "Découvrez l'excellence dans la surveillance et la coordination maritimes. Au cœur de l'océan, notre centre est un phare de sécurité et d'efficacité dans les eaux régionales. Forts de notre expertise, de nos technologies de pointe et de notre dévouement sans faille, nous veillons sur les mers avec vigilance et détermination. Nos missions sont vastes et variées ..." : "Découvrez l'excellence dans la surveillance et la coordination maritimes. Au cœur de l'océan, notre centre est un phare de sécurité et d'efficacité dans les eaux régionales. Forts de notre expertise, de nos technologies de pointe et de notre dévouement sans faille, nous veillons sur les mers avec vigilance et détermination. Nos missions sont vastes et variées ...",
+        "En savoir plus" : "En savoir plus"
+    },
+    
+    "slider" : {
+        "Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays et organisations internationales":"Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays et organisations internationales",
+        "Nous Contacter" : "Nous Contacter",
+        "Centre Régional de Fusion de Information Maritimes" : "Centre Régional de Fusion de Information Maritimes",
+        "Adresse email : assistante.communication@crfimmadagascar.org" : "Adresse email : assistante.communication@crfimmadagascar.org",
+        "Nom" : "Nom",
+        "Email" : "Email",
+        "Topic" : "Objet",
+        "Select" : "Selectionnez",
+        "Informations" : "Informations",
+        "Prendre rendez-vous" : "Prendre rendez-vous",
+        "Services aux CRFIM" : "Services aux CRFIM",
+        "Autres" : "Autres",
+        "Message" : "Message", 
+        "Votre Messge" : "Votre Message" , 
+        "Envoyer" : "Envoyer"
+    },
+    
+    "statistiques" : {
+        "Visualisez les statistiques clés de nos activités" : "Visualisez les statistiques clés de nos activités:",
+        "Opérations en Mer" : "Opérations en Mer",
+        "Surveillance Maritime": "Surveillance Maritime",
+        "Actions pour la MDA" : "Actions pour la MDA",
+        "Pays signataires": "Pays signataires",
+        "Centres régionaux" : "Centres régionaux",
+        "Formations dans l'année" : "Formations dans l'année",
+        "Missions effectuées" : "Missions effectuées"
+    },
+
+    "mase" : {
+        "Programme MASE" : "Programme MASE",
+        "Action pour la Somalie" : "Action pour la Somalie",
+        "Le plan d'action national du WiMS marque l'about..." : "Le plan d'action national du WiMS marque l'about...",
+        "Lutte contre la piraterie" : "Lutte contre la piraterie",
+        "En 2022, « seulement » 300 actes de piraterie ..." : "En 2022, « seulement » 300 actes de piraterie ...",
+        "Flux financiers illicites" : "Flux financiers illicites",
+        "L'Afrique perd chaque année environ 88,6 mill ..." : "L'Afrique perd chaque année environ 88,6 mill ...",
+        "Sécurité Maritime" : "Sécurité Maritime",
+        "De nouvelles propositions en faveur de trans..." : "De nouvelles propositions en faveur de trans...",
+        "Réseau d'informations" : "Réseau d'informations",
+        "Les Centres régionaux de fusion de l'information..." : "Les Centres régionaux de fusion de l'information..."
+    },
+   
+    "Dernières Actualités" : "Dernières Actualités",
+    "toutes les actualités" : "toutes les actualités" , 
+    
+    "recherche" : {
+        "Rechercher des articles" : "Rechercher des articles",
+        "OPERATION AUXILIUM" : "OPERATION AUXILIUM",
+        "Visite des participants du forum du réseau des procureurs au CRFIM" : "Visite des participants du forum du réseau des procureurs au CRFIM",
+        "Réunion avec le FBI" : "Réunion avec le FBI",
+        "EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars" : "EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars",
+        "Les douanes du Qatar saisissent 90 kg de haschisch dissimulés dans une cargaison de pastèques" : "Les douanes du Qatar saisissent 90 kg de haschisch dissimulés dans une cargaison de pastèques"
+    },
+
+    "excercice" : {
+        "EXERCICES REALISES" : "EXERCICES REALISES",
+        "Exercice CUTLASS EXPRESS" : "Exercice CUTLASS EXPRESS",
+        "Formation sur le 'Maritime Domain Awareness'" : "Formation sur le 'Maritime Domain Awareness'",
+        "Exercice TTX WIOPOLREX" : "Exercice TTX WIOPOLREX",
+        "Conférence « The southern Drug Route Partnership »" : "Conférence « The southern Drug Route Partnership »",
+        "of" : "sur"
+    },
+
+    "callaction" : {
+        "Nous faire parvenir des Informations" : "Nous faire parvenir des Informations",
+        "Entraidons-nous." : "Entraidons-nous.",
+        "Ensemble" : "Ensemble",
+        "De" : "De ",
+        "n'importe où" : "n'importe où",
+        "Et à" : "Et à ",
+        "n'importe quand" : "n'importe quand",
+        "Déposer une information": "Déposer une information"
+    },
+
+    "formulaire" : {
+        "Bienvenue sur la section de déposition d'information du CRFIM" : "Bienvenue sur la section de déposition d'information du CRFIM",
+        "Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile (  pêche illégale, entrées et sorties des bateaux, trafics, tourisme, et plus encore, veuillez la déposer ici" : "Si vous avez quelconque information à votre disposition qui vous semble pourrait nous être utile :  pêche illégale, entrées et sorties des bateaux, trafics, tourisme, et plus encore, veuillez la déposer ici",
+        "Nom" : "Nom",
+        "Prenom" : "Prenom",
+        "Adresse email" : "Adresse email",
+        "Mot de Passe" : "Mot de Passe",
+        "Votre fonction" : "Votre fonction",
+        "Personnel du ministère de la pêche" : "Personnel du ministère de la pêche",
+        "Votre Message" : "Votre Message",
+        "Votre message ici..." : "Votre message ici...",
+        "Importer une photo" : "Importer une photo" ,
+        "Déposer" : "Déposer"
+    },
+
+    "persoclés" : {
+        "Au CRFIM, nous nous engageons à assurer la sécurité et la sûreté des voies maritimes dans l'océan Indien, en collaborant étroitement avec nos partenaires nationaux et internationaux." : "Au CRFIM, nous nous engageons à assurer la sécurité et la sûreté des voies maritimes dans l'océan Indien, en collaborant étroitement avec nos partenaires nationaux et internationaux.",
+        "La coopération régionale est essentielle pour relever les défis complexes de la surveillance maritime. Nous sommes fiers de collaborer avec le CRFIM pour renforcer la coordination et l'échange d'informations entre les États membres de la Commission de l'Océan Indien." : "La coopération régionale est essentielle pour relever les défis complexes de la surveillance maritime. Nous sommes fiers de collaborer avec le CRFIM pour renforcer la coordination et l'échange d'informations entre les États membres de la Commission de l'Océan Indien.",
+        "La sécurité maritime est une priorité absolue pour notre gouvernement, et le travail du CRFIM dans le domaine de la surveillance et de l'échange d'informations joue un rôle essentiel dans la protection de nos eaux et de nos ressources marines." : "La sécurité maritime est une priorité absolue pour notre gouvernement, et le travail du CRFIM dans le domaine de la surveillance et de l'échange d'informations joue un rôle essentiel dans la protection de nos eaux et de nos ressources marines.",
+        "Capitaine de Vaisseau, Directeur du CRFIM" : "Capitaine de Vaisseau, Directeur du CRFIM",
+        "Ministre de la pêche et de l'économie bleu" : "Ministre de la pêche et de l'économie bleu",
+        "Secrétaire général de la COI" : "Secrétaire général de la COI"
+    },
+
+    
+    "Ressources" : "Ressources",
+
+    "ressources" : {
+        "Des données" : "Des données",
+        "fiables et à jour." : "fiables et à jour.",
+        "Le front axé au Centre et Sud de l'océan Indien" : "Le front axé au Centre et Sud de l'océan Indien",
+        "Cette carte interactive présente notre zone de couverture, qui englobe la partie sud-est de l'Océan Indien. Vous pouvez explorer les différentes zones d'intérêt, les routes maritimes clés, ainsi que les points critiques de surveillance." : "Cette carte interactive présente notre zone de couverture, qui englobe la partie sud-est de l'Océan Indien. Vous pouvez explorer les différentes zones d'intérêt, les routes maritimes clés, ainsi que les points critiques de surveillance.",
+        "Trouvez toutes les activités des vaisseaux repertoriés ici." : "Trouvez toutes les activités des vaisseaux repertoriés ici.",
+        "Nous vous garantissons des informations à jours et fiables concernants toutes activités des vaisseaux dans la zone de l'Océan Indien et bien plus. En collaboration avec des ressources officiels comme Vesselfinder ou la plateforme du 'Sea Vision', nous ne communiquons que les informations vérifiés par une communauté d'experts." : "Nous vous garantissons des informations à jours et fiables concernants toutes activités des vaisseaux dans la zone de l'Océan Indien et bien plus. En collaboration avec des ressources officiels comme Vesselfinder ou la plateforme du 'Sea Vision', nous ne communiquons que les informations vérifiés par une communauté d'experts.",
+        "Weather Data" : "Données Météo",
+        "Type the city you want to know the weather of" : "Tapez la ville dans laquelle vous voulez connaître la météo",
+        "Search City" : "Rechercher la ville",
+        "Weather Forecast" : "Prévisions météorologiques",
+        "No weather data available." : "Aucune données météo disponible",
+        "Température" : "Température:",
+        "Température Max" : "Température Max:",
+        "Température Min" : "Température Min:",
+        "Humidité" : "Humidité:",
+        "Vitesse du vent" : "Vitesse du vent:"
+    },
+
+    "partenaires" : {
+       "Intergovernmental Authority on Development":"Autorité Intergovernemental pour le Développement",
+       "East African Community":"communauté de l'Afrique de l'Est",
+       "Common Market for Eastern and Southern Africa":"Marché Commun de l'Est et du Sud de l'Afrique",
+       "Comission de l'Océan Indien":"Comission de l'Océan Indien",
+       "Union Européenne":"Union Européenne"
+    },
+    
+    "vcr" : {
+        "Devenir Volontaire aux CRFIM Madagascar" : "Devenir Volontaire aux CRFIM Madagascar",
+        "Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous." : "Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous.",
+        "Télécharger le formulaire" : "Télécharger le formulaire"
+    },
+
+    "newsletter" : {
+        "Vous abonner à notre Newsletter" : "Vous abonner à notre Newsletter",
+        "S'abonner" : "S'abonner",
+        "Entrer votre addresse email..." : "Entrer votre addresse email..."
+    },
+
+
+
+    "Loading..." : "Chargement...",
+
+    "La quête du savoir" : "La quête du savoir",
+    "La joie de la création" : "La joie de la création",
+    "L'esprit d'aventure" : "L'esprit d'aventure"
+}
