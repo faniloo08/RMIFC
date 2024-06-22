@@ -16,7 +16,7 @@ interface HomeProps {
 export default function Partenaires({ params: { locale } }: HomeProps)  {
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
-    const i18Namespaces =  ['infopages']
+    const i18Namespaces =  ['common','infopages']
     useEffect(() => {
       const fetchDonnees = async () => {
         const { t, resources } = await initTranslation(locale, i18Namespaces);
@@ -26,21 +26,21 @@ export default function Partenaires({ params: { locale } }: HomeProps)  {
     fetchDonnees();
     }, []);
     const Titre = [
-        `${t("partnaire.Le C.R.C.O")}`,
-        `${t("partnaire.L'I.Ga.D")}`,
-        `${t("partnaire.L'E.A.C")}`,
-        `${t("partnaire.La C.O.M.E.S.A")}`,
-        `${t("partnaire.La C.O.I")}`,
-        `${t("partnaire.L'U.E")}`
+        `${t("infopages:partnaire.Le C.R.C.O")}`,
+        `${t("infopages:partnaire.L'I.Ga.D")}`,
+        `${t("infopages:partnaire.L'E.A.C")}`,
+        `${t("infopages:partnaire.La C.O.M.E.S.A")}`,
+        `${t("infopages:partnaire.La C.O.I")}`,
+        `${t("infopages:partnaire.L'U.E")}`
     ]
     
     const Contenu = [
-        `${t("partnaire.Le Centre régional de coordination des opérations (CRCO) est créé par l'accord sur la coordination des opérations en mer. Il est situé aux Seychelles et chargé de planifier les opérations en mer, en collaboration avec le Centre régional de fusion de l'information maritime. Il accueille un officier de liaison de chacune des Parties et sa gouvernance est régie par les dispositions indiquées en annexe de l'accord.")}`,
-        `${t("partnaire.Intergovernmental Authority on Development, (IGAD) est un groupement régional créé le 21 mars 1986 et associant sept pays est-africains : Djibouti, Éthiopie, Kenya, Somalie, Soudan, Soudan du Sud et Ouganda.")}`,
-        `${t("partnaire.La Communauté d'Afrique de l'Est ( EAC ) est une organisation intergouvernementale composée de huit pays d' Afrique de l'Est . Les États membres sont la République démocratique du Congo , la République fédérale de Somalie , les républiques du Burundi , du Kenya , du Rwanda , du Soudan du Sud , de l'Ouganda et de la Tanzanie.")}`,
-        `${t("partnaire.Le Marché commun de l'Afrique orientale et australe ( COMESA ) est une communauté économique régionale en Afrique composée de vingt et un États membres s'étendant de la Tunisie à l'Eswatini.")}`,
-        `${t("partnaire.La Commission de l'Océan Indien ( français : Commission de l'Océan Indien , COI ) est une organisation intergouvernementale qui relie les nations africaines de l'océan Indien : Comores , Madagascar , Maurice , la Réunion (une région d'outre-mer de la France ) et les Seychelles .")}`,
-        `${t("partnaire.L'Union européenne (UE) est une union politico-économique sui generis de vingt-sept États européens qui délèguent ou transmettent par traité l'exercice de certaines compétences à des organes communautaires.")}`
+        `${t("infopages:partnaire.Le Centre régional de coordination des opérations (CRCO) est créé par l'accord sur la coordination des opérations en mer. Il est situé aux Seychelles et chargé de planifier les opérations en mer, en collaboration avec le Centre régional de fusion de l'information maritime. Il accueille un officier de liaison de chacune des Parties et sa gouvernance est régie par les dispositions indiquées en annexe de l'accord.")}`,
+        `${t("infopages:partnaire.Intergovernmental Authority on Development, (IGAD) est un groupement régional créé le 21 mars 1986 et associant sept pays est-africains : Djibouti, Éthiopie, Kenya, Somalie, Soudan, Soudan du Sud et Ouganda.")}`,
+        `${t("infopages:partnaire.La Communauté d'Afrique de l'Est ( EAC ) est une organisation intergouvernementale composée de huit pays d' Afrique de l'Est . Les États membres sont la République démocratique du Congo , la République fédérale de Somalie , les républiques du Burundi , du Kenya , du Rwanda , du Soudan du Sud , de l'Ouganda et de la Tanzanie.")}`,
+        `${t("infopages:partnaire.Le Marché commun de l'Afrique orientale et australe ( COMESA ) est une communauté économique régionale en Afrique composée de vingt et un États membres s'étendant de la Tunisie à l'Eswatini.")}`,
+        `${t("infopages:partnaire.La Commission de l'Océan Indien ( français : Commission de l'Océan Indien , COI ) est une organisation intergouvernementale qui relie les nations africaines de l'océan Indien : Comores , Madagascar , Maurice , la Réunion (une région d'outre-mer de la France ) et les Seychelles .")}`,
+        `${t("infopages:partnaire.L'Union européenne (UE) est une union politico-économique sui generis de vingt-sept États européens qui délèguent ou transmettent par traité l'exercice de certaines compétences à des organes communautaires.")}`
         // "","","","","",""
     ]
     const [isMobile, setIsMobile] = useState(false);
@@ -59,7 +59,7 @@ export default function Partenaires({ params: { locale } }: HomeProps)  {
     }, []);
   return (
     // <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-    <TranslationsProvider ressources={ressources} locale={locale} namespace={i18Namespaces}>
+    <TranslationsProvider ressources={ressources} locale={locale} namespaces={i18Namespaces}>
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -70,7 +70,7 @@ export default function Partenaires({ params: { locale } }: HomeProps)  {
             </div>
             <div className="mt-[30px] flex items-center justify-center">
                 <p className="text-[50px] font-bold">
-                    {t("partnaire.Partenaires et organisations impliquées")}
+                    {t("infopages:partnaire.Partenaires et organisations impliquées")}
                 </p>
             </div>
             <div className="grid sm:grid-cols-2 items-center justify-center">

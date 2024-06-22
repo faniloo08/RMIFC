@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip'
 import Image from 'next/image';

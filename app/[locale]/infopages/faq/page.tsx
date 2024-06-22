@@ -11,10 +11,10 @@ interface HomeProps {
     };
   }
 
-export default function Faq({ params: { locale } }: HomeProps) {
+export default function faq({ params: { locale } }: HomeProps) {
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
-    const i18Namespaces =  ['infopages']
+    const i18Namespaces =  ['common','infopages']
     useEffect(() => {
       const fetchDonnees = async () => {
         const { t, resources } = await initTranslation(locale, i18Namespaces);
@@ -25,27 +25,27 @@ export default function Faq({ params: { locale } }: HomeProps) {
     }, []);
 
     const Titre = [
-        `${t("faq.Qu'est-ce que le C.R.F.I.M ?")}`,
-        `${t("faq.Comment je peux contacter le CRFIM ?")}`,
-        `${t("faq.Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?")}`
+        `${t("infopages:faq.Qu'est-ce que le C.R.F.I.M ?")}`,
+        `${t("infopages:faq.Comment je peux contacter le CRFIM ?")}`,
+        `${t("infopages:faq.Comment puis-je obtenir des informations sur les conditions maritimes actuelles dans la région ?")}`
 
     ];
     
     const Contenu = [
-        `${t("faq.Le CRFIM est une organisation régionale basée à Madagascar, spécialisée dans la surveillance, l'analyse et le partage d'informations cruciales pour la sécurité maritime dans la région.")}`,
-        `${t("faq.1. En consultant les bulletins météorologiques maritimes et les avis de navigation disponibles sur notre site web .")}`,
-        `${t("faq.2. En contactant notre centre d'information maritime . ")}`,
-        `${t("faq.3. En venant directement nous voir .")}`
+        `${t("infopages:faq.Le CRFIM est une organisation régionale basée à Madagascar, spécialisée dans la surveillance, l'analyse et le partage d'informations cruciales pour la sécurité maritime dans la région.")}`,
+        `${t("infopages:faq.1. En consultant les bulletins météorologiques maritimes et les avis de navigation disponibles sur notre site web .")}`,
+        `${t("infopages:faq.2. En contactant notre centre d'information maritime . ")}`,
+        `${t("infopages:faq.3. En venant directement nous voir .")}`
     ];
     
     const Question = [
-        `${t("faq.questions.Bonjour. Le CRFIM offre-t-il des formations en sécurité maritime ?")}`,
+        `${t("infopages:faq.questions.Bonjour. Le CRFIM offre-t-il des formations en sécurité maritime ?")}`,
         "",
     ];
     
     const Reponse = [
-        `${t("faq.questions.Oui, le CRFIM propose des programmes de formation et de renforcement des capacités pour les acteurs régionaux impliqués dans la sécurité maritime, y compris les forces de l'ordre, les autorités portuaires et d'autres parties prenantes.")}`,
-        `${t("faq.questions.Le CRFIM vous répondra dans les plus brefs délais")}`
+        `${t("infopages:faq.questions.Oui, le CRFIM propose des programmes de formation et de renforcement des capacités pour les acteurs régionaux impliqués dans la sécurité maritime, y compris les forces de l'ordre, les autorités portuaires et d'autres parties prenantes.")}`,
+        `${t("infopages:faq.questions.Le CRFIM vous répondra dans les plus brefs délais")}`
     ];
     const [liked, setLiked] = useState(false);
     const [liked1, setLiked1] = useState(false);
@@ -87,7 +87,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
     }, []);
   return (
     // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-    <TranslationsProvider ressources={ressources} locale={locale} namespace={i18Namespaces}>
+    <TranslationsProvider ressources={ressources} locale={locale} namespaces={i18Namespaces}>
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -98,7 +98,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
             </div>
             <div className="mt-[30px] flex items-center justify-center">
                 <p className="text-[50px] font-bold">
-                    {t("faq.Foire aux questions")}
+                    {t("infopages:faq.Foire aux questions")}
                 </p>
             </div>
             <div className="grid">
@@ -121,7 +121,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
                     <div className="grid md:grid-cols-2 grid-flow-row ">
                         <div className="mb-2">
                             <p className="text-blue-800 font-bold">
-                                {t("faq.Par telephone ")}
+                                {t("infopages:faq.Par telephone ")}
                             </p>
 
                             <p className="text-xs md:text-sm">
@@ -130,7 +130,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
                         </div>
                         <div className="2xl:ml-[100px] mb-2">
                             <p className="text-blue-800 font-bold">
-                                {t("faq.Par email ")}
+                                {t("infopages:faq.Par email ")}
                             </p>
 
                             <p className="text-xs md:text-sm">
@@ -176,11 +176,11 @@ export default function Faq({ params: { locale } }: HomeProps) {
                         </div>
                         <div className="2xl:ml-[100px] mb-2">
                             <p className="text-blue-800 font-bold">
-                                {t("faq.Adresse postale")}
+                                {t("infopages:faq.Adresse postale")}
                             </p>
 
                             <p className="text-xs md:text-sm 2xl:w-[800px] lg:w-[500px]">
-                                {t("faq.Bâtiment CFIM, Rez de chaussé, Soanierana-Ankaditoho,Antananarivo, Madagascar ")}
+                                {t("infopages:faq.Bâtiment CFIM, Rez de chaussé, Soanierana-Ankaditoho,Antananarivo, Madagascar ")}
                             </p>
                         </div>
                         
@@ -227,7 +227,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
                     <p className="mt-[50px] ml-[80px] font-light text-xs">26/07/23</p>
                     <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px] w-[80%]">
                         <div>
-                            <p className="font-light text-xs hover:text-sky-600">{t("faq.répondre")}</p>
+                            <p className="font-light text-xs hover:text-sky-600">{t("infopages:faq.répondre")}</p>
                         </div>
                         {/* bouton j'aime */}
                         <div>
@@ -251,7 +251,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
                     <p className="mt-[50px] ml-[80px] font-light text-xs">26/07/23</p>
                     <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px]">
                         <div>
-                            <p className="font-light text-xs hover:text-sky-600">{t("faq.répondre")}</p>
+                            <p className="font-light text-xs hover:text-sky-600">{t("infopages:faq.répondre")}</p>
                         </div>
                         {/* bouton j'aime */}
                         <div>
@@ -286,7 +286,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
                             {/* Action */}
                             <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px]">
                                 <div>
-                                    <p className="font-light text-xs hover:text-sky-600">{t("faq.répondre")}</p>
+                                    <p className="font-light text-xs hover:text-sky-600">{t("infopages:faq.répondre")}</p>
                                 </div>
                                 {/* bouton j'aime */}
                                 <div>
@@ -309,7 +309,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
                                 
                                 <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px]">
                                     <div>
-                                        <p className="font-light text-xs hover:text-sky-600">{t("faq.répondre")}</p>
+                                        <p className="font-light text-xs hover:text-sky-600">{t("infopages:faq.répondre")}</p>
                                     </div>
                                     <div>
                                         <button onClick={handleClick1} className="w-30px h-30px ml-[-250px] mt-[-5px]">                        
@@ -341,7 +341,7 @@ export default function Faq({ params: { locale } }: HomeProps) {
                         className="bg-blue-500 text-white font-bold p-2 rounded-full hover:bg-blue-700 text-xs sm:text-md"
                         onClick={handleCommentSubmit}
                     >
-                        {t("faq.Envoyer")}
+                        {t("infopages:faq.Envoyer")}
                     </button>
                 </div>
             </div>
@@ -352,4 +352,4 @@ export default function Faq({ params: { locale } }: HomeProps) {
     // </div>
   )
 }
-//export default appWithTranslation(Faq);
+//export default appWithTranslation(infopages:faq);

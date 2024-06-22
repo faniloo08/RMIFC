@@ -17,7 +17,7 @@ interface HomeProps {
 export default function Cadres({ params: { locale } }: HomeProps) {
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
-    const i18Namespaces =  ['infopages']
+    const i18Namespaces =  ['common','infopages']
     useEffect(() => {
       const fetchDonnees = async () => {
         const { t, resources } = await initTranslation(locale, i18Namespaces);
@@ -28,37 +28,37 @@ export default function Cadres({ params: { locale } }: HomeProps) {
     }, []);
 
     const Contenu = [
-        `${t("cadres.Le Centre Régional de Fusion d'Informations Maritimes (CRFIM) opère en conformité avec les conventions et traités internationaux relatifs à la sécurité maritime, y compris")}`,
-        `${t("cadres.La Convention des Nations Unies sur le droit de la mer (UNCLOS) :")}`,
-        `${t("cadres.Cette convention établit les droits et les obligations des États en matière d'utilisation des océans et des ressources marines.")}`,
-        `${t("cadres.La Convention internationale pour la sécurité des vies en mer (SOLAS)")}`,
-        `${t("cadres.Cette convention établit des normes internationales pour la sécurité des navires, y compris les équipements de sécurité et les procédures d'exploitation.")}`,
-        `${t("cadres.La Convention internationale pour la prévention de la pollution par les navires (MARPOL) :")}`,
-        `${t("cadres.Cette convention vise à prévenir la pollution marine par les navires en établissant des normes pour le contrôle des rejets de polluants.")}`,
-        `${t("cadres.Troisième Conférence sur linteropérabilité du système SHARE-IT, initiatives conjointes avec l'ONUDC, 21 Nov 2023, Thaïlande, Bangkok.")}`,
-        `${t("cadres.Le CRFIM travaille en étroite collaboration avec les autorités nationales compétentes et se conforme aux lois et réglementations nationales relatives à la sécurité maritime et à la surveillance des eaux territoriales.")}`,
-        `${t("cadres.La Commission de l'océan Indien (COI) et le gouvernement de la République de Madagascar ont signé deux accords de siège lors d'une cérémonie qui s'est tenue le 18 février au Palais d'Etat de Iavoloha en présence du président de la République Hery Rajaonarimampianina. ")}`,
-        `${t("cadres.Le premier accord de siège, signé avec la ministre des Affaires étrangères, Béatrice Atallah,  porte sur l'installation d'une unité de coordination du programme régional de sécurité alimentaire et nutritionnelle qui sera conduit par la COI sur la période 2015-2020.")}`,
-        `${t("cadres.« L'URSAN, Unité régionale pour la sécurité alimentaire et nutritionnelle, comme nous l'appelons désormais, aura pour mandat l'exécution des différentes facilités du Programme. Elle sera responsable de la mise en œuvre des mesures d'intervention prévues sous les différentes facilités pour apporter des incitations aux acteurs privés et publics des chaines de valeur », a expliqué Jean Claude de l'Estrac, Secrétaire général de la COI.")}`,
-        `${t("cadres.Le second accord, entérine la décision du 30e Conseil de la COI décidant de l'implantation d'un centre régional de fusion de l'information maritime (CRFIM) dans la capitale malgache. Il a été signé avec le ministre de la Défense, Dominique Rakotozafy.")}`,
-        `${t("cadres.La mise en place d'un centre régional de fusion de l'information maritime « découle des enjeux liés à l'émergence de l'océan Indien en tant que centre de gravité géostratégique ainsi que de la prise de conscience, par les Etats riverains, de leur vulnérabilité face aux menaces que constituent la piraterie, le terrorisme, les différentes sortes de trafics et le pillage de leurs ressources naturelles », a rappelé le président de la République. Et de préciser  que « l'Accord de siège se rapportant au CRFIM constitue l'aboutissement d'un long processus de négociations politique et diplomatique, tant à l'échelle bilatérale que régionale ».")}`,
-        `${t("cadres.Signature des accords entre le Secrétaire général de la COI et les ministres malgaches des Affaires étrangères et de la Défense, 27 Juin 2019, Madagascar, Antananarivo.")}`,
-        `${t("cadres.Béatrice Atallah, ministre des Affaires étrangères de Madagascar ; Jean Claude de l'Estrac, Secrétaire général de la COI ; S.E.M. Hery Rajaonarimampianina, président de la République ; Domonique Rakotozafy, ministre de la Défense, 27 Juin 2019, Madagascar, Antananarivo.")}`,
-        `${t("cadres.Le CRFIM est signataire de protocoles d'entente et de mémorandums d'entente avec d'autres organisations régionales et internationales dans le but de renforcer la coordination et la collaboration en matière de sécurité maritime, de lutte contre la piraterie et d'autres menaces maritimes.")}`,
-        `${t("cadres.Signature en ligne du Memorandum d'entente: Auxillum worldwide, CRCO, et  CRFIM joinent leurs forces, 19 dec 2023, Madagascar, Antananarivo.")}`,
-        `${t("cadres.1. Accords relatifs à l'Océan Indien Occidentale")}`,
-        `${t("cadres.2. Online Signing of the Memorandum of Understanding: Auxilium Worldwide, RCOC and RMIFC join forces")}`,
-        `${t("cadres.3. Signature d'un protocole d'accord entre le CRCO et l'IFC-IOR")}`
+        `${t("infopages:cadres.Le Centre Régional de Fusion d'Informations Maritimes (CRFIM) opère en conformité avec les conventions et traités internationaux relatifs à la sécurité maritime, y compris")}`,
+        `${t("infopages:cadres.La Convention des Nations Unies sur le droit de la mer (UNCLOS)")}`,
+        `${t("infopages:cadres.Cette convention établit les droits et les obligations des États en matière d'utilisation des océans et des ressources marines.")}`,
+        `${t("infopages:cadres.La Convention internationale pour la sécurité des vies en mer (SOLAS)")}`,
+        `${t("infopages:cadres.Cette convention établit des normes internationales pour la sécurité des navires, y compris les équipements de sécurité et les procédures d'exploitation.")}`,
+        `${t("infopages:cadres.La Convention internationale pour la prévention de la pollution par les navires (MARPOL) :")}`,
+        `${t("infopages:cadres.Cette convention vise à prévenir la pollution marine par les navires en établissant des normes pour le contrôle des rejets de polluants.")}`,
+        `${t("infopages:cadres.Troisième Conférence sur linteropérabilité du système SHARE-IT, initiatives conjointes avec l'ONUDC, 21 Nov 2023, Thaïlande, Bangkok.")}`,
+        `${t("infopages:cadres.Le CRFIM travaille en étroite collaboration avec les autorités nationales compétentes et se conforme aux lois et réglementations nationales relatives à la sécurité maritime et à la surveillance des eaux territoriales.")}`,
+        `${t("infopages:cadres.La Commission de l'océan Indien (COI) et le gouvernement de la République de Madagascar ont signé deux accords de siège lors d'une cérémonie qui s'est tenue le 18 février au Palais d'Etat de Iavoloha en présence du président de la République Hery Rajaonarimampianina. ")}`,
+        `${t("infopages:cadres.Le premier accord de siège, signé avec la ministre des Affaires étrangères, Béatrice Atallah,  porte sur l'installation d'une unité de coordination du programme régional de sécurité alimentaire et nutritionnelle qui sera conduit par la COI sur la période 2015-2020.")}`,
+        `${t("infopages:cadres.« L'URSAN, Unité régionale pour la sécurité alimentaire et nutritionnelle, comme nous l'appelons désormais, aura pour mandat l'exécution des différentes facilités du Programme. Elle sera responsable de la mise en œuvre des mesures d'intervention prévues sous les différentes facilités pour apporter des incitations aux acteurs privés et publics des chaines de valeur », a expliqué Jean Claude de l'Estrac, Secrétaire général de la COI.")}`,
+        `${t("infopages:cadres.Le second accord, entérine la décision du 30e Conseil de la COI décidant de l'implantation d'un centre régional de fusion de l'information maritime (CRFIM) dans la capitale malgache. Il a été signé avec le ministre de la Défense, Dominique Rakotozafy.")}`,
+        `${t("infopages:cadres.La mise en place d'un centre régional de fusion de l'information maritime « découle des enjeux liés à l'émergence de l'océan Indien en tant que centre de gravité géostratégique ainsi que de la prise de conscience, par les Etats riverains, de leur vulnérabilité face aux menaces que constituent la piraterie, le terrorisme, les différentes sortes de trafics et le pillage de leurs ressources naturelles », a rappelé le président de la République. Et de préciser  que « l'Accord de siège se rapportant au CRFIM constitue l'aboutissement d'un long processus de négociations politique et diplomatique, tant à l'échelle bilatérale que régionale ».")}`,
+        `${t("infopages:cadres.Signature des accords entre le Secrétaire général de la COI et les ministres malgaches des Affaires étrangères et de la Défense, 27 Juin 2019, Madagascar, Antananarivo.")}`,
+        `${t("infopages:cadres.Béatrice Atallah, ministre des Affaires étrangères de Madagascar ; Jean Claude de l'Estrac, Secrétaire général de la COI ; S.E.M. Hery Rajaonarimampianina, président de la République ; Domonique Rakotozafy, ministre de la Défense, 27 Juin 2019, Madagascar, Antananarivo.")}`,
+        `${t("infopages:cadres.Le CRFIM est signataire de protocoles d'entente et de mémorandums d'entente avec d'autres organisations régionales et internationales dans le but de renforcer la coordination et la collaboration en matière de sécurité maritime, de lutte contre la piraterie et d'autres menaces maritimes.")}`,
+        `${t("infopages:cadres.Signature en ligne du Memorandum d'entente: Auxillum worldwide, CRCO, et  CRFIM joinent leurs forces, 19 dec 2023, Madagascar, Antananarivo.")}`,
+        `${t("infopages:cadres.1. Accords relatifs à l'Océan Indien Occidentale")}`,
+        `${t("infopages:cadres.2. Online Signing of the Memorandum of Understanding: Auxilium Worldwide, RCOC and RMIFC join forces")}`,
+        `${t("infopages:cadres.3. Signature d'un protocole d'accord entre le CRCO et l'IFC-IOR")}`
     
     ]
     
     const Titre = [
-        `${t("cadres.Conventions internationaux")}`,
-        `${t("cadres.Législation Nationale")}`,
-        `${t("cadres.Protocoles d'Ententes et Memoranda")}`
+        `${t("infopages:cadres.Conventions internationaux")}`,
+        `${t("infopages:cadres.Législation Nationale")}`,
+        `${t("infopages:cadres.Protocoles d'Ententes et Memoranda")}`
     ];
     
-    const Galerie = `${t("cadres.Galerie d'images")}`;
+    const Galerie = `${t("infopages:cadres.Galerie d'images")}`;
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -76,7 +76,7 @@ export default function Cadres({ params: { locale } }: HomeProps) {
   return (
     // <div className ="overflow-x-hidden bg-[url('/Fond1.webp')] bg-cover flex bg-center min-h-screen items-center justify-center ">
         // <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
-        <TranslationsProvider ressources={ressources} locale={locale} namespace={i18Namespaces}>
+        <TranslationsProvider ressources={ressources} locale={locale} namespaces={i18Namespaces}>
             <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
                 <div className="bg-cover grid grid-cols-1">
                     <div className="flex items-center justify-center"> 
@@ -87,7 +87,7 @@ export default function Cadres({ params: { locale } }: HomeProps) {
                 </div>
                 <div className="mt-[30px] flex items-center justify-center">
                     <p className="text-[50px] font-bold">
-                        {t("cadres.Cadres juridiques")}
+                        {t("infopages:cadres.Cadres juridiques")}
                     </p>
                 </div>
                 
@@ -214,6 +214,13 @@ export default function Cadres({ params: { locale } }: HomeProps) {
                             <Link href="https://www.commissionoceanindien.org/securite-maritime-signature-dun-protocole-daccord-entre-le-crco-et-lifc-ior/">
                                 <p className="text-sm text-blue-800 ">
                                     {Contenu[19]}
+                                </p>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link href="https://www.commissionoceanindien.org/securite-maritime-signature-dun-protocole-daccord-entre-le-crco-et-lifc-ior/">
+                                <p className="text-sm text-blue-800 ">
+                                    {Contenu[20]}
                                 </p>
                             </Link>
                         </div>

@@ -4,7 +4,6 @@ import {DataToTable} from '../../../../lib/api';
 import { NavBar } from "../../common/navbar/nav";
 import {MenuBuger} from "../../common/navbar/menuburger";
 import React ,{ useState, useEffect } from 'react'
-
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import { Suspense } from 'react';
@@ -36,7 +35,7 @@ function Contenus(
     const currentPage = Number(searchParams?.page) || 1;
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
-    const i18Namespaces =  ['contenu']
+    const i18Namespaces =  ['common','contenu' ]
     useEffect(() => {
       const fetchDonnees = async () => {
         const { t, resources } = await initTranslation(locale, i18Namespaces);
@@ -151,11 +150,12 @@ function Contenus(
         fetchDonnees();
     }, []);
     const Texte = [
-        `${t("overview.Le Centre de fusion de l'information maritime (CRFIM) a été présenté 11e Foire Internationale de Madagascar (FIM) organisée à Antananarivo du 19 au 22 mai. Ce Centre a été mis en place dans le cadre des activités pilotées par la Commission de l'océan Indien (COI) dans le cadre du programme régional de sécurité maritime (MASE) sur financement européen. Installé à proximité de l'entrée du grand hall international, le stand présentant le CRFIM, ses objectifs et l'enjeu de l'échange d'information pour la sécurité et la sûreté maritimes a bénéficié d'une forte visibilité. ")}`,
-        `${t("overview.Le CRFIM permet d'échanger et de fusionner des informations maritimes sur une zone allant du cap de Bonne Esperance (Afrique du Sud) au détroit de Bab-El-Mandeb (Djibouti) afin de renforcer la sécurité et la sureté maritime dans la région, en luttant notamment contre les trafics et crimes commis en mer.")}`
+        `${t("contenu:overview.Le Centre de fusion de l'information maritime (CRFIM) a été présenté 11e Foire Internationale de Madagascar (FIM) organisée à Antananarivo du 19 au 22 mai. Ce Centre a été mis en place dans le cadre des activités pilotées par la Commission de l'océan Indien (COI) dans le cadre du programme régional de sécurité maritime (MASE) sur financement européen. Installé à proximité de l'entrée du grand hall international, le stand présentant le CRFIM, ses objectifs et l'enjeu de l'échange d'information pour la sécurité et la sûreté maritimes a bénéficié d'une forte visibilité. ")}`,
+        `${t("contenu:overview.Le CRFIM permet d'échanger et de fusionner des informations maritimes sur une zone allant du cap de Bonne Esperance (Afrique du Sud) au détroit de Bab-El-Mandeb (Djibouti) afin de renforcer la sécurité et la sureté maritime dans la région, en luttant notamment contre les trafics et crimes commis en mer.")}`,
+       
     ]
     
-    const Galerie = `${t("overview.Galerie d'images")}`;
+    const Galerie = `${t("contenu:overview.Gallerie d'images")}`;
 
     const [grosTitre, setGrosTitre] = useState('');
     const [descri, setDescri] = useState('');
@@ -221,7 +221,7 @@ function Contenus(
 
   return (
     // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-    <TranslationsProvider ressources={ressources} locale={locale} namespace={i18Namespaces}>
+    <TranslationsProvider ressources={ressources} locale={locale} namespaces={i18Namespaces}>
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -255,7 +255,7 @@ function Contenus(
                         {/* Cover */}
                         <img src={`${couverture}`} alt="" width={600} height={350} className="2xl:w-[90%]" loading="lazy"/>
                         <p className="mt-1 text-xs mb-1 text-center w-[300px]">
-                            Signature en ligne du Memorandum d'entente: Auxillum worldwide, CRCO, et  CRFIM joinent leurs forces, 19 dec 2023, Madagascar, Antananarivo.
+                            {Texte[2]}
                         </p>
                     </div>
                     <div className="items-center justify-center">
@@ -291,7 +291,7 @@ function Contenus(
                     {/* Articles similaires */}
                     <div className="mt-[70px] border-t pt-2">
                         <p className="font-bold text-lg">
-                            {t("overview.Articles similaires")}
+                            {t("contenu:overview.Articles similaires")}
                         </p>
                         <div className="mt-[50px] grid grid-cols-2">
                             {/* Article1 */}
@@ -365,7 +365,7 @@ function Contenus(
                 <Link href="/">
                     <div className="grid grid-flow-col grid-cols-2">
                         <div>
-                            <p className="text-sm">{t("overview.partager")}</p>
+                            <p className="text-sm">{t("contenu:overview.partager")}</p>
                         </div>
                         <div>
                             <span className="hover:bg-[url('/share1.png')] ml-[-25px] bg-[url('/share.png')] hover:text-white inline-flex h-[20px] w-[20px] cursor-pointer items-center justify-center px-1 py-1 text-xl hover:text-2xl font-medium text-white backdrop-blur-3xl">
@@ -395,7 +395,7 @@ function Contenus(
                 ) 
                 : (
                     <div>
-                        <p>{t("overview.Aucune image trouvée")}</p>
+                        <p>{t("contenu:overview.Aucune image trouvée")}</p>
                     </div>
                 )
                 }
@@ -403,7 +403,7 @@ function Contenus(
 
             {/* Commentaires */}
             <div className=" md:ml-[50px] grid grid-row-3 gap-1 ">
-                <p className="font-bold text-lg mt-[90px] mb-[50px]">{t("overview.Commentaires")}</p>
+                <p className="font-bold text-lg mt-[90px] mb-[50px]">{t("contenu:overview.Commentaires")}</p>
                 {displayedComments.length > 0 && (
                 <div className="w-full">
                     {comments.map((comment, index) => (
@@ -426,7 +426,7 @@ function Contenus(
                             {/* Action */}
                             <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px]">
                                 <div>
-                                    <p className="font-light text-xs hover:text-sky-600">{t("overview.répondre")}</p>
+                                    <p className="font-light text-xs hover:text-sky-600">{t("contenu:overview.répondre")}</p>
                                 </div>
                                 {/* bouton j'aime */}
                                 <div>
@@ -454,7 +454,7 @@ function Contenus(
                                 
                                 <div className="grid grid-cols-2 grid-flow-row mt-[-15px] ml-[400px]">
                                     <div>
-                                        <p className="font-light text-xs hover:text-sky-600">{t("overview.répondre")}</p>
+                                        <p className="font-light text-xs hover:text-sky-600">{t("contenu:overview.répondre")}</p>
                                     </div>
                                     <div>
                                         <button onClick={handleClick1} className="w-30px h-30px ml-[-250px] mt-[-5px]">                        
@@ -486,7 +486,7 @@ function Contenus(
                         className="bg-blue-500 text-white font-bold p-2 rounded-full hover:bg-blue-700"
                         onClick={handleCommentSubmit}
                     >
-                        {t("overview.Commenter")}
+                        {t("contenu:overview.Commenter")}
                     </button>
                 </div>
             </div>

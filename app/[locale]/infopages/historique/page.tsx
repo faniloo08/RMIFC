@@ -15,7 +15,7 @@ interface HomeProps {
 export default function Historique({ params: { locale } }: HomeProps) {
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
-    const i18Namespaces =  ['infopages']
+    const i18Namespaces =  ['common','infopages']
     useEffect(() => {
       const fetchDonnees = async () => {
         const { t, resources } = await initTranslation(locale, i18Namespaces);
@@ -26,24 +26,24 @@ export default function Historique({ params: { locale } }: HomeProps) {
     }, []);
     
     const Contenu = [
-        `${t("historique.Le domaine maritime est communément connu pour être un terrain vaste pour la propagation de la criminalité de différentes natures alors qu'il constitue le facteur clé de la fluidité des échanges et du commerce internationaux. L'exploitation durable et responsable du domaine maritime passe avant tout par la maîtrise de la sécurité et la sûreté maritimes. Compte tenu de sa transversalité, sa préservation incombe au niveau national à différentes structures étatiques et également à ses usagers. Or, une absence de collaboration des entités concernés dans sa gestion et son exploitation a été dénotée depuis toujours, affaiblissant ainsi tout son potentiel.")}`,
-        `${t("historique.Le Centre Régional de Fusion d'Informations Maritimes (CRFIM) a été fondé en 2017 en réponse à la nécessité croissante de renforcer la sécurité et la sûreté des eaux régionales autour de Madagascar. L'organisation a été établie dans le cadre d'une coopération étroite avec plusieurs partenaires internationaux, y compris la Commission de l'Océan Indien, l'Union Européenne, l'US Navy et d'autres institutions régionales et mondiales.")}`,
-        `${t("historique.Dans cette entreprise, le CRFIM compte parmi ses parties prenantes et collaborateurs, les départements ministériels et organismes publics et/ou privés œuvrant dans le domaine maritime siégeant au sein de son Conseil d'Administration ou des tiers dont les rapports sont régis officiellement par des protocoles d'accord d'échange et de partage de données.")}`,
-        `${t("historique.Nos missions sont vastes et variées : collecte et analyse de données, surveillance des activités maritimes, coordination des opérations de sauvetage sécurité et la sûreté maritime, la gestion des ressources marines, le suivi du trafic et des activités maritimes, la météorologie, les incidents maritimes. D'où la mise en place du programme M.A.S.E (Maritime Security)")}`,
-        `${t("historique.Date de création du centre")}`,
-        `${t("historique.Mises en place des infrastructures et des capacités opérationelles")}`,
-        `${t("historique.Signatures de l'accord de collaboration entre les gouvernements partenaires et les organisations impliqués")}`,
-        `${t("historique.Lancement officiel des opérations aux CRFIM")}`,
-        `${t("historique.Reconnaissance internationale du CRFIM")}`,
-        `${t("historique.Élargissement du mandat du CRFIM pour inclure la formation et le renforcement des capacités des acteurs régionaux dans le domaine de la sécurité maritime")}`,
-        `${t("historique.1. Maintenir la qualité de travail et la capacité opérationelle de nos employés")}`,
-        `${t("historique.2. Multiplier les efforts dans la promotion de la sécurité maritime ")}`,
-        `${t("historique.3. Elargissement des partenariats stratégiques")}`,
-        `${t("historique.4. Développement des initiatives innovantes")}`,
-        `${t("historique.5. Faire fâce aux défis émergents en matière de sécurité maritime ")}`
+        `${t("infopages:historique.Le domaine maritime est communément connu pour être un terrain vaste pour la propagation de la criminalité de différentes natures alors qu'il constitue le facteur clé de la fluidité des échanges et du commerce internationaux. L'exploitation durable et responsable du domaine maritime passe avant tout par la maîtrise de la sécurité et la sûreté maritimes. Compte tenu de sa transversalité, sa préservation incombe au niveau national à différentes structures étatiques et également à ses usagers. Or, une absence de collaboration des entités concernés dans sa gestion et son exploitation a été dénotée depuis toujours, affaiblissant ainsi tout son potentiel.")}`,
+        `${t("infopages:historique.Le Centre Régional de Fusion d'Informations Maritimes (CRFIM) a été fondé en 2017 en réponse à la nécessité croissante de renforcer la sécurité et la sûreté des eaux régionales autour de Madagascar. L'organisation a été établie dans le cadre d'une coopération étroite avec plusieurs partenaires internationaux, y compris la Commission de l'Océan Indien, l'Union Européenne, l'US Navy et d'autres institutions régionales et mondiales.")}`,
+        `${t("infopages:historique.Dans cette entreprise, le CRFIM compte parmi ses parties prenantes et collaborateurs, les départements ministériels et organismes publics et/ou privés œuvrant dans le domaine maritime siégeant au sein de son Conseil d'Administration ou des tiers dont les rapports sont régis officiellement par des protocoles d'accord d'échange et de partage de données.")}`,
+        `${t("infopages:historique.Nos missions sont vastes et variées : collecte et analyse de données, surveillance des activités maritimes, coordination des opérations de sauvetage sécurité et la sûreté maritime, la gestion des ressources marines, le suivi du trafic et des activités maritimes, la météorologie, les incidents maritimes. D'où la mise en place du programme M.A.S.E (Maritime Security)")}`,
+        `${t("infopages:historique.Date de création du centre")}`,
+        `${t("infopages:historique.Mises en place des infrastructures et des capacités opérationelles")}`,
+        `${t("infopages:historique.Signatures de l'accord de collaboration entre les gouvernements partenaires et les organisations impliqués")}`,
+        `${t("infopages:historique.Lancement officiel des opérations aux CRFIM")}`,
+        `${t("infopages:historique.Reconnaissance internationale du CRFIM")}`,
+        `${t("infopages:historique.Élargissement du mandat du CRFIM pour inclure la formation et le renforcement des capacités des acteurs régionaux dans le domaine de la sécurité maritime")}`,
+        `${t("infopages:historique.1. Maintenir la qualité de travail et la capacité opérationelle de nos employés")}`,
+        `${t("infopages:historique.2. Multiplier les efforts dans la promotion de la sécurité maritime ")}`,
+        `${t("infopages:historique.3. Elargissement des partenariats stratégiques")}`,
+        `${t("infopages:historique.4. Développement des initiatives innovantes")}`,
+        `${t("infopages:historique.5. Faire fâce aux défis émergents en matière de sécurité maritime ")}`
     ];
     
-    const Galerie = `${t("historique.Galerie d'images")}`;
+    const Galerie = `${t("infopages:historique.Gallerie d'images")}`;
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -60,7 +60,7 @@ export default function Historique({ params: { locale } }: HomeProps) {
       };
     }, []);
   return (
-    <TranslationsProvider ressources={ressources} locale={locale} namespace={i18Namespaces}>
+    <TranslationsProvider ressources={ressources} locale={locale} namespaces={i18Namespaces}>
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -71,7 +71,7 @@ export default function Historique({ params: { locale } }: HomeProps) {
             </div>
             <div className="mt-[30px] flex items-center justify-center">
                 <p className="text-[50px] font-bold">
-                    {t("historique.Historique")}
+                    {t("infopages:historique.Historique")}
                 </p>
             </div>
             <div className="grid sm:grid-cols-2 items-center justify-center">
@@ -79,7 +79,7 @@ export default function Historique({ params: { locale } }: HomeProps) {
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <p className="text-[20px] text-cyan-700 font-bold underline mb-2">
-                        {t("historique.Le C.R.F.I.M")}
+                        {t("infopages:historique.Le C.R.F.I.M")}
                     </p>
                     {/* Contenu */}
                     <p className="text-xs md:text-sm mb-1">
@@ -110,7 +110,7 @@ export default function Historique({ params: { locale } }: HomeProps) {
                     {/* Les évènements clés */}
                     {/* Titre */}
                     <p className="text-[20px] text-cyan-700 font-bold underline mb-2">
-                        {t("historique.Les évènements clés")}
+                        {t("infopages:historique.Les évènements clés")}
                     </p>
                     {/* Contenu */}
                     <div className="grid sm:grid-cols-2 grid-flow-row">
@@ -185,7 +185,7 @@ export default function Historique({ params: { locale } }: HomeProps) {
                     {/* Les perspectives futurs */}
                     {/* Titre */}
                     <p className="text-[20px] text-cyan-700 font-bold underline mb-2">
-                        {t("historique.Les perspectives futurs")}
+                        {t("infopages:historique.Les perspectives futurs")}
                     </p>
                     {/* Contenu */}
                     <div>

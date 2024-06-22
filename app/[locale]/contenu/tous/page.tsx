@@ -23,7 +23,7 @@ interface HomeProps {
 export default function Contenus({ params: { locale } }: HomeProps) {
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
-    const i18Namespaces =  ['infopages']
+    const i18Namespaces =  ['common','contenu']
     useEffect(() => {
       const fetchDonnees = async () => {
         const { t, resources } = await initTranslation(locale, i18Namespaces);
@@ -44,8 +44,8 @@ export default function Contenus({ params: { locale } }: HomeProps) {
     }
 
     const Texte = [
-        `${t("tous.Le Centre de fusion de l'information maritime (CRFIM) a été présenté 11e Foire Internationale de Madagascar (FIM) organisée à Antananarivo du 19 au 22 mai. Ce Centre a été mis en place dans le cadre des activités pilotées par la Commission de l'océan Indien (COI) dans le cadre du programme régional de sécurité maritime (MASE) sur financement européen. Installé à proximité de l'entrée du grand hall international, le stand présentant le CRFIM, ses objectifs et l'enjeu de l'échange d'information pour la sécurité et la sûreté maritimes a bénéficié d'une forte visibilité. ")}`,
-        `${t("tous.Le CRFIM permet d'échanger et de fusionner des informations maritimes sur une zone allant du cap de Bonne Esperance (Afrique du Sud) au détroit de Bab-El-Mandeb (Djibouti) afin de renforcer la sécurité et la sureté maritime dans la région, en luttant notamment contre les trafics et crimes commis en mer.")}`
+        `${t("contenu:tous.Le Centre de fusion de l'information maritime (CRFIM) a été présenté 11e Foire Internationale de Madagascar (FIM) organisée à Antananarivo du 19 au 22 mai. Ce Centre a été mis en place dans le cadre des activités pilotées par la Commission de l'océan Indien (COI) dans le cadre du programme régional de sécurité maritime (MASE) sur financement européen. Installé à proximité de l'entrée du grand hall international, le stand présentant le CRFIM, ses objectifs et l'enjeu de l'échange d'information pour la sécurité et la sûreté maritimes a bénéficié d'une forte visibilité. ")}`,
+        `${t("contenu:tous.Le CRFIM permet d'échanger et de fusionner des informations maritimes sur une zone allant du cap de Bonne Esperance (Afrique du Sud) au détroit de Bab-El-Mandeb (Djibouti) afin de renforcer la sécurité et la sureté maritime dans la région, en luttant notamment contre les trafics et crimes commis en mer.")}`
     ]
 
     const [articles, setArticles] = useState<Article[]>([]);
@@ -160,21 +160,21 @@ export default function Contenus({ params: { locale } }: HomeProps) {
       };
     }, []);
   return (
-    <TranslationsProvider ressources={ressources} locale={locale} namespace={i18Namespaces}>    
+    <TranslationsProvider ressources={ressources} locale={locale} namespaces={i18Namespaces}>    
         <div className="bg-white bg-center bg-no-repeat w-[85%] h-4/5 items-center justify-center bg-cover">
-            <div className="bg-cover grid grid-cols-1 gap-2 space-x-4">
-                <div className="flex items-center justify-center"> 
+            {/* <div className="bg-cover grid grid-cols-1 gap-2 space-x-4"> */}
+                <div className="flex items-center justify-center ml-[50px]"> 
                     <div className="fixed z-50">
                         {isMobile ? <MenuBuger/> : <NavBar />}
                     </div> 
                 </div>
-            </div>
+            {/* </div> */}
             {/* Les articles dynamiques */}
             <div className="grid md:grid-cols-3 grid-flow-row">
                 <div className="col-span-2">
                     <div className="ml-[50px] mt-[30px] flex ">
                         <p className="md:text-[40px] lg:w-[630px] md:w-[300px] font-bold">
-                            {t("tous.Tous les articles")}
+                            {t("contenu:tous.Tous les articles")}
                         </p>
                     </div>
                     {/* Articles */}
@@ -266,7 +266,7 @@ export default function Contenus({ params: { locale } }: HomeProps) {
                     {/* Article1s similaires */}
                     <div className="mt-[70px] border-t pt-2">
                         <p className="font-bold text-lg">
-                            {t("tous.Les plus populaires")}
+                            {t("contenu:tous.Les plus populaires")}
                         </p>
                         <div className="mt-[30px]">
                             {/* Article1 */}
@@ -323,7 +323,7 @@ export default function Contenus({ params: { locale } }: HomeProps) {
 
             {/* Recherche */}
             <div className="ml-[50px] grid grid-row-1 gap-1 ">
-                <p className="font-bold text-lg mt-[90px] ">{t("tous.Rechercher des Articles")}</p>
+                <p className="font-bold text-lg mt-[90px] ">{t("contenu:tous.Rechercher des Articles")}</p>
                 <div className="flex items-center" cmdk-input-wrapper="">
                     <input
                         className="block w-[100%] rounded-md border border-gray-200 py-[9px] text-sm placeholder:text-gray-500"

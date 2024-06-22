@@ -1,3 +1,4 @@
+"use client";
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { Search } from "lucide-react"
 import { useTranslation } from "react-i18next";

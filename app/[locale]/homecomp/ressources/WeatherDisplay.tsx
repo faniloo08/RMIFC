@@ -1,4 +1,6 @@
-import { useTranslation } from 'next-i18next';
+"use client";
+
+import { useTranslation } from "react-i18next";
 
 interface WeatherDisplayProps {
     weathers: {
@@ -20,12 +22,12 @@ interface WeatherDisplayProps {
   }
   
   export default function WeatherDisplay({ weathers }: WeatherDisplayProps) {
+    const {t} = useTranslation();
     if (!weathers) return null;
   
     const { weather, main, wind, name } = weathers;
     const today = new Date();
     const formattedDate = today.toLocaleDateString('fr-FR');
-    const {t} = useTranslation();
     return (
       <div className="p-2 rounded-lg shadow-md mr-3">
         <h2 className="text-md font-bold">{name}</h2>

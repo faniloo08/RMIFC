@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import { FlipWords } from '@/components/ui/flip-words'
 import { useTranslation } from "react-i18next"

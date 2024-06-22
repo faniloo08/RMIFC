@@ -15,7 +15,7 @@ interface HomeProps {
 export default function Contact({ params: { locale } }: HomeProps) {
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
-    const i18Namespaces =  ['infopages']
+    const i18Namespaces =  ['common','infopages']
     useEffect(() => {
       const fetchDonnees = async () => {
         const { t, resources } = await initTranslation(locale, i18Namespaces);
@@ -40,7 +40,7 @@ export default function Contact({ params: { locale } }: HomeProps) {
     }, []);
   return (
     // <div className ="overflow-x-hidden bg-[url('/Fond1.png')] bg-cover flex bg-center min-h-screen items-center justify-center ">
-    <TranslationsProvider ressources={ressources} locale={locale} namespace={i18Namespaces}>
+    <TranslationsProvider ressources={ressources} locale={locale} namespaces={i18Namespaces}>
         <div className="bg-white bg-center bg-no-repeat items-center justify-center bg-cover">
             <div className="bg-cover grid grid-cols-1">
                 <div className="flex items-center justify-center"> 
@@ -51,20 +51,20 @@ export default function Contact({ params: { locale } }: HomeProps) {
             </div>
             <div className="ml-[50px] mt-[50px] text-sm ">
                 <Link href="/" className="mr-1 hover:underline hover:text-blue-500">
-                    {t("contact.Accueil")} 
+                    {t("infopages:contact.Accueil")} 
                 </Link>
-                    - {t("contact.Contact")}         
+                    - {t("infopages:contact.Contact")}         
             </div>
             <div className="mt-[50px] ml-[10px] sm:ml-[50px]">
-                <h1 className="text-[40px] font-bold">{t("contact.Contact")}</h1>
+                <h1 className="text-[40px] font-bold">{t("infopages:contact.Contact")}</h1>
             </div>
             <div className="mt-[50px] ml-[10px] sm:ml-[50px] grid grid-rows-3 md:grid-flow-col gap-5">
                 <div>
-                    <p className="text-cyan-700 text-sm font-bold">{t("contact.Téléphone")}</p>
+                    <p className="text-cyan-700 text-sm font-bold">{t("infopages:contact.Téléphone")}</p>
                     <p className="hover:underline">+261 34 05 414 12</p>
                 </div>
                 <div>
-                    <p className="text-cyan-700 text-sm font-bold">{t("contact.Email")}</p>
+                    <p className="text-cyan-700 text-sm font-bold">{t("infopages:contact.Email")}</p>
                     <Link href="https://mail.google.com/mail/">
                         <p className="hover:underline text-xs sm:text-sm">assistante.communication@crfimmadagascar.org</p>
                     </Link>
@@ -81,7 +81,7 @@ export default function Contact({ params: { locale } }: HomeProps) {
                     </Link>
                 </div>
                 <div className="row-span-3">
-                    <p className="text-cyan-700 text-sm font-bold">{t("contact.Adresse")}</p>
+                    <p className="text-cyan-700 text-sm font-bold">{t("infopages:contact.Adresse")}</p>
                     <p className="hover:underline mb-3 text-xs sm:text-md">
                         3G5G+V6C, Antananarivo.
                         Soanierana,Ankaditoho
