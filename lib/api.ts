@@ -1,6 +1,15 @@
-const url: string = `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*`;
-
-async function getData(): Promise<any> {
+var url: string ;
+const getUrlWithLocale = (pathname: string): string => {
+    if (pathname.includes("/en")) {
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=en`;
+    } else if (pathname.includes("/fr")) {
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr`;
+    }
+    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr`
+}
+// const urlLocal: string = `${url}&local=${locale}`;
+async function getData(locale : string): Promise<any> {
+    url = getUrlWithLocale(locale);
     try {
         const resp = await fetch(url, {
             method: 'GET',
@@ -27,8 +36,8 @@ interface Article {
     gallerie: string[];
 }
 
-export async function DataToTable(): Promise<Article[]> {
-    const elements: any = await getData();
+export async function DataToTable(locale : string): Promise<Article[]> {
+    const elements: any = await getData(locale);
     const articles: Article[] = [];
     const tableauDeDonnees: any[] = [];
     const tousLesTitres: string[] = [];
@@ -81,7 +90,7 @@ export async function DataToTable(): Promise<Article[]> {
         }
 
         for (let i = 0; i < tableauDeDonnees.length; i++) {
-            const articleContent = tableauDeDonnees[i][11][0].body;
+            const articleContent = tableauDeDonnees[i][12][0].body;
             //Gallerie d'images
             while ((match = imageRegex.exec(articleContent)) !== null) {
                 image.push(match[1]);
@@ -93,7 +102,7 @@ export async function DataToTable(): Promise<Article[]> {
         console.log(ImagesGallerie);
 
         for (let i = 0; i < tableauDeDonnees.length; i++) {
-            const coverUrl = tableauDeDonnees[i][9].data.attributes.url;
+            const coverUrl = tableauDeDonnees[i][10].data.attributes.url;
             const src = process.env.NEXT_PUBLIC_STRAPI_API_URL + coverUrl;
             tousLesCovers.push(src);
         }

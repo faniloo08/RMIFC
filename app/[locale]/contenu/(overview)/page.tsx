@@ -10,6 +10,9 @@ import { Suspense } from 'react';
 import Image from 'next/image';
 import TranslationsProvider from '@/components/ui/TranslationProvider';
 import initTranslation from '@/app/i18n';
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+
+
 interface HomeProps {
     params: {
       locale: string;
@@ -44,11 +47,12 @@ function Contenus(
       }
     fetchDonnees();
     }, []);
+    const pathname = usePathname();
     //Ces contenus vont être changés par les données dynamique du CMS
     useEffect(() => {
         const fetchDonnees = async () => {
             // Appelez la fonction Donnees pour obtenir les données
-            const titres  = await DataToTable();
+            const titres  = await DataToTable(pathname);
             // const slug = titres[4].slug;
             // console.log(slug);
             // setSlug(slug); 

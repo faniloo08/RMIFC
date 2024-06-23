@@ -179,10 +179,10 @@
     },
 
     "contact" : {
-        "Accueil" : "Home",
+        "Accueil" : "Accueil",
         "Contact" : "Contact",
-        "Téléphone" : "Phone Number",
+        "Téléphone" : "Téléphone",
         "Email": "Email",
-        "Adresse" : "Address"
+        "Adresse" : "Adresse"
     }
 }

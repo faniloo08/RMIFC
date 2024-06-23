@@ -39,11 +39,11 @@ function Recherche({ placeholder }: { placeholder: string }) {
     };
   },2000);
     const placeholders = [
-      "OPERATION AUXILIUM",
-      "Visite des participants du forum du réseau des procureurs au CRFIM",
-      "Réunion avec le FBI",
-      "EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars",
-      "Les douanes du Qatar saisissent 90 kg de haschisch dissimulés dans une cargaison de pastèques",
+      `${t("OPERATION AUXILIUM")}`,
+      `${t("Visite des participants du forum du réseau des procureurs au CRFIM")}`,
+      `${t("Réunion avec le FBI")}`,
+      `${t("EXERCICE CUTLASS EXPRESS 2023 du 6 au 17 mars")}`,
+      `${t("Les douanes du Qatar saisissent 90 kg de haschisch dissimulés dans une cargaison de pastèques")}`,
     ];
    
     // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

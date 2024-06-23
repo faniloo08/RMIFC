@@ -13,6 +13,7 @@ import { useDebouncedCallback } from 'use-debounce';
 import ReactMarkdown from 'react-markdown';
 import TranslationsProvider from '@/components/ui/TranslationProvider';
 import initTranslation from '@/app/i18n';
+
 interface HomeProps {
     params: {
       locale: string;
@@ -57,12 +58,12 @@ export default function Contenus({ params: { locale } }: HomeProps) {
 
     // Change la page
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
-
+    const pathname = usePathname();
     //Ces contenus vont être changés par les données dynamique du CMS
     useEffect(() => {
         const fetchDonnees = async () => {
             // Appelez la fonction Donnees pour obtenir les données
-            const titres  = await DataToTable();
+            const titres  = await DataToTable(pathname);
 
             setArticles(titres);
 

@@ -7,6 +7,7 @@ import {DataToTable} from '@/lib/api';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import { useTranslation } from 'next-i18next';
+import { usePathname} from 'next/navigation';
 
 //Partie dynamique,interaction permanente avec le back-end
 function Articles() {
@@ -29,11 +30,11 @@ function Articles() {
     const [Slug2, setSlug2] = useState('');
     const [Slug3, setSlug3] = useState('');
 
-
+    const pathname = usePathname();
     useEffect(() => {
         const fetchDonnees = async () => {
             // Appelez la fonction Donnees pour obtenir les données
-            const titres  = await DataToTable();
+            const titres  = await DataToTable(pathname);
 
             if (titres && titres.length >= 3) {
                 setTitre1(titres[0].titre || '');
@@ -93,7 +94,7 @@ function Articles() {
                 loading="lazy"/>
                 <div className="flex items-center justify-center" >
                     {/* Article.Catégorie */}
-                    <div className=" drop-shadow-lg w-[80%] md:w-[75%] lg:w-[70%] xl:w-[60%] h-[225px] bg-white text-black 2xl:mt-[-65px] lg:mt-[-70px] md:mt-[-120px] text-center rounded-[25px] relative justify-center items-center py-2"style={{}}>
+                    <div className=" drop-shadow-lg w-[80%] md:w-[75%] lg:w-[70%] xl:w-[60%] h-[245px] bg-white text-black 2xl:mt-[-65px] lg:mt-[-70px] md:mt-[-120px] text-center rounded-[25px] relative justify-center items-center py-2"style={{}}>
                        <div className="flex items-center justify-center mb-1">
                             <div className="flex items-center justify-center w-[80%] relative md:mt-[-20px]">
                                 <div className="bg-gradient-to-r from-[#DEE218] to-[#E37C1C]  px-4 py-1 text-xs md:text-sm text-white font-semibold rounded-full hover:text-[#DEE218] hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri1}</div>

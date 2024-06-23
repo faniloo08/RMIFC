@@ -11,7 +11,7 @@ interface HomeProps {
     };
   }
 
-export default function faq({ params: { locale } }: HomeProps) {
+export default function Faq({ params: { locale } }: HomeProps) {
     const [t, setT] = useState<(key: string) => string>(() => (key: string) => key);
     const [ressources, setRessources] = useState('');
     const i18Namespaces =  ['common','infopages']
