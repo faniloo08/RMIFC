@@ -83,7 +83,7 @@ function Articles() {
         {/* lg:grid-cols-[.75fr_1fr] */}
         <div className="md:grid grid-cols-2 grid-flow-row gap-3 p-2 ">
             {/* Article à la une */}
-            <div className="col-span-1 mb-4">
+            <div className="col-span-1 mb-5">
                 {/* Articles.cover */}
                 <img 
                 src={Cover1} 
@@ -140,7 +140,7 @@ function Articles() {
             </div>
             <div>
                 {/*Art2*/}
-                <div className="grid grid-cols-2 grid-flow-row lg:space-x-[-30px] mb-3 2xl:mb-[-30px]">
+                <div className="grid grid-cols-2 grid-flow-row lg:space-x-[-30px] mb-3 2xl:mb-[30px]">
                     <div className="">
                         <img 
                             src={Cover2}
@@ -153,7 +153,7 @@ function Articles() {
                     </div>
                     
                     <div className="relative ">
-                        <div className="relative w-[50%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri2}</div>
+                        <div className="relative w-[60%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri2}</div>
                         <div className="2xl:mb-[20px]">
                             <p className=" mt-[10px] hover:underline text-[13px] justify-center items-center font-bold" >
                                 {/*Articles phares title*/}
@@ -205,7 +205,7 @@ function Articles() {
                         />
                     </div>
                     <div className="relative">
-                    <div className="relative w-[50%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri3}</div>
+                    <div className="relative w-[60%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri3}</div>
                         <div className="2xl:mb-[20px]" >
                             <p className=" mt-[10px] hover:underline text-[13px] justify-center items-center font-bold" >
                                 {/*Articles phares title*/}
