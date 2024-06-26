@@ -73,7 +73,7 @@ export default function Home({ params: { locale } }: HomeProps) {
           <div className="bg-cover grid md:grid-cols-3 gap-3 items-center justify-center">
             <div className="bg-cover grid grid-cols-1 items-center justify-center md:col-span-2">
               <div className="relative mt-[50px] md:mt-[0px]">
-                <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[0px] w-[92%] md:w-[90%] lg:w-[94%] xl:w-[91%] 2xl:w-[88%] ml-[20px]">
+                <div className="sm:mt-[0px] md:mt-[-195px] lg:mt-[0px] xl:mt-[0px] 2xl:mt-[50px] w-[92%] md:w-[90%] lg:w-[94%] xl:w-[91%] 2xl:w-[88%] ml-[20px]">
                   <Slide />
                 </div>
                 <div className="md:flex justify-center items-center relative mt-[30px] sm:mt-[10px] md:mt-[0px] ml-[25%] sm:ml-[35%] md:ml-[10%] lg:ml-[0%] 2xl:ml-[-5%]">
