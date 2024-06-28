@@ -118,7 +118,7 @@ export default function Exercices() {
     <div>
       <div>
         <p className="justify-center items-center text-center font-bold text-lg">
-          {t("excercice.EXERCICES REALISES")}
+          {t("excercice.ARTICLES DES OFFICIERS DE LIAISON")}
         </p>
       </div>
       <div className="relative flex items-center justify-center overflow-hidden">

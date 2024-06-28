@@ -29,7 +29,7 @@ import {
 import {messageFonc} from '@/lib/message';
 import { sendEmail } from "@/lib/mailService";
 import { useTranslation } from "react-i18next"
-
+import {images} from "../mase/mase";
 export default function Slide() {
   const {t} = useTranslation();
   const [nom, setNom] = useState('')
@@ -37,10 +37,11 @@ export default function Slide() {
   const [topic, setTopic] = useState('');
   const [message, setMessage] = useState('')
 
-  const images = [
-    "/SlideA.webp",
-    "/SlideB.webp"
-  ];
+  // const images = [
+  //   "/SlideA.webp",
+  //   "/SlideB.webp"
+  // ];
+  const slide = images;
   const Texte = [
     `${t("slider.Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays et organisations internationales")}`,
     `${t("Centre Régional de Fusion d'Informations Maritimes")}`,
@@ -75,7 +76,7 @@ export default function Slide() {
   };
 
   return (
-    <ImagesSlider className="drop-shadow-lg flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem] justify-center items-center" images={images}>
+    <ImagesSlider className="drop-shadow-lg flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem] justify-center items-center" images={slide}>
       <motion.div
         initial={{
           opacity: 0,

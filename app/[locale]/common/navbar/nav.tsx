@@ -68,7 +68,10 @@ export function NavBar() {
     `${t("Cadres juridique.Protocoles d'Entente")}`,
     `${t("Evènements au CRFIM.Exercice Cutlass")}`,
     `${t("Evènements au CRFIM.Ministère du Transport")}`,
-    `${t("Evènements au CRFIM.NMIFC and RMIFC")}`
+    `${t("Evènements au CRFIM.NMIFC and RMIFC")}`,
+    `${t("Commité Technique.OLI Comores")}`,
+    `${t("Commité Technique.OLI MAadagascar")}`,
+    `${t("Commité Technique.OLI Kenya")}`
     // "","","","","","","","","","","","","",""
 
   ]
@@ -88,7 +91,10 @@ export function NavBar() {
     `${t("Cadres juridique.Protocoles d'Entente et Memoranda d'Entente")}`,
     `${t("Evènements au CRFIM.L'exercice Cutlass Express est un exercice naval ...")}`,
     `${t("Evènements au CRFIM.Visite du ministère du transport au sein du CRFIM ...")}`,
-    `${t("Evènements au CRFIM.Visit by an American delegation to the National and ...")}`
+    `${t("Evènements au CRFIM.Visit by an American delegation to the National and ...")}`,
+    `${t("Commité Technique.Découvrez notre officier de liaison des Comores ...")}`,
+    `${t("Commité Technique.Découvrez notre officier de liaison de Madagascar ...")}`,
+    `${t("Commité Technique.Découvrez notre officier de liaison de Kenya ...")}`
     // "","","","","","","","","","","","",""
   ]
   const [itemListContent, setItemListContent] = useState<Component[]>([
@@ -321,6 +327,38 @@ export function NavBar() {
                   ])}
                   >
                     {t("Qui sommes-nous ?.Evènements au CRFIM")}
+                  </p>
+                </Link>
+                <Link href="/infopages/commite">
+                  <p className="text-sm font-bold hover:text-blue-500 hover:underline"
+                  onMouseEnter={() => handleLinkHover([
+                  {
+                    title: `${titre[15]}`,
+                    href: "/contenu/tous",
+                    description:
+                      `${description[15]}`,
+                    date:"",
+                    coverImage:"/OLI1.webp",
+                  },
+                  {
+                    title: `${titre[16]}`,
+                    href: "/contenu/tous",
+                    description:
+                      `${description[16]}`,
+                    date:"",
+                    coverImage:"/OLI2.webp",
+                  },
+                  {
+                    title: `${titre[17]}`,
+                    href: "/contenu/tous",
+                    description:
+                      `${description[17]}`,
+                    date: "",
+                    coverImage:"/OLI3.webp",
+                  }
+                  ])}
+                  >
+                    {t("Qui sommes-nous ?.Commité Technique")}
                   </p>
                 </Link>
               </div>

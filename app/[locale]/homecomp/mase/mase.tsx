@@ -12,16 +12,16 @@ import React from "react"
 import Link from "next/link";
 import { useTranslation } from "react-i18next"
 // import Image from "next/image";
-
+export const images = [
+    "/Mase1.webp",
+    "/Mase2.webp",
+    "/Mase3.webp",
+    "/Mase4.webp",
+    "/Mase5.webp",
+];
 function Mase() {
     const {t} = useTranslation();
-    const images = [
-        "/Mase1.webp",
-        "/Mase2.webp",
-        "/Mase3.webp",
-        "/Mase4.webp",
-        "/Mase5.webp",
-    ];
+
     const catégories = [
         `${t("mase.Action pour la Somalie")}`,
         `${t("mase.Lutte contre la piraterie")}`,
@@ -47,7 +47,7 @@ function Mase() {
   return (
     <div className="">
         <div className="text-white mt-[-60px] ml-[55px] font-bold mb-2 shadow-sm lg:text-md text-xs">
-            {t("mase.Programme MASE")}
+            {t("mase.Production Hebdomadaire")}
         </div>
         <div>
         <Carousel

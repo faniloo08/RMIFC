@@ -1,4 +1,4 @@
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Metadata } from 'next';
 
 import { cn } from '@/lib/utils';
@@ -40,7 +40,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://crfim.vercel.app" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://crfim.vercel.app" />
-        <script type="application/ld+json">
+        {/* <script type="application/ld+json">
           {`{
             "@context": "http://schema.org",
             "@type": "Organization",
@@ -52,10 +52,11 @@ export default function RootLayout({
               "https://twitter.com/rmifc"
             ]
           }`}
-        </script>
+        </script> */}
       </head>
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

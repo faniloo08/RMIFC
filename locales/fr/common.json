@@ -36,7 +36,8 @@
         "FAQ" : "FAQ",
         "Partenaires" : "Partenaires",
         "Cadres juridique" : "Cadres juridique",
-        "Evènements au CRFIM" : "Evènements au CRFIM"
+        "Evènements au CRFIM" : "Evènements au CRFIM",
+        "Commité Technique" : "Commité Technique"
     },
     "Historique" : {
         "Le CRFIM" : "Le CRFIM",
@@ -77,6 +78,14 @@
         "Visite du ministère du transport au sein du CRFIM ..." : "Visite du ministère du transport au sein du CRFIM ...",
         "NMIFC and RMIFC" : "CNFIM et CRFIM",
         "Visit by an American delegation to the National and ..." : "Visite d'une délégation Américiaine aux Centres Nationale et .."
+    },
+    "Commité Technique" : {
+        "OLI Comores" : "OLI Comores",
+        "OLI MAadagascar" : "OLI Madagascar",
+        "OLI Kenya" : "OLI Kenya",
+        "Découvrez notre officier de liaison des Comores ..." : "Découvrez notre Officier de Liaison des Comores...",
+        "Découvrez notre officier de liaison de Madagascar ..." : "Découvrez notre Officier de Liaison de Madagascar...",
+        "Découvrez notre officier de liaison de Kenya ..." : "Découvrez notre Officier de Liaison de Kenya..."
     },
 
     "Ce que nous faisons ?" : {
@@ -160,14 +169,14 @@
         "Opérations en Mer" : "Opérations en Mer",
         "Surveillance Maritime": "Surveillance Maritime",
         "Actions pour la MDA" : "Actions pour la MDA",
-        "Pays signataires": "Pays signataires",
-        "Centres régionaux" : "Centres régionaux",
-        "Formations dans l'année" : "Formations dans l'année",
-        "Missions effectuées" : "Missions effectuées"
+        "Centre Soeur": "Centre Soeur",
+        "Centre National" : "Centre National",
+        "Partenaires Internationaux" : "Partenaires Internationaux",
+        "Partenaires Inter-Maritime" : "Partenaires Inter-Maritime"
     },
 
     "mase" : {
-        "Programme MASE" : "Programme MASE",
+        "Production Hebdomadaire" : "Production Hebdomadaire",
         "Action pour la Somalie" : "Action pour la Somalie",
         "Le plan d'action national du WiMS marque l'about..." : "Le plan d'action national du WiMS marque l'about...",
         "Lutte contre la piraterie" : "Lutte contre la piraterie",
@@ -180,7 +189,7 @@
         "Les Centres régionaux de fusion de l'information..." : "Les Centres régionaux de fusion de l'information..."
     },
    
-    "Dernières Actualités" : "Dernières Actualités",
+    "Activités du Centre" : "Activités du Centre",
     "toutes les actualités" : "toutes les actualités" , 
     
     "recherche" : {
@@ -193,7 +202,7 @@
     },
 
     "excercice" : {
-        "EXERCICES REALISES" : "EXERCICES REALISES",
+        "ARTICLES DES OFFICIERS DE LIAISON" : "ARTICLES DES OFFICIERS DE LIAISON",
         "Exercice CUTLASS EXPRESS" : "Exercice CUTLASS EXPRESS",
         "Formation sur le 'Maritime Domain Awareness'" : "Formation sur le 'Maritime Domain Awareness'",
         "Exercice TTX WIOPOLREX" : "Exercice TTX WIOPOLREX",

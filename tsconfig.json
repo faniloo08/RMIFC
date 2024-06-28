@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/authentification.ts", "lib/weather.js", "context/LocalContext.tsx","src/i18n.ts", "app/[locale]/middleware.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/authentification.ts", "lib/weather.js", "context/LocalContext.tsx","src/i18n.ts", "app/[locale]/middleware.ts",""],
   "exclude": ["node_modules"]
 }

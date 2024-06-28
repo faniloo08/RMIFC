@@ -77,28 +77,35 @@ export function MenuBuger() {
         `${t("Cadres juridique.Protocoles d'Entente")}`,
         `${t("Evènements au CRFIM.Exercice Cutlass")}`,
         `${t("Evènements au CRFIM.Ministère du Transport")}`,
-        `${t("Evènements au CRFIM.NMIFC and RMIFC")}`
+        `${t("Evènements au CRFIM.NMIFC and RMIFC")}`,
+        `${t("Commité Technique.OLI Comores")}`,
+        `${t("Commité Technique.OLI MAadagascar")}`,
+        `${t("Commité Technique.OLI Kenya")}`
         // "","","","","","","","","","","","","",""
-    ]
+    
+      ]
 
-    const description = [
-    `${t("Historique.Le Centre Régionale de Fusion d'Informations Maritimes est ...")}`,
-    `${t("Historique.Découvrez les évenements marquants du Centre ...")}`,
-    `${t("Historique.Nos projets pour les prochaines années ...")}`,
-    `${t("FAQ.Qu'est-ce que le Centre Régional de Fusion d'Informations ...")}`,
-    `${t("FAQ.Comment puis-je contacter le CRFIM?")}`,
-    `${t("FAQ.Comment puis-je obtenir des informations sur les conditions maritimes ...")}`,
-    `${t("Partenaires.Commission de l'Océan Indien")}`,
-    `${t("Partenaires.Union Européene")}`,
-    `${t("Partenaires.Intergovernemental Authority on Development")}`,
-    `${t("Cadres juridique.Conventions Internationaux auxquelles le CRFIM a par-...")}`,
-    `${t("Cadres juridique.Collaboration avec les autorités nationales compétentes")}`,
-    `${t("Cadres juridique.Protocoles d'Entente et Memoranda d'Entente")}`,
-    `${t("Evènements au CRFIM.L'exercice Cutlass Express est un exercice naval ...")}`,
-    `${t("Evènements au CRFIM.Visite du ministère du transport au sein du CRFIM ...")}`,
-    `${t("Evènements au CRFIM.Visit by an American delegation to the National and ...")}`
-    // "","","","","","","","","","","","",""
-    ]
+      const description = [
+        `${t("Historique.Le Centre Régionale de Fusion d'Informations Maritimes est ...")}`,
+        `${t("Historique.Découvrez les évenements marquants du Centre ...")}`,
+        `${t("Historique.Nos projets pour les prochaines années ...")}`,
+        `${t("FAQ.Qu'est-ce que le Centre Régional de Fusion d'Informations ...")}`,
+        `${t("FAQ.Comment puis-je contacter le CRFIM?")}`,
+        `${t("FAQ.Comment puis-je obtenir des informations sur les conditions maritimes ...")}`,
+        `${t("Partenaires.Commission de l'Océan Indien")}`,
+        `${t("Partenaires.Union Européene")}`,
+        `${t("Partenaires.Intergovernemental Authority on Development")}`,
+        `${t("Cadres juridique.Conventions Internationaux auxquelles le CRFIM a par-...")}`,
+        `${t("Cadres juridique.Collaboration avec les autorités nationales compétentes")}`,
+        `${t("Cadres juridique.Protocoles d'Entente et Memoranda d'Entente")}`,
+        `${t("Evènements au CRFIM.L'exercice Cutlass Express est un exercice naval ...")}`,
+        `${t("Evènements au CRFIM.Visite du ministère du transport au sein du CRFIM ...")}`,
+        `${t("Evènements au CRFIM.Visit by an American delegation to the National and ...")}`,
+        `${t("Commité Technique.Découvrez notre officier de liaison des Comores ...")}`,
+        `${t("Commité Technique.Découvrez notre officier de liaison de Madagascar ...")}`,
+        `${t("Commité Technique.Découvrez notre officier de liaison de Kenya ...")}`
+        // "","","","","","","","","","","","",""
+      ]
 
     const [itemListContent, setItemListContent] = useState<Component[]>([
     {
@@ -297,33 +304,62 @@ export function MenuBuger() {
                                     </p>
                                     </Link>
                                     <Link href="/contenu/tous">
-                                    <p className="text-sm font-bold hover:text-blue-500 hover:underline"
-                                    onMouseEnter={() => handleLinkHover([
-                                    {
-                                        title: `${titre[12]}`,
-                                        href: "/contenu/tous",
-                                        description:
-                                        `${description[12]}`,
-                                        date:"01/04/2024",
-                                                        },
-                                    {
-                                        title: `${titre[13]}`,
-                                        href: "/contenu/tous",
-                                        description:
-                                        `${description[13]}`,
-                                        date:"20/02/2024",
-                                                        },
-                                    {
-                                        title: `${titre[14]}`,
-                                        href: "/contenu/tous",
-                                        description:
-                                        `${description[14]}`,
-                                        date: "13/02/2024",
-                                                        }
-                                    ])}
-                                    >
-                                        {t("Qui sommes-nous ?.Evènements au CRFIM")}
-                                    </p>
+                                        <p className="text-sm font-bold hover:text-blue-500 hover:underline"
+                                        onMouseEnter={() => handleLinkHover([
+                                        {
+                                            title: `${titre[12]}`,
+                                            href: "/contenu/tous",
+                                            description:
+                                            `${description[12]}`,
+                                            date:"01/04/2024",
+                                                            },
+                                        {
+                                            title: `${titre[13]}`,
+                                            href: "/contenu/tous",
+                                            description:
+                                            `${description[13]}`,
+                                            date:"20/02/2024",
+                                                            },
+                                        {
+                                            title: `${titre[14]}`,
+                                            href: "/contenu/tous",
+                                            description:
+                                            `${description[14]}`,
+                                            date: "13/02/2024",
+                                                            }
+                                        ])}
+                                        >
+                                            {t("Qui sommes-nous ?.Evènements au CRFIM")}
+                                        </p>
+                                    </Link>
+                                    <Link href="/infopages/commite">
+                                        <p className="text-sm font-bold hover:text-blue-500 hover:underline"
+                                        onMouseEnter={() => handleLinkHover([
+                                        {
+                                            title: `${titre[15]}`,
+                                            href: "/contenu/tous",
+                                            description:
+                                            `${description[15]}`,
+                                            date:"",
+                                        },
+                                        {
+                                            title: `${titre[16]}`,
+                                            href: "/contenu/tous",
+                                            description:
+                                            `${description[16]}`,
+                                            date:"",
+                                        },
+                                        {
+                                            title: `${titre[17]}`,
+                                            href: "/contenu/tous",
+                                            description:
+                                            `${description[17]}`,
+                                            date: "",
+                                        }
+                                        ])}
+                                        >
+                                            {t("Qui sommes-nous ?.Commité Technique")}
+                                        </p>
                                     </Link>
                                 </div>
                                 {itemListContent.map((component) => (

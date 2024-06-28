@@ -125,7 +125,7 @@ export default function Home({ params: { locale } }: HomeProps) {
               <div className="ml-[28px] bg-[url('/fleche.png')] w-[228px] h-[52px] ">
                 <span className="flex justify-center items-center mt-2 font-bold text-[#092933]">
                   <p className="text-center">
-                    {t("Dernières Actualités")}
+                  {t("Activités du Centre")}
                   </p>
                 </span>
               </div>

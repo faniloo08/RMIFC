@@ -38,7 +38,8 @@
         "FAQ" : "FAQ",
         "Partenaires" : "Partners",
         "Cadres juridique" : "Legal frameworks",
-        "Evènements au CRFIM" : "Events at RMIFC"
+        "Evènements au CRFIM" : "Events at RMIFC",
+        "Commité Technique" : "Technical Committee"
     },
 
     "Historique" : {
@@ -80,6 +81,14 @@
         "Visite du ministère du transport au sein du CRFIM ..." : "Visit of the Ministry of Transport to the CRFIM ...",
         "NMIFC and RMIFC" : "NMIFC and RMIFC",
         "Visit by an American delegation to the National and ..." : "Visit by an American delegation to the National and ..."
+    },
+    "Commité Technique" : {
+        "OLI Comores" : "ILO Comoros",
+        "OLI MAadagascar" : "ILO Madagascar",
+        "OLI Kenya" : "ILO Kenya",
+        "Découvrez notre officier de liaison des Comores ..." : "Meet our Comoros Liaison Officer...",
+        "Découvrez notre officier de liaison de Madagascar ..." : "Meet our Madagascar Liaison Officer...",
+        "Découvrez notre officier de liaison de Kenya ..." : "Meet our Kenya Liaison Officer..."
     },
 
     "Ce que nous faisons ?" : {
@@ -163,14 +172,14 @@
         "Opérations en Mer" : "Operations at Sea",
         "Surveillance Maritime": "Maritime Surveillance",
         "Actions pour la MDA" : "Actions for MDA",
-        "Pays signataires": "Signatory countries",
-        "Centres régionaux" : "Regional centers",
-        "Formations dans l'année" : "Trainings during the year",
-        "Missions effectuées" : "Missions carried out"
+        "Centre Soeur": "Sister Center",
+        "Centre National" : "National Center",
+        "Partenaires Internationaux" : "International Partners",
+        "Partenaires Inter-Maritime" : "Inter-Maritime Partners"
     },
 
     "mase" : {
-        "Programme MASE" : "MASE program",
+        "Production Hebdomadaire" : "Weekly Production",
         "Action pour la Somalie" : "Action for Somalia",
         "Le plan d'action national du WiMS marque l'about..." : "The WiMS national action plan marks the end...",
         "Lutte contre la piraterie" : "Fight against piracy",
@@ -183,7 +192,7 @@
         "Les Centres régionaux de fusion de l'information..." : "Regional Information Fusion Centers..."
     },
    
-    "Dernières Actualités" : "Last news",
+    "Activités du Centre" : "Center Activities",
     "toutes les actualités" : "all the news" , 
 
     "recherche" : {
@@ -196,7 +205,7 @@
     },
 
     "excercice" : {
-        "EXERCICES REALISES" : "EXERCISES CARRIED OUT",
+        "ARTICLES DES OFFICIERS DE LIAISON" : "LIAISON OFFICER ARTICLES",
         "Exercice CUTLASS EXPRESS" : "CUTLASS EXPRESS Exercise",
         "Formation sur le 'Maritime Domain Awareness'" : "Maritime Domain Awareness training",
         "Exercice TTX WIOPOLREX" : "TTX WIOPOLREX exercise",

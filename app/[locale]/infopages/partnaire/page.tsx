@@ -75,27 +75,6 @@ export default function Partenaires({ params: { locale } }: HomeProps)  {
             </div>
             <div className="grid sm:grid-cols-2 items-center justify-center">
                 <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
-                    {/* Le CRCO */}
-                    {/* Titre */}
-                    <Link href="https://crcoseychelles.org/">
-                        <p className="text-[20px] text-cyan-700 font-bold underline mb-2">{Titre[0]}</p>
-                    </Link>
-                    {/* Contenu */}
-                    <p className="text-sm">
-                        {Contenu[0]}
-                    </p>
-                </div>
-                <div className=" 2xl:ml-[280px] lg:ml-[130px] ">
-                    {/* Cover */}
-                    <Image 
-                    src="/SlideB.webp" 
-                    alt="" 
-                    width={357} 
-                    height={200}/>
-                </div>
-            </div>
-            <div className="grid sm:grid-cols-2 items-center justify-center">
-                <div className="mt-[30px] sm:ml-[50px] ml-[10px] 2xl:w-[1000px] lg:w-[600px]">
                     {/* Le CRFIM */}
                     {/* Titre */}
                     <Link href="https://igad.int/">
@@ -201,7 +180,7 @@ export default function Partenaires({ params: { locale } }: HomeProps)  {
                     height={150}/>
                 </div>
             </div>
-            <p className="text-[20px] text-cyan-700 font-bold underline mb-2 mt-[30px] ml-[50px] w-[600px]">Les pays signataires</p>
+            <p className="text-[20px] text-cyan-700 font-bold underline mb-2 mt-[30px] ml-[50px] w-[600px]">{t("infopages:partnaire.Les pays signataires")}</p>
             <div className="mt-[30px] 2xl:ml-[100px] lg:ml-[50px] grid grid-cols-7 items-center justify-center">
                 <div>
                     {/* Photo1 */}

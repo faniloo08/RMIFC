@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "../globals.css";
-// import ColorSwitcher from "./color-switcher/ColorSwitcher";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { cn } from "@/lib/utils"
 import {MenuBar} from "../common/menubar/menu";
 import Footer from "../common/footer/footer";
@@ -44,6 +44,7 @@ export default function RootLayout({
               </div>
             </div>
                 {children}
+                <SpeedInsights />
             <div className="mt-[50px]">
                 <Footer/>
             </div>
