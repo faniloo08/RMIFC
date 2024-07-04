@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import Link from "next/link";
+import Image from "next/image";
 import { UrlObject } from "url";
 export const BentoGrid = ({
   className,
@@ -31,7 +32,7 @@ export const BentoGridItem = ({
   className?: string;
   title?: string | React.ReactNode;
   date?: string | React.ReactNode;
-  header?: React.ReactNode;
+  header : string;
   icon?: React.ReactNode;
   link?: string;
 }) => {
@@ -50,7 +51,7 @@ export const BentoGridItem = ({
       )}
     >
       <Link href={linkUrl}>
-        {header}
+        <img src={header} alt="" width={200} height={120} className="rounded-lg ml-[15px]"/>
         <div className="group-hover/bento:translate-x-2 transition duration-200">
           {icon}
           <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2 text-sm">

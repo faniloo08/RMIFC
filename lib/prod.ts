@@ -1,11 +1,11 @@
 var url: string ;
 const getUrlWithLocale = (pathname: string): string => {
     if (pathname.includes("/en")) {
-        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=en&filters[author][name][$contains]=Faraniaina`;
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=en&filters[author][name][$contains]=Operateurs`;
     } else if (pathname.includes("/fr")) {
-        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Faraniaina`;
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Operateurs`;
     }
-    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Faraniaina`
+    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Operateurs`
 }
 // const urlLocal: string = `${url}&local=${locale}`;
 async function getData(locale : string): Promise<any> {
@@ -101,7 +101,7 @@ export async function DataToTable(locale : string): Promise<Article[]> {
             ImagesGallerie.push(image);
             toutesLesArticles.push(articleContent);
         }
-        console.log(ImagesGallerie);
+        //console.log(ImagesGallerie);
 
         for (let i = 0; i < tableauDeDonnees.length; i++) {
             const coverUrl = tableauDeDonnees[i][11].data.attributes.url;

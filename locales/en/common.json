@@ -280,9 +280,10 @@
      },
 
     "vcr" : {
-        "Devenir Volontaire aux CRFIM Madagascar" : "Become a Volunteer at RMIFC Madagascar",
-        "Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous." : "Become a hero of the seas by joining the Maritime Information Fusion Center. As a volunteer, you will contribute to global maritime security by fighting illicit trafficking and coordinating operations with leading international organizations.Join- us to protect our oceans and ensure a secure future for all." ,
-        "Télécharger le formulaire" : "Download the form"
+        "Rapport Communautaire des Navires" : "Vessel Community Report",
+        "Contribuez à la sécurité maritime régionale avec le Centre de Fusion d'Informations Maritimes. En tant que participant au 'Vessel Community Report', vous jouerez un rôle crucial dans la lutte contre les activités illicites et l'amélioration de la surveillance maritime. Rejoignez-nous pour renforcer la sécurité de nos océans et garantir un avenir serein pour tous.": 
+        "Contribute to regional maritime security with the Maritime Information Fusion Center. As a participant in the Vessel Community Report, you will play a crucial role in combating illicit activities and improving maritime surveillance. Join -us to strengthen the security of our oceans and guarantee a peaceful future for all." ,
+        "Remplir le formulaire" : "Fill the form"
     },
 
     "newsletter" : {

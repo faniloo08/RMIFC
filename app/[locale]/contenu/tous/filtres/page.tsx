@@ -1,10 +1,10 @@
 "use client"
 
-import {DataToTable} from '@/lib/api';
+import {DataToTable} from '@/lib/apifiltres';
 import { PaginationDemo } from '@/app/[locale]/homecomp/pagination/pagination';
 import React ,{ useState, useEffect } from 'react'
-import { NavBar } from "../../common/navbar/nav";
-import {MenuBuger} from "../../common/navbar/menuburger";
+import { NavBar } from "@/app/[locale]/common/navbar/nav";
+import {MenuBuger} from "@/app/[locale]/common/navbar/menuburger";
 import Link from 'next/link';
 import { Search } from "lucide-react"
 import Image from 'next/image';
@@ -54,6 +54,7 @@ export default function Contenus(
         cover: string;
         article: string;
         slug: string;
+        keyword : string
         // Ajoutez d'autres propriétés si nécessaire
     }
 
@@ -72,15 +73,15 @@ export default function Contenus(
     // Change la page
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
     const pathname = usePathname();
-
-    // //Filtre
-    // const query = searchParams?.query || '';
-
+    // var keyword : string;
+    //Filtre
+    const query = searchParams?.query || '';
+    const keyword = query;
     //Ces contenus vont être changés par les données dynamique du CMS
     useEffect(() => {
         const fetchDonnees = async () => {
             // Appelez la fonction Donnees pour obtenir les données
-            const titres  = await DataToTable(pathname);
+            const titres  = await DataToTable(pathname,keyword);
 
             setArticles(titres);
 

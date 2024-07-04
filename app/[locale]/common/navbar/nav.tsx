@@ -334,7 +334,7 @@ export function NavBar() {
                   onMouseEnter={() => handleLinkHover([
                   {
                     title: `${titre[15]}`,
-                    href: "/contenu/tous",
+                    href: "/infopages/commite",
                     description:
                       `${description[15]}`,
                     date:"",
@@ -342,7 +342,7 @@ export function NavBar() {
                   },
                   {
                     title: `${titre[16]}`,
-                    href: "/contenu/tous",
+                    href: "/infopages/commite",
                     description:
                       `${description[16]}`,
                     date:"",
@@ -350,7 +350,7 @@ export function NavBar() {
                   },
                   {
                     title: `${titre[17]}`,
-                    href: "/contenu/tous",
+                    href: "/infopages/commite",
                     description:
                       `${description[17]}`,
                     date: "",

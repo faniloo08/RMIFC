@@ -29,7 +29,9 @@ function Articles() {
     const [Slug1, setSlug1] = useState('');
     const [Slug2, setSlug2] = useState('');
     const [Slug3, setSlug3] = useState('');
-
+    const [Keyword1, setKeyword1] = useState('');
+    const [Keyword2, setKeyword2] = useState('');
+    const [Keyword3, setKeyword3] = useState('');
     const pathname = usePathname();
     useEffect(() => {
         const fetchDonnees = async () => {
@@ -60,6 +62,10 @@ function Articles() {
                 setSlug1(titres[0].slug || '');
                 setSlug2(titres[2].slug || '');
                 setSlug3(titres[3].slug || '');
+
+                setKeyword1(titres[0].keyword || '');
+                setKeyword2(titres[2].keyword || '');
+                setKeyword3(titres[3].keyword || '');
             }
         };
         fetchDonnees();
@@ -97,7 +103,9 @@ function Articles() {
                     <div className=" drop-shadow-lg w-[80%] md:w-[75%] lg:w-[70%] xl:w-[60%] h-[245px] bg-white text-black 2xl:mt-[-65px] lg:mt-[-70px] md:mt-[-120px] text-center rounded-[25px] relative justify-center items-center py-2"style={{}}>
                        <div className="flex items-center justify-center mb-1">
                             <div className="flex items-center justify-center w-[80%] relative md:mt-[-20px]">
-                                <div className="bg-gradient-to-r from-[#DEE218] to-[#E37C1C]  px-4 py-1 text-xs md:text-sm text-white font-semibold rounded-full hover:text-[#DEE218] hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri1}</div>
+                                <Link href={`/contenu/tous/filtres?query=${Keyword1}`}>
+                                    <div className="bg-gradient-to-r from-[#DEE218] to-[#E37C1C]  px-4 py-1 text-xs md:text-sm text-white font-semibold rounded-full hover:text-[#DEE218] hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri1}</div>
+                                </Link>
                             </div>
                        </div>
                         <div>
@@ -153,7 +161,9 @@ function Articles() {
                     </div>
                     
                     <div className="relative ">
-                        <div className="relative w-[60%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri2}</div>
+                        <Link href={`/contenu/tous/filtres?query=${Keyword2}`}>
+                            <div className="relative w-[60%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri2}</div>
+                        </Link>
                         <div className="2xl:mb-[20px]">
                             <p className=" mt-[10px] hover:underline text-[13px] justify-center items-center font-bold" >
                                 {/*Articles phares title*/}
@@ -205,7 +215,9 @@ function Articles() {
                         />
                     </div>
                     <div className="relative">
-                    <div className="relative w-[60%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri3}</div>
+                    <Link href={`/contenu/tous/filtres?query=${Keyword3}`}>
+                        <div className="relative w-[60%] text-center 2xl:mb-[20px] bg-gradient-to-r from-[#2ADACF] to-[#1C54E3]  px-4 py-[5px] text-[14px] text-white font-semibold rounded-full hover:text-slate-800 hover:bg-white hover:border-transparent focus:outline-none focus:ring-2  focus:ring-offset-2">{Descri3}</div>
+                    </Link>
                         <div className="2xl:mb-[20px]" >
                             <p className=" mt-[10px] hover:underline text-[13px] justify-center items-center font-bold" >
                                 {/*Articles phares title*/}

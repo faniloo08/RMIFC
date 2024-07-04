@@ -1,11 +1,11 @@
 var url: string ;
 const getUrlWithLocale = (pathname: string): string => {
     if (pathname.includes("/en")) {
-        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=en&filters[author][name][$contains]=Faraniaina`;
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=en&filters[author][name][$contains]=Officier`;
     } else if (pathname.includes("/fr")) {
-        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Faraniaina`;
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Officier`;
     }
-    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Faraniaina`
+    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Officier`
 }
 // const urlLocal: string = `${url}&local=${locale}`;
 async function getData(locale : string): Promise<any> {

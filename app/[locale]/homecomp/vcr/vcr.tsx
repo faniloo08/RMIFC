@@ -18,9 +18,9 @@ function Vcr() {
     "/VCR1.webp"
   ];
   const Texte = [
-    `${t("vcr.Devenir Volontaire aux CRFIM Madagascar")}`,
-    `${t("vcr.Devenez un héros des mers en rejoignant le Centre de Fusion d'Informations Maritimes. En tant que volontaire, vous contribuerez à la sécurité maritime mondiale en luttant contre les trafics illicites et en coordonnant des opérations avec des organisations internationales de premier plan.Rejoignez-nous pour protéger nos océans et assurer un avenir sûr pour tous.")}`,
-    `${t("vcr.Télécharger le formulaire")}`
+    `${t("vcr.Rapport Communautaire des Navires")}`,
+    `${t("vcr.Contribuez à la sécurité maritime régionale avec le Centre de Fusion d'Informations Maritimes. En tant que participant au 'Vessel Community Report', vous jouerez un rôle crucial dans la lutte contre les activités illicites et l'amélioration de la surveillance maritime. Rejoignez-nous pour renforcer la sécurité de nos océans et garantir un avenir serein pour tous.")}`,
+    `${t("vcr.Remplir le formulaire")}`
   ]
   return (
     <div className="w-[85%] sm:h-[300px] bg-gradient-to-r from-[#9BD95D] to-[#181C70] bg-cover flex bg-center justify-center items-center py-[40px]">
@@ -50,15 +50,16 @@ function Vcr() {
             <p className="text-sm  text-white font-light mt-[10px]">
                 {Texte[1]}
             </p>
-            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc0YNS8mpJ9nURTH-mY7eoMgCX7Sby4MoaML4Etr5zwKkHa6Q/viewform?usp=sf_link">
-              <button className="mt-[20px] drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px]"                     onMouseEnter={() => setIsHovered(true)}
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc2ilZzeZH2jLNFlBIS8KcrSb7Gb2jh4HvPCmZ0JPObqJmz8w/viewform?usp=pp_url">
+              <button className="mt-[20px] drop-shadow relative inline-flex overflow-hidden rounded-full p-[2px]"
+                    onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     onClick={handleDownload}>
-                    <Image src={isHovered ? "/Download1(1).png" : "/Download.png"} 
-                    alt="Telecharger" 
-                    width={25} height={25} 
-                    className="mt-[10px]" 
-                    />
+                      {/* <Image src={isHovered ? "/Download1(1).png" : "/Download.png"} 
+                      alt="Telecharger" 
+                      width={25} height={25} 
+                      className="mt-[10px]" 
+                      /> */}
                     <span className="hover:text-green-200 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-2 py-2 text-sm font-medium text-white backdrop-blur-3xl">
                         {Texte[2]}
                     </span>

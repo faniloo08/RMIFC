@@ -1,6 +1,7 @@
+//Affichage Articles OLI
 "use client"
 
-import {DataToTable} from '../../../../lib/api';
+import {DataToTable} from '../../../../lib/oli';
 import { NavBar } from "../../common/navbar/nav";
 import {MenuBuger} from "../../common/navbar/menuburger";
 import React ,{ useState, useEffect } from 'react'
@@ -58,37 +59,37 @@ function Contenus(
             // setSlug(slug); 
 
             //Pour les articles similaires
-            const Slug0 = titres[0].slug
-            console.log(Slug0);
-            setSlug0(Slug0);
+            // const Slug0 = titres[0].slug
+            // console.log(Slug0);
+            // setSlug0(Slug0);
 
-            const Slug3 = titres[3].slug
-            console.log(Slug3);
-            setSlug3(Slug3);
+            // const Slug3 = titres[3].slug
+            // console.log(Slug3);
+            // setSlug3(Slug3);
 
-            const Titre0 = titres[0].titre
-            console.log(Titre0);
-            setTitre0(Titre0);
+            // const Titre0 = titres[0].titre
+            // console.log(Titre0);
+            // setTitre0(Titre0);
 
-            const Titre3 = titres[3].titre
-            console.log(Titre3);
-            setTitre3(Titre3);
+            // const Titre3 = titres[3].titre
+            // console.log(Titre3);
+            // setTitre3(Titre3);
 
-            const Cover0 = titres[0].cover
-            console.log(Cover0);
-            setCover0(Cover0);
+            // const Cover0 = titres[0].cover
+            // console.log(Cover0);
+            // setCover0(Cover0);
 
-            const Cover3 = titres[3].cover
-            console.log(Cover3);
-            setCover3(Cover3);
+            // const Cover3 = titres[3].cover
+            // console.log(Cover3);
+            // setCover3(Cover3);
 
-            const Article0 = titres[0].article
-            console.log(Article0);
-            setArticle0(Article0);
+            // const Article0 = titres[0].article
+            // console.log(Article0);
+            // setArticle0(Article0);
 
-            const Article3 = titres[3].article
-            console.log(Article3);
-            setArticle3(Article3);
+            // const Article3 = titres[3].article
+            // console.log(Article3);
+            // setArticle3(Article3);
 
             //pour les exploitation de slug
             var slugs = [];
@@ -171,14 +172,14 @@ function Contenus(
     const [couverture, setCouverture] = useState('');
     const [keyword, setKeyword] = useState('');
     const [gallerie, setGallerie] = useState<string[]>([]);
-    const [Slug0, setSlug0] = useState('');
-    const [Slug3, setSlug3] = useState('');
-    const [Titre0, setTitre0] = useState('');
-    const [Titre3, setTitre3] = useState('');
-    const [Cover0, setCover0] = useState('');
-    const [Cover3, setCover3] = useState('');
-    const [Article0, setArticle0] = useState('');
-    const [Article3, setArticle3] = useState('');
+    // const [Slug0, setSlug0] = useState('');
+    // const [Slug3, setSlug3] = useState('');
+    // const [Titre0, setTitre0] = useState('');
+    // const [Titre3, setTitre3] = useState('');
+    // const [Cover0, setCover0] = useState('');
+    // const [Cover3, setCover3] = useState('');
+    // const [Article0, setArticle0] = useState('');
+    // const [Article3, setArticle3] = useState('');
 
     //User interactions
     const [liked, setLiked] = useState(false);
@@ -297,15 +298,15 @@ function Contenus(
                         </p>
                     </div>
                     {/* Articles similaires */}
-                    <div className="mt-[70px] border-t pt-2">
+                    {/* <div className="mt-[70px] border-t pt-2">
                         <p className="font-bold text-lg">
                             {t("contenu:overview.Articles similaires")}
                         </p>
-                        <div className="mt-[50px] grid grid-cols-2">
+                        <div className="mt-[50px] grid grid-cols-2">*/}
                             {/* Article1 */}
-                            <div className="mr-2">
+                            {/* <div className="mr-2"> */}
                                 {/* cover */}
-                                <img
+                                {/* <img
                                 src={Cover3}
                                 alt="" 
                                 width={195} 
@@ -324,11 +325,11 @@ function Contenus(
                                         </p>
                                     </Link>
                                 </div>
-                            </div>
+                            </div> */}
                             {/* Article2 */}
-                            <div className="ml-2">
+                            {/* <div className="ml-2"> */}
                                 {/* cover */}
-                                <img 
+                                {/* <img 
                                 src={Cover0} 
                                 alt="" 
                                 width={195} 
@@ -348,25 +349,25 @@ function Contenus(
                                     </Link>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div> */}
                 </div>
-            </div>
+            </div> 
             
-            <div className=" md:ml-[50px] mt-[30px]">
+            {/* <div className=" md:ml-[50px] mt-[30px]"> */}
                     {/*Auteur*/}
-                    <Image
+                    {/* <Image
                     src="/Auteur2.png"
                     alt=""
                     width={60}
                     height={60}
                     className="inline-flex cursor-pointer items-center justify-center rounded-full  text-xl hover:text-2xl font-medium text-white"
-                    />
+                    /> */}
                     {/* Nom */}
-                    <p className="mt-[-50px] ml-[70px] text-[13px] font-bold">Faraniaina Estherie</p>
+                    {/* <p className="mt-[-50px] ml-[70px] text-[13px] font-bold">Faraniaina Estherie</p> */}
                     {/* Poste */}
-                    <p className="ml-[70px] font-light text-[11px]">Assistante en communication</p>
-            </div>
+                    {/* <p className="ml-[70px] font-light text-[11px]">Assistante en communication</p> */}
+            {/* </div> */}
             {/* Bouton de partage */}
             <div className=" relative ml-[550px] mt-[-50px]">
                 <button className="hover:text-[#00A2E8]  inline-flex drop-shadow relative overflow-hidden p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

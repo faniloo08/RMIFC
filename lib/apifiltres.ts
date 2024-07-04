@@ -1,15 +1,16 @@
-var url: string ;
-const getUrlWithLocale = (pathname: string): string => {
+var url: string;
+
+const getUrlWithLocale = (pathname: string, keyword: string): string => {
     if (pathname.includes("/en")) {
-        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=en&filters[author][name][$contains]=Faraniaina`;
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&filters[description][$contains]=${keyword}&locale=en&filters[author][name][$contains]=Faraniaina`;
     } else if (pathname.includes("/fr")) {
-        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Faraniaina`;
+        return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&filters[description][$contains]=${keyword}&locale=fr&filters[author][name][$contains]=Faraniaina`;
     }
-    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&locale=fr&filters[author][name][$contains]=Faraniaina`
-}
-// const urlLocal: string = `${url}&local=${locale}`;
-async function getData(locale : string): Promise<any> {
-    url = getUrlWithLocale(locale);
+    return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/articles?populate=*&filters[description][$contains]=${keyword}&locale=fr&filters[author][name][$contains]=Faraniaina`;
+};
+
+async function getData(locale: string, keyword: string): Promise<any> {
+    url = getUrlWithLocale(locale, keyword);
     try {
         const resp = await fetch(url, {
             method: 'GET',
@@ -37,8 +38,8 @@ interface Article {
     keyword: string; 
 }
 
-export async function DataToTable(locale : string): Promise<Article[]> {
-    const elements: any = await getData(locale);
+export async function DataToTable(locale: string, keyword: string): Promise<Article[]> {
+    const elements: any = await getData(locale, keyword);
     const articles: Article[] = [];
     const tableauDeDonnees: any[] = [];
     const tousLesTitres: string[] = [];
@@ -127,6 +128,8 @@ export async function DataToTable(locale : string): Promise<Article[]> {
             };
             articles.push(article);
         }
+
+
 
         console.log("Tous les articles formatés donnent : ", articles);
         console.log(typeof articles);
