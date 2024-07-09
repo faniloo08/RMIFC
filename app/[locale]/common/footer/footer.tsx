@@ -97,17 +97,17 @@ function Footer() {
             <p className="text-white text-xs md:text-md font-bold mt-[-5px] relative mb-[7px]">{t("footer.Mentions légales")}</p>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/infopages/cadres">
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Mentions[0]}</p>
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/infopages/cadres">
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Mentions[1]}</p>
             </Link>
           </div>
           <div>
-            <Link href="/">
+            <Link href="/infopages/cadres">
               <p className="text-xs sm:text-sm text-white underline hover:text-blue-500 mb-[2px]">{Mentions[2]}</p>
             </Link>
           </div>

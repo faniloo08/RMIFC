@@ -19,6 +19,11 @@ import { useTranslation } from "react-i18next"
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 //import ReactMarkdown from 'react-markdown';
 
+export const slide = [
+    "https://backend.crfimmadagascar.org/uploads/pixelcut_export_f158ce40c4.jpeg",
+    "https://backend.crfimmadagascar.org/uploads/pixelcut_export_1_4c52f851b5.jpeg",
+    "https://backend.crfimmadagascar.org/uploads/pixelcut_export_9414ad0205.png"
+];
 
 interface Article {
     titre: string;
@@ -27,149 +32,105 @@ interface Article {
     cover: string; //=header
     article: string;
     slug: string;
-    // Ajoutez d'autres propriétés si nécessaire
 }
 
-    //génération de l'apperçu : 
-    // const generatePreview = (content: string): string => {
-    //     const preview = content.slice(0, 100);
-    //     return preview
-    //   };
-    // const { t } = useTranslation('common');
-
-export function imagesf() {
-    const pathname = usePathname();
-    //const [current, setCurrent] = React.useState(0);
-    //const [articles, setArticles] = useState<Article[]>([]);
+export function UseImagesSlider() {
     const [imageUrls, setImageUrls] = useState<string[]>([]);
+    const pathname = usePathname();
+  
+    useEffect(() => {
+      const fetchDonnees = async () => {
+        const titres = await DataToTable(pathname);
+        const urls = titres.map(article => article.cover);
+        setImageUrls(urls);
+      };
+      fetchDonnees();
+    }, [pathname]);
+  
+    return imageUrls;
+  }
+  
+function Mase() {
+    const [api, setApi] = useState<CarouselApi>();
+    const [current, setCurrent] = useState(0);
+    const [articles, setArticles] = useState<Article[]>([]);
+    const { t } = useTranslation();
+    const pathname = usePathname();
 
     useEffect(() => {
         const fetchDonnees = async () => {
-          const titres = await DataToTable(pathname);
-          const urls = titres.map(article => article.cover);
-          setImageUrls(urls);
+            const titres = await DataToTable(pathname);
+            setArticles(titres);
+            console.log('Articles fetched:', titres);
         };
         fetchDonnees();
-      }, [pathname]);
-    
-      console.log(imageUrls);
-    // Retourner le tableau d'URL
-    return imageUrls;
-}  
+    }, [pathname]);
 
-function Mase() {
-    const [api, setApi] = React.useState<CarouselApi>();
-    const [current, setCurrent] = React.useState(0);
-    //const [count, setCount] = React.useState(0);
-
-    React.useEffect(() => {
+    useEffect(() => {
         if (!api) {
-        return;
+            return;
         }
 
-        //setCount(api.scrollSnapList().length);
         setCurrent(api.selectedScrollSnap() + 1);
-
         api.on("select", () => {
-        setCurrent(api.selectedScrollSnap() + 1);
+            setCurrent(api.selectedScrollSnap() + 1);
         });
     }, [api]);
-    const {t} = useTranslation();
-    const pathname = usePathname();
-    const [articles, setArticles] = useState<Article[]>([]);
-    
-    useEffect(() => {
-        const fetchDonnees = async () => {
-            // Appelez la fonction Donnees pour obtenir les données
-            const titres  = await DataToTable(pathname);
-            setArticles(titres);
-            console.log(titres)
-    
-        };
-        fetchDonnees();
-    }, []);
 
-    const itemsPerPage = 5;
-    //Toutes ces actions sont à remplacer par les articles écrits par les opérateurs
-    // const catégories = [
-    //     `${t("mase.Action pour la Somalie")}`,
-    //     `${t("mase.Lutte contre la piraterie")}`,
-    //     `${t("mase.Flux financiers illicites")}`,
-    //     `${t("mase.Sécurité Maritime")}`,
-    //     `${t("mase.Réseau d'informations")}`
-    // ];
-    // const titres = [
-    //     `${t("mase.Le plan d'action national du WiMS marque l'about...")}`,
-    //     `${t("mase.En 2022, « seulement » 300 actes de piraterie ...")}`,
-    //     `${t("mase.L'Afrique perd chaque année environ 88,6 mill ...")}`,
-    //     `${t("mase.De nouvelles propositions en faveur de trans...")}`,
-    //     `${t("mase.Les Centres régionaux de fusion de l'information...")}`,
-    // ];
-    // const dates = [
-    //     "01/01/2024",
-    //     "02/02/2024",
-    //     "03/03/2024",
-    //     "01/06/2023",
-    //     "00/00/2024",
-    // ]
+    const itemsPerPage = 5;//production des 5 derniers jours 
+    const totalItems = Math.ceil(articles.length / itemsPerPage) * itemsPerPage;
+    const displayArticles = articles.slice(0, totalItems);
 
-  return (
-    <div className="">
-        <div className="text-white mt-[-60px] ml-[55px] font-bold mb-2 shadow-sm lg:text-md text-xs">
-            {t("mase.Production Hebdomadaire")}
-        </div>
-        <div>
-        <Carousel
-            opts={{
-                align: "start",
-            }}
-            className="w-1/2 md:max-w-md lg:max-w-lg 2xl:max-w-2xl"
-            setApi={setApi}
-            >
-            <CarouselContent>
-                {articles.slice((current - 1) * itemsPerPage, current * itemsPerPage).map((article, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 2xl:basis-1/4">
-                    <div className="">
-                    <Card className="bg-transparent border-none">
-                        <CardContent className="flex aspect-square items-center justify-center p-10 ">
-                            <Link href={`/contenu/prod?query=${article.slug}`}>
-                                <div className="mb-6 grid grid-cols-1">
-                                    <div>
-                                    <img src={article.cover} alt={`Image ${index + 1}`} className="w-full h-auto transition-transform duration-300 transform-gpu hover:scale-110" loading="lazy"/>
-                                    </div>
-                                    <div className="hover:text-[#7A1A1A]">
-                                        <div>
-                                            <p className= " hover:text-[#7A1A1A] text-yellow-500 font-bold text-center text-[13px]">{article.titre}</p>
-                                        </div>
-                                        <div>
-                                            <p className= "text-center text-[14px] font-bold ">
-                                                {/* <ReactMarkdown> 
-                                                    {generatePreview(article.article)}
-                                                </ReactMarkdown> */}
-                                                {article.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div>
-                                        <p className="text-center font-light text-[13px] ">{article.date}</p>
-                                    </div>
+    console.log(`Current: ${current}`);
+    console.log('Articles in current slice:', displayArticles);
+
+    return (
+        <div className="">
+            <div className="text-white mt-[-60px] ml-[55px] font-bold mb-2 shadow-sm lg:text-md text-xs">
+                {t("mase.Production Hebdomadaire")}
+            </div>
+            <div>
+                <Carousel
+                    opts={{ align: "start" }}
+                    className="w-1/2 md:max-w-md lg:max-w-lg 2xl:max-w-2xl"
+                    setApi={setApi}
+                >
+                    <CarouselContent>
+                        {displayArticles.map((article, index) => (
+                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 2xl:basis-1/4">
+                                <div className="">
+                                    <Card className="bg-transparent border-none">
+                                        <CardContent className="flex aspect-square items-center justify-center p-10">
+                                            <Link href={`/contenu/prod?query=${article.slug}`}>
+                                                <div className="mb-6 grid grid-cols-1">
+                                                    <div>
+                                                        <img src={article.cover} alt={`Image ${index + 1}`} className="w-full h-auto transition-transform duration-300 transform-gpu hover:scale-110" loading="lazy" />
+                                                    </div>
+                                                    <div className="hover:text-[#7A1A1A]">
+                                                        <div>
+                                                            <p className="hover:text-[#7A1A1A] text-yellow-500 font-bold text-center text-[13px]">{article.titre}</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-center text-[14px] font-bold ">{article.description}</p>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-center font-light text-[13px] ">{article.date}</p>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </CardContent>
+                                    </Card>
                                 </div>
-                            </Link>
-                        </CardContent>
-                    </Card>
-                    </div>
-                </CarouselItem>
-                ))}
-            </CarouselContent>
-            <CarouselPrevious className="mt-[-120px]"/>
-            <CarouselNext className="mt-[-120px]" />
-        </Carousel>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="mt-[-120px]" />
+                    <CarouselNext className="mt-[-120px]" />
+                </Carousel>
+            </div>
         </div>
-    </div>
-  );
+    );
 }
- 
 
-
-export default Mase
+export default Mase;

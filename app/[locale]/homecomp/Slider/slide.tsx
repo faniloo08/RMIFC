@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React ,{ useState, useEffect } from 'react';
-import { ImagesSlider } from "@/components/ui/images-slider";
+import {ImagesSlider} from "@/components/ui/images-slider1";
 import { 
   Dialog,
   DialogContent,
@@ -25,12 +25,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import {imagesf} from '../mase/mase';
+import {UseImagesSlider,slide} from '../mase/mase';
+//import {Imagesf, slide} from '../mase/mase';
 import {messageFonc} from '@/lib/message';
 import { sendEmail } from "@/lib/mailService";
 import { useTranslation } from "react-i18next"
-import {DataToTable} from '../../../../lib/prod';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 export default function Slide() {
   const {t} = useTranslation();
@@ -38,14 +37,17 @@ export default function Slide() {
   const [email, setEmail] = useState('')
   const [topic, setTopic] = useState('');
   const [message, setMessage] = useState('')
-  const pathname = usePathname();
-  const imageUrls = imagesf();
+  const images  = UseImagesSlider();
+  console.log("slides:",images);
+  const slider = slide;
+  console.log(slider);
+
   //const [imageUrls, setImageUrls] = useState<string[]>([]);
-  const slide = [
-    "https://backend.crfimmadagascar.org/uploads/pixelcut_export_f158ce40c4.jpeg",
-    "https://backend.crfimmadagascar.org/uploads/pixelcut_export_1_4c52f851b5.jpeg",
-    "https://backend.crfimmadagascar.org/uploads/pixelcut_export_9414ad0205.png"
-  ];
+  // const slide = [
+  //   "https://backend.crfimmadagascar.org/uploads/pixelcut_export_f158ce40c4.jpeg",
+  //   "https://backend.crfimmadagascar.org/uploads/pixelcut_export_1_4c52f851b5.jpeg",
+  //   "https://backend.crfimmadagascar.org/uploads/pixelcut_export_9414ad0205.png"
+  // ];
   // useEffect(() => {
   //   const fetchDonnees = async () => {
   //     const titres = await DataToTable(pathname);
@@ -55,7 +57,6 @@ export default function Slide() {
   //   fetchDonnees();
   // }, [pathname]);
 
-  console.log(imageUrls);
   const Texte = [
     `${t("slider.Le CRFIM est une organisation gouvernementale qui opère dans le secteur Maritime, en coopération avec plusieurs pays et organisations internationales")}`,
     `${t("Centre Régional de Fusion d'Informations Maritimes")}`,
@@ -89,8 +90,18 @@ export default function Slide() {
     setTopic(event.target.value); // Met à jour l'état avec la valeur sélectionnée
   };
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    }, 5000); // 0.5 second interval
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    <ImagesSlider className="drop-shadow-lg flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem] justify-center items-center" images={slide}>
+    <ImagesSlider className="drop-shadow-lg flex lg:h-[25rem] md:h-[20rem] sm:h-[20rem] h-[12rem] justify-center items-center" images={images}>
       <motion.div
         initial={{
           opacity: 0,
